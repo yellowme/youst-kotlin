@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/materialCardView"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_margin="4dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/typeCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="0.5"
+            android:fontFamily="@font/montserrat"
+            android:minHeight="38dp"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="TYPE"/>
+
+        <com.github.florent37.diagonallayout.DiagonalLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:elevation="4dp"
+            app:diagonal_angle="30"
+            app:diagonal_direction="right"
+            app:diagonal_position="top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/typeCheckBox"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:id="@+id/typeDecoration"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:background="@color/red"/>
+
+        </com.github.florent37.diagonallayout.DiagonalLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/yellow</color>
+    <color name="colorPrimaryDark">@color/yellow</color>
+    <color name="colorAccent">@color/black</color>
+
+    <color name="textColor">@color/black</color>
+
+    <color name="white">#ffffff</color>
+    <color name="yellow">#ffdc00</color>
+    <color name="blue">#0074D9</color>
+    <color name="black">#111111</color>
+    <color name="gray">#aaaaaa</color>
+    <color name="silver">#dddddd</color>
+    <color name="olive">#3d9970</color>
+    <color name="green">#2ecc40</color>
+    <color name="lime">#01ff70</color>
+    <color name="maroon">#85144b</color>
+    <color name="red">#ff4136</color>
+
+    <color name="shade">#697385</color>
+
+    <!-- Colors for type -->
+
+    <color name="vermillion">#db2811</color>
+    <color name="frenchBlue">#3b5ba7</color>
+    <color name="orange">#FF6600</color>
+    <color name="gray_purple">#666699</color>
+    <color name="dark_pink">#990066</color>
+    <color name="light_green">#00CC00</color>
+    <color name="green_brown">#404F24</color>
+    <color name="light_brown">#996633</color>
+    <color name="blue_green">#01796f</color>
+    <color name="bright_blue">#00E0E0</color>
+    <color name="blue_gray">#AEC6CF</color>
+    <color name="gray_brown">#816E5C</color>
+    <color name="dark_brown">#593C1F</color>
+    <color name="purple">#663399</color>
+    <color name="hot_pink">#FF0099</color>
+    <color name="gray_green">#336666</color>
+    <color name="gold">#FFCC00</color>
+    <color name="dark_red">#AA0114</color>
+    <color name="clear_gray">#e0e0e0</color>
+    <color name="light_gray">#f2f2f2</color>
+    <color name="dark_gray">#56575a</color>
+</resources>

@@ -1,0 +1,28 @@
+{
+  "challenges": [
+    {
+      "title": "Crazy Lists",
+      "description": "You need to solve a common problem that happens when scrolling through several items. After scrolling, do the elements looks the same?",
+      "help": "You need to fix the scrolling issues for the list. \n\nScroll to the last item, then scroll back and you will see how the colored type bars have changed its initial color.",
+      "type": "BLUE"
+    },
+    {
+      "title": "Listen to Me",
+      "description": "Loading data and updating the state of a static list might result on UI issues.",
+      "help": "You have a limit of items to select. Even if you are far from reaching the limit, scrolling is still an issue to properly keep the checked items. \n\nKeep an eye on your position.",
+      "type": "MAROON"
+    },
+    {
+      "title": "All about the details",
+      "description": "Imagine you are new on a team, your first task is to implement a classic detail view. \n\nFirst solve 'Crazy Lists' challenge.",
+      "help": "Use all the hooks available inside the common and components packages to display a new screen when clicking any item on the list \n\nReview the data folder to see how our API calls work.",
+      "type": "BLUE_GREEN"
+    },
+    {
+      "title": "Archie",
+      "description": "Our project gets bigger and we have new teammates. Is time to create reusable components inside our app context.",
+      "help": "Work In Progress. Come back later!",
+      "type": "BLACK"
+    }
+  ]
+}

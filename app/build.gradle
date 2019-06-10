@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    compileOptions {
+        sourceCompatibility = "8"
+        targetCompatibility = "8"
+    }
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+    implementation "androidx.core:core-ktx:$rootProject.ext.coreKtx"
+
+    implementation "androidx.appcompat:appcompat:$rootProject.ext.appcompat"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.ext.constraintLayout"
+    implementation "androidx.emoji:emoji-appcompat:$rootProject.ext.emoji"
+    implementation "androidx.emoji:emoji-bundled:$rootProject.ext.emoji"
+
+    implementation "com.google.android:flexbox:$rootProject.ext.flexbox"
+    implementation "com.google.android.material:material:$rootProject.ext.material"
+    implementation "com.github.florent37:diagonallayout:$rootProject.ext.diagonalLayout"
+
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit"
+    implementation "com.squareup.retrofit2:converter-moshi:$rootProject.ext.converterMoshi"
+    implementation "com.squareup.picasso:picasso:$rootProject.ext.picasso"
+
+    implementation "com.squareup.moshi:moshi:$rootProject.ext.moshi"
+
+    testImplementation "junit:junit:$rootProject.ext.junit"
+    androidTestImplementation "com.android.support.test:runner:$rootProject.ext.espressoTestRunner"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoCore"
+}
+

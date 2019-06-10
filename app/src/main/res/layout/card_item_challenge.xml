@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    app:cardBackgroundColor="@color/white"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/MidTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            tools:text="Title"/>
+
+        <TextView
+            android:id="@+id/contentTextView"
+            style="@style/MidSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/mainAction"
+            android:layout_below="@id/titleTextView"
+            android:layout_alignStart="@id/mainAction"
+            android:layout_marginTop="6dp"
+            android:gravity="top"
+            tools:text="Subtitle"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mainAction"
+            style="@style/BaseStyledButton.Colored.Main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="24dp"
+            android:text="@string/action_open_challenge"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="-8dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/content_description_card_bookmark"
+        tools:src="@drawable/ic_bookmark_blue"/>
+
+</com.google.android.material.card.MaterialCardView>

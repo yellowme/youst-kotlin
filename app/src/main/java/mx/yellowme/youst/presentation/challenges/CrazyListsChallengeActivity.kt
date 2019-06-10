@@ -1,0 +1,46 @@
+package mx.yellowme.youst.presentation.challenges;
+
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import mx.yellowme.youst.R
+import mx.yellowme.youst.common.ItemListener
+import mx.yellowme.youst.common.SimpleRecyclerAdapter
+import mx.yellowme.youst.common.activities.BaseChallengeActivity
+import mx.yellowme.youst.common.activities.ChallengeWithListActivity
+import mx.yellowme.youst.components.pokemon.index.PokemonListAdapter
+import mx.yellowme.youst.components.pokemon.index.PokemonListViewHolder
+import mx.yellowme.youst.data.PokemonListLoader
+import mx.yellowme.youst.domain.Challenge
+import mx.yellowme.youst.domain.Pokemon
+import java.util.*
+
+class CrazyListsChallengeActivity : ChallengeWithListActivity<Pokemon, PokemonListViewHolder>(),
+    BaseChallengeActivity.MenuActionsListener,
+    ItemListener<Pokemon> {
+
+    override val layoutResource: Int
+        get() = R.layout.screen_challenge_crazy_lists
+
+    override fun onResume() {
+        super.onResume()
+        PokemonListLoader.loadData(this)
+    }
+
+    override fun initAdapter(): SimpleRecyclerAdapter<Pokemon, PokemonListViewHolder>? {
+        return PokemonListAdapter(ArrayList(), this)
+    }
+
+    override fun onItemClick(item: Pokemon?) {
+        item?.name?.let {
+            toast(it)
+        }
+    }
+
+    override fun initLayoutManager(): RecyclerView.LayoutManager {
+        return GridLayoutManager(this, 3)
+    }
+
+    override fun onClickHelpMenu() {
+        dialogWithHelpFor(Challenge.ChallengeType.BLUE)
+    }
+}

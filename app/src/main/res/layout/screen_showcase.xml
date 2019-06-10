@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.showcase.ShowcaseActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <androidx.emoji.widget.EmojiTextView
+            android:id="@+id/titleTextView"
+            style="@style/Title"
+            android:text="@string/showcase_title"/>
+
+        <TextView
+            android:id="@+id/subtitleTextView"
+            style="@style/Description"
+            android:layout_marginTop="6dp"
+            android:text="@string/showcase_subtitle"/>
+
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/challengesViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="5"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingStart="60dp"
+        android:paddingLeft="60dp"
+        android:paddingTop="30dp"
+        android:paddingEnd="60dp"
+        android:paddingRight="60dp"
+        android:paddingBottom="30dp"/>
+
+</LinearLayout>
