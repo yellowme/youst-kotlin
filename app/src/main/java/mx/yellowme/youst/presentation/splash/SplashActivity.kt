@@ -9,12 +9,11 @@ import mx.yellowme.youst.common.utils.setListener
 import mx.yellowme.youst.presentation.showcase.ShowcaseActivity
 
 class SplashActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        splashAnimation?.apply {
+        splashAnimationView?.apply {
             useHardwareAcceleration()
             setListener {
                 onAnimationEnd {
