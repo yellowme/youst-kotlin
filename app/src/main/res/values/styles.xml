@@ -106,7 +106,4 @@
         <item name="android:textSize">12sp</item>
     </style>
 
-    <style name="SharedAppTheme.Launcher" parent="SharedAppTheme.NoActionBar">
-        <item name="android:windowBackground">@color/white</item>
-    </style>
 </resources>
