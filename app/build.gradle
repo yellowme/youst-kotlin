@@ -43,6 +43,7 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit"
     implementation "com.squareup.retrofit2:converter-moshi:$rootProject.ext.converterMoshi"
     implementation "com.squareup.picasso:picasso:$rootProject.ext.picasso"
+    implementation "com.airbnb.android:lottie:$rootProject.ext.lottie"
 
     implementation "com.squareup.moshi:moshi:$rootProject.ext.moshi"
 

@@ -49,6 +49,7 @@ ext {
     retrofit = '2.3.0'
     moshi = '1.8.0'
     converterMoshi = '2.4.0'
+    lottie = '2.8.0'
 
     // Test dependencies
     junit = '4.12'
