@@ -14,7 +14,7 @@
             android:theme="@style/SharedAppTheme">
         <activity
             android:name=".presentation.splash.SplashActivity"
-            android:theme="@style/SharedAppTheme.Launcher">
+            android:theme="@style/SharedAppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
