@@ -106,5 +106,7 @@
         <item name="android:textSize">12sp</item>
     </style>
 
-
+    <style name="SharedAppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+    </style>
 </resources>
