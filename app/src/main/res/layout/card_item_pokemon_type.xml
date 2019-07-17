@@ -33,26 +33,16 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="TYPE"/>
 
-        <com.github.florent37.diagonallayout.DiagonalLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:elevation="4dp"
-            app:diagonal_angle="30"
-            app:diagonal_direction="right"
-            app:diagonal_position="top"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/typeCheckBox"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <View
+        <mx.yellowme.youst.components.TriangularView
                 android:id="@+id/typeDecoration"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
                 android:layout_height="match_parent"
-                tools:background="@color/red"/>
-
-        </com.github.florent37.diagonallayout.DiagonalLayout>
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/typeCheckBox"
+                app:layout_constraintTop_toTopOf="parent"
+                app:triangleColor="@color/red"/>
 
     </LinearLayout>
 
