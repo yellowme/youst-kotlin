@@ -38,7 +38,6 @@ dependencies {
 
     implementation "com.google.android:flexbox:$rootProject.ext.flexbox"
     implementation "com.google.android.material:material:$rootProject.ext.material"
-    implementation "com.github.florent37:diagonallayout:$rootProject.ext.diagonalLayout"
 
     implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit"
     implementation "com.squareup.retrofit2:converter-moshi:$rootProject.ext.converterMoshi"
