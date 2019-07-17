@@ -54,13 +54,13 @@ class TriangularView : View {
         setBackgroundColor(Color.TRANSPARENT)
         val canvasWidth = canvas.width.toFloat()
         val canvasHeight = canvas.height.toFloat()
-        arcPaint.apply {
+        arcPaint.run {
             strokeWidth = 0f
             pathEffect = null
             color = triangleColor
             style = Paint.Style.FILL_AND_STROKE
         }
-        path1.apply {
+        path1.run {
             moveTo(0f, canvasHeight)
             lineTo(canvasWidth, canvasHeight)
             lineTo(canvasWidth, 0f)
