@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.CheckBox
 import mx.yellowme.youst.R
 import mx.yellowme.youst.common.RecyclerViewHolderDecorable
+import mx.yellowme.youst.common.components.TriangularView
 import mx.yellowme.youst.domain.PokemonTypeSelection
 
 /**
@@ -15,7 +16,7 @@ class PokemonTypeListViewHolder internal constructor(
 ) : RecyclerViewHolderDecorable<PokemonTypeSelection>(itemView) {
 
     private val context: Context = itemView.context
-    private val typeDecoration: View = itemView.findViewById(R.id.typeDecoration)
+    private val typeDecoration: TriangularView = itemView.findViewById(R.id.typeDecoration)
     internal val typeCheckBox: CheckBox = itemView.findViewById(R.id.typeCheckBox)
 
     init {
@@ -26,7 +27,7 @@ class PokemonTypeListViewHolder internal constructor(
         with(model) {
             type?.let {
                 typeCheckBox.text = it.toString()
-                typeDecoration.setBackgroundColor(it.getColorResource(context))
+                typeDecoration.changeTriangleColor(it.getColorResource(context))
             }
             typeCheckBox.isChecked = isChecked
         }
