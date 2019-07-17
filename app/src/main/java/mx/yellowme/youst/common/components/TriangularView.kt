@@ -55,9 +55,6 @@ class TriangularView : View {
         val canvasWidth = canvas.width.toFloat()
         val canvasHeight = canvas.height.toFloat()
         arcPaint.apply {
-            style = Paint.Style.FILL
-            color = Color.TRANSPARENT
-            canvas.drawPaint(this)
             strokeWidth = 0f
             pathEffect = null
             color = triangleColor
