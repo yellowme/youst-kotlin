@@ -20,6 +20,8 @@ class TriangularView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
 
+    //region Attributes
+
     private var arcPaint: Paint
     private var path: Path
 
@@ -30,6 +32,10 @@ class TriangularView @JvmOverloads constructor(
             invalidate()
         }
 
+    //endregion
+
+    //region Setup
+
     init {
         attrs?.consumeTypeArray(context, R.styleable.TriangularView) {
             triangleColor = getInt(R.styleable.TriangularView_triangleColor, 0)
@@ -37,6 +43,10 @@ class TriangularView @JvmOverloads constructor(
         path = Path()
         arcPaint = Paint()
     }
+
+    //endregion
+
+    //region Drawing
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
@@ -62,4 +72,7 @@ class TriangularView @JvmOverloads constructor(
         }
         canvas.drawPath(path, arcPaint)
     }
+
+    //endregion
+
 }
