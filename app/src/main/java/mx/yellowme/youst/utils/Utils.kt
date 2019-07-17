@@ -1,4 +1,4 @@
-package mx.yellowme.youst.utils;
+package mx.yellowme.youst.utils
 
 import android.util.TypedValue
 import android.view.View

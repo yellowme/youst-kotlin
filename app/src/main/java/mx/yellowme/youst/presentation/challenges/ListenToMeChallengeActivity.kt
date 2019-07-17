@@ -4,8 +4,8 @@ import mx.yellowme.youst.R
 import mx.yellowme.youst.common.SimpleRecyclerAdapter
 import mx.yellowme.youst.common.activities.BaseChallengeActivity
 import mx.yellowme.youst.common.activities.ChallengeWithListActivity
-import mx.yellowme.youst.components.pokemon.types.PokemonTypeAdapter
-import mx.yellowme.youst.components.pokemon.types.PokemonTypeListViewHolder
+import mx.yellowme.youst.pokemon.types.PokemonTypeAdapter
+import mx.yellowme.youst.pokemon.types.PokemonTypeListViewHolder
 import mx.yellowme.youst.domain.Challenge
 import mx.yellowme.youst.domain.PokemonType
 import mx.yellowme.youst.domain.PokemonTypeSelection

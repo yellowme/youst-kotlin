@@ -1,4 +1,4 @@
-package mx.yellowme.youst.components.pokemon.types;
+package mx.yellowme.youst.pokemon.types
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
