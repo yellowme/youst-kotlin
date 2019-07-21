@@ -1,4 +1,4 @@
-package mx.yellowme.youst.presentation.challenges;
+package mx.yellowme.youst.presentation.challenges
 
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView

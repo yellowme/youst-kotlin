@@ -1,4 +1,4 @@
-package mx.yellowme.youst.presentation.showcase;
+package mx.yellowme.youst.presentation.showcase
 
 import android.os.Bundle
 import kotlinx.android.synthetic.main.screen_showcase.*
