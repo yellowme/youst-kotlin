@@ -1,5 +1,5 @@
 ---
-name: Pull Request Template
+name: 📋 Pull Request Template
 about: A change is gonna come - Sam Cooke
 title: ''
 labels:
