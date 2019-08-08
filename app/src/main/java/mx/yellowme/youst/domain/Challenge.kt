@@ -12,7 +12,7 @@ class Challenge {
     val type: ChallengeType? = null
 
     enum class ChallengeType {
-        BLUE, MAROON, BLUE_GREEN, BLACK;
+        BLUE, MAROON, BLUE_GREEN, BLACK, EMERALD;
 
         val resourceId: Int
             get() {
@@ -21,6 +21,7 @@ class Challenge {
                     BLUE -> R.drawable.ic_bookmark_blue
                     BLUE_GREEN -> R.drawable.ic_bookmark_blue_green
                     MAROON -> R.drawable.ic_bookmark_maroon
+                    EMERALD -> R.drawable.ic_bookmark_emerald
                 }
             }
     }

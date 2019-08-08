@@ -13,6 +13,7 @@ import mx.yellowme.youst.data.ChallengeDataHelper.loadChallengesFromJSONUsing
 import mx.yellowme.youst.domain.Challenge
 import mx.yellowme.youst.presentation.challenges.CrazyListsChallengeActivity
 import mx.yellowme.youst.presentation.challenges.ListenToMeChallengeActivity
+import mx.yellowme.youst.presentation.challenges.navigation.NavigationActivity
 import mx.yellowme.youst.utils.dipTopx
 
 class ShowcaseActivity : BaseActivity(), ItemListener<Challenge> {
@@ -48,6 +49,7 @@ class ShowcaseActivity : BaseActivity(), ItemListener<Challenge> {
                 Challenge.ChallengeType.BLUE_GREEN -> {
                     CrazyListsChallengeActivity::class.java
                 }
+                Challenge.ChallengeType.EMERALD -> NavigationActivity::class.java
                 else -> throw RuntimeException("Invalid challenge identifier")
             }
 

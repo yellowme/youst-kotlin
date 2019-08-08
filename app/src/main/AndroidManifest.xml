@@ -1,56 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="mx.yellowme.youst">
+    package="mx.yellowme.youst">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-            android:name=".common.ChallengesApplication"
-            android:allowBackup="false"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name"
-            android:roundIcon="@mipmap/ic_launcher_round"
-            android:supportsRtl="true"
-            android:theme="@style/SharedAppTheme">
+        android:name=".common.ChallengesApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/SharedAppTheme">
         <activity
             android:name=".presentation.splash.SplashActivity"
             android:theme="@style/SharedAppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-                android:name=".presentation.showcase.ShowcaseActivity"
-                android:label="@string/app_name"
-                android:theme="@style/SharedAppTheme.NoActionBar">
+            android:name=".presentation.showcase.ShowcaseActivity"
+            android:label="@string/app_name"
+            android:theme="@style/SharedAppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                        android:host="www.yellowme.mx"
-                        android:scheme="https"/>
+                    android:host="www.yellowme.mx"
+                    android:scheme="https" />
             </intent-filter>
         </activity>
         <activity
-                android:name=".components.pokemon.show.PokemonDetailActivity"
-                android:label="@string/pokemon_detail"
-                android:theme="@style/SharedAppTheme.NoActionBar"/>
+            android:name=".components.pokemon.show.PokemonDetailActivity"
+            android:label="@string/pokemon_detail"
+            android:theme="@style/SharedAppTheme.NoActionBar" />
         <activity
-                android:name=".presentation.challenges.CrazyListsChallengeActivity"
-                android:label="@string/activity_challenge_title_crazy_lists"
-                android:theme="@style/SharedAppTheme.NoActionBar"/>
+            android:name=".presentation.challenges.CrazyListsChallengeActivity"
+            android:label="@string/activity_challenge_title_crazy_lists"
+            android:theme="@style/SharedAppTheme.NoActionBar" />
         <activity
-                android:name=".presentation.challenges.ListenToMeChallengeActivity"
-                android:label="@string/activity_challenge_title_listen_to_me"
-                android:theme="@style/SharedAppTheme.NoActionBar"/>
+            android:name=".presentation.challenges.ListenToMeChallengeActivity"
+            android:label="@string/activity_challenge_title_listen_to_me"
+            android:theme="@style/SharedAppTheme.NoActionBar" />
+        <activity
+            android:name=".presentation.challenges.navigation.NavigationActivity"
+            android:label="Jetpack Navigation"
+            android:parentActivityName=".presentation.showcase.ShowcaseActivity"
+            android:theme="@style/SharedAppTheme.NoActionBar.TransparentStatus">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".presentation.showcase.ShowcaseActivity" />
+        </activity>
+        <activity
+            android:name=".presentation.challenges.navigation.LastFragment"
+            android:theme="@style/SharedAppTheme.NoActionBar.TransparentStatus" />
 
         <meta-data
-                android:name="preloaded_fonts"
-                android:resource="@array/preloaded_fonts"/>
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <receiver android:name=".presentation.challenges.navigation.DeepLinkWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/deeplink_widget_info" />
+        </receiver>
     </application>
 
 </manifest>
