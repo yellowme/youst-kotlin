@@ -23,6 +23,12 @@
       "description": "Our project gets bigger and we have new teammates. Is time to create reusable components inside our app context.",
       "help": "Work In Progress. Come back later!",
       "type": "BLACK"
+    },
+    {
+      "title": "Navigation Component",
+      "description": "Showcase of the Android Jetpack Navigation Component, designed to delegate much of navigation logic to a centralized hub.",
+      "help": "",
+      "type": "EMERALD"
     }
   ]
 }
