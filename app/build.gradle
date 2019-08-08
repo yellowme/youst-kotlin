@@ -4,11 +4,16 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
 android {
     compileSdkVersion 28
     compileOptions {
-        sourceCompatibility = "8"
-        targetCompatibility = "8"
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
     defaultConfig {
         applicationId rootProject.ext.applicationId
@@ -24,6 +29,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    dataBinding {
+        enabled = true
+        enabledForTests = true
+    }
 }
 
 dependencies {
@@ -33,6 +43,11 @@ dependencies {
 
     implementation "androidx.appcompat:appcompat:$rootProject.ext.appcompat"
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.ext.constraintLayout"
+    implementation "androidx.navigation:navigation-fragment-ktx:$rootProject.ext.navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$rootProject.ext.navigation"
+    implementation "androidx.fragment:fragment-testing:$rootProject.ext.fragmentVersion"
+    implementation "androidx.test:core:$rootProject.ext.androidXTest"
+    implementation "androidx.fragment:fragment:$rootProject.ext.fragmentVersion"
     implementation "androidx.emoji:emoji-appcompat:$rootProject.ext.emoji"
     implementation "androidx.emoji:emoji-bundled:$rootProject.ext.emoji"
 
@@ -47,7 +62,19 @@ dependencies {
     implementation "com.squareup.moshi:moshi:$rootProject.ext.moshi"
 
     testImplementation "junit:junit:$rootProject.ext.junit"
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
+
+    androidTestImplementation "org.mockito:mockito-core:$mockitoVersion"
+    androidTestImplementation "com.linkedin.dexmaker:dexmaker-mockito:$dexMakerVersion"
+    androidTestImplementation "androidx.test.ext:junit-ktx:$androidXTestExtKotlinRunnerVersion"
     androidTestImplementation "com.android.support.test:runner:$rootProject.ext.espressoTestRunner"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoCore"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$rootProject.ext.espressoCore"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$rootProject.ext.espressoCore"
+    androidTestImplementation "androidx.test.espresso.idling:idling-concurrent:$rootProject.ext.espressoCore"
+    androidTestImplementation "androidx.arch.core:core-testing:$rootProject.ext.archTesting"
+    androidTestImplementation "androidx.test:core-ktx:$rootProject.ext.androidXTest"
+
+    implementation "androidx.test.espresso:espresso-idling-resource:$rootProject.ext.espressoCore"
 }
 

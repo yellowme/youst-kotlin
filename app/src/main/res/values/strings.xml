@@ -12,6 +12,7 @@
     <string name="activity_challenge_title_crazy_lists">Crazy Lists</string>
     <string name="activity_challenge_title_listen_to_me">Listen to Me</string>
     <string name="activity_challenge_title_archie">Archie</string>
+    <string name="activity_challenge_title_jetpack_navigation">Jetpack Navigation</string>
 
     <string name="content_description_card_bookmark">card_bookmark</string>
     <string name="content_description_right_action">right_action_menu</string>
@@ -24,4 +25,15 @@
     <string name="instructions">Instructions</string>
 
     <string name="toolbar_title">Toolbar Title</string>
+    <string name="navigation_title_emoji_1">🙈</string>
+    <string name="navigation_title_emoji_2">🙉</string>
+    <string name="navigation_title_emoji_3">🙊</string>
+    <string name="navigation_title_emoji_deeplink">🔗🤖</string>
+    <string name="navigation_title_deeplink">You\'ve arrived to a secret screen!</string>
+    <string name="navigation_title_step_1">Hello! What\'s your name?</string>
+    <string name="navigation_title_step_2">Nice to meet you, %1$s! Tell us... what are you passionate about?</string>
+    <string name="navigation_title_step_3">Thanks for reaching out, %1$s!\n\nTo know more about us, visit our website linked below! ⬇️</string>
+    <string name="action_next">Next</string>
+    <string name="action_go_back">Go back</string>
+    <string name="yellowme_link">yellowme.mx 💛</string>
 </resources>
