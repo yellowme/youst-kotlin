@@ -1,4 +1,4 @@
-package mx.yellowme.youst.common;
+package mx.yellowme.youst.common
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

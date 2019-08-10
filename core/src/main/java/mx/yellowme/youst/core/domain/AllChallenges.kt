@@ -1,4 +1,4 @@
-package mx.yellowme.youst.domain;
+package mx.yellowme.youst.core.domain
 
 /**
  * TODO: Add docs

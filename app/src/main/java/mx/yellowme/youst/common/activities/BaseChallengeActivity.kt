@@ -8,8 +8,10 @@ import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import mx.yellowme.youst.R
 import mx.yellowme.youst.common.dialogs.SimpleInfoDialogBuilder
+import mx.yellowme.youst.core.domain.Challenge
+import mx.yellowme.youst.core.extensions.toast
+import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.data.ChallengeDataHelper
-import mx.yellowme.youst.domain.Challenge
 import mx.yellowme.youst.utils.findOrThrow
 
 /**
@@ -23,6 +25,13 @@ abstract class BaseChallengeActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        toolbarAction = findOrThrow(R.id.toolbarAction)
+        toolbarTitle = findOrThrow(R.id.toolbarTitle)
+
+        leftAction = findOrThrow(R.id.leftAction)
+        leftAction?.setOnClickListener { _ -> finish() }
+
+        setSupportActionBar(toolbarAction)
         setupTitleIfNeeded()
     }
 
@@ -39,16 +48,6 @@ abstract class BaseChallengeActivity : BaseActivity() {
         } else {
             super.onOptionsItemSelected(item)
         }
-    }
-
-    override fun bindViews() {
-        toolbarAction = findOrThrow(R.id.toolbarAction)
-        setSupportActionBar(toolbarAction)
-
-        toolbarTitle = findOrThrow(R.id.toolbarTitle)
-
-        leftAction = findOrThrow(R.id.leftAction)
-        leftAction?.setOnClickListener { _ -> finish() }
     }
 
     /**
@@ -83,4 +82,5 @@ abstract class BaseChallengeActivity : BaseActivity() {
     companion object {
         const val TOOLBAR_TITLE = "TOOLBAR_TITLE"
     }
+
 }

@@ -21,8 +21,8 @@ fun <T : View> AppCompatActivity.findOrThrow(viewId: Int): T {
     )
 }
 
-fun ClassLoader?.loadJsonNamed(
-    jsonName: String,
+fun ClassLoader?.readJson(
+    named: String,
     withClass: Class<*>
 ): Any? {
 
@@ -30,7 +30,7 @@ fun ClassLoader?.loadJsonNamed(
         return null
     }
 
-    val inputStream = getResourceAsStream(jsonName)
+    val inputStream = getResourceAsStream(named)
 
     val scanner = Scanner(inputStream!!).useDelimiter("\\A")
     val schemaJSON = if (scanner.hasNext()) scanner.next() else ""

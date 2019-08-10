@@ -17,13 +17,13 @@
         <androidx.emoji.widget.EmojiTextView
             android:id="@+id/titleTextView"
             style="@style/Title"
-            android:text="@string/showcase_title"/>
+            android:text="@string/showcase_title" />
 
         <TextView
             android:id="@+id/subtitleTextView"
             style="@style/Description"
             android:layout_marginTop="6dp"
-            android:text="@string/showcase_subtitle"/>
+            android:text="@string/showcase_subtitle" />
 
     </LinearLayout>
 
@@ -42,6 +42,6 @@
         android:paddingTop="30dp"
         android:paddingEnd="60dp"
         android:paddingRight="60dp"
-        android:paddingBottom="30dp"/>
+        android:paddingBottom="30dp" />
 
 </LinearLayout>

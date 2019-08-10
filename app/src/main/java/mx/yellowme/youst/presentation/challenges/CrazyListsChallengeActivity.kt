@@ -7,10 +7,11 @@ import mx.yellowme.youst.common.ItemListener
 import mx.yellowme.youst.common.SimpleRecyclerAdapter
 import mx.yellowme.youst.common.activities.BaseChallengeActivity
 import mx.yellowme.youst.common.activities.ChallengeWithListActivity
-import mx.yellowme.youst.components.pokemon.index.PokemonListAdapter
-import mx.yellowme.youst.components.pokemon.index.PokemonListViewHolder
+import mx.yellowme.youst.pokemon.index.PokemonListAdapter
+import mx.yellowme.youst.pokemon.index.PokemonListViewHolder
+import mx.yellowme.youst.core.domain.Challenge
+import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.data.PokemonListLoader
-import mx.yellowme.youst.domain.Challenge
 import mx.yellowme.youst.domain.Pokemon
 import java.util.*
 
@@ -18,8 +19,7 @@ class CrazyListsChallengeActivity : ChallengeWithListActivity<Pokemon, PokemonLi
     BaseChallengeActivity.MenuActionsListener,
     ItemListener<Pokemon> {
 
-    override val layoutResource: Int
-        get() = R.layout.screen_challenge_crazy_lists
+    override val layoutId = R.layout.screen_challenge_crazy_lists
 
     override fun onResume() {
         super.onResume()
