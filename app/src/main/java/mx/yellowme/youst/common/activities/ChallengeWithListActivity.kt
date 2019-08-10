@@ -31,6 +31,9 @@ abstract class ChallengeWithListActivity<Model, ViewHolder : RecyclerViewHolderD
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        progressBar = findViewById(R.id.loadingProgressBar)
+        emptyMessageView = findViewById(R.id.emptyMessageTextView)
+        recyclerView = findOrThrow(R.id.recyclerView)
         setupRecyclerView()
     }
 
@@ -67,13 +70,6 @@ abstract class ChallengeWithListActivity<Model, ViewHolder : RecyclerViewHolderD
 
             adapter?.replaceData(it)
         }
-    }
-
-    override fun bindViews() {
-        super.bindViews()
-        progressBar = findViewById(R.id.loadingProgressBar)
-        emptyMessageView = findViewById(R.id.emptyMessageTextView)
-        recyclerView = findOrThrow(R.id.recyclerView)
     }
 
     /**

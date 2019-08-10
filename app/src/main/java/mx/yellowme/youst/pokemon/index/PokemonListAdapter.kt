@@ -1,4 +1,4 @@
-package mx.yellowme.youst.components.pokemon.index;
+package mx.yellowme.youst.pokemon.index
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,11 +8,8 @@ import mx.yellowme.youst.common.SimpleRecyclerAdapter
 import mx.yellowme.youst.domain.Pokemon
 
 /**
- * MainModel adapter for displaying a list
- * <p>
- * Created by luisburgos.
+ * MainModel adapter for displaying a list.
  */
-
 class PokemonListAdapter(
     items: MutableList<Pokemon>,
     itemListener: ItemListener<Pokemon>

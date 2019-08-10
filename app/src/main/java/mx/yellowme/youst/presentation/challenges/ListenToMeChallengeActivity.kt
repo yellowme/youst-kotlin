@@ -6,7 +6,7 @@ import mx.yellowme.youst.common.activities.BaseChallengeActivity
 import mx.yellowme.youst.common.activities.ChallengeWithListActivity
 import mx.yellowme.youst.pokemon.types.PokemonTypeAdapter
 import mx.yellowme.youst.pokemon.types.PokemonTypeListViewHolder
-import mx.yellowme.youst.domain.Challenge
+import mx.yellowme.youst.core.domain.Challenge
 import mx.yellowme.youst.domain.PokemonType
 import mx.yellowme.youst.domain.PokemonTypeSelection
 import java.util.*
@@ -14,8 +14,7 @@ import java.util.*
 class ListenToMeChallengeActivity : ChallengeWithListActivity<PokemonTypeSelection, PokemonTypeListViewHolder>(),
     BaseChallengeActivity.MenuActionsListener {
 
-    override val layoutResource: Int
-        get() = R.layout.screen_challenge_listen_to_me
+    override val layoutId = R.layout.screen_challenge_listen_to_me
 
     override fun initAdapter(): SimpleRecyclerAdapter<PokemonTypeSelection, PokemonTypeListViewHolder>? {
         val types = PokemonType.values()

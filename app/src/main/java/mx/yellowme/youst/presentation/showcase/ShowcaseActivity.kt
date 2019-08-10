@@ -4,40 +4,39 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.screen_showcase.*
 import mx.yellowme.youst.R
 import mx.yellowme.youst.common.ItemListener
-import mx.yellowme.youst.common.activities.BaseActivity
 import mx.yellowme.youst.common.activities.BaseChallengeActivity.Companion.TOOLBAR_TITLE
 import mx.yellowme.youst.common.cards.CardPagerAdapter
 import mx.yellowme.youst.common.cards.ShadowTransformer
 import mx.yellowme.youst.common.start
+import mx.yellowme.youst.core.domain.Challenge
+import mx.yellowme.youst.core.extensions.toast
+import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.data.ChallengeDataHelper.loadChallengesFromJSONUsing
-import mx.yellowme.youst.domain.Challenge
 import mx.yellowme.youst.presentation.challenges.CrazyListsChallengeActivity
 import mx.yellowme.youst.presentation.challenges.ListenToMeChallengeActivity
 import mx.yellowme.youst.presentation.challenges.navigation.NavigationActivity
 import mx.yellowme.youst.utils.dipTopx
 
 class ShowcaseActivity : BaseActivity(), ItemListener<Challenge> {
+
     private var mCardAdapter: CardPagerAdapter? = null
     private var mCardShadowTransformer: ShadowTransformer? = null
 
-    override val layoutResource: Int
-        get() = R.layout.screen_showcase
+    override val layoutId = R.layout.screen_showcase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mCardAdapter = CardPagerAdapter(this)
         mCardAdapter?.addItems(loadChallengesFromJSONUsing(classLoader)!!)
-        setupViewPager()
-    }
 
-    override fun bindViews() {
         challengesViewPager?.pageMargin = dipTopx(12)
+        setupViewPager()
     }
 
     override fun onItemClick(item: Challenge?) {
         item?.type?.let {
             if (it == Challenge.ChallengeType.BLACK) {
-                challengeAtWIP()
+                toast(getString(R.string.work_in_progress))
                 return
             }
 

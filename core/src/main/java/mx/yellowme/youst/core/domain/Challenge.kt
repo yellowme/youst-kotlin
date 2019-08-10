@@ -1,6 +1,6 @@
-package mx.yellowme.youst.domain;
+package mx.yellowme.youst.core.domain
 
-import  mx.yellowme.youst.R;
+import mx.yellowme.youst.core.R
 
 /**
  * TODO: Add docs

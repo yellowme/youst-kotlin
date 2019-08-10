@@ -12,7 +12,7 @@ import com.google.android.material.card.MaterialCardView
 import mx.yellowme.youst.R
 import mx.yellowme.youst.common.ItemListener
 import mx.yellowme.youst.common.cards.CardAdapter.Companion.MAX_ELEVATION_FACTOR
-import mx.yellowme.youst.domain.Challenge
+import mx.yellowme.youst.core.domain.Challenge
 import java.util.*
 
 /**

@@ -1,4 +1,4 @@
-package mx.yellowme.youst.components.pokemon.index;
+package mx.yellowme.youst.pokemon.index
 
 import android.content.Context
 import android.view.View
@@ -13,8 +13,6 @@ import mx.yellowme.youst.domain.Pokemon
 
 /**
  * Reusable view portion.
- * <p>
- * Created by luisburgos.
  */
 class PokemonListViewHolder internal constructor(
     itemView: View,
@@ -61,4 +59,5 @@ class PokemonListViewHolder internal constructor(
             }
         }
     }
+
 }
