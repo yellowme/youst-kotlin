@@ -15,7 +15,7 @@ import mx.yellowme.youst.data.ChallengeDataHelper.loadChallengesFromJSONUsing
 import mx.yellowme.youst.presentation.challenges.CrazyListsChallengeActivity
 import mx.yellowme.youst.presentation.challenges.ListenToMeChallengeActivity
 import mx.yellowme.youst.presentation.challenges.navigation.NavigationActivity
-import mx.yellowme.youst.utils.dipTopx
+import mx.yellowme.youst.core.utils.dipToPx
 
 class ShowcaseActivity : BaseActivity(), ItemListener<Challenge> {
 
@@ -29,7 +29,7 @@ class ShowcaseActivity : BaseActivity(), ItemListener<Challenge> {
         mCardAdapter = CardPagerAdapter(this)
         mCardAdapter?.addItems(loadChallengesFromJSONUsing(classLoader)!!)
 
-        challengesViewPager?.pageMargin = dipTopx(12)
+        challengesViewPager?.pageMargin = dipToPx(12)
         setupViewPager()
     }
 
