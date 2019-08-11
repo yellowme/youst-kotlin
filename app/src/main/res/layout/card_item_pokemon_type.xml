@@ -33,7 +33,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="TYPE"/>
 
-        <mx.yellowme.youst.components.TriangularView
+        <mx.yellowme.youst.core.components.TriangularView
                 android:id="@+id/typeDecoration"
                 android:layout_width="0dp"
                 android:layout_weight="0.5"

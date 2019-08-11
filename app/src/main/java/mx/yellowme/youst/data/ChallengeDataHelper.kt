@@ -2,7 +2,7 @@ package mx.yellowme.youst.data;
 
 import mx.yellowme.youst.core.domain.AllChallenges
 import mx.yellowme.youst.core.domain.Challenge
-import mx.yellowme.youst.utils.readJson
+import mx.yellowme.youst.core.utils.readJson
 
 object ChallengeDataHelper {
     /**

@@ -1,4 +1,4 @@
-package mx.yellowme.youst.utils
+package mx.yellowme.youst.core.utils
 
 import android.util.TypedValue
 import android.view.View
@@ -7,7 +7,7 @@ import com.squareup.moshi.Moshi
 import java.io.IOException
 import java.util.*
 
-fun AppCompatActivity.dipTopx(dip: Int): Int {
+fun AppCompatActivity.dipToPx(dip: Int): Int {
     return TypedValue.applyDimension(
         TypedValue.COMPLEX_UNIT_DIP,
         dip.toFloat(),

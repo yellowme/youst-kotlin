@@ -1,4 +1,4 @@
-package mx.yellowme.youst.components
+package mx.yellowme.youst.core.components
 
 import android.content.Context
 import android.graphics.Canvas
@@ -8,9 +8,8 @@ import android.graphics.Path
 import android.util.AttributeSet
 import android.view.View
 import androidx.annotation.ColorInt
-import mx.yellowme.youst.R
-import mx.yellowme.youst.extensions.consumeTypeArray
-
+import mx.yellowme.youst.core.R
+import mx.yellowme.youst.core.extensions.consumeTypeArray
 
 /**
  * youst-kotlin

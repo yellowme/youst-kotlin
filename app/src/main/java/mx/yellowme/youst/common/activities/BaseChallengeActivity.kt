@@ -12,7 +12,7 @@ import mx.yellowme.youst.core.domain.Challenge
 import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.data.ChallengeDataHelper
-import mx.yellowme.youst.utils.findOrThrow
+import mx.yellowme.youst.core.utils.findOrThrow
 
 /**
  * TODO: Add javadoc

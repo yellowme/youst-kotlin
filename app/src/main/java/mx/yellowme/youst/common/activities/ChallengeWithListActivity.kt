@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import mx.yellowme.youst.R
 import mx.yellowme.youst.common.RecyclerViewHolderDecorable
 import mx.yellowme.youst.common.SimpleRecyclerAdapter
-import mx.yellowme.youst.utils.findOrThrow
+import mx.yellowme.youst.core.utils.findOrThrow
 
 /**
  * TODO: Add javadoc
