@@ -36,8 +36,7 @@
             </intent-filter>
         </activity>
         <activity
-<<<<<<< HEAD
-            android:name=".components.pokemon.show.PokemonDetailActivity"
+            android:name=".pokemon.show.PokemonDetailActivity"
             android:label="@string/pokemon_detail"
             android:theme="@style/SharedAppTheme.NoActionBar" />
         <activity
@@ -48,11 +47,6 @@
             android:name=".presentation.challenges.ListenToMeChallengeActivity"
             android:label="@string/activity_challenge_title_listen_to_me"
             android:theme="@style/SharedAppTheme.NoActionBar" />
-=======
-                android:name=".pokemon.show.PokemonDetailActivity"
-                android:label="@string/pokemon_detail"
-                android:theme="@style/SharedAppTheme.NoActionBar"/>
->>>>>>> Add core library module
         <activity
             android:name=".presentation.challenges.navigation.NavigationActivity"
             android:label="Jetpack Navigation"
@@ -63,9 +57,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".presentation.showcase.ShowcaseActivity" />
         </activity>
-        <activity
-            android:name=".presentation.challenges.navigation.LastFragment"
-            android:theme="@style/SharedAppTheme.NoActionBar.TransparentStatus" />
 
         <meta-data
             android:name="preloaded_fonts"
