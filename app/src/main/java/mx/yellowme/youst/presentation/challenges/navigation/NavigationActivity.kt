@@ -1,13 +1,10 @@
 package mx.yellowme.youst.presentation.challenges.navigation
 
 import mx.yellowme.youst.R
-import mx.yellowme.youst.common.activities.BaseActivity
+import mx.yellowme.youst.core.hooks.BaseActivity
 
 class NavigationActivity : BaseActivity() {
 
-    override val layoutResource: Int
-        get() = R.layout.screen_challenge_navigation
-
-    override fun bindViews() {}
+    override val layoutId: Int = R.layout.screen_challenge_navigation
 
 }

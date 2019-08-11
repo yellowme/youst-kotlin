@@ -12,7 +12,6 @@ import androidx.navigation.fragment.navArgs
 import kotlinx.android.synthetic.main.screen_destination_three.*
 import mx.yellowme.youst.R
 
-
 class LastFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -39,4 +38,5 @@ class LastFragment : Fragment() {
         val args: LastFragmentArgs by navArgs()
         goodbyeTextView.text = getString(R.string.navigation_title_step_3, args.nameArg)
     }
+
 }
