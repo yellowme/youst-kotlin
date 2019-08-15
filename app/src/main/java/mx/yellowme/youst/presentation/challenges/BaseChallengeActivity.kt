@@ -1,4 +1,4 @@
-package mx.yellowme.youst.common.activities
+package mx.yellowme.youst.presentation.challenges
 
 import android.os.Bundle
 import android.view.Menu
@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import mx.yellowme.youst.R
-import mx.yellowme.youst.common.dialogs.SimpleInfoDialogBuilder
+import mx.yellowme.youst.core.components.dialogs.SimpleInfoDialogBuilder
 import mx.yellowme.youst.core.domain.Challenge
 import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.core.hooks.BaseActivity

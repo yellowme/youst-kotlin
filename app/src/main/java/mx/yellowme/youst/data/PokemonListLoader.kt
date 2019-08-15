@@ -1,6 +1,6 @@
 package mx.yellowme.youst.data;
 
-import mx.yellowme.youst.common.activities.ChallengeWithListActivity
+import mx.yellowme.youst.presentation.challenges.ChallengeWithListActivity
 import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.pokemon.index.PokemonListViewHolder
 import mx.yellowme.youst.domain.Pokemon

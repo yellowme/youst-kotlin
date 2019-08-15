@@ -7,8 +7,8 @@ import android.widget.TextView
 import androidx.core.graphics.drawable.DrawableCompat
 import com.squareup.picasso.Picasso
 import mx.yellowme.youst.R
-import mx.yellowme.youst.common.ItemListener
-import mx.yellowme.youst.common.RecyclerViewHolderDecorable
+import mx.yellowme.youst.core.hooks.recycler.ItemListener
+import mx.yellowme.youst.core.hooks.recycler.RecyclerViewHolderDecorator
 import mx.yellowme.youst.domain.Pokemon
 
 /**
@@ -17,7 +17,7 @@ import mx.yellowme.youst.domain.Pokemon
 class PokemonListViewHolder internal constructor(
     itemView: View,
     private val listener: ItemListener<Pokemon>?
-) : RecyclerViewHolderDecorable<Pokemon>(itemView) {
+) : RecyclerViewHolderDecorator<Pokemon>(itemView) {
 
     private val imageView: ImageView = itemView.findViewById(R.id.imageView)
     private val nameTextView: TextView = itemView.findViewById(R.id.nameTextView)

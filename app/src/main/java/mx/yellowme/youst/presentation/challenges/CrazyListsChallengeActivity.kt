@@ -3,10 +3,8 @@ package mx.yellowme.youst.presentation.challenges
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import mx.yellowme.youst.R
-import mx.yellowme.youst.common.ItemListener
-import mx.yellowme.youst.common.SimpleRecyclerAdapter
-import mx.yellowme.youst.common.activities.BaseChallengeActivity
-import mx.yellowme.youst.common.activities.ChallengeWithListActivity
+import mx.yellowme.youst.core.hooks.recycler.ItemListener
+import mx.yellowme.youst.core.hooks.recycler.SimpleRecyclerAdapter
 import mx.yellowme.youst.pokemon.index.PokemonListAdapter
 import mx.yellowme.youst.pokemon.index.PokemonListViewHolder
 import mx.yellowme.youst.core.domain.Challenge

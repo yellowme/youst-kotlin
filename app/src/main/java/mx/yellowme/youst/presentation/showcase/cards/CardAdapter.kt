@@ -1,4 +1,4 @@
-package mx.yellowme.youst.common.cards
+package mx.yellowme.youst.presentation.showcase.cards
 
 import androidx.cardview.widget.CardView
 
@@ -16,4 +16,5 @@ interface CardAdapter {
     }
 
     fun getCount(): Int
+
 }

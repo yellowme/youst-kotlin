@@ -1,4 +1,4 @@
-package mx.yellowme.youst.common.activities;
+package mx.yellowme.youst.presentation.challenges;
 
 import android.os.Bundle
 import android.view.View.GONE
@@ -8,14 +8,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import mx.yellowme.youst.R
-import mx.yellowme.youst.common.RecyclerViewHolderDecorable
-import mx.yellowme.youst.common.SimpleRecyclerAdapter
+import mx.yellowme.youst.core.hooks.recycler.SimpleRecyclerAdapter
+import mx.yellowme.youst.core.hooks.recycler.RecyclerViewHolderDecorator
 import mx.yellowme.youst.core.utils.findOrThrow
 
 /**
  * TODO: Add javadoc
  */
-abstract class ChallengeWithListActivity<Model, ViewHolder : RecyclerViewHolderDecorable<Model>> : BaseChallengeActivity() {
+abstract class ChallengeWithListActivity<Model, ViewHolder : RecyclerViewHolderDecorator<Model>> : BaseChallengeActivity() {
 
     private var adapter: SimpleRecyclerAdapter<Model, ViewHolder>? = null
 
