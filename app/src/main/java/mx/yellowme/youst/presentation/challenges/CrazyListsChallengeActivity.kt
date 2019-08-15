@@ -10,7 +10,7 @@ import mx.yellowme.youst.pokemon.index.PokemonListViewHolder
 import mx.yellowme.youst.core.domain.Challenge
 import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.data.PokemonListLoader
-import mx.yellowme.youst.domain.Pokemon
+import mx.yellowme.youst.core.domain.Pokemon
 import java.util.*
 
 class CrazyListsChallengeActivity : ChallengeWithListActivity<Pokemon, PokemonListViewHolder>(),

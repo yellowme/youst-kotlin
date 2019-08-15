@@ -6,7 +6,7 @@ import mx.yellowme.youst.pokemon.types.PokemonTypeAdapter
 import mx.yellowme.youst.pokemon.types.PokemonTypeListViewHolder
 import mx.yellowme.youst.core.domain.Challenge
 import mx.yellowme.youst.domain.PokemonType
-import mx.yellowme.youst.domain.PokemonTypeSelection
+import mx.yellowme.youst.core.domain.PokemonTypeSelection
 import java.util.*
 
 class ListenToMeChallengeActivity : ChallengeWithListActivity<PokemonTypeSelection, PokemonTypeListViewHolder>(),

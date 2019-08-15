@@ -3,7 +3,7 @@ package mx.yellowme.youst.data;
 import mx.yellowme.youst.presentation.challenges.ChallengeWithListActivity
 import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.pokemon.index.PokemonListViewHolder
-import mx.yellowme.youst.domain.Pokemon
+import mx.yellowme.youst.core.domain.Pokemon
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,7 +19,7 @@ object PokemonListLoader {
         view.setState(ChallengeWithListActivity.ListState.LOADING)
         call.enqueue(object : Callback<MutableList<Pokemon>> {
             override fun onResponse(
-                call: Call<MutableList<Pokemon>>, response: Response<MutableList<Pokemon>>
+                    call: Call<MutableList<Pokemon>>, response: Response<MutableList<Pokemon>>
             ) {
                 view.setState(ChallengeWithListActivity.ListState.LOADED)
                 if (response.isSuccessful) {
@@ -28,7 +28,7 @@ object PokemonListLoader {
             }
 
             override fun onFailure(
-                call: Call<MutableList<Pokemon>>, t: Throwable
+                    call: Call<MutableList<Pokemon>>, t: Throwable
             ) {
                 view.setState(ChallengeWithListActivity.ListState.LOADED)
                 view.toast("Error")

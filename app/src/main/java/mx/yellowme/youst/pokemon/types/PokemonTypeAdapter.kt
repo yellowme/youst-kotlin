@@ -5,14 +5,14 @@ import android.view.ViewGroup
 import mx.yellowme.youst.R
 import mx.yellowme.youst.core.hooks.recycler.ItemListener
 import mx.yellowme.youst.core.hooks.recycler.SimpleRecyclerAdapter
-import mx.yellowme.youst.domain.PokemonTypeSelection
+import mx.yellowme.youst.core.domain.PokemonTypeSelection
 
 /**
  * TODO: Add docs
  */
 class PokemonTypeAdapter(
-    pokemonTypes: MutableList<PokemonTypeSelection>,
-    itemListener: ItemListener<PokemonTypeSelection>?
+        pokemonTypes: MutableList<PokemonTypeSelection>,
+        itemListener: ItemListener<PokemonTypeSelection>?
 ) : SimpleRecyclerAdapter<PokemonTypeSelection, PokemonTypeListViewHolder>(pokemonTypes, itemListener) {
 
     /**

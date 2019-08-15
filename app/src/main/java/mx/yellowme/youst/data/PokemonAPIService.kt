@@ -1,6 +1,6 @@
 package mx.yellowme.youst.data;
 
-import mx.yellowme.youst.domain.Pokemon
+import mx.yellowme.youst.core.domain.Pokemon
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
