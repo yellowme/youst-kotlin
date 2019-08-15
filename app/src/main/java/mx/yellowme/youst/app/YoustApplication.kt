@@ -1,8 +1,8 @@
-package mx.yellowme.youst.app;
+package mx.yellowme.youst.app
 
-import android.app.Application;
-import androidx.emoji.bundled.BundledEmojiCompatConfig;
-import androidx.emoji.text.EmojiCompat;
+import android.app.Application
+import androidx.emoji.bundled.BundledEmojiCompatConfig
+import androidx.emoji.text.EmojiCompat
 
 class YoustApplication : Application() {
     override fun onCreate() {

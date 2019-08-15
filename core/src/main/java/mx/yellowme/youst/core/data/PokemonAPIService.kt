@@ -1,4 +1,4 @@
-package mx.yellowme.youst.core.data;
+package mx.yellowme.youst.core.data
 
 import mx.yellowme.youst.core.domain.Pokemon
 import retrofit2.Call

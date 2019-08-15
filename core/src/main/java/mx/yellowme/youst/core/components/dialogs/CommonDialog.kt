@@ -1,4 +1,4 @@
-package mx.yellowme.youst.core.components.dialogs;
+package mx.yellowme.youst.core.components.dialogs
 
 import android.app.Dialog
 import android.content.Context
@@ -70,7 +70,10 @@ abstract class CommonDialog private constructor(
             window.windowManager?.let {
                 val display = it.defaultDisplay
                 display.getSize(size)
-                window.setLayout((size.x * percentage).toInt(), WindowManager.LayoutParams.WRAP_CONTENT)
+                window.setLayout(
+                    (size.x * percentage).toInt(),
+                    WindowManager.LayoutParams.WRAP_CONTENT
+                )
                 window.setGravity(Gravity.CENTER)
             }
         }

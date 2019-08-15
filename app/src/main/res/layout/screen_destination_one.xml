@@ -8,10 +8,10 @@
 
     <androidx.emoji.widget.EmojiTextView
         style="@style/Title"
-        android:textSize="40sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/navigation_title_emoji_1"
+        android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@id/greetingTextView"
         app:layout_constraintStart_toStartOf="parent" />
 

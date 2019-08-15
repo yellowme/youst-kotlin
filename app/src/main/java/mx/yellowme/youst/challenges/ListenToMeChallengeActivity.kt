@@ -9,8 +9,9 @@ import mx.yellowme.youst.pokemon.types.PokemonTypeAdapter
 import mx.yellowme.youst.pokemon.types.PokemonTypeListViewHolder
 import java.util.*
 
-class ListenToMeChallengeActivity : ChallengeWithListActivity<PokemonTypeSelection, PokemonTypeListViewHolder>(),
-        BaseChallengeActivity.MenuActionsListener {
+class ListenToMeChallengeActivity :
+    ChallengeWithListActivity<PokemonTypeSelection, PokemonTypeListViewHolder>(),
+    BaseChallengeActivity.MenuActionsListener {
 
     override val layoutId = R.layout.screen_challenge_listen_to_me
 

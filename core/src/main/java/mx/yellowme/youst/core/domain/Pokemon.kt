@@ -1,4 +1,4 @@
-package mx.yellowme.youst.core.domain;
+package mx.yellowme.youst.core.domain
 
 /**
  * Main application domain model.

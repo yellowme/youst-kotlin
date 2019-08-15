@@ -15,9 +15,9 @@
         <item name="android:statusBarColor">@color/black</item>
     </style>
 
-    <style name="SharedAppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="SharedAppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="SharedAppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="SharedAppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="SharedAppTheme.Translucent">
         <!-- using a semi-transparent window background for the drag-back gesture -->
@@ -40,9 +40,9 @@
         <item name="android:paddingEnd">16dp</item>
     </style>
 
-    <style name="BaseStyledButton.Borderless" parent="Base.Widget.AppCompat.Button.Borderless"/>
+    <style name="BaseStyledButton.Borderless" parent="Base.Widget.AppCompat.Button.Borderless" />
 
-    <style name="BaseStyledButton.Colored" parent="Base.Widget.AppCompat.Button.Colored"/>
+    <style name="BaseStyledButton.Colored" parent="Base.Widget.AppCompat.Button.Colored" />
 
     <style name="BaseStyledButton.Colored.Main">
         <item name="android:layout_width">match_parent</item>

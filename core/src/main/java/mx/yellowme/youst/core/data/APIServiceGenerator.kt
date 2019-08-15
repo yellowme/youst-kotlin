@@ -1,4 +1,4 @@
-package mx.yellowme.youst.core.data;
+package mx.yellowme.youst.core.data
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

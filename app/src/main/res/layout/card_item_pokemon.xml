@@ -23,7 +23,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.Barrier
             android:id="@+id/typesBarrier"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             app:barrierDirection="bottom"
-            app:constraint_referenced_ids="imageView"/>
+            app:constraint_referenced_ids="imageView" />
 
         <View
             android:id="@+id/firstTypeView"
@@ -44,7 +44,7 @@
             app:layout_constraintStart_toStartOf="@id/imageView"
             app:layout_constraintTop_toBottomOf="@id/typesBarrier"
             app:layout_constraintVertical_chainStyle="packed"
-            tools:text="Type #1"/>
+            tools:text="Type #1" />
 
         <View
             android:id="@+id/secondTypeView"
@@ -57,7 +57,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/firstTypeView"
             app:layout_constraintTop_toBottomOf="@id/typesBarrier"
-            tools:text="Type #2"/>
+            tools:text="Type #2" />
 
         <TextView
             android:id="@+id/nameTextView"
@@ -69,7 +69,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/typesBarrier"
-            tools:text="Name"/>
+            tools:text="Name" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

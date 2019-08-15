@@ -1,4 +1,4 @@
-package mx.yellowme.youst.core.components.dialogs;
+package mx.yellowme.youst.core.components.dialogs
 
 import android.app.Activity
 

@@ -15,14 +15,18 @@ class GreetingFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         navigateButton?.setOnClickListener {
-            val action = GreetingFragmentDirections.toSecondDestination(nameEditText.text.toString())
+            val action =
+                GreetingFragmentDirections.toSecondDestination(nameEditText.text.toString())
             findNavController().navigate(action)
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.screen_destination_one, container, false)
     }
-
 
 }

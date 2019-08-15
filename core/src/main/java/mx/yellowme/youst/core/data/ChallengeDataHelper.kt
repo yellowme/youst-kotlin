@@ -1,4 +1,4 @@
-package mx.yellowme.youst.core.data;
+package mx.yellowme.youst.core.data
 
 import mx.yellowme.youst.core.domain.AllChallenges
 import mx.yellowme.youst.core.domain.Challenge
@@ -11,7 +11,7 @@ object ChallengeDataHelper {
      */
     fun loadChallengesFromJSONUsing(loader: ClassLoader?): List<Challenge>? {
         val challenges = loader?.readJson(
-                    "challenges.json", AllChallenges::class.java
+            "challenges.json", AllChallenges::class.java
         ) as? AllChallenges
 
         return challenges?.challenges

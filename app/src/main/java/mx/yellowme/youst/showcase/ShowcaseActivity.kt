@@ -3,19 +3,19 @@ package mx.yellowme.youst.showcase
 import android.os.Bundle
 import kotlinx.android.synthetic.main.screen_showcase.*
 import mx.yellowme.youst.R
-import mx.yellowme.youst.core.hooks.recycler.ItemListener
 import mx.yellowme.youst.challenges.BaseChallengeActivity.Companion.TOOLBAR_TITLE
-import mx.yellowme.youst.showcase.cards.CardPagerAdapter
-import mx.yellowme.youst.showcase.cards.ShadowTransformer
+import mx.yellowme.youst.challenges.CrazyListsChallengeActivity
+import mx.yellowme.youst.challenges.ListenToMeChallengeActivity
+import mx.yellowme.youst.challenges.navigation.NavigationActivity
+import mx.yellowme.youst.core.data.ChallengeDataHelper.loadChallengesFromJSONUsing
 import mx.yellowme.youst.core.domain.Challenge
 import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.core.hooks.BaseActivity
+import mx.yellowme.youst.core.hooks.recycler.ItemListener
 import mx.yellowme.youst.core.utils.dipToPx
-import mx.yellowme.youst.core.data.ChallengeDataHelper.loadChallengesFromJSONUsing
-import mx.yellowme.youst.challenges.CrazyListsChallengeActivity
-import mx.yellowme.youst.challenges.ListenToMeChallengeActivity
-import mx.yellowme.youst.challenges.navigation.NavigationActivity
+import mx.yellowme.youst.showcase.cards.CardPagerAdapter
+import mx.yellowme.youst.showcase.cards.ShadowTransformer
 
 class ShowcaseActivity : BaseActivity(), ItemListener<Challenge> {
 
