@@ -1,4 +1,4 @@
-package mx.yellowme.youst.presentation.challenges;
+package mx.yellowme.youst.challenges;
 
 import android.os.Bundle
 import android.view.View.GONE

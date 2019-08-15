@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".presentation.challenges.ListenToMeChallengeActivity">
+    tools:context=".challenges.ListenToMeChallengeActivity">
 
     <include layout="@layout/component_back_app_bar" />
 

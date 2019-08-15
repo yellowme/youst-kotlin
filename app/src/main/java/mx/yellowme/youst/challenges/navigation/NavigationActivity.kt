@@ -1,4 +1,4 @@
-package mx.yellowme.youst.presentation.challenges.navigation
+package mx.yellowme.youst.challenges.navigation
 
 import mx.yellowme.youst.R
 import mx.yellowme.youst.core.hooks.BaseActivity

@@ -1,4 +1,4 @@
-package mx.yellowme.youst.data;
+package mx.yellowme.youst.core.data;
 
 import mx.yellowme.youst.core.domain.AllChallenges
 import mx.yellowme.youst.core.domain.Challenge

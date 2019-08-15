@@ -1,4 +1,4 @@
-package mx.yellowme.youst.presentation.challenges.navigation
+package mx.yellowme.youst.challenges.navigation
 
 import android.os.Bundle
 import android.view.LayoutInflater
