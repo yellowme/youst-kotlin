@@ -36,4 +36,5 @@
     <string name="action_next">Next</string>
     <string name="action_go_back">Go back</string>
     <string name="yellowme_link">yellowme.mx 💛</string>
+    <string name="deep_link_widget">Deep Link</string>
 </resources>

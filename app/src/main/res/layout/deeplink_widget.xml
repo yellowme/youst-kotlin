@@ -3,4 +3,4 @@
     android:id="@+id/deep_link_button"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:text="Deep Link" />
+    android:text="@string/deep_link_widget" />
