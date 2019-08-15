@@ -34,7 +34,6 @@ fun ViewGroup.inflate(layoutIdRes: Int, context: Context): View {
     return LayoutInflater.from(context).inflate(layoutIdRes, this, true)
 }
 
-
 /**
  * Change visibility in order to disappear from the screen.
  */

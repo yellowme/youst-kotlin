@@ -10,6 +10,7 @@
         android:name="mx.yellowme.youst.challenges.navigation.GreetingFragment"
         android:label="DestinationOneFragment"
         tools:layout="@layout/screen_destination_one">
+
         <action
             android:id="@+id/toSecondDestination"
             app:destination="@id/middleFragment"
@@ -17,6 +18,7 @@
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left" />
+
     </fragment>
 
     <fragment
@@ -36,6 +38,7 @@
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left" />
+
     </fragment>
 
     <fragment
@@ -52,12 +55,13 @@
             app:destination="@id/greetingFragment"
             app:popUpTo="@+id/greetingFragment"
             app:popUpToInclusive="true" />
+
     </fragment>
 
     <fragment
         android:id="@+id/deepLinkFragment"
         android:name="mx.yellowme.youst.challenges.navigation.DeepLinkDestinationFragment"
         android:label="DeepLinkDestinationFragment"
-        tools:layout="@layout/screen_deeplink_destination" />
+        tools:layout="@layout/screen_deep_link_destination" />
 
 </navigation>
