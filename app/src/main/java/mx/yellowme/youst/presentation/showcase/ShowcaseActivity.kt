@@ -7,15 +7,16 @@ import mx.yellowme.youst.common.ItemListener
 import mx.yellowme.youst.common.activities.BaseChallengeActivity.Companion.TOOLBAR_TITLE
 import mx.yellowme.youst.common.cards.CardPagerAdapter
 import mx.yellowme.youst.common.cards.ShadowTransformer
-import mx.yellowme.youst.common.start
 import mx.yellowme.youst.core.domain.Challenge
+import mx.yellowme.youst.core.extensions.launch
+import mx.yellowme.youst.core.extensions.newIntent
 import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.core.hooks.BaseActivity
+import mx.yellowme.youst.core.utils.dipToPx
 import mx.yellowme.youst.data.ChallengeDataHelper.loadChallengesFromJSONUsing
 import mx.yellowme.youst.presentation.challenges.CrazyListsChallengeActivity
 import mx.yellowme.youst.presentation.challenges.ListenToMeChallengeActivity
 import mx.yellowme.youst.presentation.challenges.navigation.NavigationActivity
-import mx.yellowme.youst.core.utils.dipToPx
 
 class ShowcaseActivity : BaseActivity(), ItemListener<Challenge> {
 
@@ -52,7 +53,9 @@ class ShowcaseActivity : BaseActivity(), ItemListener<Challenge> {
                 else -> throw RuntimeException("Invalid challenge identifier")
             }
 
-            start(nextActivity, hashMapOf(TOOLBAR_TITLE to item.title))
+            launch(nextActivity) {
+                putExtra(TOOLBAR_TITLE, item.title)
+            }
         }
     }
 
