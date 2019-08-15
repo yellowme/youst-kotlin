@@ -13,7 +13,7 @@ import android.util.AttributeSet
  */
 fun AttributeSet.asTypeArray(context: Context, styleableResId: IntArray): TypedArray? {
     return context.theme.obtainStyledAttributes(
-            this, styleableResId, 0, 0
+        this, styleableResId, 0, 0
     )
 }
 
@@ -22,9 +22,10 @@ fun AttributeSet.asTypeArray(context: Context, styleableResId: IntArray): TypedA
  * [AttributeSet.asTypeArray] method.
  */
 inline fun AttributeSet.consumeTypeArray(
-        context: Context,
-        styleableResId: IntArray,
-        consume: TypedArray.() -> Unit = {}) {
+    context: Context,
+    styleableResId: IntArray,
+    consume: TypedArray.() -> Unit = {}
+) {
 
     asTypeArray(context, styleableResId)?.apply {
         consume()

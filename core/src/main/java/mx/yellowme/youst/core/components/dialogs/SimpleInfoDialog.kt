@@ -1,4 +1,4 @@
-package mx.yellowme.youst.core.components.dialogs;
+package mx.yellowme.youst.core.components.dialogs
 
 import android.app.Activity
 import android.view.View
@@ -10,7 +10,8 @@ import mx.yellowme.youst.core.R
  * Displays a custom dialog with a title, description and
  * a back button, all elements are customizable.
  */
-abstract class SimpleInfoDialog internal constructor(source: Activity) : CommonDialog(source), View.OnClickListener {
+abstract class SimpleInfoDialog internal constructor(source: Activity) : CommonDialog(source),
+    View.OnClickListener {
 
     //region Decoration Attributes
 

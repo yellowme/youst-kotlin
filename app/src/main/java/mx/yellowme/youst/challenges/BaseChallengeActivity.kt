@@ -8,10 +8,10 @@ import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import mx.yellowme.youst.R
 import mx.yellowme.youst.core.components.dialogs.SimpleInfoDialogBuilder
+import mx.yellowme.youst.core.data.ChallengeDataHelper
 import mx.yellowme.youst.core.domain.Challenge
 import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.core.hooks.BaseActivity
-import mx.yellowme.youst.core.data.ChallengeDataHelper
 import mx.yellowme.youst.core.utils.findOrThrow
 
 /**

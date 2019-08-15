@@ -3,14 +3,14 @@ package mx.yellowme.youst.challenges
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import mx.yellowme.youst.R
+import mx.yellowme.youst.core.domain.Challenge
+import mx.yellowme.youst.core.domain.Pokemon
+import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.core.hooks.recycler.ItemListener
 import mx.yellowme.youst.core.hooks.recycler.SimpleRecyclerAdapter
+import mx.yellowme.youst.pokemon.PokemonListLoader
 import mx.yellowme.youst.pokemon.index.PokemonListAdapter
 import mx.yellowme.youst.pokemon.index.PokemonListViewHolder
-import mx.yellowme.youst.core.domain.Challenge
-import mx.yellowme.youst.core.extensions.toast
-import mx.yellowme.youst.pokemon.PokemonListLoader
-import mx.yellowme.youst.core.domain.Pokemon
 import java.util.*
 
 class CrazyListsChallengeActivity : ChallengeWithListActivity<Pokemon, PokemonListViewHolder>(),

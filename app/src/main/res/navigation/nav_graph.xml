@@ -48,9 +48,10 @@
             android:name="nameArg"
             app:argType="string" />
         <action
-                android:id="@+id/backToGreeting"
-                app:destination="@id/greetingFragment"
-                app:popUpTo="@+id/greetingFragment" app:popUpToInclusive="true"/>
+            android:id="@+id/backToGreeting"
+            app:destination="@id/greetingFragment"
+            app:popUpTo="@+id/greetingFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment

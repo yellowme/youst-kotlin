@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/SharedAppTheme">
         <activity
-            android:name="mx.yellowme.youst.splash.SplashActivity"
+            android:name=".splash.SplashActivity"
             android:theme="@style/SharedAppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="mx.yellowme.youst.showcase.ShowcaseActivity"
+            android:name=".showcase.ShowcaseActivity"
             android:label="@string/app_name"
             android:theme="@style/SharedAppTheme.NoActionBar">
             <intent-filter>
@@ -40,35 +40,35 @@
             android:label="@string/pokemon_detail"
             android:theme="@style/SharedAppTheme.NoActionBar" />
         <activity
-            android:name="mx.yellowme.youst.challenges.CrazyListsChallengeActivity"
+            android:name=".challenges.CrazyListsChallengeActivity"
             android:label="@string/activity_challenge_title_crazy_lists"
             android:theme="@style/SharedAppTheme.NoActionBar" />
         <activity
-            android:name="mx.yellowme.youst.challenges.ListenToMeChallengeActivity"
+            android:name=".challenges.ListenToMeChallengeActivity"
             android:label="@string/activity_challenge_title_listen_to_me"
             android:theme="@style/SharedAppTheme.NoActionBar" />
         <activity
-            android:name="mx.yellowme.youst.challenges.navigation.NavigationActivity"
+            android:name=".challenges.navigation.NavigationActivity"
             android:label="Jetpack Navigation"
-            android:parentActivityName="mx.yellowme.youst.showcase.ShowcaseActivity"
+            android:parentActivityName=".showcase.ShowcaseActivity"
             android:theme="@style/SharedAppTheme.NoActionBar.TransparentStatus">
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="mx.yellowme.youst.showcase.ShowcaseActivity" />
+                android:value=".showcase.ShowcaseActivity" />
         </activity>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <receiver android:name="mx.yellowme.youst.challenges.navigation.DeepLinkWidgetProvider">
+        <receiver android:name=".challenges.navigation.DeepLinkWidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/deeplink_widget_info" />
+                android:resource="@xml/deep_link_widget_info" />
         </receiver>
     </application>
 

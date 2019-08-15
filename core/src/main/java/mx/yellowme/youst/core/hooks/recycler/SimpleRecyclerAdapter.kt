@@ -1,4 +1,4 @@
-package mx.yellowme.youst.core.hooks.recycler;
+package mx.yellowme.youst.core.hooks.recycler
 
 import androidx.recyclerview.widget.RecyclerView
 

@@ -7,7 +7,7 @@
     android:background="@color/white"
     tools:context=".challenges.CrazyListsChallengeActivity">
 
-    <include layout="@layout/component_back_app_bar"/>
+    <include layout="@layout/component_back_app_bar" />
 
     <TextView
         android:id="@+id/emptyMessageTextView"
@@ -19,7 +19,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Empty list"/>
+        tools:text="Empty list" />
 
     <ProgressBar
         android:id="@+id/loadingProgressBar"
@@ -30,7 +30,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -44,7 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/mainAppBar"
-        tools:listitem="@layout/card_item_pokemon"/>
+        tools:listitem="@layout/card_item_pokemon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

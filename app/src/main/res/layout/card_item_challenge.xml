@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            tools:text="Title"/>
+            tools:text="Title" />
 
         <TextView
             android:id="@+id/contentTextView"
@@ -33,7 +33,7 @@
             android:layout_alignStart="@id/mainAction"
             android:layout_marginTop="6dp"
             android:gravity="top"
-            tools:text="Subtitle"/>
+            tools:text="Subtitle" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/mainAction"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="24dp"
-            android:text="@string/action_open_challenge"/>
+            android:text="@string/action_open_challenge" />
 
     </RelativeLayout>
 
@@ -56,6 +56,6 @@
         android:layout_marginTop="-8dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/content_description_card_bookmark"
-        tools:src="@drawable/ic_bookmark_blue"/>
+        tools:src="@drawable/ic_bookmark_blue" />
 
 </com.google.android.material.card.MaterialCardView>

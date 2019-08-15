@@ -1,4 +1,4 @@
-package mx.yellowme.youst.core.domain;
+package mx.yellowme.youst.core.domain
 
 import android.content.Context
 import androidx.core.content.ContextCompat

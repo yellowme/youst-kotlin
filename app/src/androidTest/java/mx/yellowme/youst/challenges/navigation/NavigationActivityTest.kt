@@ -28,6 +28,8 @@ class NavigationActivityTest {
         onView(withId(R.id.navigateButton)).perform(click())
 
         //Verifying that the text is displayed
-        onView(withText("Nice to meet you, Cesar! Tell us... what are you passionate about?")).check(matches(isDisplayed()))
+        onView(withText("Nice to meet you, Cesar! Tell us... what are you passionate about?")).check(
+            matches(isDisplayed())
+        )
     }
 }

@@ -52,7 +52,7 @@
                         android:contentDescription="@string/content_description_right_action"
                         android:src="@drawable/ic_back_black"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/toolbarTitle"
@@ -63,7 +63,7 @@
                         android:paddingEnd="8dp"
                         android:text="@string/toolbar_title"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/leftAction"/>
+                        app:layout_constraintTop_toBottomOf="@id/leftAction" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
