@@ -1,4 +1,4 @@
-package mx.yellowme.youst.presentation.challenges.navigation
+package mx.yellowme.youst.challenges.navigation
 
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider

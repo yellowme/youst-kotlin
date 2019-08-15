@@ -1,7 +1,7 @@
 package mx.yellowme.youst.pokemon.show
 
 import  mx.yellowme.youst.R;
-import  mx.yellowme.youst.presentation.challenges.BaseChallengeActivity;
+import  mx.yellowme.youst.challenges.BaseChallengeActivity;
 
 class PokemonDetailActivity : BaseChallengeActivity() {
 

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/greetingFragment"
-        android:name="mx.yellowme.youst.presentation.challenges.navigation.GreetingFragment"
+        android:name="mx.yellowme.youst.challenges.navigation.GreetingFragment"
         android:label="DestinationOneFragment"
         tools:layout="@layout/screen_destination_one">
         <action
@@ -21,7 +21,7 @@
 
     <fragment
         android:id="@+id/middleFragment"
-        android:name="mx.yellowme.youst.presentation.challenges.navigation.MiddleFragment"
+        android:name="mx.yellowme.youst.challenges.navigation.MiddleFragment"
         android:label="DestinationTwoFragment"
         tools:layout="@layout/screen_destination_two">
 
@@ -40,7 +40,7 @@
 
     <fragment
         android:id="@+id/lastFragment"
-        android:name="mx.yellowme.youst.presentation.challenges.navigation.LastFragment"
+        android:name="mx.yellowme.youst.challenges.navigation.LastFragment"
         android:label="DestinationThreeFragment"
         tools:layout="@layout/screen_destination_three">
 
@@ -55,7 +55,7 @@
 
     <fragment
         android:id="@+id/deepLinkFragment"
-        android:name="mx.yellowme.youst.presentation.challenges.navigation.DeepLinkDestinationFragment"
+        android:name="mx.yellowme.youst.challenges.navigation.DeepLinkDestinationFragment"
         android:label="DeepLinkDestinationFragment"
         tools:layout="@layout/screen_deeplink_destination" />
 

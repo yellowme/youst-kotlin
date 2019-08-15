@@ -1,16 +1,16 @@
-package mx.yellowme.youst.presentation.challenges
+package mx.yellowme.youst.challenges
 
 import mx.yellowme.youst.R
+import mx.yellowme.youst.core.domain.Challenge
+import mx.yellowme.youst.core.domain.PokemonType
+import mx.yellowme.youst.core.domain.PokemonTypeSelection
 import mx.yellowme.youst.core.hooks.recycler.SimpleRecyclerAdapter
 import mx.yellowme.youst.pokemon.types.PokemonTypeAdapter
 import mx.yellowme.youst.pokemon.types.PokemonTypeListViewHolder
-import mx.yellowme.youst.core.domain.Challenge
-import mx.yellowme.youst.domain.PokemonType
-import mx.yellowme.youst.core.domain.PokemonTypeSelection
 import java.util.*
 
 class ListenToMeChallengeActivity : ChallengeWithListActivity<PokemonTypeSelection, PokemonTypeListViewHolder>(),
-    BaseChallengeActivity.MenuActionsListener {
+        BaseChallengeActivity.MenuActionsListener {
 
     override val layoutId = R.layout.screen_challenge_listen_to_me
 

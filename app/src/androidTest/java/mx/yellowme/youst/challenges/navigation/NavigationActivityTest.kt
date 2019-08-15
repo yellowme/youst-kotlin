@@ -1,4 +1,4 @@
-package mx.yellowme.youst.presentation.challenges.navigation
+package mx.yellowme.youst.challenges.navigation
 
 import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView

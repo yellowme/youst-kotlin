@@ -1,4 +1,4 @@
-package mx.yellowme.youst.presentation.challenges
+package mx.yellowme.youst.challenges
 
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -9,7 +9,7 @@ import mx.yellowme.youst.pokemon.index.PokemonListAdapter
 import mx.yellowme.youst.pokemon.index.PokemonListViewHolder
 import mx.yellowme.youst.core.domain.Challenge
 import mx.yellowme.youst.core.extensions.toast
-import mx.yellowme.youst.data.PokemonListLoader
+import mx.yellowme.youst.pokemon.PokemonListLoader
 import mx.yellowme.youst.core.domain.Pokemon
 import java.util.*
 
