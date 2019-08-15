@@ -1,4 +1,4 @@
-package mx.yellowme.youst.common.cards;
+package mx.yellowme.youst.presentation.showcase.cards;
 
 import android.view.LayoutInflater
 import android.view.View
@@ -10,14 +10,15 @@ import androidx.viewpager.widget.PagerAdapter
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 import mx.yellowme.youst.R
-import mx.yellowme.youst.common.ItemListener
-import mx.yellowme.youst.common.cards.CardAdapter.Companion.MAX_ELEVATION_FACTOR
+import mx.yellowme.youst.presentation.showcase.cards.CardAdapter.Companion.MAX_ELEVATION_FACTOR
 import mx.yellowme.youst.core.domain.Challenge
+import mx.yellowme.youst.core.hooks.recycler.ItemListener
 import java.util.*
 
 /**
  * TODO: Needs refactor
  */
+@Suppress("MemberVisibilityCanBePrivate")
 open class CardPagerAdapter(itemListener: ItemListener<Challenge>) : PagerAdapter(), CardAdapter {
 
     private val mViews: MutableList<MaterialCardView?>

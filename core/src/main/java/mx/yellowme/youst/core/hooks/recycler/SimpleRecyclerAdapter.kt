@@ -1,4 +1,4 @@
-package mx.yellowme.youst.common;
+package mx.yellowme.youst.core.hooks.recycler;
 
 import androidx.recyclerview.widget.RecyclerView
 
@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
  * Created by luisburgos
  */
 @Suppress("MemberVisibilityCanBePrivate")
-abstract class SimpleRecyclerAdapter<Item, CustomViewHolder : RecyclerViewHolderDecorable<Item>> protected constructor(
+abstract class SimpleRecyclerAdapter<Item, CustomViewHolder : RecyclerViewHolderDecorator<Item>> protected constructor(
     itemList: MutableList<Item>,
     val itemListener: ItemListener<Item>?
 ) : RecyclerView.Adapter<CustomViewHolder>() {

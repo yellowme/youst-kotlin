@@ -1,4 +1,4 @@
-package mx.yellowme.youst.common.dialogs;
+package mx.yellowme.youst.core.components.dialogs;
 
 import android.app.Dialog
 import android.content.Context
@@ -10,19 +10,27 @@ import android.view.Window
 import android.view.WindowManager
 
 /**
+ * Dialog interface for callers to respond back button action.
+ */
+interface OnDialogBackListener {
+    fun onBackFromDialog()
+}
+
+/**
  * Base implementation to create a custom dialog.
- *
- *
- * Created by luisburgos.
  */
 abstract class CommonDialog private constructor(
     context: Context,
     private val mResizePercentage: Double
 ) : Dialog(context), View.OnClickListener {
 
-    // CONCRETE DECORATION
+    //region Attributes
 
     protected abstract val layoutId: Int
+
+    //endregion
+
+    //region Setup
 
     internal constructor(context: Context) : this(context, 0.85)
 
@@ -35,16 +43,11 @@ abstract class CommonDialog private constructor(
         resizeDialogWindow(mResizePercentage)
     }
 
-    /**
-     * Dialog interface for callers to respond back button action.
-     */
-    interface OnBackListener {
-        fun onBackFromDialog()
-    }
-
     protected abstract fun bindViews()
 
-    // RESIZING
+    //endregion
+
+    //region Resizing
 
     /**
      * Helper to close the dialog.
@@ -72,5 +75,7 @@ abstract class CommonDialog private constructor(
             }
         }
     }
+
+    //endregion
 
 }

@@ -1,4 +1,4 @@
-package mx.yellowme.youst.common.dialogs;
+package mx.yellowme.youst.core.components.dialogs;
 
 import android.app.Activity
 
@@ -38,4 +38,5 @@ class SimpleInfoDialogBuilder {
                 get() = actionTitle
         }
     }
+
 }

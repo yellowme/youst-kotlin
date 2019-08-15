@@ -3,13 +3,12 @@ package mx.yellowme.youst.presentation.showcase
 import android.os.Bundle
 import kotlinx.android.synthetic.main.screen_showcase.*
 import mx.yellowme.youst.R
-import mx.yellowme.youst.common.ItemListener
-import mx.yellowme.youst.common.activities.BaseChallengeActivity.Companion.TOOLBAR_TITLE
-import mx.yellowme.youst.common.cards.CardPagerAdapter
-import mx.yellowme.youst.common.cards.ShadowTransformer
+import mx.yellowme.youst.core.hooks.recycler.ItemListener
+import mx.yellowme.youst.presentation.challenges.BaseChallengeActivity.Companion.TOOLBAR_TITLE
+import mx.yellowme.youst.presentation.showcase.cards.CardPagerAdapter
+import mx.yellowme.youst.presentation.showcase.cards.ShadowTransformer
 import mx.yellowme.youst.core.domain.Challenge
 import mx.yellowme.youst.core.extensions.launch
-import mx.yellowme.youst.core.extensions.newIntent
 import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.core.utils.dipToPx
