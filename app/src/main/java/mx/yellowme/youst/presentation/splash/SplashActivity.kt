@@ -4,7 +4,7 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_splash.*
 import mx.yellowme.youst.R
 import mx.yellowme.youst.common.utils.setListener
-import mx.yellowme.youst.core.extensions.launchAndFinish
+import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.presentation.showcase.ShowcaseActivity
 
@@ -18,7 +18,7 @@ class SplashActivity : BaseActivity() {
             useHardwareAcceleration()
             setListener {
                 onAnimationEnd {
-                    launchAndFinish<ShowcaseActivity>()
+                    launch<ShowcaseActivity>(finishCaller = true)
                 }
             }
         }
