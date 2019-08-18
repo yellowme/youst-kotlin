@@ -1,0 +1,57 @@
+<resources>
+
+    <!--region Buttons -->
+
+    <style name="ButtonBorderless" parent="Base.Widget.AppCompat.Button.Borderless">
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/dimen_8</item>
+        <item name="android:paddingBottom">@dimen/dimen_8</item>
+        <item name="android:paddingStart">@dimen/dimen_16</item>
+        <item name="android:paddingEnd">@dimen/dimen_16</item>
+        <item name="android:minHeight">@dimen/dimen_48</item>
+        <item name="android:textSize">@dimen/size_16</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="ButtonColored" parent="Base.Widget.AppCompat.Button.Colored">
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/dimen_8</item>
+        <item name="android:paddingBottom">@dimen/dimen_8</item>
+        <item name="android:paddingStart">@dimen/dimen_16</item>
+        <item name="android:paddingEnd">@dimen/dimen_16</item>
+        <item name="android:minHeight">@dimen/dimen_48</item>
+        <item name="android:textSize">@dimen/size_16</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="ButtonColored.Primary" parent="ButtonColored">
+        <item name="android:background">@color/yellow</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="ButtonText" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/dimen_8</item>
+        <item name="android:paddingBottom">@dimen/dimen_8</item>
+        <item name="android:paddingStart">@dimen/dimen_16</item>
+        <item name="android:paddingEnd">@dimen/dimen_16</item>
+        <item name="android:minHeight">@dimen/dimen_48</item>
+        <item name="android:textSize">@dimen/size_16</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="ButtonText.Blue" parent="ButtonText">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <!--endregion-->
+
+</resources>

@@ -1,0 +1,29 @@
+<resources>
+
+    <!--region Text-->
+
+    <style name="TextAppearance">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:lineSpacingExtra">@dimen/size_4</item>
+        <item name="android:letterSpacing">0.015</item>
+    </style>
+
+    <style name="TextAppearance.Regular" parent="TextAppearance">
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+    </style>
+
+    <style name="TextAppearance.Bold" parent="TextAppearance">
+        <item name="android:fontFamily">@font/source_sans_pro_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Light" parent="TextAppearance">
+        <item name="android:fontFamily">@font/source_sans_pro_light</item>
+    </style>
+
+    <!--endregion-->
+
+</resources>

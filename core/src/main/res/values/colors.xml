@@ -2,9 +2,9 @@
 <resources>
     <color name="colorPrimary">@color/yellow</color>
     <color name="colorPrimaryDark">@color/yellow</color>
-    <color name="colorAccent">@color/black</color>
+    <color name="colorAccent">@color/haiti</color>
 
-    <color name="textColor">@color/black</color>
+    <color name="textColor">@color/haiti</color>
 
     <color name="white">#ffffff</color>
     <color name="yellow">#ffdc00</color>
@@ -18,6 +18,7 @@
     <color name="lime">#01ff70</color>
     <color name="maroon">#85144b</color>
     <color name="red">#ff4136</color>
+    <color name="haiti">#140d38</color>
 
     <color name="shade">#697385</color>
 
