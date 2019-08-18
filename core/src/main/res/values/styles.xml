@@ -1,8 +1,8 @@
 <resources>
 
-    <!-- Base application theme. -->
+    <!--region Base application theme. -->
+
     <style name="SharedAppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -31,93 +31,155 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
     </style>
 
-    <!-- Widgets -->
+    <!--endregion-->
 
-    <style name="BaseStyledButton">
+    <!--region Text-->
+
+    <style name="TextAppearance">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="TextAppearance.Regular" parent="TextAppearance">
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
+
+    <style name="TextAppearance.Bold" parent="TextAppearance">
+        <item name="android:fontFamily">@font/source_sans_pro_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
+
+    <style name="TextAppearance.Light" parent="TextAppearance">
+        <item name="android:fontFamily">@font/source_sans_pro_light</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
+
+    <!--endregion-->
+
+    <!--region Buttons -->
+
+    <style name="ButtonBorderless" parent="Base.Widget.AppCompat.Button.Borderless">
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingTop">8dp</item>
         <item name="android:paddingBottom">8dp</item>
         <item name="android:paddingStart">16dp</item>
         <item name="android:paddingEnd">16dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
     </style>
 
-    <style name="BaseStyledButton.Borderless" parent="Base.Widget.AppCompat.Button.Borderless" />
-
-    <style name="BaseStyledButton.Colored" parent="Base.Widget.AppCompat.Button.Colored" />
-
-    <style name="BaseStyledButton.Colored.Main">
+    <style name="ButtonColored" parent="Base.Widget.AppCompat.Button.Colored">
+        <item name="android:fontFamily">@font/source_sans_pro</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
         <item name="android:minHeight">48dp</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="ButtonColored.Primary" parent="ButtonColored">
+        <item name="android:background">@color/yellow</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">@color/textColor</item>
-        <item name="android:background">@color/yellow</item>
     </style>
 
-    <style name="BaseStyledButton.Flat" parent="Widget.MaterialComponents.Button.TextButton">
+    <style name="ButtonText" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:fontFamily">@font/source_sans_pro</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
         <item name="android:minHeight">48dp</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="ButtonText.Blue" parent="ButtonText">
         <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/blue</item>
     </style>
 
-    <style name="MontserratText">
-        <item name="android:fontFamily">@font/montserrat</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:lineSpacingExtra">4sp</item>
-        <item name="android:textColor">@color/textColor</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+    <!--endregion-->
+
+    <!--region Dialog-->
+
+    <style name="Dialog" />
+
+    <style name="Dialog.Title" parent="TextAppearance.Bold">
+        <item name="android:textSize">22sp</item>
     </style>
 
-    <style name="MontserratTextBold">
-        <item name="android:fontFamily">@font/montserrat</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:lineSpacingExtra">4sp</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textStyle">bold</item>
+    <style name="Dialog.Subtitle" parent="TextAppearance.Regular">
+        <item name="android:textSize">16sp</item>
     </style>
 
-    <style name="Header" parent="MontserratText">
+    <!--endregion-->
+
+    <!--region AppBar-->
+
+    <style name="AppBar" />
+
+    <style name="AppBar.Header" parent="TextAppearance.Bold">
         <item name="android:minHeight">80dp</item>
         <item name="android:textSize">28sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Title" parent="MontserratText">
+    <!--endregion-->
+
+    <!--region Showcase-->
+
+    <style name="Showcase" />
+
+    <style name="Showcase.Title" parent="TextAppearance.Bold">
         <item name="android:minHeight">56dp</item>
         <item name="android:textSize">24sp</item>
-        <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Subtitle" parent="MontserratText">
+    <style name="Showcase.Subtitle" parent="TextAppearance.Regular">
         <item name="android:minHeight">46dp</item>
         <item name="android:textSize">18sp</item>
     </style>
 
-    <style name="Description" parent="Subtitle">
-        <item name="android:lineSpacingExtra">4sp</item>
-    </style>
+    <!--endregion-->
 
-    <style name="MidTitle" parent="Title">
+    <!--region Challenge-->
+
+    <style name="Challenge" />
+
+    <style name="Challenge.Title" parent="TextAppearance.Bold">
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">20sp</item>
     </style>
 
-    <style name="MidSubtitle" parent="Subtitle">
+    <style name="Challenge.Subtitle" parent="TextAppearance.Regular">
         <item name="android:textSize">14sp</item>
     </style>
 
-    <style name="ItemTitle" parent="Title">
+    <!--endregion-->
+
+    <!--region Pokemon-->
+
+    <style name="Pokemon" />
+
+    <style name="Pokemon.Title" parent="TextAppearance.Regular">
         <item name="android:minHeight">36dp</item>
         <item name="android:textSize">12sp</item>
     </style>
+
+    <!--endregion-->
 
 </resources>

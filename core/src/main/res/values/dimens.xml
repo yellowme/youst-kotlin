@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--region Text Size-->
+    <dimen name="size_4">4sp</dimen>
+    <dimen name="size_5">5sp</dimen>
+    <dimen name="size_6">6sp</dimen>
+    <dimen name="size_7">7sp</dimen>
+    <dimen name="size_8">8sp</dimen>
+    <dimen name="size_9">9sp</dimen>
+    <dimen name="size_10">10sp</dimen>
+    <dimen name="size_11">11sp</dimen>
+    <dimen name="size_12">12sp</dimen>
+    <dimen name="size_13">13sp</dimen>
+    <dimen name="size_14">14sp</dimen>
+    <dimen name="size_15">15sp</dimen>
+    <dimen name="size_16">16sp</dimen>
+    <dimen name="size_17">17sp</dimen>
+    <dimen name="size_18">18sp</dimen>
+    <dimen name="size_19">19sp</dimen>
+    <dimen name="size_20">20sp</dimen>
+    <dimen name="size_21">21sp</dimen>
+    <dimen name="size_22">22sp</dimen>
+    <dimen name="size_23">23sp</dimen>
+    <dimen name="size_24">24sp</dimen>
+    <dimen name="size_25">25sp</dimen>
+    <dimen name="size_26">26sp</dimen>
+    <dimen name="size_27">27sp</dimen>
+    <dimen name="size_28">28sp</dimen>
+    <dimen name="size_29">29sp</dimen>
+    <dimen name="size_30">30sp</dimen>
+    <dimen name="size_31">31sp</dimen>
+    <dimen name="size_32">31sp</dimen>
+    <dimen name="size_33">33sp</dimen>
+    <dimen name="size_34">34sp</dimen>
+    <dimen name="size_35">35sp</dimen>
+    <dimen name="size_36">36sp</dimen>
+    <dimen name="size_37">37sp</dimen>
+    <dimen name="size_38">38sp</dimen>
+    <dimen name="size_39">39sp</dimen>
+    <dimen name="size_40">40sp</dimen>
+    <dimen name="size_41">41sp</dimen>
+    <dimen name="size_42">42sp</dimen>
+    <dimen name="size_43">43sp</dimen>
+    <dimen name="size_44">44sp</dimen>
+    <dimen name="size_45">45sp</dimen>
+    <dimen name="size_46">46sp</dimen>
+    <dimen name="size_47">47sp</dimen>
+    <dimen name="size_48">48sp</dimen>
+    <dimen name="size_49">49sp</dimen>
+    <dimen name="size_50">50sp</dimen>
+
+    <!--endregion-->
+
+    <!--region Margin & Padding -->
+
+    <dimen name="dimen_0">0dp</dimen>
+    <dimen name="dimen_1">1dp</dimen>
+    <dimen name="dimen_2">2dp</dimen>
+    <dimen name="dimen_3">3dp</dimen>
+    <dimen name="dimen_4">4dp</dimen>
+    <dimen name="dimen_5">5dp</dimen>
+    <dimen name="dimen_6">6dp</dimen>
+    <dimen name="dimen_7">7dp</dimen>
+    <dimen name="dimen_8">8dp</dimen>
+    <dimen name="dimen_9">9dp</dimen>
+    <dimen name="dimen_10">10dp</dimen>
+    <dimen name="dimen_11">11dp</dimen>
+    <dimen name="dimen_12">12dp</dimen>
+    <dimen name="dimen_13">13dp</dimen>
+    <dimen name="dimen_14">14dp</dimen>
+    <dimen name="dimen_15">15dp</dimen>
+    <dimen name="dimen_16">16dp</dimen>
+    <dimen name="dimen_17">17dp</dimen>
+    <dimen name="dimen_18">18dp</dimen>
+    <dimen name="dimen_19">19dp</dimen>
+    <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_21">21dp</dimen>
+    <dimen name="dimen_22">22dp</dimen>
+    <dimen name="dimen_23">23dp</dimen>
+    <dimen name="dimen_24">24dp</dimen>
+    <dimen name="dimen_25">25dp</dimen>
+    <dimen name="dimen_26">26dp</dimen>
+    <dimen name="dimen_27">27dp</dimen>
+    <dimen name="dimen_28">28dp</dimen>
+    <dimen name="dimen_29">29dp</dimen>
+    <dimen name="dimen_30">30dp</dimen>
+    <dimen name="dimen_31">31dp</dimen>
+    <dimen name="dimen_32">32dp</dimen>
+    <dimen name="dimen_33">33dp</dimen>
+    <dimen name="dimen_34">34dp</dimen>
+    <dimen name="dimen_35">35dp</dimen>
+    <dimen name="dimen_36">36dp</dimen>
+    <dimen name="dimen_37">37dp</dimen>
+    <dimen name="dimen_38">38dp</dimen>
+    <dimen name="dimen_39">39dp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
+    <dimen name="dimen_41">41dp</dimen>
+    <dimen name="dimen_42">42dp</dimen>
+    <dimen name="dimen_43">43dp</dimen>
+    <dimen name="dimen_44">44dp</dimen>
+    <dimen name="dimen_45">45dp</dimen>
+    <dimen name="dimen_46">46dp</dimen>
+    <dimen name="dimen_47">47dp</dimen>
+    <dimen name="dimen_48">48dp</dimen>
+    <dimen name="dimen_49">49dp</dimen>
+    <dimen name="dimen_50">50dp</dimen>
+    <dimen name="dimen_60">60dp</dimen>
+    <dimen name="dimen_70">70dp</dimen>
+    <dimen name="dimen_80">80dp</dimen>
+    <dimen name="dimen_90">90dp</dimen>
+    <dimen name="dimen_100">100dp</dimen>
+
+    <!--endregion-->
+</resources>

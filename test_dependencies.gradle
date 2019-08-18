@@ -1,0 +1,21 @@
+dependencies {
+    implementation "androidx.test:core:${versions.androidXTest}"
+    implementation "androidx.test.espresso:espresso-idling-resource:${versions.espressoCore}"
+
+    testImplementation "junit:junit:${versions.junit}"
+    testImplementation "org.mockito:mockito-core:${versions.mockitoVersion}"
+    androidTestImplementation "org.mockito:mockito-core:${versions.mockitoVersion}"
+    androidTestImplementation "com.linkedin.dexmaker:dexmaker-mockito:${versions.dexMakerVersion}"
+
+    androidTestImplementation "androidx.test.ext:junit-ktx:${versions.androidXTestExtJunit}"
+
+    androidTestImplementation "com.android.support.test:runner:${versions.espressoTestRunner}"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:${versions.espressoCore}"
+
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:${versions.espressoCore}"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:${versions.espressoCore}"
+    androidTestImplementation "androidx.test.espresso.idling:idling-concurrent:${versions.espressoCore}"
+
+    androidTestImplementation "androidx.arch.core:core-testing:${versions.archTesting}"
+    androidTestImplementation "androidx.test:core-ktx:${versions.androidXTest}"
+}

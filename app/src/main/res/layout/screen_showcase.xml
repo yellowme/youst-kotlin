@@ -16,12 +16,12 @@
 
         <androidx.emoji.widget.EmojiTextView
             android:id="@+id/titleTextView"
-            style="@style/Title"
+            style="@style/Showcase.Title"
             android:text="@string/showcase_title" />
 
         <TextView
             android:id="@+id/subtitleTextView"
-            style="@style/Description"
+            style="@style/Showcase.Subtitle"
             android:layout_marginTop="6dp"
             android:text="@string/showcase_subtitle" />
 

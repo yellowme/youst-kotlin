@@ -9,7 +9,7 @@
 
     <androidx.emoji.widget.EmojiTextView
         android:id="@+id/titleEmoji"
-        style="@style/Title"
+        style="@style/Challenge.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/navigation_title_emoji_3"
@@ -19,7 +19,7 @@
 
     <TextView
         android:id="@+id/goodbyeTextView"
-        style="@style/Title"
+        style="@style/Challenge.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -34,12 +34,12 @@
         android:background="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
-        android:fontFamily="@font/montserrat"
+        android:fontFamily="@font/source_sans_pro"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:text="@string/yellowme_link"
-        android:textColor="@color/yellow"
-        android:textSize="28sp"
+        android:textColor="@color/gold"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

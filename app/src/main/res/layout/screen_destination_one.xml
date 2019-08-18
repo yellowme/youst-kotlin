@@ -7,7 +7,7 @@
     android:padding="32dp">
 
     <androidx.emoji.widget.EmojiTextView
-        style="@style/Title"
+        style="@style/Challenge.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/navigation_title_emoji_1"
@@ -17,7 +17,7 @@
 
     <TextView
         android:id="@+id/greetingTextView"
-        style="@style/Title"
+        style="@style/Challenge.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -27,7 +27,7 @@
 
     <EditText
         android:id="@+id/nameEditText"
-        style="@style/Description"
+        style="@style/Challenge.Subtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -37,7 +37,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/navigateButton"
-        style="@style/BaseStyledButton.Colored.Main"
+        style="@style/ButtonColored.Primary"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="@string/action_next"

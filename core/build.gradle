@@ -2,18 +2,15 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+apply from: '../shared_dependencies.gradle'
+apply from: '../test_dependencies.gradle'
+
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.1"
-    compileOptions {
-        sourceCompatibility = 1.8
-        targetCompatibility = 1.8
-    }
+    compileSdkVersion versions.compileSdk
+
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -25,24 +22,16 @@ android {
         }
     }
 
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation "androidx.core:core-ktx:$rootProject.ext.coreKtx"
-    implementation "androidx.appcompat:appcompat:$rootProject.ext.appcompat"
-    implementation "androidx.constraintlayout:constraintlayout:$rootProject.ext.constraintLayout"
-    implementation "androidx.emoji:emoji-appcompat:$rootProject.ext.emoji"
-    implementation "androidx.emoji:emoji-bundled:$rootProject.ext.emoji"
-
-    implementation "com.google.android:flexbox:$rootProject.ext.flexbox"
-    implementation "com.google.android.material:material:$rootProject.ext.material"
-
-    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit"
-    implementation "com.squareup.retrofit2:converter-moshi:$rootProject.ext.converterMoshi"
-    implementation "com.squareup.picasso:picasso:$rootProject.ext.picasso"
-    implementation "com.squareup.moshi:moshi:$rootProject.ext.moshi"
-
-    implementation "com.airbnb.android:lottie:$rootProject.ext.lottie"
 }

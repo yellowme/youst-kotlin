@@ -1,0 +1,26 @@
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${versions.kotlinVersion}"
+
+    implementation "androidx.core:core-ktx:${versions.coreKtx}"
+    implementation "androidx.appcompat:appcompat:${versions.appcompat}"
+    implementation "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}"
+
+    implementation "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
+    implementation "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
+
+    implementation "androidx.fragment:fragment-testing:${versions.fragmentVersion}"
+    implementation "androidx.fragment:fragment:${versions.fragmentVersion}"
+
+    implementation "androidx.emoji:emoji-appcompat:${versions.emoji}"
+    implementation "androidx.emoji:emoji-bundled:${versions.emoji}"
+
+    implementation "com.google.android:flexbox:${versions.flexbox}"
+    implementation "com.google.android.material:material:${versions.material}"
+
+    implementation "com.squareup.retrofit2:retrofit:${versions.retrofit}"
+    implementation "com.squareup.retrofit2:converter-moshi:${versions.converterMoshi}"
+    implementation "com.squareup.picasso:picasso:${versions.picasso}"
+    implementation "com.squareup.moshi:moshi:${versions.moshi}"
+
+    implementation "com.airbnb.android:lottie:${versions.lottie}"
+}

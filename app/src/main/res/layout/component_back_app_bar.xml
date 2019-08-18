@@ -56,7 +56,7 @@
 
                     <TextView
                         android:id="@+id/toolbarTitle"
-                        style="@style/Header"
+                        style="@style/AppBar.Header"
                         android:layout_marginStart="8dp"
                         android:minHeight="60dp"
                         android:paddingStart="8dp"

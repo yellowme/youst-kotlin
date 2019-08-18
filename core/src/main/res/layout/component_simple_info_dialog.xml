@@ -13,18 +13,16 @@
 
     <TextView
         android:id="@+id/dialogTitle"
-        style="@style/Title"
+        style="@style/Dialog.Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:lineSpacingExtra="8sp"
         android:paddingTop="12dp"
         android:paddingBottom="8dp"
-        android:textSize="20sp"
         tools:text="Title" />
 
     <TextView
         android:id="@+id/dialogMessage"
-        style="@style/Subtitle"
+        style="@style/Dialog.Subtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
@@ -33,7 +31,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/dialogDoneButton"
-        style="@style/BaseStyledButton.Flat"
+        style="@style/ButtonText.Blue"
         android:layout_gravity="end"
         android:text="@string/understood"
         app:rippleColor="@color/blue" />

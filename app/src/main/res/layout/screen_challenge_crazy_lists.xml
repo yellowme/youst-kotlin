@@ -11,7 +11,7 @@
 
     <TextView
         android:id="@+id/emptyMessageTextView"
-        style="@style/Subtitle"
+        style="@style/Challenge.Subtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone"

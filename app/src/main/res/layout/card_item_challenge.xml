@@ -17,15 +17,16 @@
 
         <TextView
             android:id="@+id/titleTextView"
-            style="@style/MidTitle"
+            style="@style/Challenge.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
+            android:fontFamily="@font/source_sans_pro_bold"
             tools:text="Title" />
 
         <TextView
             android:id="@+id/contentTextView"
-            style="@style/MidSubtitle"
+            style="@style/Challenge.Subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@id/mainAction"
@@ -37,7 +38,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/mainAction"
-            style="@style/BaseStyledButton.Colored.Main"
+            style="@style/ButtonColored.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
