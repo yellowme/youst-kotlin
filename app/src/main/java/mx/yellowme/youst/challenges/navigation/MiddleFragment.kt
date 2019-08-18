@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import kotlinx.android.synthetic.main.screen_destination_one.navigateButton
-import kotlinx.android.synthetic.main.screen_destination_two.*
+import kotlinx.android.synthetic.main.navigation_destination_one.navigateButton
+import kotlinx.android.synthetic.main.navigation_destination_two.*
 import mx.yellowme.youst.R
 
 class MiddleFragment : Fragment() {
@@ -29,7 +29,7 @@ class MiddleFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.screen_destination_two, container, false)
+        return inflater.inflate(R.layout.navigation_destination_two, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

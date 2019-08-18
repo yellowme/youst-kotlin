@@ -1,7 +1,7 @@
 package mx.yellowme.youst.challenges
 
 import android.os.Bundle
-import kotlinx.android.synthetic.main.screen_showcase.*
+import kotlinx.android.synthetic.main.challenges.*
 import mx.yellowme.youst.R
 import mx.yellowme.youst.challenges.BaseChallengeActivity.Companion.TOOLBAR_TITLE
 import mx.yellowme.youst.challenges.navigation.NavigationActivity
@@ -20,7 +20,7 @@ class ChallengesActivity : BaseActivity(), ItemListener<Challenge> {
     private var mCardAdapter: CardPagerAdapter? = null
     private var mCardShadowTransformer: ShadowTransformer? = null
 
-    override val layoutId = R.layout.screen_showcase
+    override val layoutId = R.layout.challenges
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

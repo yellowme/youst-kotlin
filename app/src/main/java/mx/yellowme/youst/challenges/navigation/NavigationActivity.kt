@@ -5,6 +5,6 @@ import mx.yellowme.youst.core.hooks.BaseActivity
 
 class NavigationActivity : BaseActivity() {
 
-    override val layoutId: Int = R.layout.screen_challenge_navigation
+    override val layoutId: Int = R.layout.challenge_navigation
 
 }

@@ -13,7 +13,7 @@ class DeepLinkWidgetProvider : AppWidgetProvider() {
         appWidgetManager: AppWidgetManager?,
         appWidgetIds: IntArray?
     ) {
-        val remoteViews = RemoteViews(context.packageName, R.layout.deeplink_widget)
+        val remoteViews = RemoteViews(context.packageName, R.layout.component_deeplink)
 
         val pendingIntent = NavDeepLinkBuilder(context)
             .setComponentName(NavigationActivity::class.java)

@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.screen_destination_one.*
+import kotlinx.android.synthetic.main.navigation_destination_one.*
 import mx.yellowme.youst.R
 
 class GreetingFragment : Fragment() {
@@ -26,7 +26,7 @@ class GreetingFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.screen_destination_one, container, false)
+        return inflater.inflate(R.layout.navigation_destination_one, container, false)
     }
 
 }

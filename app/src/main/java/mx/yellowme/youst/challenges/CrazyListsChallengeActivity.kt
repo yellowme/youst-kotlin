@@ -17,7 +17,7 @@ class CrazyListsChallengeActivity : ChallengeWithListActivity<Pokemon, PokemonLi
     BaseChallengeActivity.MenuActionsListener,
     ItemListener<Pokemon> {
 
-    override val layoutId = R.layout.screen_challenge_crazy_lists
+    override val layoutId = R.layout.challenge_crazy_lists
 
     override fun onResume() {
         super.onResume()

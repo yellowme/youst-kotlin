@@ -10,20 +10,21 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
-        android:gravity="center_vertical"
+        android:gravity="bottom"
         android:orientation="vertical"
-        android:padding="32dp">
+        android:padding="@dimen/dimen_32"
+        android:paddingBottom="@dimen/dimen_64">
 
         <androidx.emoji.widget.EmojiTextView
             android:id="@+id/titleTextView"
             style="@style/Challenge.Title"
-            android:text="@string/challenges_title"/>
+            android:text="@string/challenges_title" />
 
         <TextView
             android:id="@+id/subtitleTextView"
             style="@style/Challenge.Subtitle"
             android:layout_marginTop="6dp"
-            android:text="@string/challenges_subtitle"/>
+            android:text="@string/challenges_subtitle" />
 
     </LinearLayout>
 
@@ -32,16 +33,16 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="bottom"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:layout_marginBottom="@dimen/dimen_16"
         android:layout_weight="5"
         android:clipToPadding="false"
         android:overScrollMode="never"
-        android:paddingStart="60dp"
-        android:paddingLeft="60dp"
-        android:paddingTop="30dp"
-        android:paddingEnd="60dp"
-        android:paddingRight="60dp"
-        android:paddingBottom="30dp" />
+        android:paddingStart="@dimen/dimen_60"
+        android:paddingLeft="@dimen/dimen_60"
+        android:paddingTop="@dimen/dimen_30"
+        android:paddingEnd="@dimen/dimen_60"
+        android:paddingRight="@dimen/dimen_60"
+        android:paddingBottom="@dimen/dimen_30" />
 
 </LinearLayout>

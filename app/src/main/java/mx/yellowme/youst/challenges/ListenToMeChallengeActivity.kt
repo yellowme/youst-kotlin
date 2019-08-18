@@ -13,7 +13,7 @@ class ListenToMeChallengeActivity :
     ChallengeWithListActivity<PokemonTypeSelection, PokemonTypeListViewHolder>(),
     BaseChallengeActivity.MenuActionsListener {
 
-    override val layoutId = R.layout.screen_challenge_listen_to_me
+    override val layoutId = R.layout.challenge_listen_to_me
 
     override fun initAdapter(): SimpleRecyclerAdapter<PokemonTypeSelection, PokemonTypeListViewHolder>? {
         val types = PokemonType.values()

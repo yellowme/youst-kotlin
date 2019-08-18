@@ -5,6 +5,6 @@ import  mx.yellowme.youst.challenges.BaseChallengeActivity
 
 class PokemonDetailActivity : BaseChallengeActivity() {
 
-    override val layoutId = R.layout.screen_pokemon_detail
+    override val layoutId = R.layout.pokemon_detail
 
 }

@@ -1,38 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="32dp">
+    android:padding="@dimen/dimen_32">
 
     <androidx.emoji.widget.EmojiTextView
-        android:id="@+id/titleEmoji"
         style="@style/Challenge.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/navigation_title_emoji_2"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@id/destinationTextView"
+        android:text="@string/navigation_title_emoji_1"
+        android:textSize="@dimen/size_40"
+        app:layout_constraintBottom_toTopOf="@id/greetingTextView"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/destinationTextView"
+        android:id="@+id/greetingTextView"
         style="@style/Challenge.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        app:layout_constraintBottom_toTopOf="@id/jobEditText"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="@string/navigation_title_step_2" />
+        android:text="@string/navigation_title_step_1"
+        app:layout_constraintBottom_toTopOf="@id/nameEditText"
+        app:layout_constraintStart_toStartOf="@id/nameEditText" />
 
     <EditText
-        android:id="@+id/jobEditText"
+        android:id="@+id/nameEditText"
         style="@style/Challenge.Subtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/dimen_20"
         android:imeOptions="actionDone"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@id/centerGuide" />
@@ -40,7 +38,8 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/navigateButton"
         style="@style/ButtonColored.Primary"
-        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15"
         android:text="@string/action_next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

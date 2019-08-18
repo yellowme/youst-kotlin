@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import kotlinx.android.synthetic.main.screen_destination_three.*
+import kotlinx.android.synthetic.main.navigation_destination_three.*
 import mx.yellowme.youst.R
 
 class LastFragment : Fragment() {
@@ -33,7 +33,7 @@ class LastFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.screen_destination_three, container, false)
+        return inflater.inflate(R.layout.navigation_destination_three, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

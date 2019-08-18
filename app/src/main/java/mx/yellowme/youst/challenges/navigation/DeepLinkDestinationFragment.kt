@@ -13,6 +13,6 @@ class DeepLinkDestinationFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.screen_deep_link_destination, container, false)
+        return inflater.inflate(R.layout.navigation_deep_link_destination, container, false)
     }
 }
