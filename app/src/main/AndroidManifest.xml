@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".showcase.ShowcaseActivity"
+            android:name=".challenges.ChallengesActivity"
             android:label="@string/app_name"
             android:theme="@style/SharedAppTheme.NoActionBar">
             <intent-filter>
@@ -41,21 +41,21 @@
             android:theme="@style/SharedAppTheme.NoActionBar" />
         <activity
             android:name=".challenges.CrazyListsChallengeActivity"
-            android:label="@string/activity_challenge_title_crazy_lists"
+            android:label="@string/challenge_title_crazy_lists"
             android:theme="@style/SharedAppTheme.NoActionBar" />
         <activity
             android:name=".challenges.ListenToMeChallengeActivity"
-            android:label="@string/activity_challenge_title_listen_to_me"
+            android:label="@string/challenge_title_listen_to_me"
             android:theme="@style/SharedAppTheme.NoActionBar" />
         <activity
             android:name=".challenges.navigation.NavigationActivity"
             android:label="Jetpack Navigation"
-            android:parentActivityName=".showcase.ShowcaseActivity"
+            android:parentActivityName=".challenges.ChallengesActivity"
             android:theme="@style/SharedAppTheme.NoActionBar.TransparentStatus">
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".showcase.ShowcaseActivity" />
+                android:value=".challenges.ChallengesActivity" />
         </activity>
 
         <meta-data

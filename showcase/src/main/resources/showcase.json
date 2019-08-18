@@ -1,0 +1,26 @@
+[
+  {
+    "id": "challenges",
+    "title": "Challenges",
+    "subtitle": "Interview puzzlers",
+    "hexColor": "#FF9A7B"
+  },
+  {
+    "id": "playground",
+    "title": "Playground",
+    "subtitle": "Proofs of concept",
+    "hexColor": "#1abc9c"
+  },
+  {
+    "id": "mini_apps",
+    "title": "Mini Apps",
+    "subtitle": "Let's clone that app",
+    "hexColor": "#3498db"
+  },
+  {
+    "id": "portfolio",
+    "title": "Portfolio",
+    "subtitle": "Our most recent work",
+    "hexColor": "#9b59b6"
+  }
+]

@@ -24,11 +24,11 @@ fun intentTo(addressableActivity: AddressableActivity): Intent {
  * ## Example
  *
  * ```
- * object Dribbble {
- *      object Shot : AddressableActivity {
- *          override val className = "$PACKAGE_NAME.dribbble.ui.shot.ShotActivity"
- *          const val EXTRA_SHOT_ID = "EXTRA_SHOT_ID"
- *          const val RESULT_EXTRA_SHOT_ID = "RESULT_EXTRA_SHOT_ID"
+ * object Challenges {
+ *      object CrazyLists : AddressableActivity {
+ *          override val className = "$PACKAGE_NAME.challenges.CrazyListsChallengeActivity"
+ *          const val SOME_EXTRA_ID = "SOME_EXTRA_ID"
+ *          const val SOME_RESULT_EXTRA_ID = "SOME_RESULT_EXTRA_ID ="
  *      }
  * }
  * ```
@@ -51,25 +51,28 @@ object Activities {
      * AboutActivity
      */
     object Showcase : AddressableActivity {
-        override val className = "$PACKAGE_NAME.showcase.ui.ShowcaseActivity"
+        override val className = "$PACKAGE_NAME.showcase.ShowcaseActivity"
     }
 
     /**
      * Base object for DesignerNews activities.
      */
-    object Challenges {
+    object Challenges : AddressableActivity {
+
+        override val className = "$PACKAGE_NAME.challenges.ChallengesActivity"
+
         /**
          * DesignerNews LoginActivity
          */
         object CrazyLists : AddressableActivity {
-            override val className = "$PACKAGE_NAME.challenges.ui.CrazyListsChallengeActivity"
+            override val className = "$PACKAGE_NAME.challenges.CrazyListsChallengeActivity"
         }
 
         /**
          * DesignerNewsStory Activity
          */
         object ListenToMe : AddressableActivity {
-            override val className = "$PACKAGE_NAME.challenges.ui.ListenToMeChallengeActivity"
+            override val className = "$PACKAGE_NAME.challenges.ListenToMeChallengeActivity"
         }
     }
 

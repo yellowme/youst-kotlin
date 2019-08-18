@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Core</string>
     <string name="understood">Understood</string>
+    <string name="work_in_progress">Sorry! We are still working on this challenge</string>
 </resources>

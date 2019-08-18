@@ -37,7 +37,7 @@
         android:fontFamily="@font/source_sans_pro"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
-        android:text="@string/yellowme_link"
+        android:text="@string/yellow_web_link"
         android:textColor="@color/gold"
         android:textSize="24sp"
         android:textStyle="bold"

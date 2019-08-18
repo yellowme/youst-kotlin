@@ -1,4 +1,4 @@
-package mx.yellowme.youst.showcase.cards
+package mx.yellowme.youst.challenges.cards
 
 import androidx.cardview.widget.CardView
 

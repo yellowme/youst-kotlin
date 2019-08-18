@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--region Text Size-->
+    <dimen name="size_2">2sp</dimen>
     <dimen name="size_4">4sp</dimen>
     <dimen name="size_5">5sp</dimen>
     <dimen name="size_6">6sp</dimen>
@@ -109,6 +110,7 @@
     <dimen name="dimen_80">80dp</dimen>
     <dimen name="dimen_90">90dp</dimen>
     <dimen name="dimen_100">100dp</dimen>
+    <dimen name="dimen_150">150dp</dimen>
 
     <!--endregion-->
 </resources>

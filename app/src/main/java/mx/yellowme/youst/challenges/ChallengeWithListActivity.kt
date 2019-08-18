@@ -25,9 +25,6 @@ abstract class ChallengeWithListActivity<Model, ViewHolder : RecyclerViewHolderD
 
     private lateinit var recyclerView: RecyclerView
 
-    /**
-     * TODO: Add docs
-     */
     protected abstract fun initAdapter(): SimpleRecyclerAdapter<Model, ViewHolder>?
 
     override fun onCreate(savedInstanceState: Bundle?) {

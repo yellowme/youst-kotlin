@@ -33,7 +33,6 @@ inline fun AttributeSet.consumeTypeArray(
     }
 }
 
-inline fun <reified T : Any> String.asInstance(context: Context): T {
-    val classRef = Class.forName(this).constructors.first()
-    return classRef.newInstance(context) as T
+fun TypedArray.stringOrThrow(stringId: Int): String {
+    return getString(stringId) ?: throw RuntimeException("Value for $stringId must not be null")
 }

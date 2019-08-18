@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.RecyclerView
  * Base class to implement a RecyclerView based list. In order to use this class
  * is necessary to implement a Custom ViewHolder over which the adapter is going to operate.
  *
- *
  * Created by luisburgos
  */
 @Suppress("MemberVisibilityCanBePrivate")

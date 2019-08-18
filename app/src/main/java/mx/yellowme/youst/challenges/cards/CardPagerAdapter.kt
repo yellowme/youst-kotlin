@@ -1,4 +1,4 @@
-package mx.yellowme.youst.showcase.cards
+package mx.yellowme.youst.challenges.cards
 
 import android.view.LayoutInflater
 import android.view.View
@@ -12,14 +12,15 @@ import com.google.android.material.card.MaterialCardView
 import mx.yellowme.youst.R
 import mx.yellowme.youst.core.domain.Challenge
 import mx.yellowme.youst.core.hooks.recycler.ItemListener
-import mx.yellowme.youst.showcase.cards.CardAdapter.Companion.MAX_ELEVATION_FACTOR
+import mx.yellowme.youst.challenges.cards.CardAdapter.Companion.MAX_ELEVATION_FACTOR
 import java.util.*
 
 /**
  * TODO: Needs refactor
  */
 @Suppress("MemberVisibilityCanBePrivate")
-open class CardPagerAdapter(itemListener: ItemListener<Challenge>) : PagerAdapter(), CardAdapter {
+open class CardPagerAdapter(itemListener: ItemListener<Challenge>) : PagerAdapter(),
+    CardAdapter {
 
     private val mViews: MutableList<MaterialCardView?>
     private val mData: MutableList<Challenge?>

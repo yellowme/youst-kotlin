@@ -1,0 +1,23 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="mx.yellowme.youst.showcase">
+
+    <dist:module
+        dist:instant="false"
+        dist:onDemand="false"
+        dist:title="@string/title_showcase">
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+    <application android:name="mx.yellowme.youst.app.YoustApplication">
+        <activity
+            android:name="mx.yellowme.youst.showcase.ShowcaseActivity"
+            android:theme="@style/SharedAppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+

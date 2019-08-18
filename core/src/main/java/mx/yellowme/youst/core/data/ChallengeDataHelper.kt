@@ -2,6 +2,7 @@ package mx.yellowme.youst.core.data
 
 import mx.yellowme.youst.core.domain.AllChallenges
 import mx.yellowme.youst.core.domain.Challenge
+import mx.yellowme.youst.core.utils.asJsonObject
 import mx.yellowme.youst.core.utils.readJson
 
 object ChallengeDataHelper {
@@ -10,9 +11,8 @@ object ChallengeDataHelper {
      * test resources folder.
      */
     fun loadChallengesFromJSONUsing(loader: ClassLoader?): List<Challenge>? {
-        val challenges = loader?.readJson(
-            "challenges.json", AllChallenges::class.java
-        ) as? AllChallenges
+        val challenges =
+            loader?.readJson("challenges.json")?.asJsonObject<AllChallenges>()
 
         return challenges?.challenges
     }

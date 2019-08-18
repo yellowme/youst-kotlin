@@ -1,0 +1,6 @@
+<resources>
+    <string name="showcase_title">Welcome to Youst!</string>
+    <string name="showcase_subtitle">Now you control a yellow knight riding a flying ostrich or stork, from a third-person perspective.</string>
+    <string name="showcase_option_item_holder_title">Showcase Element</string>
+    <string name="showcase_option_item_holder_subtitle">This is a show case element description</string>
+</resources>

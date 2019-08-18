@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/materialCardView"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_150"
+    app:cardCornerRadius="@dimen/dimen_10"
+    app:cardElevation="@dimen/dimen_1"
+    tools:background="@color/turquoise"
+    tools:cardBackgroundColor="@color/turquoise">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/size_12">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/Showcase.OptionItem.Title"
+            android:layout_marginBottom="@dimen/size_2"
+            app:layout_constraintBottom_toTopOf="@id/subtitleTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/showcase_option_item_holder_title" />
+
+        <TextView
+            android:id="@+id/subtitleTextView"
+            style="@style/Showcase.OptionItem.Subtitle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/showcase_option_item_holder_subtitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,4 +1,4 @@
-package mx.yellowme.youst.showcase.cards
+package mx.yellowme.youst.challenges.cards
 
 import android.view.View
 import androidx.viewpager.widget.ViewPager

@@ -6,7 +6,8 @@ import mx.yellowme.youst.R
 import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.core.hooks.animations.setListener
-import mx.yellowme.youst.showcase.ShowcaseActivity
+import mx.yellowme.youst.core.utils.Activities
+import mx.yellowme.youst.core.utils.intentTo
 
 class SplashActivity : BaseActivity() {
 
@@ -18,7 +19,7 @@ class SplashActivity : BaseActivity() {
             useHardwareAcceleration()
             setListener {
                 onAnimationEnd {
-                    launch<ShowcaseActivity>(finishCaller = true)
+                    launch(intentTo(Activities.Showcase), finishCaller = true)
                 }
             }
         }

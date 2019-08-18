@@ -64,14 +64,29 @@
     <style name="Showcase" />
 
     <style name="Showcase.Title" parent="TextAppearance.Bold">
-        <item name="android:minHeight">@dimen/dimen_50</item>
-        <item name="android:textSize">@dimen/size_28</item>
+        <item name="android:paddingStart">@dimen/dimen_2</item>
+        <item name="android:paddingEnd">@dimen/dimen_2</item>
+        <item name="android:textSize">@dimen/size_22</item>
         <item name="android:letterSpacing">0.025</item>
     </style>
 
     <style name="Showcase.Subtitle" parent="TextAppearance.Regular">
-        <item name="android:minHeight">@dimen/dimen_46</item>
+        <item name="android:paddingStart">@dimen/dimen_2</item>
+        <item name="android:paddingEnd">@dimen/dimen_2</item>
+        <item name="android:textSize">@dimen/size_12</item>
+    </style>
+
+    <style name="Showcase.OptionItem" parent="Showcase" />
+
+    <style name="Showcase.OptionItem.Title" parent="TextAppearance.Bold">
         <item name="android:textSize">@dimen/size_18</item>
+        <item name="android:letterSpacing">0.025</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Showcase.OptionItem.Subtitle" parent="TextAppearance.Regular">
+        <item name="android:textSize">@dimen/size_10</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <!--endregion-->
@@ -81,11 +96,22 @@
     <style name="Challenge" />
 
     <style name="Challenge.Title" parent="TextAppearance.Bold">
-        <item name="android:textSize">@dimen/size_18</item>
+        <item name="android:textSize">@dimen/size_24</item>
         <item name="android:letterSpacing">0.025</item>
     </style>
 
     <style name="Challenge.Subtitle" parent="TextAppearance.Regular">
+        <item name="android:textSize">@dimen/size_16</item>
+    </style>
+
+    <style name="Challenge.Option" parent="Challenge" />
+
+    <style name="Challenge.Option.Title" parent="TextAppearance.Bold">
+        <item name="android:textSize">@dimen/size_18</item>
+        <item name="android:letterSpacing">0.025</item>
+    </style>
+
+    <style name="Challenge.Option.Subtitle" parent="TextAppearance.Regular">
         <item name="android:textSize">@dimen/size_14</item>
     </style>
 

@@ -3,9 +3,12 @@ package mx.yellowme.youst.core.utils
 import android.util.TypedValue
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
+import com.squareup.moshi.Types.newParameterizedType
 import java.io.IOException
 import java.util.*
+
 
 fun AppCompatActivity.dipToPx(dip: Int): Int {
     return TypedValue.applyDimension(
@@ -21,27 +24,38 @@ fun <T : View> AppCompatActivity.findOrThrow(viewId: Int): T {
     )
 }
 
-fun ClassLoader?.readJson(
-    named: String,
-    withClass: Class<*>
-): Any? {
-
+fun ClassLoader?.readJson(named: String): String? {
     if (this == null) {
         return null
     }
 
     val inputStream = getResourceAsStream(named)
-
     val scanner = Scanner(inputStream!!).useDelimiter("\\A")
-    val schemaJSON = if (scanner.hasNext()) scanner.next() else ""
+    return if (scanner.hasNext()) scanner.next() else ""
+}
 
-    val adapter = Moshi.Builder().build().adapter(withClass)
-
-    return try {
-        adapter.fromJson(schemaJSON)
+inline fun <reified T : Any> String.asJsonObject(): T? {
+    var modelFromJson: T? = null
+    try {
+        val adapter = Moshi.Builder().build().adapter(T::class.java)
+        modelFromJson = adapter.fromJson(this) as T
     } catch (exception: IOException) {
         exception.printStackTrace()
-        null
+    } finally {
+        return modelFromJson
+    }
+}
+
+inline fun <reified T : Any> String.asJsonArrayOf(): List<T>? {
+    var modelFromJson: List<T>? = null
+    try {
+        val type = newParameterizedType(List::class.java, T::class.java)
+        val adapter: JsonAdapter<List<T>> = Moshi.Builder().build().adapter(type)
+        modelFromJson = adapter.fromJson(this) as List<T>
+    } catch (exception: IOException) {
+        exception.printStackTrace()
+    } finally {
+        return modelFromJson
     }
 
 }

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".showcase.ShowcaseActivity">
+    tools:context=".challenges.ChallengesActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,14 +16,14 @@
 
         <androidx.emoji.widget.EmojiTextView
             android:id="@+id/titleTextView"
-            style="@style/Showcase.Title"
-            android:text="@string/showcase_title" />
+            style="@style/Challenge.Title"
+            android:text="@string/challenges_title"/>
 
         <TextView
             android:id="@+id/subtitleTextView"
-            style="@style/Showcase.Subtitle"
+            style="@style/Challenge.Subtitle"
             android:layout_marginTop="6dp"
-            android:text="@string/showcase_subtitle" />
+            android:text="@string/challenges_subtitle"/>
 
     </LinearLayout>
 

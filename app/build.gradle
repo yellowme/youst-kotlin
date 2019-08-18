@@ -43,10 +43,9 @@ android {
         targetCompatibility = 1.8
     }
 
-    //dynamicFeatures = [':playground', ':challenges', 'showcase']
+    dynamicFeatures = [":showcase"]
 }
 
 dependencies {
     implementation project(':core')
 }
-

@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
+// dp to pixels
+val Int.dp: Int get() = (this * Resources.getSystem().displayMetrics.density + 0.5f).toInt()
+
 fun getScreenWidth(): Int {
     return Resources.getSystem().displayMetrics.widthPixels
 }
@@ -21,6 +24,18 @@ fun getScreenHeight(): Int {
 fun TextView.hideOrDisplay(content: String?, gonable: Boolean = true) {
     if (content.isNullOrBlank()) {
         visibility = if (gonable) View.GONE else View.INVISIBLE
+    } else {
+        visibility = View.VISIBLE
+        text = content
+    }
+}
+
+/**
+ * Display given content or hide the view if the argument is null or blank.
+ */
+fun TextView.displayOrThrow(content: String?) {
+    if (content.isNullOrBlank()) {
+        throw RuntimeException("Content for component should not be null or empty")
     } else {
         visibility = View.VISIBLE
         text = content

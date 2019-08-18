@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_32"
+    app:layout_constraintVertical_chainStyle="spread_inside"
+    tools:context=".ShowcaseActivity">
+
+    <mx.yellowme.youst.core.components.YellowCircle
+        android:id="@+id/yellowCircle"
+        android:layout_width="@dimen/dimen_40"
+        android:layout_height="@dimen/dimen_40"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.emoji.widget.EmojiTextView
+        android:id="@+id/titleTextView"
+        style="@style/Showcase.Title"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:text="@string/showcase_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/yellowCircle" />
+
+    <TextView
+        android:id="@+id/subtitleTextView"
+        style="@style/Showcase.Subtitle"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:layout_marginBottom="@dimen/dimen_24"
+        android:text="@string/showcase_subtitle"
+        app:layout_constraintBottom_toTopOf="@id/showcaseOptions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/showcaseOptions"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitleTextView"
+        tools:itemCount="4"
+        tools:layoutManager="mx.yellowme.youst.core.hooks.recycler.SpanningGridLayoutManager"
+        tools:listitem="@layout/showcase_option_item"
+        tools:spanCount="2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
