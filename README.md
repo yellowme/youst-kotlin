@@ -6,6 +6,10 @@ Our goal is to make an application that will be our playground. We want to show 
 
 We are using Kotlin language and testing latest Android libraries. It'll be updated with new features as they come to the Android development world.
 
+## Showcase
+
+![Demo](./assets/hero.gif)
+
 ## Getting Started
 
 Please refer to the [contributing](./CONTRIBUTING.md) file to see our contribution guidelines and also our [workflow](./WORKFLOW.md) file to see our development workflow.
