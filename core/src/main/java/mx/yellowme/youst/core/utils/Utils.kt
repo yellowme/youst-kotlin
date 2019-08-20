@@ -1,5 +1,6 @@
 package mx.yellowme.youst.core.utils
 
+import android.app.Activity
 import android.util.TypedValue
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +23,10 @@ fun <T : View> AppCompatActivity.findOrThrow(viewId: Int): T {
     return findViewById(viewId) ?: throw RuntimeException(
         "Screen must contain a reference to component with id: $viewId"
     )
+}
+
+inline fun <reified T: Any> Activity.loadJsonArray(named: String): List<T>? {
+    return classLoader?.readJson("showcase.json")?.asJsonArrayOf()
 }
 
 fun ClassLoader?.readJson(named: String): String? {

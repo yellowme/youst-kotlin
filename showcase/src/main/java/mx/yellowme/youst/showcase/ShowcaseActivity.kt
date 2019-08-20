@@ -7,9 +7,8 @@ import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.core.hooks.recycler.ItemListener
 import mx.yellowme.youst.core.utils.Activities
-import mx.yellowme.youst.core.utils.asJsonArrayOf
 import mx.yellowme.youst.core.utils.intentTo
-import mx.yellowme.youst.core.utils.readJson
+import mx.yellowme.youst.core.utils.loadJsonArray
 import mx.yellowme.youst.core.R as coreR
 
 class ShowcaseActivity : BaseActivity(), ItemListener<ShowcaseOption> {
@@ -23,11 +22,12 @@ class ShowcaseActivity : BaseActivity(), ItemListener<ShowcaseOption> {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val showcaseRecycler = ShowcaseRecyclerView.Builder()
+        val showcaseRecycler = ShowcaseOptionRecyclerView.Builder()
             .with(showcaseOptions)
             .into(this)
 
-        classLoader?.readJson("showcase.json")?.asJsonArrayOf<ShowcaseOption>()?.let {
+
+        loadJsonArray<ShowcaseOption>("showcase.json")?.let {
             showcaseRecycler.setData(it)
         } ?: throw RuntimeException("Reading corrupted showcase JSON file")
     }
