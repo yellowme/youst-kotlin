@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dimen_32"
+        android:paddingEnd="@dimen/dimen_32"
+        android:paddingBottom="@dimen/dimen_16">
+
+        <androidx.emoji.widget.EmojiTextView
+            android:id="@+id/titleTextView"
+            style="@style/Challenge.Title"
+            android:text="@string/generic_showcase_title_holder" />
+
+        <TextView
+            android:id="@+id/subtitleTextView"
+            style="@style/Challenge.Subtitle"
+            android:layout_marginTop="6dp"
+            android:text="@string/generic_showcase_subtitle_holder" />
+
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/showcaseItemsViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:layout_marginBottom="@dimen/dimen_16"
+        android:layout_weight="5"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingStart="@dimen/dimen_60"
+        android:paddingLeft="@dimen/dimen_60"
+        android:paddingTop="@dimen/dimen_30"
+        android:paddingEnd="@dimen/dimen_60"
+        android:paddingRight="@dimen/dimen_60"
+        android:paddingBottom="@dimen/dimen_30" />
+
+</LinearLayout>

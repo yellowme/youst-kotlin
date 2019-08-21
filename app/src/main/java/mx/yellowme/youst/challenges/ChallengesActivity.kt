@@ -1,52 +1,42 @@
 package mx.yellowme.youst.challenges
 
-import android.os.Bundle
-import kotlinx.android.synthetic.main.challenges.*
 import mx.yellowme.youst.R
 import mx.yellowme.youst.challenges.BaseChallengeActivity.Companion.TOOLBAR_TITLE
+import mx.yellowme.youst.challenges.cards.CardPagerAdapter
+import mx.yellowme.youst.challenges.cards.ShadowTransformer
 import mx.yellowme.youst.challenges.navigation.NavigationActivity
-import mx.yellowme.youst.core.data.ChallengeDataHelper.loadChallengesFromJSONUsing
 import mx.yellowme.youst.core.domain.Challenge
 import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.extensions.toast
-import mx.yellowme.youst.core.hooks.BaseActivity
-import mx.yellowme.youst.core.hooks.recycler.ItemListener
-import mx.yellowme.youst.core.utils.dipToPx
-import mx.yellowme.youst.challenges.cards.CardPagerAdapter
-import mx.yellowme.youst.challenges.cards.ShadowTransformer
+import mx.yellowme.youst.core.templates.GenericShowcaseActivity
+import mx.yellowme.youst.core.templates.GenericShowcasedOption
 
-class ChallengesActivity : BaseActivity(), ItemListener<Challenge> {
+class ChallengesActivity : GenericShowcaseActivity() {
 
-    private var mCardAdapter: CardPagerAdapter? = null
-    private var mCardShadowTransformer: ShadowTransformer? = null
+    //TODO: Rename
 
-    override val layoutId = R.layout.challenges
+    override val titleResId: Int = R.string.challenges_title
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        mCardAdapter = CardPagerAdapter(this)
-        mCardAdapter?.addItems(loadChallengesFromJSONUsing(classLoader)!!)
+    override val subtitleResId: Int = R.string.challenges_subtitle
 
-        challengesViewPager?.pageMargin = dipToPx(12)
-        setupViewPager()
-    }
+    override val fileName: String = "challenges.json"
 
-    override fun onItemClick(item: Challenge?) {
-        item?.type?.let {
-            if (it == Challenge.ChallengeType.BLACK) {
+    override fun onItemClick(item: GenericShowcasedOption?) {
+        item?.id?.let {
+            if (it == "4") {
                 toast(getString(R.string.work_in_progress))
                 return
             }
 
             val nextActivity: Class<*> = when (it) {
-                Challenge.ChallengeType.MAROON -> {
+                "2" -> {
                     ListenToMeChallengeActivity::class.java
                 }
-                Challenge.ChallengeType.BLUE,
-                Challenge.ChallengeType.BLUE_GREEN -> {
+                "1",
+                "3" -> {
                     CrazyListsChallengeActivity::class.java
                 }
-                Challenge.ChallengeType.EMERALD -> NavigationActivity::class.java
+                "5" -> NavigationActivity::class.java
                 else -> throw RuntimeException("Invalid challenge identifier")
             }
 
@@ -56,17 +46,4 @@ class ChallengesActivity : BaseActivity(), ItemListener<Challenge> {
         }
     }
 
-    private fun setupViewPager() {
-        mCardAdapter?.let {
-            mCardShadowTransformer = ShadowTransformer(
-                challengesViewPager,
-                it
-            ).apply {
-                enableScaling(true)
-            }
-            challengesViewPager?.adapter = it
-            challengesViewPager?.setPageTransformer(false, mCardShadowTransformer)
-            challengesViewPager?.offscreenPageLimit = 3
-        }
-    }
 }

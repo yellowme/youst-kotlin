@@ -26,7 +26,7 @@ fun <T : View> AppCompatActivity.findOrThrow(viewId: Int): T {
 }
 
 inline fun <reified T: Any> Activity.loadJsonArray(named: String): List<T>? {
-    return classLoader?.readJson("dashboard.json")?.asJsonArrayOf()
+    return classLoader?.readJson(named)?.asJsonArrayOf()
 }
 
 fun ClassLoader?.readJson(named: String): String? {
