@@ -1,7 +1,8 @@
-package mx.yellowme.youst.core.templates
+package mx.yellowme.youst.core.templates.showcase
 
 import android.view.View
 import androidx.viewpager.widget.ViewPager
+import mx.yellowme.youst.core.templates.showcase.CardAdapter
 
 class ShadowTransformer(
     private val mViewPager: ViewPager,
@@ -93,4 +94,5 @@ class ShadowTransformer(
     override fun onPageSelected(position: Int) {}
 
     override fun onPageScrollStateChanged(state: Int) {}
+
 }

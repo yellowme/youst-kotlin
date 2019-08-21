@@ -2,25 +2,21 @@ package mx.yellowme.youst.challenges
 
 import mx.yellowme.youst.R
 import mx.yellowme.youst.challenges.BaseChallengeActivity.Companion.TOOLBAR_TITLE
-import mx.yellowme.youst.challenges.cards.CardPagerAdapter
-import mx.yellowme.youst.challenges.cards.ShadowTransformer
 import mx.yellowme.youst.challenges.navigation.NavigationActivity
-import mx.yellowme.youst.core.domain.Challenge
 import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.extensions.toast
-import mx.yellowme.youst.core.templates.GenericShowcaseActivity
-import mx.yellowme.youst.core.templates.GenericShowcasedOption
+import mx.yellowme.youst.core.templates.showcase.GenericShowcaseActivity
+import mx.yellowme.youst.core.templates.showcase.GenericShowcasedOption
 
 class ChallengesActivity : GenericShowcaseActivity() {
-
-    //TODO: Rename
 
     override val titleResId: Int = R.string.challenges_title
 
     override val subtitleResId: Int = R.string.challenges_subtitle
 
-    override val fileName: String = "challenges.json"
+    override val optionsJsonName: String = "challenges.json"
 
+    //TODO: Improve item handle
     override fun onItemClick(item: GenericShowcasedOption?) {
         item?.id?.let {
             if (it == "4") {
