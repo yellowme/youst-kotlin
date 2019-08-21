@@ -1,0 +1,58 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="mx.yellowme.youst.challenges">
+
+    <dist:module
+        dist:instant="false"
+        dist:onDemand="false"
+        dist:title="@string/title_challenges">
+        <dist:fusing dist:include="false" />
+    </dist:module>
+
+    <application>
+        <activity
+            android:name="mx.yellowme.youst.challenges.ChallengesActivity"
+            android:label="@string/app_name"
+            android:theme="@style/SharedAppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.yellowme.mx"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="mx.yellowme.youst.challenges.pokemon.show.PokemonDetailActivity"
+            android:label="@string/pokemon_detail"
+            android:theme="@style/SharedAppTheme.NoActionBar" />
+        <activity
+            android:name="mx.yellowme.youst.challenges.CrazyListsChallengeActivity"
+            android:label="@string/challenge_title_crazy_lists"
+            android:theme="@style/SharedAppTheme.NoActionBar" />
+        <activity
+            android:name="mx.yellowme.youst.challenges.ListenToMeChallengeActivity"
+            android:label="@string/challenge_title_listen_to_me"
+            android:theme="@style/SharedAppTheme.NoActionBar" />
+        <activity
+            android:name="mx.yellowme.youst.challenges.navigation.NavigationActivity"
+            android:label="Jetpack Navigation"
+            android:parentActivityName="mx.yellowme.youst.challenges.ChallengesActivity"
+            android:theme="@style/SharedAppTheme.NoActionBar.TransparentStatus">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mx.yellowme.youst.challenges.ChallengesActivity" />
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+    </application>
+
+</manifest>
+

@@ -6,10 +6,10 @@
         dist:instant="false"
         dist:onDemand="false"
         dist:title="@string/title_dashboard">
-        <dist:fusing dist:include="true" />
+        <dist:fusing dist:include="false" />
     </dist:module>
 
-    <application android:name="mx.yellowme.youst.app.YoustApplication">
+    <application>
         <activity
             android:name="mx.yellowme.youst.dashboard.DashboardActivity"
             android:theme="@style/SharedAppTheme.NoActionBar">

@@ -6,4 +6,8 @@
     <string name="generic_showcase_title_holder">Generic show case item</string>
     <string name="toolbar_title_holder">Toolbar Title</string>
     <string name="menu_help">Ayuda</string>
+
+    <string name="content_description_card_bookmark">card_bookmark</string>
+    <string name="content_description_right_action">right_action_menu</string>
+    <string name="content_description_image">content_description_image</string>
 </resources>

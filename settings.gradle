@@ -1,1 +1,1 @@
-include ':app', ':core', ':dashboard', ':playground'
+include ':app', ':core', ':dashboard', ':playground', ':challenges'

@@ -19,57 +19,11 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".challenges.ChallengesActivity"
-            android:label="@string/app_name"
-            android:theme="@style/SharedAppTheme.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="www.yellowme.mx"
-                    android:scheme="https" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".pokemon.show.PokemonDetailActivity"
-            android:label="@string/pokemon_detail"
-            android:theme="@style/SharedAppTheme.NoActionBar" />
-        <activity
-            android:name=".challenges.CrazyListsChallengeActivity"
-            android:label="@string/challenge_title_crazy_lists"
-            android:theme="@style/SharedAppTheme.NoActionBar" />
-        <activity
-            android:name=".challenges.ListenToMeChallengeActivity"
-            android:label="@string/challenge_title_listen_to_me"
-            android:theme="@style/SharedAppTheme.NoActionBar" />
-        <activity
-            android:name=".challenges.navigation.NavigationActivity"
-            android:label="Jetpack Navigation"
-            android:parentActivityName=".challenges.ChallengesActivity"
-            android:theme="@style/SharedAppTheme.NoActionBar.TransparentStatus">
-
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".challenges.ChallengesActivity" />
-        </activity>
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
-
-        <receiver android:name=".challenges.navigation.DeepLinkWidgetProvider">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/deep_link_widget_info" />
-        </receiver>
     </application>
 
 </manifest>
