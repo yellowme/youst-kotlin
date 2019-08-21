@@ -1,1 +1,1 @@
-include ':app', ':core', ':showcase'
+include ':app', ':core', ':dashboard', ':playground'

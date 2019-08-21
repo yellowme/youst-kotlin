@@ -43,7 +43,7 @@ android {
         targetCompatibility = 1.8
     }
 
-    dynamicFeatures = [":showcase"]
+    dynamicFeatures = [":dashboard", ":playground"]
 }
 
 dependencies {

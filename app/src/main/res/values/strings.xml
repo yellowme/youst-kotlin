@@ -37,5 +37,6 @@
     <string name="action_go_back">Go back</string>
     <string name="yellow_web_link">yellowme.mx 💛</string>
     <string name="deep_link_widget">Deep Link</string>
-    <string name="title_showcase">Showcase</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_playground">Playground</string>
 </resources>

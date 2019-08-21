@@ -1,0 +1,6 @@
+<resources>
+    <string name="dashboard_title">Welcome to Youst!</string>
+    <string name="dashboard_subtitle">Now you control a yellow knight riding a flying ostrich or stork, from a third-person perspective.</string>
+    <string name="dashboard_option_item_holder_title">Dashboard Element</string>
+    <string name="dashboard_option_item_holder_subtitle">This is a show case element description</string>
+</resources>

@@ -1,4 +1,4 @@
-package mx.yellowme.youst.showcase
+package mx.yellowme.youst.dashboard
 
 import android.app.Activity
 import android.graphics.Color
@@ -7,41 +7,41 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.showcase_option_item.view.*
+import kotlinx.android.synthetic.main.dashboard_option_item.view.*
 import mx.yellowme.youst.core.extensions.displayOrThrow
 import mx.yellowme.youst.core.extensions.dp
 import mx.yellowme.youst.core.hooks.recycler.*
 import mx.yellowme.youst.core.hooks.setSingleOnClickListener
 
-data class ShowcaseOption(
+data class DashboardOption(
     val id: String,
     val title: String,
     val subtitle: String,
     val hexColor: String
 ) {
-    val optionId: ShowcaseOptionId
+    val optionId: DashboardOptionId
         get() {
-            return ShowcaseOptionId.valueOf(id.toUpperCase())
+            return DashboardOptionId.valueOf(id.toUpperCase())
         }
 }
 
-enum class ShowcaseOptionId {
+enum class DashboardOptionId {
     CHALLENGES,
     PLAYGROUND,
     MINI_APPS,
     PORTFOLIO
 }
 
-class ShowcaseOptionRecyclerView<ActivityListener>(
+class DashboardOptionRecyclerView<ActivityListener>(
     private val recyclerView: RecyclerView,
     private val activityListener: ActivityListener
-) where ActivityListener : Activity, ActivityListener : ItemListener<ShowcaseOption> {
+) where ActivityListener : Activity, ActivityListener : ItemListener<DashboardOption> {
 
-    private var optionsAdapter: ShowcaseOptionAdapter
+    private var optionsAdapter: DashboardOptionAdapter
 
     init {
         with(recyclerView) {
-            optionsAdapter = ShowcaseOptionAdapter(mutableListOf(), activityListener)
+            optionsAdapter = DashboardOptionAdapter(mutableListOf(), activityListener)
             adapter = optionsAdapter
 
             viewTreeObserver
@@ -70,7 +70,7 @@ class ShowcaseOptionRecyclerView<ActivityListener>(
         }
     }
 
-    fun setData(data: List<ShowcaseOption>?) {
+    fun setData(data: List<DashboardOption>?) {
         optionsAdapter.replaceData(data?.toMutableList() ?: mutableListOf())
         optionsAdapter.notifyDataSetChanged()
         recyclerView.invalidate()
@@ -81,34 +81,34 @@ class ShowcaseOptionRecyclerView<ActivityListener>(
             this.recyclerView = recyclerView
         }
 
-        fun into(activity: ShowcaseActivity): ShowcaseOptionRecyclerView<ShowcaseActivity> {
+        fun into(activity: DashboardActivity): DashboardOptionRecyclerView<DashboardActivity> {
             recyclerView?.let {
-                return ShowcaseOptionRecyclerView(it, activity)
+                return DashboardOptionRecyclerView(it, activity)
             } ?: throw RuntimeException("RecyclerView reference must not be null")
         }
     }
 }
 
-class ShowcaseOptionAdapter(
-    items: MutableList<ShowcaseOption>,
-    itemListener: ItemListener<ShowcaseOption>
-) : SimpleRecyclerAdapter<ShowcaseOption, ShowcaseOptionViewHolder>(items, itemListener) {
+class DashboardOptionAdapter(
+    items: MutableList<DashboardOption>,
+    itemListener: ItemListener<DashboardOption>
+) : SimpleRecyclerAdapter<DashboardOption, DashboardOptionViewHolder>(items, itemListener) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShowcaseOptionViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DashboardOptionViewHolder {
         val view = LayoutInflater
             .from(parent.context)
-            .inflate(R.layout.showcase_option_item, parent, false)
+            .inflate(R.layout.dashboard_option_item, parent, false)
 
-        return ShowcaseOptionViewHolder(view, itemListener)
+        return DashboardOptionViewHolder(view, itemListener)
     }
 
 }
 
-class ShowcaseOptionViewHolder(
+class DashboardOptionViewHolder(
     itemView: View,
-    private val listener: ItemListener<ShowcaseOption>? = null
-) : RecyclerViewHolderDecorator<ShowcaseOption>(itemView) {
-    override fun decorate(model: ShowcaseOption) {
+    private val listener: ItemListener<DashboardOption>? = null
+) : RecyclerViewHolderDecorator<DashboardOption>(itemView) {
+    override fun decorate(model: DashboardOption) {
         with(itemView) {
             setSingleOnClickListener { listener?.onItemClick(model) }
             titleTextView.displayOrThrow(model.title)

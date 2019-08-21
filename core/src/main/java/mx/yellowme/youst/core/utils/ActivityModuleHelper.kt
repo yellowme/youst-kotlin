@@ -50,8 +50,8 @@ object Activities {
     /**
      * AboutActivity
      */
-    object Showcase : AddressableActivity {
-        override val className = "$PACKAGE_NAME.showcase.ShowcaseActivity"
+    object Dashboard : AddressableActivity {
+        override val className = "$PACKAGE_NAME.dashboard.DashboardActivity"
     }
 
     /**

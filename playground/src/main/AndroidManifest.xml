@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="mx.yellowme.youst.playground">
+
+    <dist:module
+        dist:instant="false"
+        dist:onDemand="false"
+        dist:title="@string/title_playground">
+        <dist:fusing dist:include="false" />
+    </dist:module>
+</manifest>
+

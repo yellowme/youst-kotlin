@@ -17,18 +17,18 @@
 
         <TextView
             android:id="@+id/titleTextView"
-            style="@style/Showcase.OptionItem.Title"
+            style="@style/Dashboard.OptionItem.Title"
             android:layout_marginBottom="@dimen/size_2"
             app:layout_constraintBottom_toTopOf="@id/subtitleTextView"
             app:layout_constraintStart_toStartOf="parent"
-            tools:text="@string/showcase_option_item_holder_title" />
+            tools:text="@string/dashboard_option_item_holder_title" />
 
         <TextView
             android:id="@+id/subtitleTextView"
-            style="@style/Showcase.OptionItem.Subtitle"
+            style="@style/Dashboard.OptionItem.Subtitle"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:text="@string/showcase_option_item_holder_subtitle" />
+            tools:text="@string/dashboard_option_item_holder_subtitle" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -59,32 +59,32 @@
 
     <!--endregion-->
 
-    <!--region Showcase-->
+    <!--region Dashboard-->
 
-    <style name="Showcase" />
+    <style name="Dashboard" />
 
-    <style name="Showcase.Title" parent="TextAppearance.Bold">
+    <style name="Dashboard.Title" parent="TextAppearance.Bold">
         <item name="android:paddingStart">@dimen/dimen_2</item>
         <item name="android:paddingEnd">@dimen/dimen_2</item>
         <item name="android:textSize">@dimen/size_24</item>
         <item name="android:letterSpacing">0.025</item>
     </style>
 
-    <style name="Showcase.Subtitle" parent="TextAppearance.Regular">
+    <style name="Dashboard.Subtitle" parent="TextAppearance.Regular">
         <item name="android:paddingStart">@dimen/dimen_2</item>
         <item name="android:paddingEnd">@dimen/dimen_2</item>
         <item name="android:textSize">@dimen/size_12</item>
     </style>
 
-    <style name="Showcase.OptionItem" parent="Showcase" />
+    <style name="Dashboard.OptionItem" parent="Dashboard" />
 
-    <style name="Showcase.OptionItem.Title" parent="TextAppearance.Bold">
+    <style name="Dashboard.OptionItem.Title" parent="TextAppearance.Bold">
         <item name="android:textSize">@dimen/size_20</item>
         <item name="android:letterSpacing">0.025</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="Showcase.OptionItem.Subtitle" parent="TextAppearance.Regular">
+    <style name="Dashboard.OptionItem.Subtitle" parent="TextAppearance.Regular">
         <item name="android:textSize">@dimen/size_12</item>
         <item name="android:textColor">@color/white</item>
     </style>

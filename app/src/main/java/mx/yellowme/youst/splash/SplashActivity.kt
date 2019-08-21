@@ -19,7 +19,7 @@ class SplashActivity : BaseActivity() {
             useHardwareAcceleration()
             setListener {
                 onAnimationEnd {
-                    launch(intentTo(Activities.Showcase), finishCaller = true)
+                    launch(intentTo(Activities.Dashboard), finishCaller = true)
                 }
             }
         }

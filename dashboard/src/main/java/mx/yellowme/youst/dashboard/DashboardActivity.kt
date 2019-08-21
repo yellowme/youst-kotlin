@@ -1,7 +1,7 @@
-package mx.yellowme.youst.showcase
+package mx.yellowme.youst.dashboard
 
 import android.os.Bundle
-import kotlinx.android.synthetic.main.showcase.*
+import kotlinx.android.synthetic.main.dashboard.*
 import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.core.hooks.BaseActivity
@@ -11,37 +11,37 @@ import mx.yellowme.youst.core.utils.intentTo
 import mx.yellowme.youst.core.utils.loadJsonArray
 import mx.yellowme.youst.core.R as coreR
 
-class ShowcaseActivity : BaseActivity(), ItemListener<ShowcaseOption> {
+class DashboardActivity : BaseActivity(), ItemListener<DashboardOption> {
 
     //region Attribute
 
-    override val layoutId = R.layout.showcase
+    override val layoutId = R.layout.dashboard
 
     //endregion
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val showcaseRecycler = ShowcaseOptionRecyclerView.Builder()
-            .with(showcaseOptions)
+        val recyclerView = DashboardOptionRecyclerView.Builder()
+            .with(dashboardOptions)
             .into(this)
 
 
-        loadJsonArray<ShowcaseOption>("showcase.json")?.let {
-            showcaseRecycler.setData(it)
-        } ?: throw RuntimeException("Reading corrupted showcase JSON file")
+        loadJsonArray<DashboardOption>("dashboard.json")?.let {
+            recyclerView.setData(it)
+        } ?: throw RuntimeException("Reading corrupted dashboard JSON file")
     }
 
-    override fun onItemClick(item: ShowcaseOption?) {
+    override fun onItemClick(item: DashboardOption?) {
         when (item!!.optionId) {
-            ShowcaseOptionId.CHALLENGES -> {
+            DashboardOptionId.CHALLENGES -> {
                 launch(intentTo(Activities.Challenges))
             }
-            ShowcaseOptionId.PLAYGROUND -> {
+            DashboardOptionId.PLAYGROUND -> {
                 toast("TODO: Must migrate current navigation component")
             }
-            ShowcaseOptionId.MINI_APPS,
-            ShowcaseOptionId.PORTFOLIO -> {
+            DashboardOptionId.MINI_APPS,
+            DashboardOptionId.PORTFOLIO -> {
                 toast(getString(coreR.string.work_in_progress))
             }
         }
