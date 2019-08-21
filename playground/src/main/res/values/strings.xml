@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Playground</string>
+    <string name="playground_title">Playground Title</string>
+    <string name="playground_subtitle">Playground Subtitle</string>
+</resources>

@@ -30,13 +30,5 @@
     "help": "Work In Progress. Come back later!",
     "type": "BLACK",
     "hexColor": "#111111"
-  },
-  {
-    "id": "5",
-    "title": "Navigation Component",
-    "subtitle": "Showcase of the Android Jetpack Navigation Component, designed to delegate much of navigation logic to a centralized hub.",
-    "help": "",
-    "type": "EMERALD",
-    "hexColor": "#49D482"
   }
 ]

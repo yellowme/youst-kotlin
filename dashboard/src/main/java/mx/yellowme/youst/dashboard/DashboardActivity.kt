@@ -38,7 +38,7 @@ class DashboardActivity : BaseActivity(), ItemListener<DashboardOption> {
                 launch(intentTo(Activities.Challenges))
             }
             DashboardOptionId.PLAYGROUND -> {
-                toast("TODO: Must migrate current navigation component")
+                launch(intentTo(Activities.Playground))
             }
             DashboardOptionId.MINI_APPS,
             DashboardOptionId.PORTFOLIO -> {

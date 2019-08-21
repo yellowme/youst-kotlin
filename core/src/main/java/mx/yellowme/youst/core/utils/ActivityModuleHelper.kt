@@ -48,14 +48,21 @@ interface AddressableActivity {
 object Activities {
 
     /**
-     * AboutActivity
+     * Dashboard
      */
     object Dashboard : AddressableActivity {
         override val className = "$PACKAGE_NAME.dashboard.DashboardActivity"
     }
 
     /**
-     * Base object for DesignerNews activities.
+     * Playground
+     */
+    object Playground : AddressableActivity {
+        override val className = "$PACKAGE_NAME.playground.PlaygroundActivity"
+    }
+
+    /**
+     * Base object for Challenges activities.
      */
     object Challenges : AddressableActivity {
 
