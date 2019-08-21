@@ -1,40 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    app:layout_constraintVertical_chainStyle="spread_inside">
 
-    <LinearLayout
+    <mx.yellowme.youst.core.components.toolbar.MainActionToolbar
+        android:id="@+id/mainActionToolbar"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:gravity="bottom"
-        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftAction="back"
+        app:menuAction="none" />
+
+    <androidx.emoji.widget.EmojiTextView
+        android:id="@+id/titleTextView"
+        style="@style/Dashboard.Title"
         android:paddingStart="@dimen/dimen_32"
         android:paddingEnd="@dimen/dimen_32"
-        android:paddingBottom="@dimen/dimen_16">
+        android:text="@string/generic_showcase_title_holder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainActionToolbar" />
 
-        <androidx.emoji.widget.EmojiTextView
-            android:id="@+id/titleTextView"
-            style="@style/Challenge.Title"
-            android:text="@string/generic_showcase_title_holder" />
-
-        <TextView
-            android:id="@+id/subtitleTextView"
-            style="@style/Challenge.Subtitle"
-            android:layout_marginTop="6dp"
-            android:text="@string/generic_showcase_subtitle_holder" />
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/subtitleTextView"
+        style="@style/Challenge.Subtitle"
+        android:layout_marginTop="@dimen/dimen_6"
+        android:paddingStart="@dimen/dimen_32"
+        android:paddingEnd="@dimen/dimen_32"
+        android:text="@string/generic_showcase_subtitle_holder"
+        app:layout_constraintBottom_toTopOf="@id/showcaseItemsViewPager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/showcaseItemsViewPager"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_gravity="bottom"
         android:layout_marginTop="@dimen/dimen_16"
         android:layout_marginBottom="@dimen/dimen_16"
-        android:layout_weight="5"
         android:clipToPadding="false"
         android:overScrollMode="never"
         android:paddingStart="@dimen/dimen_60"
@@ -42,6 +49,10 @@
         android:paddingTop="@dimen/dimen_30"
         android:paddingEnd="@dimen/dimen_60"
         android:paddingRight="@dimen/dimen_60"
-        android:paddingBottom="@dimen/dimen_30" />
+        android:paddingBottom="@dimen/dimen_30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitleTextView" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

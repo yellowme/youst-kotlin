@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MainActionToolbar">
+        <attr name="leftAction" format="string" />
+        <attr name="toolbarTitle" format="string" />
+        <attr name="menuAction" format="string" />
+        <attr name="displayShadowOnCollapse" format="boolean" />
+    </declare-styleable>
+</resources>

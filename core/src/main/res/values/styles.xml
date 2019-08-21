@@ -33,6 +33,17 @@
 
     <!--endregion-->
 
+    <!--region Components-->
+
+    <style name="Toolbar.ActionTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--endregion-->
+
     <!--region Dialog-->
 
     <style name="Dialog" />
