@@ -18,6 +18,8 @@
     <androidx.emoji.widget.EmojiTextView
         android:id="@+id/titleTextView"
         style="@style/Dashboard.Title"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/dimen_16"
         android:paddingStart="@dimen/dimen_32"
         android:paddingEnd="@dimen/dimen_32"
         android:text="@string/generic_showcase_title_holder"
@@ -28,20 +30,25 @@
         android:id="@+id/subtitleTextView"
         style="@style/Challenge.Subtitle"
         android:layout_marginTop="@dimen/dimen_6"
+        android:layout_marginBottom="@dimen/dimen_24"
         android:paddingStart="@dimen/dimen_32"
         android:paddingEnd="@dimen/dimen_32"
         android:text="@string/generic_showcase_subtitle_holder"
-        app:layout_constraintBottom_toTopOf="@id/showcaseItemsViewPager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/showcaseItemsViewPager"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_gravity="bottom"
-        android:layout_marginTop="@dimen/dimen_16"
-        android:layout_marginBottom="@dimen/dimen_16"
         android:clipToPadding="false"
         android:overScrollMode="never"
         android:paddingStart="@dimen/dimen_60"
@@ -53,6 +60,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/subtitleTextView" />
+        app:layout_constraintTop_toBottomOf="@id/guideline" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
