@@ -3,6 +3,7 @@ package mx.yellowme.youst.challenges
 import mx.yellowme.youst.challenges.common.BaseChallengeActivity.Companion.TOOLBAR_TITLE
 import mx.yellowme.youst.challenges.crazylists.CrazyListsChallengeActivity
 import mx.yellowme.youst.challenges.domain.Challenge
+import mx.yellowme.youst.challenges.domain.ChallengeType
 import mx.yellowme.youst.challenges.listentome.ListenToMeChallengeActivity
 import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.extensions.toast
@@ -27,21 +28,21 @@ class ChallengesActivity : GenericShowcaseActivity<Challenge>() {
 
     //TODO: Improve item handle
     override fun onItemClick(item: Challenge?) {
-        item?.id?.let {
-            if (it == "4") {
+        item?.type?.let {
+            if (it == ChallengeType.ARCHIE) {
                 toast(getString(coreR.string.work_in_progress))
                 return
             }
 
             val nextActivity: Class<*> = when (it) {
-                "2" -> {
+                ChallengeType.LISTEN_TO_ME -> {
                     ListenToMeChallengeActivity::class.java
                 }
-                "1",
-                "3" -> {
+                ChallengeType.CRAZY_LISTS,
+                ChallengeType.ABOUT_DETAILS -> {
                     CrazyListsChallengeActivity::class.java
                 }
-                else -> throw RuntimeException("Invalid identifier")
+                else -> throw RuntimeException("Invalid challenge identifier")
             }
 
             launch(nextActivity) {

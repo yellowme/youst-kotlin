@@ -26,7 +26,12 @@ fun <T : View> AppCompatActivity.findOrThrow(viewId: Int): T {
 }
 
 fun Activity.readJson(named: String): String? {
+    println("Reading JSON file named $named")
     return classLoader?.readJson(named)
+}
+
+inline fun <reified T : Any> Activity.loadJsonArray(named: String) : List<T>? {
+    return readJson(named)?.asJsonArrayOf()
 }
 
 fun ClassLoader?.readJson(named: String): String? {

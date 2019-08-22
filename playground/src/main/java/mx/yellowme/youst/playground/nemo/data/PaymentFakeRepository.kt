@@ -1,7 +1,7 @@
 package mx.yellowme.youst.playground.nemo.data
 
 import android.os.Handler
-import mx.yellowme.youst.playground.nemo.domain.Payment
+import mx.yellowme.youst.playground.domain.Payment
 
 class PaymentFakeRepository {
 

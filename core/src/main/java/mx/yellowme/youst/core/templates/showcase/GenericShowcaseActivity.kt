@@ -6,18 +6,11 @@ import mx.yellowme.youst.core.R
 import mx.yellowme.youst.core.domain.GenericShowcasedOption
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.core.hooks.recycler.ItemListener
-import mx.yellowme.youst.core.utils.asJsonArrayOf
 import mx.yellowme.youst.core.utils.dipToPx
 import mx.yellowme.youst.core.utils.readJson
 
 interface ModelTransformer<Model> {
     fun asList(rawString: String): List<Model>
-}
-
-class DefaultModelTransformer : ModelTransformer<GenericShowcasedOption> {
-    override fun asList(rawString: String): List<GenericShowcasedOption> {
-        return rawString.asJsonArrayOf()!!
-    }
 }
 
 abstract class GenericShowcaseActivity<Model : GenericShowcasedOption> : BaseActivity(),
@@ -45,7 +38,7 @@ abstract class GenericShowcaseActivity<Model : GenericShowcasedOption> : BaseAct
 
         readJson(optionsJsonName)?.let {
             mCardAdapter?.addItems(modelTransformer.asList(it))
-        } ?: throw RuntimeException("Reading corrupted dashboard JSON file")
+        } ?: throw RuntimeException("Unable to read JSON file named $optionsJsonName")
 
         showcaseItemsViewPager?.pageMargin = dipToPx(12)
         setupViewPager()

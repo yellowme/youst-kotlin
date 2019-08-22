@@ -3,7 +3,7 @@ package mx.yellowme.youst.playground.nemo.navigation.matchers
 import mx.yellowme.nemo.common.navigation.hooks.AsyncSingleNavigator
 import mx.yellowme.youst.playground.nemo.navigation.BaseNavigator
 import mx.yellowme.youst.playground.nemo.data.UserFakeRepository
-import mx.yellowme.youst.playground.nemo.domain.User
+import mx.yellowme.youst.playground.domain.User
 import mx.yellowme.youst.playground.nemo.navigation.hooks.Navigator
 
 class HasLastName<Navigation>(

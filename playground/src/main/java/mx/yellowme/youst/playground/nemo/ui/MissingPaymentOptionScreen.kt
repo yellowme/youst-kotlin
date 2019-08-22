@@ -6,7 +6,7 @@ import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.nemo.components.AppHeroActionListener
 import mx.yellowme.youst.playground.nemo.data.PaymentFakeRepository
-import mx.yellowme.youst.playground.nemo.domain.Payment
+import mx.yellowme.youst.playground.domain.Payment
 import mx.yellowme.youst.playground.nemo.navigation.CommonNavigator
 
 class MissingPaymentOptionScreen : BaseActivity() {
@@ -26,7 +26,8 @@ class MissingPaymentOptionScreen : BaseActivity() {
         appHero.listener = object : AppHeroActionListener {
             override fun onClickAction() {
                 //TODO: Must delegate action to another layer component (ViewModel or Presenter)
-                PaymentFakeRepository.defaultConfig = Payment("Enso", "4242424242424242")
+                PaymentFakeRepository.defaultConfig =
+                    Payment("Enso", "4242424242424242")
                 navigation.sendToSplash()
             }
         }

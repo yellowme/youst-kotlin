@@ -6,7 +6,7 @@ import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.nemo.components.AppHeroActionListener
 import mx.yellowme.youst.playground.nemo.data.UserFakeRepository
-import mx.yellowme.youst.playground.nemo.domain.User
+import mx.yellowme.youst.playground.domain.User
 import mx.yellowme.youst.playground.nemo.navigation.CommonNavigator
 
 class LoginScreen : BaseActivity() {

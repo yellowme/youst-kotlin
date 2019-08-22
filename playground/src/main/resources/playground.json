@@ -3,14 +3,12 @@
     "id": "1",
     "title": "Jetpack Navigation Component",
     "subtitle": "Showcase of the Android Jetpack Navigation Component, designed to delegate much of navigation logic to a centralized hub.",
-    "help": "",
     "hexColor": "#49D482"
   },
   {
     "id": "2",
     "title": "Nemo Navigation Approach",
     "subtitle": ".....",
-    "help": "",
     "hexColor": "#ff4136"
   }
 ]

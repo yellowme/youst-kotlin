@@ -4,7 +4,7 @@ import mx.yellowme.nemo.common.navigation.hooks.AsyncSingleNavigator
 import mx.yellowme.youst.playground.nemo.navigation.hooks.Navigator
 import mx.yellowme.youst.playground.nemo.navigation.BaseNavigator
 import mx.yellowme.youst.playground.nemo.data.UserFakeRepository
-import mx.yellowme.youst.playground.nemo.domain.User
+import mx.yellowme.youst.playground.domain.User
 
 class FetchUser<Navigation>(
     private val repository: UserFakeRepository,

@@ -1,14 +1,16 @@
 package mx.yellowme.youst.playground
 
-import mx.yellowme.youst.core.domain.GenericShowcasedOption
 import mx.yellowme.youst.core.extensions.launch
-import mx.yellowme.youst.core.templates.showcase.DefaultModelTransformer
 import mx.yellowme.youst.core.templates.showcase.GenericShowcaseActivity
+import mx.yellowme.youst.core.templates.showcase.ModelTransformer
 import mx.yellowme.youst.core.utils.Activities
+import mx.yellowme.youst.core.utils.asJsonArrayOf
 import mx.yellowme.youst.core.utils.intentTo
+import mx.yellowme.youst.playground.domain.PlaygroundElement
+import mx.yellowme.youst.playground.domain.PlaygroundElementType
 import mx.yellowme.youst.core.R as coreR
 
-class PlaygroundActivity : GenericShowcaseActivity<GenericShowcasedOption>() {
+class PlaygroundActivity : GenericShowcaseActivity<PlaygroundElement>() {
 
     override val titleResId: Int = R.string.playground_title
 
@@ -16,16 +18,20 @@ class PlaygroundActivity : GenericShowcaseActivity<GenericShowcasedOption>() {
 
     override val optionsJsonName: String = "playground.json"
 
-    override val modelTransformer = DefaultModelTransformer()
+    override val modelTransformer = object : ModelTransformer<PlaygroundElement> {
+        override fun asList(rawString: String): List<PlaygroundElement> {
+            return rawString.asJsonArrayOf()!!
+        }
+    }
 
     //TODO: Improve item handle
-    override fun onItemClick(item: GenericShowcasedOption?) {
-        item?.id?.let {
+    override fun onItemClick(item: PlaygroundElement?) {
+        item?.type?.let {
             when (it) {
-                "1" -> {
+                PlaygroundElementType.JETPACK_NAVIGATION -> {
                     launch(intentTo(Activities.Playground.Navigation))
                 }
-                "2" -> {
+                PlaygroundElementType.NEMO -> {
                     launch(intentTo(Activities.Playground.Nemo))
                 }
                 else -> throw RuntimeException("Invalid identifier")

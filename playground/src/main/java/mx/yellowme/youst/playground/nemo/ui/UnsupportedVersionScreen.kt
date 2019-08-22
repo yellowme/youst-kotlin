@@ -6,7 +6,7 @@ import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.nemo.components.AppHeroActionListener
 import mx.yellowme.youst.playground.nemo.data.ConfigFakeRepository
-import mx.yellowme.youst.playground.nemo.domain.Config
+import mx.yellowme.youst.playground.domain.Config
 import mx.yellowme.youst.playground.nemo.navigation.CommonNavigator
 
 class UnsupportedVersionScreen : BaseActivity() {
@@ -26,7 +26,8 @@ class UnsupportedVersionScreen : BaseActivity() {
         appHero.listener = object : AppHeroActionListener {
             override fun onClickAction() {
                 //TODO: Must delegate action to another layer component (ViewModel or Presenter)
-                ConfigFakeRepository.defaultConfig = Config("3.3.12", 12)
+                ConfigFakeRepository.defaultConfig =
+                    Config("3.3.12", 12)
                 navigation.sendToSplash()
             }
         }

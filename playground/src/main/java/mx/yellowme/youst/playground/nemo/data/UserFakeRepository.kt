@@ -1,7 +1,7 @@
 package mx.yellowme.youst.playground.nemo.data
 
 import android.os.Handler
-import mx.yellowme.youst.playground.nemo.domain.User
+import mx.yellowme.youst.playground.domain.User
 
 class UserFakeRepository {
 
