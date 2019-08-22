@@ -1,4 +1,4 @@
-package mx.yellowme.youst.challenges
+package mx.yellowme.youst.challenges.common
 
 import android.os.Bundle
 import android.view.View.GONE
@@ -7,6 +7,7 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import mx.yellowme.youst.challenges.R
 import mx.yellowme.youst.core.hooks.recycler.RecyclerViewHolderDecorator
 import mx.yellowme.youst.core.hooks.recycler.SimpleRecyclerAdapter
 import mx.yellowme.youst.core.utils.findOrThrow

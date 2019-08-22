@@ -9,12 +9,11 @@ import java.util.concurrent.TimeUnit
  * Provides methods to easily create API services providing the concrete service class and
  * the user auth token if is needed.
  */
-object APIServiceGenerator {
+open class BaseAPIServiceGenerator(baseURL: String) {
 
     private var httpClient: OkHttpClient.Builder? = null
 
-    private val builder = Retrofit.Builder()
-        .baseUrl("https://ios-course-poke-api.herokuapp.com/")
+    private val builder = Retrofit.Builder().baseUrl(baseURL)
 
     /**
      * Generates a out of the box retrofit service with a session id on the headers.

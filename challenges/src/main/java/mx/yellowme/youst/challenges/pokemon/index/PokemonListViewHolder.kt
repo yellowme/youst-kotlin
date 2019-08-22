@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.core.graphics.drawable.DrawableCompat
 import com.squareup.picasso.Picasso
 import mx.yellowme.youst.challenges.R
-import mx.yellowme.youst.core.domain.Pokemon
+import mx.yellowme.youst.challenges.domain.Pokemon
 import mx.yellowme.youst.core.hooks.recycler.ItemListener
 import mx.yellowme.youst.core.hooks.recycler.RecyclerViewHolderDecorator
 

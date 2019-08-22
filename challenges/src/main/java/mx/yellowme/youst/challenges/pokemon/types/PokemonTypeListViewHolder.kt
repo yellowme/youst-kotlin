@@ -5,7 +5,7 @@ import android.view.View
 import android.widget.CheckBox
 import mx.yellowme.youst.challenges.R
 import mx.yellowme.youst.core.components.TriangularView
-import mx.yellowme.youst.core.domain.PokemonTypeSelection
+import mx.yellowme.youst.challenges.domain.PokemonTypeSelection
 import mx.yellowme.youst.core.hooks.recycler.RecyclerViewHolderDecorator
 
 /**

@@ -25,8 +25,8 @@ fun <T : View> AppCompatActivity.findOrThrow(viewId: Int): T {
     )
 }
 
-inline fun <reified T: Any> Activity.loadJsonArray(named: String): List<T>? {
-    return classLoader?.readJson(named)?.asJsonArrayOf()
+fun Activity.readJson(named: String): String? {
+    return classLoader?.readJson(named)
 }
 
 fun ClassLoader?.readJson(named: String): String? {
@@ -62,5 +62,4 @@ inline fun <reified T : Any> String.asJsonArrayOf(): List<T>? {
     } finally {
         return modelFromJson
     }
-
 }

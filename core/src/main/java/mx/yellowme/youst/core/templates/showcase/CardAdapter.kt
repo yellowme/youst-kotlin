@@ -9,6 +9,7 @@ import androidx.cardview.widget.CardView
 import androidx.viewpager.widget.PagerAdapter
 import com.google.android.material.card.MaterialCardView
 import mx.yellowme.youst.core.R
+import mx.yellowme.youst.core.domain.GenericShowcasedOption
 import mx.yellowme.youst.core.hooks.recycler.ItemListener
 import mx.yellowme.youst.core.templates.showcase.CardAdapter.Companion.MAX_ELEVATION_FACTOR
 
@@ -30,13 +31,13 @@ interface CardAdapter {
  * TODO: Needs refactor
  */
 @Suppress("MemberVisibilityCanBePrivate")
-open class CardPagerAdapter(itemListener: ItemListener<GenericShowcasedOption>) : PagerAdapter(),
+open class CardPagerAdapter<Model : GenericShowcasedOption>(itemListener: ItemListener<Model>) : PagerAdapter(),
     CardAdapter {
 
     private val mViews: MutableList<MaterialCardView?>
-    private val mData: MutableList<GenericShowcasedOption?>
+    private val mData: MutableList<Model?>
 
-    private var mItemListener: ItemListener<GenericShowcasedOption>
+    private var mItemListener: ItemListener<Model>
 
     override var baseElevation: Float = 0f
 
@@ -46,12 +47,12 @@ open class CardPagerAdapter(itemListener: ItemListener<GenericShowcasedOption>) 
         mItemListener = itemListener
     }
 
-    fun addCardItem(item: GenericShowcasedOption) {
+    fun addCardItem(item: Model) {
         mViews.add(null)
         mData.add(item)
     }
 
-    fun addItems(items: List<GenericShowcasedOption>) {
+    fun addItems(items: List<Model>) {
         for (item in items) {
             addCardItem(item)
         }
@@ -92,7 +93,7 @@ open class CardPagerAdapter(itemListener: ItemListener<GenericShowcasedOption>) 
         mViews[position] = null
     }
 
-    private fun bind(item: GenericShowcasedOption?, view: View) {
+    private fun bind(item: Model?, view: View) {
         val titleTextView = view.findViewById<TextView>(R.id.titleTextView)
         val contentTextView = view.findViewById<TextView>(R.id.contentTextView)
         val cardView = view.findViewById<MaterialCardView>(R.id.cardView)

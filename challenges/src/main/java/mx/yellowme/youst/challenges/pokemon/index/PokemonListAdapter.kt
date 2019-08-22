@@ -3,7 +3,7 @@ package mx.yellowme.youst.challenges.pokemon.index
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import mx.yellowme.youst.challenges.R
-import mx.yellowme.youst.core.domain.Pokemon
+import mx.yellowme.youst.challenges.domain.Pokemon
 import mx.yellowme.youst.core.hooks.recycler.ItemListener
 import mx.yellowme.youst.core.hooks.recycler.SimpleRecyclerAdapter
 

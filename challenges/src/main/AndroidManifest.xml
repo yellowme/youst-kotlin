@@ -30,11 +30,11 @@
             android:label="@string/pokemon_detail"
             android:theme="@style/SharedAppTheme.NoActionBar" />
         <activity
-            android:name="mx.yellowme.youst.challenges.CrazyListsChallengeActivity"
+            android:name="mx.yellowme.youst.challenges.crazylists.CrazyListsChallengeActivity"
             android:label="@string/challenge_title_crazy_lists"
             android:theme="@style/SharedAppTheme.NoActionBar" />
         <activity
-            android:name="mx.yellowme.youst.challenges.ListenToMeChallengeActivity"
+            android:name="mx.yellowme.youst.challenges.listentome.ListenToMeChallengeActivity"
             android:label="@string/challenge_title_listen_to_me"
             android:theme="@style/SharedAppTheme.NoActionBar" />
     </application>
