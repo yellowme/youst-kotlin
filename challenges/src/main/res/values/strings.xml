@@ -9,4 +9,5 @@
 
     <string name="action_go_back">Go back</string>
     <string name="instructions">Instructions</string>
+    <string name="empty_list_holder">Empty List</string>
 </resources>

@@ -134,7 +134,8 @@
 
     <style name="Pokemon.Title" parent="TextAppearance.Regular">
         <item name="android:minHeight">@dimen/dimen_36</item>
-        <item name="android:textSize">@dimen/size_12</item>
+        <item name="android:textSize">@dimen/size_14</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <!--endregion-->

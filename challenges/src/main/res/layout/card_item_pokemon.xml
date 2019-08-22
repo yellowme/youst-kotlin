@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/materialCardView"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dimen_140"
+    android:layout_height="wrap_content"
     android:layout_margin="@dimen/dimen_4"
+    android:minHeight="@dimen/dimen_150"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="@dimen/dimen_8"
     app:cardElevation="@dimen/dimen_2">
@@ -25,14 +26,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.constraintlayout.widget.Barrier
-            android:id="@+id/typesBarrier"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_6"
-            app:barrierDirection="bottom"
-            app:constraint_referenced_ids="imageView" />
-
         <View
             android:id="@+id/firstTypeView"
             android:layout_width="0dp"
@@ -42,7 +35,7 @@
             android:gravity="center"
             app:layout_constraintEnd_toStartOf="@+id/secondTypeView"
             app:layout_constraintStart_toStartOf="@id/imageView"
-            app:layout_constraintTop_toBottomOf="@id/typesBarrier"
+            app:layout_constraintTop_toBottomOf="@id/imageView"
             app:layout_constraintVertical_chainStyle="packed"
             tools:text="Type #1" />
 
@@ -56,19 +49,20 @@
             app:layout_constraintEnd_toEndOf="@id/imageView"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/firstTypeView"
-            app:layout_constraintTop_toBottomOf="@id/typesBarrier"
+            app:layout_constraintTop_toBottomOf="@id/imageView"
             tools:text="Type #2" />
 
         <TextView
             android:id="@+id/nameTextView"
             style="@style/Pokemon.Title"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/dimen_36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen_16"
+            android:minHeight="@dimen/dimen_36"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/typesBarrier"
+            app:layout_constraintTop_toBottomOf="@id/firstTypeView"
             tools:text="Name" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

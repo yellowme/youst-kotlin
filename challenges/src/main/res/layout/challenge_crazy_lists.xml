@@ -10,22 +10,23 @@
         android:id="@+id/mainActionToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:leftAction="back"
         app:menuAction="@string/help" />
 
     <TextView
         android:id="@+id/emptyMessageTextView"
         style="@style/Challenge.Subtitle"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Empty list" />
+        tools:text="@string/empty_list_holder" />
 
     <ProgressBar
         android:id="@+id/loadingProgressBar"
@@ -40,16 +41,19 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dimen_12"
         android:layout_marginEnd="@dimen/dimen_12"
         android:paddingTop="@dimen/dimen_6"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constrainedHeight="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/mainActionToolbar"
+        app:spanCount="3"
+        tools:itemCount="15"
         tools:listitem="@layout/card_item_pokemon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
