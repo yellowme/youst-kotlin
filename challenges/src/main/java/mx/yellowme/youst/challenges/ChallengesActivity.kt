@@ -1,7 +1,6 @@
 package mx.yellowme.youst.challenges
 
 import mx.yellowme.youst.challenges.BaseChallengeActivity.Companion.TOOLBAR_TITLE
-import mx.yellowme.youst.challenges.navigation.NavigationActivity
 import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.core.templates.showcase.GenericShowcaseActivity
@@ -31,7 +30,6 @@ class ChallengesActivity : GenericShowcaseActivity() {
                 "3" -> {
                     CrazyListsChallengeActivity::class.java
                 }
-                "5" -> NavigationActivity::class.java
                 else -> throw RuntimeException("Invalid challenge identifier")
             }
 

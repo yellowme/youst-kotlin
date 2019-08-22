@@ -1,4 +1,4 @@
-package mx.yellowme.youst.challenges.navigation
+package mx.yellowme.youst.playground.navigation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,9 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import kotlinx.android.synthetic.main.navigation_destination_one.navigateButton
 import kotlinx.android.synthetic.main.navigation_destination_two.*
-import mx.yellowme.youst.challenges.R
+import mx.yellowme.youst.playground.R
 
 class MiddleFragment : Fragment() {
 

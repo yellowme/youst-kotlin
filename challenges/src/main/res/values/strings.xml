@@ -3,23 +3,10 @@
     <string name="action_settings">Settings</string>
 
     <string name="action_open_challenge">Go!</string>
-    <string name="deep_link_widget">Deep Link</string>
 
     <string name="challenges_title">Welcome! 👋</string>
     <string name="challenges_subtitle">Yellow programming challenges app, here you can solve a few of the most common Android issues.</string>
 
-
-    <string name="navigation_title_emoji_1">🙈</string>
-    <string name="navigation_title_emoji_2">🙉</string>
-    <string name="navigation_title_emoji_3">🙊</string>
-    <string name="navigation_title_emoji_deeplink">🔗🤖</string>
-    <string name="navigation_title_deeplink">You\'ve arrived to a secret screen!</string>
-    <string name="navigation_title_step_1">Hello! What\'s your name?</string>
-    <string name="navigation_title_step_2">Nice to meet you, %1$s! Tell us... what are you passionate about?</string>
-    <string name="navigation_title_step_3">Thanks for reaching out, %1$s!\n\nTo know more about us, visit our website linked below! ⬇️</string>
-
-    <string name="action_next">Next</string>
     <string name="action_go_back">Go back</string>
-    <string name="yellow_web_link">yellowme.mx 💛</string>
     <string name="instructions">Instructions</string>
 </resources>

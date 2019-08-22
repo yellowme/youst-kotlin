@@ -17,6 +17,17 @@
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="mx.yellowme.youst.playground.navigation.NavigationActivity"
+            android:label="Jetpack Navigation"
+            android:parentActivityName="mx.yellowme.youst.playground.PlaygroundActivity"
+            android:theme="@style/SharedAppTheme.NoActionBar.TransparentStatus">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mx.yellowme.youst.playground.PlaygroundActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -37,21 +37,6 @@
             android:name="mx.yellowme.youst.challenges.ListenToMeChallengeActivity"
             android:label="@string/challenge_title_listen_to_me"
             android:theme="@style/SharedAppTheme.NoActionBar" />
-        <activity
-            android:name="mx.yellowme.youst.challenges.navigation.NavigationActivity"
-            android:label="Jetpack Navigation"
-            android:parentActivityName="mx.yellowme.youst.challenges.ChallengesActivity"
-            android:theme="@style/SharedAppTheme.NoActionBar.TransparentStatus">
-
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="mx.yellowme.youst.challenges.ChallengesActivity" />
-        </activity>
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
-
     </application>
 
 </manifest>

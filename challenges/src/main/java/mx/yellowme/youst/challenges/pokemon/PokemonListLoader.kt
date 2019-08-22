@@ -4,6 +4,7 @@ import mx.yellowme.youst.core.data.APIServiceGenerator
 import mx.yellowme.youst.core.data.PokemonAPIService
 import mx.yellowme.youst.core.domain.Pokemon
 import mx.yellowme.youst.challenges.pokemon.index.PokemonListViewHolder
+import mx.yellowme.youst.core.extensions.toast
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

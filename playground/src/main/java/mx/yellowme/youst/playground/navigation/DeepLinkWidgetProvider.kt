@@ -1,11 +1,11 @@
-package mx.yellowme.youst.challenges.navigation
+package mx.yellowme.youst.playground.navigation
 
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
 import android.widget.RemoteViews
 import androidx.navigation.NavDeepLinkBuilder
-import mx.yellowme.youst.challenges.R
+import mx.yellowme.youst.playground.R
 
 class DeepLinkWidgetProvider : AppWidgetProvider() {
     override fun onUpdate(

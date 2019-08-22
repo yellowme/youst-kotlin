@@ -1,4 +1,4 @@
-package mx.yellowme.youst.challenges.navigation
+package mx.yellowme.youst.playground.navigation
 
 import android.os.Bundle
 import androidx.fragment.app.testing.launchFragmentInContainer

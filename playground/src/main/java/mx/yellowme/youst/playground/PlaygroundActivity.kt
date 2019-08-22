@@ -1,8 +1,10 @@
 package mx.yellowme.youst.playground
 
+import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.core.templates.showcase.GenericShowcaseActivity
 import mx.yellowme.youst.core.templates.showcase.GenericShowcasedOption
+import mx.yellowme.youst.playground.navigation.NavigationActivity
 
 class PlaygroundActivity : GenericShowcaseActivity() {
 
@@ -17,20 +19,14 @@ class PlaygroundActivity : GenericShowcaseActivity() {
         item?.id?.let {
             toast("Must implement for ${item.id}")
 
-            /*
             val nextActivity: Class<*> = when (it) {
                 "1" -> {
-                    throw RuntimeException("Invalid challenge identifier")
-                }
-                "2" -> {
-                    throw RuntimeException("Invalid challenge identifier")
+                    NavigationActivity::class.java
                 }
                 else -> throw RuntimeException("Invalid challenge identifier")
             }
 
-            launch(nextActivity) {
-                putExtra(TOOLBAR_TITLE, item.title)
-            }*/
+            launch(nextActivity)
         }
     }
 

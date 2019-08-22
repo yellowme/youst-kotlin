@@ -1,4 +1,4 @@
-package mx.yellowme.youst.challenges.navigation
+package mx.yellowme.youst.playground.navigation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.navigation_destination_one.*
-import mx.yellowme.youst.challenges.R
+import mx.yellowme.youst.playground.R
 
 class GreetingFragment : Fragment() {
 
