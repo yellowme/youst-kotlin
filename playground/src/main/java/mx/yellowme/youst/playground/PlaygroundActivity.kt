@@ -7,6 +7,8 @@ import mx.yellowme.youst.core.templates.showcase.GenericShowcasedOption
 import mx.yellowme.youst.core.utils.Activities
 import mx.yellowme.youst.core.utils.intentTo
 
+import mx.yellowme.youst.core.R as coreR
+
 class PlaygroundActivity : GenericShowcaseActivity() {
 
     override val titleResId: Int = R.string.playground_title
@@ -22,7 +24,10 @@ class PlaygroundActivity : GenericShowcaseActivity() {
                 "1" -> {
                     launch(intentTo(Activities.Playground.Navigation))
                 }
-                else -> throw RuntimeException("Invalid challenge identifier")
+                "2" -> {
+                    launch(intentTo(Activities.Playground.Nemo))
+                }
+                else -> throw RuntimeException("Invalid identifier")
             }
         }
     }

@@ -11,23 +11,51 @@
 
     <application>
         <activity
-            android:name="mx.yellowme.youst.playground.PlaygroundActivity"
+            android:name=".PlaygroundActivity"
             android:theme="@style/SharedAppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
 
+        <!--region Navigation-->
+
         <activity
-            android:name="mx.yellowme.youst.playground.navigation.NavigationActivity"
+            android:name=".navigation.NavigationActivity"
             android:label="Jetpack Navigation"
-            android:parentActivityName="mx.yellowme.youst.playground.PlaygroundActivity"
+            android:parentActivityName=".PlaygroundActivity"
             android:theme="@style/SharedAppTheme.NoActionBar.TransparentStatus">
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="mx.yellowme.youst.playground.PlaygroundActivity" />
+                android:value=".PlaygroundActivity" />
         </activity>
+
+        <!--endregion-->
+
+        <!--region Nemo-->
+
+        <activity
+            android:name=".nemo.ui.NemoActivity"
+            android:theme="@style/SharedAppTheme.NoActionBar" />
+        <activity
+            android:name=".nemo.ui.LoginScreen"
+            android:theme="@style/SharedAppTheme.NoActionBar" />
+        <activity
+            android:name=".nemo.ui.UnsupportedVersionScreen"
+            android:theme="@style/SharedAppTheme.NoActionBar" />
+        <activity
+            android:name=".nemo.ui.UserWithoutAttributeScreen"
+            android:theme="@style/SharedAppTheme.NoActionBar" />
+        <activity
+            android:name=".nemo.ui.MissingPaymentOptionScreen"
+            android:theme="@style/SharedAppTheme.NoActionBar" />
+        <activity
+            android:name=".nemo.ui.MainScreen"
+            android:theme="@style/SharedAppTheme.NoActionBar" />
+
+        <!--endregion-->
+
     </application>
 
 </manifest>

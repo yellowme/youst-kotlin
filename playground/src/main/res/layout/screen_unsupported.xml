@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <mx.yellowme.youst.playground.nemo.components.AppHero
+        android:id="@+id/appHero"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:heroActionLabel="@string/action_upgrade"
+        app:heroBackgroundColor="@color/olive"
+        app:heroMessage="@string/screen_unsupported" />
+
+</RelativeLayout>

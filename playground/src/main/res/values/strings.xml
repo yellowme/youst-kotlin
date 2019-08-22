@@ -15,4 +15,19 @@
     <string name="yellow_web_link">yellowme.mx 💛</string>
     <string name="action_next">Next</string>
     <string name="deep_link_widget">Deep Link</string>
+
+    <string name="screen_unsupported">Oops! Unsupported app version</string>
+    <string name="screen_user_no_attribute">Oops! You must complete your personal info before continue</string>
+    <string name="screen_no_payment_option">Oops! You must provide a payment option first</string>
+    <string name="screen_splash">Loading</string>
+    <string name="screen_login">You shall not pass!</string>
+    <string name="screen_main">Welcome, %1$s!\n\nYou have %2$s as main payment option.</string>
+
+    <string name="action_upgrade">Upgrade</string>
+    <string name="action_add_last_name">Add last name</string>
+    <string name="action_add_add_payment">Add option</string>
+    <string name="action_login">Login</string>
+
+    <string name="component_holder_hero_message">This is a message for the user!</string>
+    <string name="component_holder_hero_action_label">Action</string>
 </resources>

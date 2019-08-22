@@ -10,7 +10,7 @@ object ChallengeDataHelper {
      * Looks for a JSON file named "challenges.json" that should be placed under the
      * test resources folder.
      */
-    fun loadChallengesFromJSONUsing(loader: ClassLoader?): List<Challenge>? {
+    private fun loadChallengesFromJSONUsing(loader: ClassLoader?): List<Challenge>? {
         val challenges =
             loader?.readJson("challenges.json")?.asJsonObject<AllChallenges>()
 

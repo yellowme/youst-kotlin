@@ -5,6 +5,7 @@ import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.core.templates.showcase.GenericShowcaseActivity
 import mx.yellowme.youst.core.templates.showcase.GenericShowcasedOption
+import mx.yellowme.youst.core.R as coreR
 
 class ChallengesActivity : GenericShowcaseActivity() {
 
@@ -18,7 +19,7 @@ class ChallengesActivity : GenericShowcaseActivity() {
     override fun onItemClick(item: GenericShowcasedOption?) {
         item?.id?.let {
             if (it == "4") {
-                toast(getString(mx.yellowme.youst.core.R.string.work_in_progress))
+                toast(getString(coreR.string.work_in_progress))
                 return
             }
 
@@ -30,7 +31,7 @@ class ChallengesActivity : GenericShowcaseActivity() {
                 "3" -> {
                     CrazyListsChallengeActivity::class.java
                 }
-                else -> throw RuntimeException("Invalid challenge identifier")
+                else -> throw RuntimeException("Invalid identifier")
             }
 
             launch(nextActivity) {

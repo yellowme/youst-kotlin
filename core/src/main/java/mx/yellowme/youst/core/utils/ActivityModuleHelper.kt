@@ -61,10 +61,17 @@ object Activities {
         override val className = "$PACKAGE_NAME.playground.PlaygroundActivity"
 
         /**
-         * CrazyLists Activity
+         * Navigation Activity
          */
         object Navigation : AddressableActivity {
             override val className = "$PACKAGE_NAME.playground.navigation.NavigationActivity"
+        }
+
+        /**
+         * Nemo Activity
+         */
+        object Nemo : AddressableActivity {
+            override val className = "$PACKAGE_NAME.playground.nemo.NemoActivity"
         }
     }
 

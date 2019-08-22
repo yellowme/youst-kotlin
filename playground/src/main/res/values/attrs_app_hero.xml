@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AppHero">
+        <attr name="heroMessage" format="string" />
+        <attr name="heroActionLabel" format="string" />
+        <attr name="heroBackgroundColor" format="color" />
+        <attr name="heroMessageColor" format="color" />
+    </declare-styleable>
+</resources>

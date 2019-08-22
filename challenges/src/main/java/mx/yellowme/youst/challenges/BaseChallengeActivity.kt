@@ -1,7 +1,6 @@
 package mx.yellowme.youst.challenges
 
 import android.os.Bundle
-import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
@@ -10,7 +9,7 @@ import mx.yellowme.youst.core.data.ChallengeDataHelper
 import mx.yellowme.youst.core.domain.Challenge
 import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.core.hooks.BaseActivity
-import mx.yellowme.youst.core.utils.findOrThrow
+import mx.yellowme.youst.core.R as coreR
 
 /**
  * TODO: Add javadoc
@@ -42,7 +41,7 @@ abstract class BaseChallengeActivity : BaseActivity() {
             SimpleInfoDialogBuilder()
                 .title(getString(R.string.instructions))
                 .message(it.help)
-                .actionTitle(getString(mx.yellowme.youst.core.R.string.understood))
+                .actionTitle(getString(coreR.string.understood))
                 .build(this)
                 .show()
         } ?: toast("There was a problem loading the help for this challenge")
