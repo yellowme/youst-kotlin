@@ -18,9 +18,10 @@
         app:layout_constraintWidth_percent=".8"
         tools:text="@string/component_holder_hero_message" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/mainAction"
         style="@style/AppHero.Action"
+        android:layout_margin="@dimen/dimen_16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintWidth_default="percent"

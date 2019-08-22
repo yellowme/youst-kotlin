@@ -2,6 +2,7 @@ package mx.yellowme.youst.playground.nemo.navigation
 
 import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.hooks.BaseActivity
+import mx.yellowme.youst.playground.nemo.ui.NemoActivity
 import mx.yellowme.youst.playground.nemo.ui.*
 
 class CommonNavigator(private val activity: BaseActivity) : BaseNavigator {
