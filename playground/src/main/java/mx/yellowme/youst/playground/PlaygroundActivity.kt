@@ -4,7 +4,8 @@ import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.core.templates.showcase.GenericShowcaseActivity
 import mx.yellowme.youst.core.templates.showcase.GenericShowcasedOption
-import mx.yellowme.youst.playground.navigation.NavigationActivity
+import mx.yellowme.youst.core.utils.Activities
+import mx.yellowme.youst.core.utils.intentTo
 
 class PlaygroundActivity : GenericShowcaseActivity() {
 
@@ -17,16 +18,12 @@ class PlaygroundActivity : GenericShowcaseActivity() {
     //TODO: Improve item handle
     override fun onItemClick(item: GenericShowcasedOption?) {
         item?.id?.let {
-            toast("Must implement for ${item.id}")
-
-            val nextActivity: Class<*> = when (it) {
+            when (it) {
                 "1" -> {
-                    NavigationActivity::class.java
+                    launch(intentTo(Activities.Playground.Navigation))
                 }
                 else -> throw RuntimeException("Invalid challenge identifier")
             }
-
-            launch(nextActivity)
         }
     }
 

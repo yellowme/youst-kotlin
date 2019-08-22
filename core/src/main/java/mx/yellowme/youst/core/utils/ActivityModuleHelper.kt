@@ -59,6 +59,13 @@ object Activities {
      */
     object Playground : AddressableActivity {
         override val className = "$PACKAGE_NAME.playground.PlaygroundActivity"
+
+        /**
+         * CrazyLists Activity
+         */
+        object Navigation : AddressableActivity {
+            override val className = "$PACKAGE_NAME.playground.navigation.NavigationActivity"
+        }
     }
 
     /**
@@ -69,14 +76,14 @@ object Activities {
         override val className = "$PACKAGE_NAME.challenges.ChallengesActivity"
 
         /**
-         * DesignerNews LoginActivity
+         * CrazyLists Activity
          */
         object CrazyLists : AddressableActivity {
             override val className = "$PACKAGE_NAME.challenges.CrazyListsChallengeActivity"
         }
 
         /**
-         * DesignerNewsStory Activity
+         * ListenToMe Activity
          */
         object ListenToMe : AddressableActivity {
             override val className = "$PACKAGE_NAME.challenges.ListenToMeChallengeActivity"
