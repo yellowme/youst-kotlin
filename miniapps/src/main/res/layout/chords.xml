@@ -3,6 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
     app:layout_constraintVertical_chainStyle="spread_inside">
 
     <mx.yellowme.youst.core.components.toolbar.MainActionToolbar
@@ -16,8 +18,20 @@
         app:menuAction="none" />
 
     <TextView
-        android:id="@+id/subtitleTextView"
+        android:id="@+id/guitaleleChord"
+        style="@style/MiniApps.Chords.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:text="@string/chord_guitalele"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainActionToolbar" />
+
+    <TextView
+        android:id="@+id/selectedChordTextView"
         style="@style/MiniApps.Chords.Selected"
+        android:layout_height="0dp"
         android:layout_marginTop="@dimen/dimen_16"
         android:layout_marginBottom="@dimen/dimen_16"
         android:paddingStart="@dimen/dimen_32"
@@ -26,7 +40,7 @@
         app:layout_constraintBottom_toTopOf="@id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mainActionToolbar" />
+        app:layout_constraintTop_toBottomOf="@id/guitaleleChord" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -48,9 +62,22 @@
         android:paddingEnd="@dimen/dimen_60"
         android:paddingRight="@dimen/dimen_60"
         android:paddingBottom="@dimen/dimen_30"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guitarChord"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/guitarChord"
+        style="@style/MiniApps.Chords.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:layout_marginBottom="@dimen/dimen_16"
+        android:text="@string/chord_guitar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chordsViewPager" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

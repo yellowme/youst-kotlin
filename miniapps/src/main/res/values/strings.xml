@@ -3,5 +3,9 @@
 
     <string name="mini_apps_title">Mini Apps Title</string>
     <string name="mini_apps_subtitle">Mini Apps Subtitle</string>
-    <string name="chords_selected_holder">G#</string>
+
+    <string name="chords_selected_holder">G</string>
+    <string name="chords_card_holder">D</string>
+    <string name="chord_guitar">Guitar chord</string>
+    <string name="chord_guitalele">Guitalele chord</string>
 </resources>

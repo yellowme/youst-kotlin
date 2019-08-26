@@ -16,8 +16,8 @@ interface ModelTransformer<Model> {
 abstract class GenericShowcaseActivity<Model : GenericShowcasedOption> : BaseActivity(),
     ItemListener<Model> {
 
-    private var mCardAdapter: CardPagerAdapter<Model>? = null
-    private var mCardShadowTransformer: ShadowTransformer? = null
+    private var cardAdapter: CardPagerAdapter<Model>? = null
+    private var shadowTransformer: ShadowTransformer? = null
 
     override val layoutId = R.layout.template_generic_showcase
 
@@ -31,13 +31,13 @@ abstract class GenericShowcaseActivity<Model : GenericShowcasedOption> : BaseAct
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mCardAdapter = CardPagerAdapter(this)
+        cardAdapter = CardPagerAdapter(this)
 
         titleTextView.text = getString(titleResId)
         subtitleTextView.text = getString(subtitleResId)
 
         readJson(optionsJsonName)?.let {
-            mCardAdapter?.addItems(modelTransformer.asList(it))
+            cardAdapter?.addItems(modelTransformer.asList(it))
         } ?: throw RuntimeException("Unable to read JSON file named $optionsJsonName")
 
         showcaseItemsViewPager?.pageMargin = dipToPx(12)
@@ -45,15 +45,15 @@ abstract class GenericShowcaseActivity<Model : GenericShowcasedOption> : BaseAct
     }
 
     private fun setupViewPager() {
-        mCardAdapter?.let {
-            mCardShadowTransformer = ShadowTransformer(
+        cardAdapter?.let {
+            shadowTransformer = ShadowTransformer(
                 showcaseItemsViewPager,
                 it
             ).apply {
                 enableScaling(true)
             }
             showcaseItemsViewPager?.adapter = it
-            showcaseItemsViewPager?.setPageTransformer(false, mCardShadowTransformer)
+            showcaseItemsViewPager?.setPageTransformer(false, shadowTransformer)
             showcaseItemsViewPager?.offscreenPageLimit = 3
         }
     }

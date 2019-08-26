@@ -21,7 +21,9 @@
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.ChordsActivity" />
+        <activity
+            android:name=".ui.ChordsActivity"
+            android:theme="@style/SharedAppTheme.NoActionBar" />
     </application>
 
 </manifest>

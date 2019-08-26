@@ -50,6 +50,8 @@
     <dimen name="size_49">49sp</dimen>
     <dimen name="size_50">50sp</dimen>
     <dimen name="size_60">60sp</dimen>
+    <dimen name="size_70">70sp</dimen>
+    <dimen name="size_80">80sp</dimen>
 
     <!--endregion-->
 
