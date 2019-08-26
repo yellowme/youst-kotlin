@@ -1,9 +1,9 @@
 dependencies {
-    implementation "androidx.test:core:${versions.androidXTest}"
-    implementation "androidx.test.espresso:espresso-idling-resource:${versions.espressoCore}"
+    androidTestImplementation "androidx.test:core:${versions.androidXTest}"
+    androidTestImplementation "androidx.test.espresso:espresso-idling-resource:${versions.espressoCore}"
 
-    testImplementation "junit:junit:${versions.junit}"
-    testImplementation "org.mockito:mockito-core:${versions.mockitoVersion}"
+    androidTestImplementation "junit:junit:${versions.junit}"
+    androidTestImplementation "org.mockito:mockito-core:${versions.mockitoVersion}"
     androidTestImplementation "org.mockito:mockito-core:${versions.mockitoVersion}"
     androidTestImplementation "com.linkedin.dexmaker:dexmaker-mockito:${versions.dexMakerVersion}"
 

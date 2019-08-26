@@ -7,9 +7,9 @@ import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
-import mx.yellowme.youst.R
-import mx.yellowme.youst.util.DataBindingIdlingResource
-import mx.yellowme.youst.util.monitorActivity
+import mx.yellowme.youst.playground.R
+import mx.yellowme.youst.playground.util.DataBindingIdlingResource
+import mx.yellowme.youst.playground.util.monitorActivity
 import org.junit.Test
 import org.junit.runner.RunWith
 

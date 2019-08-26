@@ -1,4 +1,4 @@
-package mx.yellowme.youst.util
+package mx.yellowme.youst.playground.util
 
 import android.view.View
 import androidx.databinding.DataBindingUtil
