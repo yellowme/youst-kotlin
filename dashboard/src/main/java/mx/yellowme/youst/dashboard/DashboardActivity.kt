@@ -40,7 +40,9 @@ class DashboardActivity : BaseActivity(), ItemListener<DashboardOption> {
             DashboardOptionId.PLAYGROUND -> {
                 launch(intentTo(Activities.Playground))
             }
-            DashboardOptionId.MINI_APPS,
+            DashboardOptionId.MINI_APPS -> {
+                launch(intentTo(Activities.MiniApps))
+            }
             DashboardOptionId.PORTFOLIO -> {
                 toast(getString(coreR.string.work_in_progress))
             }

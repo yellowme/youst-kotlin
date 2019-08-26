@@ -4,8 +4,10 @@
 
     <dist:module
         dist:instant="false"
-        dist:onDemand="false"
         dist:title="@string/title_playground">
+        <dist:delivery>
+            <dist:install-time />
+        </dist:delivery>
         <dist:fusing dist:include="false" />
     </dist:module>
 

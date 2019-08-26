@@ -1,25 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="mx.yellowme.youst.dashboard">
+    package="mx.yellowme.youst.miniapps">
 
     <dist:module
         dist:instant="false"
-        dist:title="@string/title_dashboard">
+        dist:title="@string/title_mini_apps">
         <dist:delivery>
             <dist:install-time />
         </dist:delivery>
+
         <dist:fusing dist:include="false" />
     </dist:module>
 
     <application>
         <activity
-            android:name=".DashboardActivity"
+            android:name=".MiniAppsActivity"
             android:theme="@style/SharedAppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
+
         </activity>
     </application>
 
 </manifest>
-

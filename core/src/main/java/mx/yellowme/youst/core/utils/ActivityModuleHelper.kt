@@ -47,54 +47,40 @@ interface AddressableActivity {
  */
 object Activities {
 
-    /**
-     * Dashboard
-     */
     object Dashboard : AddressableActivity {
         override val className = "$PACKAGE_NAME.dashboard.DashboardActivity"
     }
 
-    /**
-     * Playground
-     */
     object Playground : AddressableActivity {
         override val className = "$PACKAGE_NAME.playground.PlaygroundActivity"
 
-        /**
-         * Navigation Activity
-         */
         object Navigation : AddressableActivity {
             override val className = "$PACKAGE_NAME.playground.navigation.NavigationActivity"
         }
 
-        /**
-         * Nemo Activity
-         */
         object Nemo : AddressableActivity {
             override val className = "$PACKAGE_NAME.playground.nemo.ui.NemoActivity"
         }
     }
 
-    /**
-     * Base object for Challenges activities.
-     */
     object Challenges : AddressableActivity {
 
         override val className = "$PACKAGE_NAME.challenges.ChallengesActivity"
 
-        /**
-         * CrazyLists Activity
-         */
         object CrazyLists : AddressableActivity {
             override val className = "$PACKAGE_NAME.challenges.CrazyListsChallengeActivity"
         }
 
-        /**
-         * ListenToMe Activity
-         */
         object ListenToMe : AddressableActivity {
             override val className = "$PACKAGE_NAME.challenges.ListenToMeChallengeActivity"
         }
     }
 
+    object MiniApps : AddressableActivity {
+        override val className = "$PACKAGE_NAME.miniapps.MiniAppsActivity"
+
+        object Chords : AddressableActivity {
+            override val className = "$PACKAGE_NAME.miniapps.ChordsActivity"
+        }
+    }
 }

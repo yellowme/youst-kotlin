@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Youst Kotlin</string>
     <string name="action_settings">Settings</string>
-
+    <string name="title_challenges">Challenges</string>
     <string name="action_open_challenge">Go!</string>
 
     <string name="challenges_title">Welcome! 👋</string>
@@ -10,4 +10,11 @@
     <string name="action_go_back">Go back</string>
     <string name="instructions">Instructions</string>
     <string name="empty_list_holder">Empty List</string>
+    <string name="help">Help</string>
+    <string name="pokemon_detail">Pokemon Detail</string>
+    <string name="challenge_title_crazy_lists">Crazy Lists</string>
+    <string name="challenge_title_listen_to_me">Listen to Me</string>
+    <string name="challenge_title_archie">Archie</string>
+    <string name="challenge_title_navigation">Jetpack Navigation</string>
+
 </resources>

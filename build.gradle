@@ -1,5 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-buildscript {
+buildscript { 
+    ext.kotlin_version = '1.3.41'
+
     ext.names = [
             applicationId: 'mx.yellowme.youst'
     ]
@@ -53,7 +55,7 @@ buildscript {
         classpath "com.android.tools.build:gradle:${versions.gradleVersion}"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlinVersion}"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:${versions.navigation}"
-    }
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" }
 }
 
 allprojects {
