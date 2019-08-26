@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--region Challenge-->
+
+    <style name="Challenge" />
+
+    <style name="Challenge.Title" parent="TextAppearance.Bold">
+        <item name="android:textSize">@dimen/size_26</item>
+        <item name="android:letterSpacing">0.025</item>
+    </style>
+
+    <style name="Challenge.Subtitle" parent="TextAppearance.Regular">
+        <item name="android:textSize">@dimen/size_18</item>
+    </style>
+
+    <style name="Challenge.Option" parent="Challenge" />
+
+    <style name="Challenge.Option.Title" parent="TextAppearance.Bold">
+        <item name="android:textSize">@dimen/size_22</item>
+        <item name="android:letterSpacing">0.025</item>
+    </style>
+
+    <style name="Challenge.Option.Subtitle" parent="TextAppearance.Regular">
+        <item name="android:textSize">@dimen/size_16</item>
+    </style>
+
+    <!--endregion-->
+
+    <!--region Pokemon-->
+
+    <style name="Challenge.Pokemon" parent="Challenge"/>
+
+    <style name="Challenge.Pokemon.Title" parent="TextAppearance.Regular">
+        <item name="android:minHeight">@dimen/dimen_36</item>
+        <item name="android:textSize">@dimen/size_14</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--endregion-->
+</resources>

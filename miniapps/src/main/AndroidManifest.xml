@@ -20,8 +20,8 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
-
         </activity>
+        <activity android:name=".ui.ChordsActivity" />
     </application>
 
 </manifest>

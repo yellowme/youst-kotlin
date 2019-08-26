@@ -80,7 +80,7 @@ object Activities {
         override val className = "$PACKAGE_NAME.miniapps.MiniAppsActivity"
 
         object Chords : AddressableActivity {
-            override val className = "$PACKAGE_NAME.miniapps.ChordsActivity"
+            override val className = "$PACKAGE_NAME.miniapps.ui.ChordsActivity"
         }
     }
 }

@@ -29,15 +29,12 @@
         </activity>
         <activity
             android:name=".pokemon.show.PokemonDetailActivity"
-            android:label="@string/pokemon_detail"
             android:theme="@style/SharedAppTheme.NoActionBar" />
         <activity
             android:name=".crazylists.CrazyListsChallengeActivity"
-            android:label="@string/challenge_title_crazy_lists"
             android:theme="@style/SharedAppTheme.NoActionBar" />
         <activity
             android:name=".listentome.ListenToMeChallengeActivity"
-            android:label="@string/challenge_title_listen_to_me"
             android:theme="@style/SharedAppTheme.NoActionBar" />
     </application>
 

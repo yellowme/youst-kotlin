@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--region Dashboard-->
+
+    <style name="Dashboard" />
+
+    <style name="Dashboard.Title" parent="TextAppearance.Bold">
+        <item name="android:paddingStart">@dimen/dimen_2</item>
+        <item name="android:paddingEnd">@dimen/dimen_2</item>
+        <item name="android:textSize">@dimen/size_24</item>
+        <item name="android:letterSpacing">0.025</item>
+    </style>
+
+    <style name="Dashboard.Subtitle" parent="TextAppearance.Regular">
+        <item name="android:paddingStart">@dimen/dimen_2</item>
+        <item name="android:paddingEnd">@dimen/dimen_2</item>
+        <item name="android:textSize">@dimen/size_12</item>
+    </style>
+
+    <style name="Dashboard.OptionItem" parent="Dashboard" />
+
+    <style name="Dashboard.OptionItem.Title" parent="TextAppearance.Bold">
+        <item name="android:textSize">@dimen/size_20</item>
+        <item name="android:letterSpacing">0.025</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Dashboard.OptionItem.Subtitle" parent="TextAppearance.Regular">
+        <item name="android:textSize">@dimen/size_12</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--endregion-->
+</resources>

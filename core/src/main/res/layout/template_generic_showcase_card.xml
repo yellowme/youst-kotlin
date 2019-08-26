@@ -19,7 +19,7 @@
 
         <TextView
             android:id="@+id/titleTextView"
-            style="@style/Challenge.Option.Title"
+            style="@style/GenericShowcase.Option.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -29,7 +29,7 @@
 
         <TextView
             android:id="@+id/contentTextView"
-            style="@style/Challenge.Option.Subtitle"
+            style="@style/GenericShowcase.Option.Subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/titleTextView"

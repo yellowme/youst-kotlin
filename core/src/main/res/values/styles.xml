@@ -70,73 +70,53 @@
 
     <!--endregion-->
 
-    <!--region Dashboard-->
+    <!--region Generic Showcase-->
 
-    <style name="Dashboard" />
+    <style name="GenericShowcase" />
 
-    <style name="Dashboard.Title" parent="TextAppearance.Bold">
+    <style name="GenericShowcase.Title" parent="TextAppearance.Bold">
         <item name="android:paddingStart">@dimen/dimen_2</item>
         <item name="android:paddingEnd">@dimen/dimen_2</item>
         <item name="android:textSize">@dimen/size_24</item>
         <item name="android:letterSpacing">0.025</item>
     </style>
 
-    <style name="Dashboard.Subtitle" parent="TextAppearance.Regular">
-        <item name="android:paddingStart">@dimen/dimen_2</item>
-        <item name="android:paddingEnd">@dimen/dimen_2</item>
-        <item name="android:textSize">@dimen/size_12</item>
-    </style>
-
-    <style name="Dashboard.OptionItem" parent="Dashboard" />
-
-    <style name="Dashboard.OptionItem.Title" parent="TextAppearance.Bold">
-        <item name="android:textSize">@dimen/size_20</item>
-        <item name="android:letterSpacing">0.025</item>
-        <item name="android:textColor">@color/white</item>
-    </style>
-
-    <style name="Dashboard.OptionItem.Subtitle" parent="TextAppearance.Regular">
-        <item name="android:textSize">@dimen/size_12</item>
-        <item name="android:textColor">@color/white</item>
-    </style>
-
-    <!--endregion-->
-
-    <!--region Challenge-->
-
-    <style name="Challenge" />
-
-    <style name="Challenge.Title" parent="TextAppearance.Bold">
-        <item name="android:textSize">@dimen/size_26</item>
-        <item name="android:letterSpacing">0.025</item>
-    </style>
-
-    <style name="Challenge.Subtitle" parent="TextAppearance.Regular">
+    <style name="GenericShowcase.Description" parent="TextAppearance.Regular">
         <item name="android:textSize">@dimen/size_18</item>
     </style>
 
-    <style name="Challenge.Option" parent="Challenge" />
+    <style name="GenericShowcase.Option" />
 
-    <style name="Challenge.Option.Title" parent="TextAppearance.Bold">
+    <style name="GenericShowcase.Option.Title" parent="TextAppearance.Bold">
         <item name="android:textSize">@dimen/size_22</item>
         <item name="android:letterSpacing">0.025</item>
     </style>
 
-    <style name="Challenge.Option.Subtitle" parent="TextAppearance.Regular">
+    <style name="GenericShowcase.Option.Subtitle" parent="TextAppearance.Regular">
         <item name="android:textSize">@dimen/size_16</item>
     </style>
 
     <!--endregion-->
 
-    <!--region Pokemon-->
+    <!--region Placeholders. Implementations in feature modules. -->
 
-    <style name="Pokemon" />
+    <style name="Dashboard" />
+    <style name="Dashboard.OptionItem" parent="Dashboard" />
+    <style name="Dashboard.OptionItem.Title" />
+    <style name="Dashboard.OptionItem.Subtitle" />
 
-    <style name="Pokemon.Title" parent="TextAppearance.Regular">
-        <item name="android:minHeight">@dimen/dimen_36</item>
-        <item name="android:textSize">@dimen/size_14</item>
-        <item name="android:textStyle">bold</item>
-    </style>
+    <style name="Challenge" />
+    <style name="Challenge.Title" />
+    <style name="Challenge.Subtitle" />
+    <style name="Challenge.Option" parent="Challenge" />
+    <style name="Challenge.Option.Title" />
+    <style name="Challenge.Option.Subtitle" />
+
+    <style name="Playground" />
+
+    <style name="MiniApps" />
+    <style name="MiniApps.Chords" />
+    <style name="MiniApps.Chords.OptionItem" parent="MiniApps.Chords" />
 
     <!--endregion-->
 

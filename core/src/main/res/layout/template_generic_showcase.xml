@@ -17,7 +17,7 @@
 
     <androidx.emoji.widget.EmojiTextView
         android:id="@+id/titleTextView"
-        style="@style/Dashboard.Title"
+        style="@style/GenericShowcase.Title"
         android:layout_width="0dp"
         android:layout_marginTop="@dimen/dimen_16"
         android:paddingStart="@dimen/dimen_32"
@@ -28,7 +28,7 @@
 
     <TextView
         android:id="@+id/subtitleTextView"
-        style="@style/Challenge.Subtitle"
+        style="@style/GenericShowcase.Description"
         android:layout_marginTop="@dimen/dimen_6"
         android:layout_marginBottom="@dimen/dimen_24"
         android:paddingStart="@dimen/dimen_32"

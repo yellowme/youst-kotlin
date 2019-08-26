@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--region Dashboard-->
+
+    <style name="MiniApps" />
+
+    <style name="MiniApps.Chords" />
+
+    <style name="MiniApps.Chords.Selected" parent="TextAppearance.Bold">
+        <item name="android:paddingStart">@dimen/dimen_2</item>
+        <item name="android:paddingEnd">@dimen/dimen_2</item>
+        <item name="android:textSize">@dimen/size_60</item>
+        <item name="android:letterSpacing">0.025</item>
+    </style>
+
+    <style name="MiniApps.Chords.OptionItem" parent="MiniApps.Chords" />
+
+    <style name="MiniApps.Chords.OptionItem.Title" parent="TextAppearance.Bold">
+        <item name="android:textSize">@dimen/size_20</item>
+        <item name="android:letterSpacing">0.025</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="MiniApps.Chords.OptionItem.Subtitle" parent="TextAppearance.Regular">
+        <item name="android:textSize">@dimen/size_12</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--endregion-->
+</resources>
