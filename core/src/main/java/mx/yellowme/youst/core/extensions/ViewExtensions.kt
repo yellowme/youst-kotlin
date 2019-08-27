@@ -10,6 +10,8 @@ import android.widget.TextView
 // dp to pixels
 val Int.dp: Int get() = (this * Resources.getSystem().displayMetrics.density + 0.5f).toInt()
 
+val Float.px: Float get() = this * Resources.getSystem().displayMetrics.density / 160f
+
 fun getScreenWidth(): Int {
     return Resources.getSystem().displayMetrics.widthPixels
 }

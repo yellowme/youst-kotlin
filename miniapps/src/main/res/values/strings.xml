@@ -6,8 +6,8 @@
 
     <string name="chords_selected_holder">Fmaj</string>
     <string name="chords_card_holder">D</string>
-    <string name="chord_guitar">Guitar chord</string>
-    <string name="chord_guitalele">Guitalele chord</string>
+    <string name="chord_selector_title">Guitar Chord</string>
+    <string name="chord_title">Guitalele Chord</string>
 
     <string name="navigation_title_emoji_1">🙈</string>
     <string name="navigation_title_emoji_2">🙉</string>
