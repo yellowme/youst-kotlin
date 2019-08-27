@@ -5,6 +5,8 @@ import kotlinx.android.synthetic.main.template_generic_showcase.*
 import mx.yellowme.youst.core.R
 import mx.yellowme.youst.core.domain.GenericShowcasedOption
 import mx.yellowme.youst.core.hooks.BaseActivity
+import mx.yellowme.youst.core.hooks.adapter.CardPagerAdapter
+import mx.yellowme.youst.core.hooks.adapter.Decorator
 import mx.yellowme.youst.core.hooks.recycler.ItemListener
 import mx.yellowme.youst.core.utils.dipToPx
 import mx.yellowme.youst.core.utils.readJson
@@ -16,9 +18,6 @@ interface ModelTransformer<Model> {
 abstract class GenericShowcaseActivity<Model : GenericShowcasedOption> : BaseActivity(),
     ItemListener<Model> {
 
-    private var cardAdapter: CardPagerAdapter<Model>? = null
-    private var shadowTransformer: ShadowTransformer? = null
-
     override val layoutId = R.layout.template_generic_showcase
 
     abstract val titleResId: Int
@@ -29,9 +28,15 @@ abstract class GenericShowcaseActivity<Model : GenericShowcasedOption> : BaseAct
 
     abstract val modelTransformer: ModelTransformer<Model>
 
+    open val itemDecorator: Decorator<Model> = GenericShowcaseOptionDecorator()
+
+    private var cardAdapter: CardPagerAdapter<Model>? = null
+    private var shadowTransformer: ShadowTransformer? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        cardAdapter = CardPagerAdapter(this)
+        itemDecorator.bindListener(this)
+        cardAdapter = CardPagerAdapter(itemDecorator)
 
         titleTextView.text = getString(titleResId)
         subtitleTextView.text = getString(subtitleResId)
@@ -57,4 +62,5 @@ abstract class GenericShowcaseActivity<Model : GenericShowcasedOption> : BaseAct
             showcaseItemsViewPager?.offscreenPageLimit = 3
         }
     }
+
 }

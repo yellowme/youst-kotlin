@@ -1,17 +1,14 @@
-package mx.yellowme.youst.core.templates.showcase
+package mx.yellowme.youst.core.hooks.adapter
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.viewpager.widget.PagerAdapter
 import com.google.android.material.card.MaterialCardView
 import mx.yellowme.youst.core.R
-import mx.yellowme.youst.core.domain.GenericShowcasedOption
+import mx.yellowme.youst.core.hooks.adapter.CardAdapter.Companion.MAX_ELEVATION_FACTOR
 import mx.yellowme.youst.core.hooks.recycler.ItemListener
-import mx.yellowme.youst.core.templates.showcase.CardAdapter.Companion.MAX_ELEVATION_FACTOR
 
 interface CardAdapter {
 
@@ -27,29 +24,38 @@ interface CardAdapter {
 
 }
 
+@Suppress("SpellCheckingInspection")
+abstract class Decorator<Model>{
+    var listener: ItemListener<Model>? = null
+
+    abstract fun decorate(model: Model?, onView: View)
+
+    fun bindListener(listener: ItemListener<Model>?) {
+        this.listener = listener
+    }
+}
+
 /**
  * TODO: Needs refactor
  */
 @Suppress("MemberVisibilityCanBePrivate")
-open class CardPagerAdapter<Model : GenericShowcasedOption>(itemListener: ItemListener<Model>) : PagerAdapter(),
-    CardAdapter {
+open class CardPagerAdapter<Model>(
+    val decorator: Decorator<Model>
+) : PagerAdapter(), CardAdapter {
 
-    private val mViews: MutableList<MaterialCardView?>
-    private val mData: MutableList<Model?>
-
-    private var mItemListener: ItemListener<Model>
+    private val views: MutableList<MaterialCardView?>
+    private val data: MutableList<Model?>
 
     override var baseElevation: Float = 0f
 
     init {
-        mData = ArrayList()
-        mViews = ArrayList()
-        mItemListener = itemListener
+        data = arrayListOf()
+        views = arrayListOf()
     }
 
     fun addCardItem(item: Model) {
-        mViews.add(null)
-        mData.add(item)
+        views.add(null)
+        data.add(item)
     }
 
     fun addItems(items: List<Model>) {
@@ -59,11 +65,11 @@ open class CardPagerAdapter<Model : GenericShowcasedOption>(itemListener: ItemLi
     }
 
     override fun getCardViewAt(position: Int): CardView? {
-        return mViews[position]
+        return views[position]
     }
 
     override fun getCount(): Int {
-        return mData.size
+        return data.size
     }
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
@@ -76,7 +82,7 @@ open class CardPagerAdapter<Model : GenericShowcasedOption>(itemListener: ItemLi
             .inflate(R.layout.template_generic_showcase_card, container, false)
 
         container.addView(view)
-        bind(mData[position], view)
+        bind(data[position], view)
         val cardView = view.findViewById<MaterialCardView>(R.id.cardView)
 
         if (baseElevation == 0f) {
@@ -84,28 +90,17 @@ open class CardPagerAdapter<Model : GenericShowcasedOption>(itemListener: ItemLi
         }
 
         cardView.maxCardElevation = baseElevation * MAX_ELEVATION_FACTOR
-        mViews[position] = cardView
+        views[position] = cardView
         return view
     }
 
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
         container.removeView(`object` as View)
-        mViews[position] = null
+        views[position] = null
     }
 
     private fun bind(item: Model?, view: View) {
-        val titleTextView = view.findViewById<TextView>(R.id.titleTextView)
-        val contentTextView = view.findViewById<TextView>(R.id.contentTextView)
-        val cardView = view.findViewById<MaterialCardView>(R.id.cardView)
-
-        titleTextView.text = item?.title
-        contentTextView.text = item?.subtitle
-
-        item?.hexColor?.let {
-            cardView.setCardBackgroundColor(Color.parseColor(it))
-        }
-
-        cardView.setOnClickListener { mItemListener.onItemClick(item) }
+        decorator.decorate(item, view)
     }
 
 }

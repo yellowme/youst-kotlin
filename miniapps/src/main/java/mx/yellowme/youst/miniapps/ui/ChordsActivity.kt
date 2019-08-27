@@ -12,7 +12,7 @@ import com.google.android.material.card.MaterialCardView
 import kotlinx.android.synthetic.main.chords.*
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.core.hooks.recycler.ItemListener
-import mx.yellowme.youst.core.templates.showcase.CardAdapter
+import mx.yellowme.youst.core.hooks.adapter.CardAdapter
 import mx.yellowme.youst.core.templates.showcase.ShadowTransformer
 import mx.yellowme.youst.core.utils.dipToPx
 import mx.yellowme.youst.miniapps.R
@@ -71,7 +71,8 @@ class ChordsActivity : BaseActivity(), ViewPager.OnPageChangeListener {
 }
 
 //TODO: Generify
-class ChordsAdapter(itemListener: ItemListener<Chord>?) : PagerAdapter(), CardAdapter {
+class ChordsAdapter(itemListener: ItemListener<Chord>?) : PagerAdapter(),
+    CardAdapter {
 
     private val mViews: MutableList<MaterialCardView?>
     private val mData: MutableList<Chord?>

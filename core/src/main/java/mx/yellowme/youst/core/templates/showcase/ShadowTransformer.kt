@@ -2,7 +2,7 @@ package mx.yellowme.youst.core.templates.showcase
 
 import android.view.View
 import androidx.viewpager.widget.ViewPager
-import mx.yellowme.youst.core.templates.showcase.CardAdapter
+import mx.yellowme.youst.core.hooks.adapter.CardAdapter
 
 class ShadowTransformer(
     private val mViewPager: ViewPager,
