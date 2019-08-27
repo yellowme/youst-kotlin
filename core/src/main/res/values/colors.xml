@@ -11,6 +11,7 @@
     <color name="blue">#0074D9</color>
     <color name="black">#111111</color>
     <color name="gray">#aaaaaa</color>
+    <color name="graywhite">#EEEEEE</color>
     <color name="silver">#dddddd</color>
     <color name="olive">#3d9970</color>
     <color name="emerald">#49D482</color>
@@ -57,5 +58,7 @@
 
     <color name="immersive_bars">#99000000</color>
     <color name="scrim">#99323232</color>
+
+    <color name="clear_chill">#1e90ff</color>
 
 </resources>

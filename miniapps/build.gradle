@@ -31,4 +31,6 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':app')
     implementation project(':core')
+
+    implementation "com.sdsmdg.harjot:croller:${versions.croller}"
 }
