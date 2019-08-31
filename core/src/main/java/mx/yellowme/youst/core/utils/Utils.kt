@@ -10,6 +10,7 @@ import com.squareup.moshi.Types.newParameterizedType
 import java.io.IOException
 import java.util.*
 
+//region AppCompatActivity
 
 fun AppCompatActivity.dipToPx(dip: Int): Int {
     return TypedValue.applyDimension(
@@ -25,6 +26,10 @@ fun <T : View> AppCompatActivity.findOrThrow(viewId: Int): T {
     )
 }
 
+//endregion
+
+//region Activity Helpers
+
 fun Activity.readJson(named: String): String? {
     println("Reading JSON file named $named")
     return classLoader?.readJson(named)
@@ -33,6 +38,14 @@ fun Activity.readJson(named: String): String? {
 inline fun <reified T : Any> Activity.loadJsonArray(named: String) : List<T>? {
     return readJson(named)?.asJsonArrayOf()
 }
+
+inline fun <reified T : Any> Activity.loadJsonObject(named: String) : T? {
+    return readJson(named)?.asJsonObject()
+}
+
+//endregion
+
+//region Generic Readers
 
 fun ClassLoader?.readJson(named: String): String? {
     if (this == null) {
@@ -68,3 +81,5 @@ inline fun <reified T : Any> String.asJsonArrayOf(): List<T>? {
         return modelFromJson
     }
 }
+
+//endregion

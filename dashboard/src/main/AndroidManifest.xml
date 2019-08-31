@@ -13,7 +13,7 @@
 
     <application>
         <activity
-            android:name=".DashboardActivity"
+            android:name=".ui.DashboardActivity"
             android:theme="@style/SharedAppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
