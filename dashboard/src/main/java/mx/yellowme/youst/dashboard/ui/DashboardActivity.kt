@@ -10,6 +10,7 @@ import mx.yellowme.youst.core.utils.Activities
 import mx.yellowme.youst.core.utils.intentTo
 import mx.yellowme.youst.core.utils.loadJsonObject
 import mx.yellowme.youst.dashboard.R
+import mx.yellowme.youst.dashboard.data.DashboardLoader
 import mx.yellowme.youst.dashboard.domain.Dashboard
 import mx.yellowme.youst.dashboard.domain.DashboardOption
 import mx.yellowme.youst.dashboard.domain.DashboardOptionId
@@ -32,12 +33,13 @@ class DashboardActivity : BaseActivity(), ItemListener<DashboardOption> {
             .with(dashboardOptions)
             .into(this)
 
-        loadJsonObject<Dashboard>("dashboard.json")?.let {
+
+        DashboardLoader.loadData(this) {
             titleTextView.text = it.title
             subtitleTextView.text = it.subtitle
 
             recyclerView.setData(it.options)
-        } ?: throw RuntimeException("Reading corrupted dashboard JSON file")
+        }
     }
 
     override fun onItemClick(item: DashboardOption?) {
