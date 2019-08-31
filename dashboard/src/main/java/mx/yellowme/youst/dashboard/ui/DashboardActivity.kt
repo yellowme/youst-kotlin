@@ -28,7 +28,7 @@ class DashboardActivity : BaseActivity(), ItemListener<DashboardOption> {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val recyclerView = DashboardOptionRecyclerView.Builder()
+        val recyclerView = DashboardRecyclerView.Builder()
             .with(dashboardOptions)
             .into(this)
 

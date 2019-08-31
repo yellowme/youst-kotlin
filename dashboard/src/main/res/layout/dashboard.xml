@@ -30,19 +30,6 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:text="@string/dashboard_holder_title" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/dashboardOptions"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline"
-        tools:itemCount="4"
-        tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        tools:listitem="@layout/dashboard_option_item"
-        tools:spanCount="2" />
-
     <mx.yellowme.youst.core.components.YellowCircle
         android:id="@+id/yellowCircle"
         android:layout_width="@dimen/dimen_40"
@@ -50,5 +37,14 @@
         android:layout_marginBottom="@dimen/dimen_16"
         app:layout_constraintBottom_toTopOf="@id/titleTextView"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <mx.yellowme.youst.core.hooks.recycler.AutoSizeGridRecyclerView
+        android:id="@+id/dashboardOptions"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
