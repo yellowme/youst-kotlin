@@ -1,4 +1,4 @@
-package mx.yellowme.youst.dashboard
+package mx.yellowme.youst.dashboard.ui
 
 import android.os.Bundle
 import kotlinx.android.synthetic.main.dashboard.*
@@ -8,16 +8,22 @@ import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.core.hooks.recycler.ItemListener
 import mx.yellowme.youst.core.utils.Activities
 import mx.yellowme.youst.core.utils.intentTo
-import mx.yellowme.youst.core.utils.loadJsonArray
+import mx.yellowme.youst.core.utils.loadJsonObject
+import mx.yellowme.youst.dashboard.R
+import mx.yellowme.youst.dashboard.domain.Dashboard
+import mx.yellowme.youst.dashboard.domain.DashboardOption
+import mx.yellowme.youst.dashboard.domain.DashboardOptionId
 import mx.yellowme.youst.core.R as coreR
 
 class DashboardActivity : BaseActivity(), ItemListener<DashboardOption> {
 
-    //region Attribute
+    //region Attributes
 
     override val layoutId = R.layout.dashboard
 
     //endregion
+
+    //region Lifecycle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,9 +32,11 @@ class DashboardActivity : BaseActivity(), ItemListener<DashboardOption> {
             .with(dashboardOptions)
             .into(this)
 
+        loadJsonObject<Dashboard>("dashboard.json")?.let {
+            titleTextView.text = it.title
+            subtitleTextView.text = it.subtitle
 
-        loadJsonArray<DashboardOption>("dashboard.json")?.let {
-            recyclerView.setData(it)
+            recyclerView.setData(it.options)
         } ?: throw RuntimeException("Reading corrupted dashboard JSON file")
     }
 
@@ -48,4 +56,6 @@ class DashboardActivity : BaseActivity(), ItemListener<DashboardOption> {
             }
         }
     }
+
+    //endregion
 }

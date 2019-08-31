@@ -45,10 +45,11 @@ interface AddressableActivity {
  *
  * Can contain intent extra names or functions associated with the activity creation.
  */
+@Suppress("SpellCheckingInspection")
 object Activities {
 
     object Dashboard : AddressableActivity {
-        override val className = "$PACKAGE_NAME.dashboard.DashboardActivity"
+        override val className = "$PACKAGE_NAME.dashboard.ui.DashboardActivity"
     }
 
     object Playground : AddressableActivity {
