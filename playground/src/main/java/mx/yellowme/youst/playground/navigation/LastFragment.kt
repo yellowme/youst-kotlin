@@ -6,16 +6,20 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.navArgs
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import kotlinx.android.synthetic.main.navigation_destination_three.*
+import mx.yellowme.youst.core.hooks.BaseFragment
 import mx.yellowme.youst.playground.R
 
-class LastFragment : Fragment() {
+class LastFragment : BaseFragment() {
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override val layoutId: Int = R.layout.navigation_destination_three
+
+    private val args: LastFragmentArgs by navArgs()
+
+    override fun setup() {
+        goodbyeTextView.text = getString(R.string.navigation_title_step_3, args.nameArg)
 
         titleEmoji?.setOnClickListener {
             val action = LastFragmentDirections.backToGreeting()
@@ -26,21 +30,6 @@ class LastFragment : Fragment() {
             val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://yellowme.mx/"))
             startActivity(browserIntent)
         }
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.navigation_destination_three, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val args: LastFragmentArgs by navArgs()
-        goodbyeTextView.text = getString(R.string.navigation_title_step_3, args.nameArg)
     }
 
 }

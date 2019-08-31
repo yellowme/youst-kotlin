@@ -1,32 +1,20 @@
 package mx.yellowme.youst.playground.navigation
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.navigation_destination_one.*
+import mx.yellowme.youst.core.hooks.BaseFragment
 import mx.yellowme.youst.playground.R
 
-class GreetingFragment : Fragment() {
+class GreetingFragment : BaseFragment() {
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override val layoutId: Int = R.layout.navigation_destination_one
 
+    override fun setup() {
         navigateButton?.setOnClickListener {
             val action =
                 GreetingFragmentDirections.toSecondDestination(nameEditText.text.toString())
             findNavController().navigate(action)
         }
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.navigation_destination_one, container, false)
     }
 
 }

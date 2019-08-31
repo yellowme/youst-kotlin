@@ -1,21 +1,23 @@
 package mx.yellowme.youst.playground.navigation
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import kotlinx.android.synthetic.main.navigation_destination_two.*
+import mx.yellowme.youst.core.hooks.BaseFragment
 import mx.yellowme.youst.playground.R
 
-class MiddleFragment : Fragment() {
+class MiddleFragment : BaseFragment() {
 
-    val args: MiddleFragmentArgs by navArgs()
+    //region Attributes
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override val layoutId: Int = R.layout.navigation_destination_two
+
+    private val args: MiddleFragmentArgs by navArgs()
+
+    //endregion
+
+    override fun setup() {
+        destinationTextView.text = getString(R.string.navigation_title_step_2, args.textArg)
 
         navigateButton?.setOnClickListener {
             val action = MiddleFragmentDirections.toLastFragment(args.textArg)
@@ -23,17 +25,4 @@ class MiddleFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.navigation_destination_two, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        destinationTextView.text = getString(R.string.navigation_title_step_2, args.textArg)
-    }
 }
