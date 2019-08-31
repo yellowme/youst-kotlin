@@ -14,7 +14,7 @@ class MissingPaymentOptionFragment : BaseFragment() {
 
     //endregion
 
-    override fun setup() {
+    override fun onViewReady() {
         appHero.listener = object : AppHeroActionListener {
             override fun onClickAction() {
                 val action = MissingPaymentOptionFragmentDirections.toMain()
