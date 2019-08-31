@@ -57,7 +57,6 @@
 
     <!--region Margin & Padding -->
 
-    <dimen name="dimen_0">0dp</dimen>
     <dimen name="dimen_1">1dp</dimen>
     <dimen name="dimen_2">2dp</dimen>
     <dimen name="dimen_3">3dp</dimen>

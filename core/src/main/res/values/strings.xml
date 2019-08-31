@@ -2,7 +2,7 @@
     <string name="app_name">Core</string>
     <string name="understood">Understood</string>
     <string name="work_in_progress">Sorry! We are still working on this module</string>
-    <string name="generic_showcase_subtitle_holder">This is the subtitle with a little discription for the current generic showcase item</string>
+    <string name="generic_showcase_subtitle_holder">This is the subtitle with a little discription for the current generic showcase item.</string>
     <string name="generic_showcase_title_holder">Generic show case item</string>
     <string name="toolbar_title_holder">Toolbar Title</string>
     <string name="menu_help">Ayuda</string>
