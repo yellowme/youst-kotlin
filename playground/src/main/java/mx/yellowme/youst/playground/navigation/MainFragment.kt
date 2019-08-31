@@ -14,7 +14,7 @@ class MainFragment : BaseFragment() {
 
     //endregion
 
-    override fun setup() {
+    override fun onViewReady() {
         appHero.message = getString(
             R.string.screen_main,
             getString(R.string.userName),

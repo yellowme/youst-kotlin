@@ -8,13 +8,9 @@ import mx.yellowme.youst.playground.components.AppHeroActionListener
 
 class LoginFragment : BaseFragment() {
 
-    //region Attributes
-
     override val layoutId: Int = R.layout.screen_login
 
-    //endregion
-
-    override fun setup() {
+    override fun onViewReady() {
         appHero.listener = object : AppHeroActionListener {
             override fun onClickAction() {
                 val action = LoginFragmentDirections.toUserWithoutAttributeFragment()

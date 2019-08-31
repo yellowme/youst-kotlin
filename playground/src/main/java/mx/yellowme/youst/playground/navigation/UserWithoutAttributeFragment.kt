@@ -10,7 +10,7 @@ class UserWithoutAttributeFragment : BaseFragment() {
 
     override val layoutId: Int = R.layout.screen_user_no_attribute
 
-    override fun setup() {
+    override fun onViewReady() {
         appHero.listener = object : AppHeroActionListener {
             override fun onClickAction() {
                 val action = UserWithoutAttributeFragmentDirections.toPayment()

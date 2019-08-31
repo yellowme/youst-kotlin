@@ -8,7 +8,11 @@ import androidx.fragment.app.Fragment
 
 abstract class BaseFragment : Fragment() {
 
+    //region Attributes
+
     abstract val layoutId: Int
+
+    //endregion
 
     //region Lifecycle
 
@@ -22,12 +26,11 @@ abstract class BaseFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        setup()
+        onViewReady()
     }
 
     //endregion
 
-    abstract fun setup()
+    abstract fun onViewReady()
 
 }

@@ -10,7 +10,7 @@ class UnsupportedVersionFragment : BaseFragment() {
 
     override val layoutId: Int = R.layout.screen_unsupported
 
-    override fun setup() {
+    override fun onViewReady() {
         appHero.listener = object : AppHeroActionListener {
             override fun onClickAction() {
                 val action = UnsupportedVersionFragmentDirections.toLogin()
