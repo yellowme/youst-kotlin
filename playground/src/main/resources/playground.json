@@ -1,14 +1,14 @@
 [
   {
     "id": "1",
-    "title": "Jetpack Navigation Component",
-    "subtitle": "Showcase of the Android Jetpack Navigation Component, designed to delegate much of navigation logic to a centralized hub.",
-    "hexColor": "#49D482"
+    "title": "Jetpack Navigation",
+    "subtitle": "Showcase of the Android Jetpack Navigation Component.\n\nThis component is designed to delegate much of navigation logic to a centralized hub.",
+    "paletteColor": "FOREST_BLUES"
   },
   {
     "id": "2",
-    "title": "Nemo Navigation Approach",
-    "subtitle": ".....",
-    "hexColor": "#ff4136"
+    "title": "Nemo Navigation",
+    "subtitle": "Opinionated mobile navigation flow handler.\n\nAvoid boilerplate code when handle navigation programmatically.",
+    "paletteColor": "JALAPENO_RED"
   }
 ]

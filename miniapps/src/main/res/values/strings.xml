@@ -1,8 +1,8 @@
 <resources>
     <string name="title_mini_apps">Mini Apps</string>
 
-    <string name="mini_apps_title">Mini Apps Title</string>
-    <string name="mini_apps_subtitle">Mini Apps Subtitle</string>
+    <string name="mini_apps_title">Mini Apps! 📲</string>
+    <string name="mini_apps_subtitle">You can easily get all sorts of app concepts provided here. Watch out! You could find some famous app clones.</string>
 
     <string name="chords_selected_holder">G</string>
     <string name="chords_card_holder">D</string>

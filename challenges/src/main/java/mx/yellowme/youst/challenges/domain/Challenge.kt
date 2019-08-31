@@ -6,7 +6,7 @@ class Challenge(
     override val id: String,
     override val title: String,
     override val subtitle: String,
-    override val hexColor: String
+    override val paletteColor: String
 ) : GenericShowcasedOption {
 
     val help: String? = null

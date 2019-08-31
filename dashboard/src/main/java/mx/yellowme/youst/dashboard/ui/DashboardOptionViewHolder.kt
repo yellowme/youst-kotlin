@@ -3,6 +3,7 @@ package mx.yellowme.youst.dashboard.ui
 import android.graphics.Color
 import android.view.View
 import kotlinx.android.synthetic.main.dashboard_option_item.view.*
+import mx.yellowme.youst.core.components.PaletteColors
 import mx.yellowme.youst.core.extensions.displayOrThrow
 import mx.yellowme.youst.core.hooks.recycler.ItemListener
 import mx.yellowme.youst.core.hooks.recycler.RecyclerViewHolderDecorator
@@ -18,7 +19,9 @@ class DashboardOptionViewHolder(
             setSingleOnClickListener { listener?.onItemClick(model) }
             titleTextView.displayOrThrow(model.title)
             subtitleTextView.displayOrThrow(model.subtitle)
-            materialCardView.setCardBackgroundColor(Color.parseColor(model.hexColor))
+            materialCardView.setCardBackgroundColor(
+                Color.parseColor(PaletteColors.valueOf(model.paletteColor).hexColor)
+            )
         }
     }
 }
