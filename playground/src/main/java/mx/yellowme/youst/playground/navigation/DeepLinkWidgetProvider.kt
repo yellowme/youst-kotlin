@@ -17,7 +17,7 @@ class DeepLinkWidgetProvider : AppWidgetProvider() {
 
         val pendingIntent = NavDeepLinkBuilder(context)
             .setComponentName(NavigationActivity::class.java)
-            .setGraph(R.navigation.nav_graph)
+            .setGraph(R.navigation.playground_navigation_graph)
             .setDestination(R.id.deepLinkFragment)
             .createPendingIntent()
 

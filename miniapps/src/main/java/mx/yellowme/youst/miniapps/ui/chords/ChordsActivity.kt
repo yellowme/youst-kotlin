@@ -1,4 +1,4 @@
-package mx.yellowme.youst.miniapps.ui
+package mx.yellowme.youst.miniapps.ui.chords
 
 import android.os.Bundle
 import android.view.LayoutInflater

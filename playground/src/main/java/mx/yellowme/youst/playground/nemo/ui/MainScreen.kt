@@ -27,11 +27,4 @@ class MainScreen : BaseActivity() {
         )
     }
 
-    //region View
-
-    fun setProgress(isActive: Boolean) {
-        appHero.setProgress(isActive)
-    }
-
-    //endregion
 }

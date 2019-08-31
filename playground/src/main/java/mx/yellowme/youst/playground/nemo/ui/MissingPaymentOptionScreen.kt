@@ -35,11 +35,4 @@ class MissingPaymentOptionScreen : BaseActivity() {
 
     //endregion
 
-    //region View
-
-    fun setProgress(isActive: Boolean) {
-        appHero.setProgress(isActive)
-    }
-
-    //endregion
 }

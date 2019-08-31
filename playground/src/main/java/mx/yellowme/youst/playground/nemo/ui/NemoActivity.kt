@@ -51,7 +51,7 @@ class NemoActivity : BaseActivity() {
 
     //region View
 
-    fun setProgress(isActive: Boolean) {
+    private fun setProgress(isActive: Boolean) {
         appHero.setProgress(isActive)
     }
 
