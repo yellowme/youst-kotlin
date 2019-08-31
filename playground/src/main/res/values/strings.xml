@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Playground</string>
-    <string name="playground_title">Playground Title</string>
-    <string name="playground_subtitle">Playground Subtitle</string>
     <string name="title_playground">Playground</string>
+
+    <string name="playground_title">This is our Playground! 🎡</string>
+    <string name="playground_subtitle">An outdoor area provided for all to play in. Feel free to try out any development tool you are interested in.</string>
 
     <string name="navigation_title_emoji_1">🙈</string>
     <string name="navigation_title_emoji_2">🙉</string>
