@@ -6,7 +6,7 @@ data class DashboardOption(
     val id: String,
     val title: String,
     val subtitle: String,
-    val hexColor: String
+    val paletteColor: String
 ) {
     val optionId: DashboardOptionId
         get() {

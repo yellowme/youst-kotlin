@@ -1,14 +1,14 @@
 [
   {
     "id": "1",
-    "title": "Chords",
-    "subtitle": "Guitalele chords and guitar chords unified",
-    "hexColor": "#49D482"
+    "title": "Chordify",
+    "subtitle": "Transform the notes of a guitar to a guitalele while you play.\n\nSelect a guitar chord and you will see the guitalele chord as if you play it on guitar.",
+    "paletteColor": "CLEAR_CHILL"
   },
   {
     "id": "2",
     "title": "Contact Us",
-    "subtitle": ".......",
-    "hexColor": "#396AA2"
+    "subtitle": "This is the best way to get in touch with us! Follow the steps and send us an email.\n\nDo not be shy 🙈",
+    "paletteColor": "SATURATED_SKY"
   }
 ]

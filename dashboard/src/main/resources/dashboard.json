@@ -6,25 +6,25 @@
       "id": "challenges",
       "title": "Challenges",
       "subtitle": "Interview puzzlers",
-      "hexColor": "#FF9A7B"
+      "paletteColor": "TANGERINE"
     },
     {
       "id": "playground",
       "title": "Playground",
       "subtitle": "Proofs of concept",
-      "hexColor": "#1abc9c"
+      "paletteColor": "TURQUOISE"
     },
     {
       "id": "mini_apps",
       "title": "Mini Apps",
       "subtitle": "Let's clone that app",
-      "hexColor": "#3498db"
+      "paletteColor": "PETERRIVER"
     },
     {
       "id": "portfolio",
       "title": "Portfolio",
       "subtitle": "Our most recent work",
-      "hexColor": "#9b59b6"
+      "paletteColor": "AMETHYST"
     }
   ]
 }
