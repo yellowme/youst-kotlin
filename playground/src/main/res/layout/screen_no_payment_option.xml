@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <mx.yellowme.youst.playground.nemo.components.AppHero
+    <mx.yellowme.youst.playground.components.AppHero
         android:id="@+id/appHero"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

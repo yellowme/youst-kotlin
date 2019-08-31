@@ -1,17 +1,17 @@
-package mx.yellowme.youst.playground.nemo.ui
+package mx.yellowme.youst.playground.nemo
 
 import kotlinx.android.synthetic.main.screen_login.*
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.R
-import mx.yellowme.youst.playground.nemo.data.ConfigFakeRepository
-import mx.yellowme.youst.playground.nemo.data.PaymentFakeRepository
-import mx.yellowme.youst.playground.nemo.data.UserFakeRepository
-import mx.yellowme.youst.playground.nemo.navigation.CommonNavigator
-import mx.yellowme.youst.playground.nemo.navigation.fetchers.FetchConfig
-import mx.yellowme.youst.playground.nemo.navigation.fetchers.FetchOtherModel
-import mx.yellowme.youst.playground.nemo.navigation.fetchers.FetchUser
-import mx.yellowme.youst.playground.nemo.navigation.hooks.Navigator
-import mx.yellowme.youst.playground.nemo.navigation.matchers.HasLastName
+import mx.yellowme.youst.playground.data.ConfigFakeRepository
+import mx.yellowme.youst.playground.data.PaymentFakeRepository
+import mx.yellowme.youst.playground.data.UserFakeRepository
+import mx.yellowme.youst.playground.nemo.navigator.CommonNavigator
+import mx.yellowme.youst.playground.nemo.navigator.fetchers.FetchConfig
+import mx.yellowme.youst.playground.nemo.navigator.fetchers.FetchOtherModel
+import mx.yellowme.youst.playground.nemo.navigator.fetchers.FetchUser
+import mx.yellowme.youst.playground.nemo.navigator.hooks.Navigator
+import mx.yellowme.youst.playground.nemo.navigator.matchers.HasLastName
 
 class NemoActivity : BaseActivity() {
 

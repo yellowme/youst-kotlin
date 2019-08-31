@@ -1,4 +1,4 @@
-package mx.yellowme.youst.playground.nemo.components
+package mx.yellowme.youst.playground.components
 
 import android.content.Context
 import android.util.AttributeSet

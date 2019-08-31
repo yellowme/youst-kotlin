@@ -38,22 +38,22 @@
         <!--region Nemo-->
 
         <activity
-            android:name=".nemo.ui.NemoActivity"
+            android:name=".nemo.NemoActivity"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
         <activity
-            android:name=".nemo.ui.LoginScreen"
+            android:name=".shared.LoginScreen"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
         <activity
-            android:name=".nemo.ui.UnsupportedVersionScreen"
+            android:name=".shared.UnsupportedVersionScreen"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
         <activity
-            android:name=".nemo.ui.UserWithoutAttributeScreen"
+            android:name=".shared.UserWithoutAttributeScreen"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
         <activity
-            android:name=".nemo.ui.MissingPaymentOptionScreen"
+            android:name=".shared.MissingPaymentOptionScreen"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
         <activity
-            android:name=".nemo.ui.MainScreen"
+            android:name=".shared.MainScreen"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
 
         <!--endregion-->

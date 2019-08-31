@@ -1,4 +1,4 @@
-package mx.yellowme.youst.playground.nemo.data
+package mx.yellowme.youst.playground.data
 
 interface ServerCallback {
     fun onServerError(message: String)

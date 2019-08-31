@@ -1,4 +1,4 @@
-package mx.yellowme.youst.playground.nemo.navigation
+package mx.yellowme.youst.playground.nemo.navigator
 
 interface BaseNavigator {
     fun sendToLogin()

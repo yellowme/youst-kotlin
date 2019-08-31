@@ -1,13 +1,13 @@
-package mx.yellowme.youst.playground.nemo.ui
+package mx.yellowme.youst.playground.shared
 
 import android.os.Bundle
 import kotlinx.android.synthetic.main.screen_unsupported.*
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.R
-import mx.yellowme.youst.playground.nemo.components.AppHeroActionListener
-import mx.yellowme.youst.playground.nemo.data.ConfigFakeRepository
+import mx.yellowme.youst.playground.components.AppHeroActionListener
+import mx.yellowme.youst.playground.data.ConfigFakeRepository
 import mx.yellowme.youst.playground.domain.Config
-import mx.yellowme.youst.playground.nemo.navigation.CommonNavigator
+import mx.yellowme.youst.playground.nemo.navigator.CommonNavigator
 
 class UnsupportedVersionScreen : BaseActivity() {
 

@@ -1,11 +1,11 @@
-package mx.yellowme.youst.playground.nemo.ui
+package mx.yellowme.youst.playground.shared
 
 import android.os.Bundle
 import kotlinx.android.synthetic.main.screen_main.*
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.R
-import mx.yellowme.youst.playground.nemo.data.PaymentFakeRepository
-import mx.yellowme.youst.playground.nemo.data.UserFakeRepository
+import mx.yellowme.youst.playground.data.PaymentFakeRepository
+import mx.yellowme.youst.playground.data.UserFakeRepository
 
 class MainScreen : BaseActivity() {
 

@@ -1,4 +1,4 @@
-package mx.yellowme.youst.playground.nemo.data
+package mx.yellowme.youst.playground.data
 
 import android.os.Handler
 import mx.yellowme.youst.playground.domain.User

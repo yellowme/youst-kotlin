@@ -1,4 +1,4 @@
-package mx.yellowme.youst.playground.nemo.navigation.hooks
+package mx.yellowme.youst.playground.nemo.navigator.hooks
 
 import mx.yellowme.youst.playground.BuildConfig
 
