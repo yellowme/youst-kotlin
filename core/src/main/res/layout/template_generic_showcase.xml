@@ -6,35 +6,20 @@
     android:fitsSystemWindows="true"
     app:layout_constraintVertical_chainStyle="spread_inside">
 
-    <mx.yellowme.youst.core.components.toolbar.MainActionToolbar
-        android:id="@+id/mainActionToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="?attr/actionBarSize"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:leftAction="back"
-        app:menuAction="none" />
-
     <androidx.emoji.widget.EmojiTextView
-        android:id="@+id/titleTextView"
-        style="@style/GenericShowcase.Title"
-        android:layout_width="0dp"
-        android:layout_marginTop="@dimen/dimen_16"
-        android:paddingStart="@dimen/dimen_32"
-        android:paddingEnd="@dimen/dimen_32"
-        android:text="@string/generic_showcase_title_holder"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mainActionToolbar" />
-
-    <TextView
         android:id="@+id/subtitleTextView"
         style="@style/GenericShowcase.Description"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_marginTop="@dimen/dimen_6"
-        android:layout_marginBottom="@dimen/dimen_24"
+        android:ellipsize="end"
+        android:gravity="top"
         android:paddingStart="@dimen/dimen_32"
+        android:paddingTop="@dimen/dimen_8"
         android:paddingEnd="@dimen/dimen_32"
+        android:paddingBottom="@dimen/dimen_8"
         android:text="@string/generic_showcase_subtitle_holder"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titleTextView" />
 
@@ -43,7 +28,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.30" />
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.emoji.widget.EmojiTextView
+        android:id="@+id/titleTextView"
+        style="@style/GenericShowcase.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dimen_32"
+        android:paddingEnd="@dimen/dimen_32"
+        android:text="@string/generic_showcase_title_holder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainActionToolbar" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/showcaseItemsViewPager"
@@ -53,14 +57,22 @@
         android:clipToPadding="false"
         android:overScrollMode="never"
         android:paddingStart="@dimen/dimen_60"
-        android:paddingLeft="@dimen/dimen_60"
         android:paddingTop="@dimen/dimen_30"
         android:paddingEnd="@dimen/dimen_60"
-        android:paddingRight="@dimen/dimen_60"
         android:paddingBottom="@dimen/dimen_30"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomGuideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+    <mx.yellowme.youst.core.components.toolbar.MainActionToolbar
+        android:id="@+id/mainActionToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftAction="back"
+        app:menuAction="none" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
