@@ -21,7 +21,7 @@ class GreetingFragmentTest {
 
     @Test
     fun clickNavigateButton_navigateToSecondDestinationFragment() {
-        val scenario = launchFragmentInContainer<GreetingFragment>(Bundle(), R.style.SharedAppTheme)
+        val scenario = launchFragmentInContainer<UnsupportedVersionFragment>(Bundle(), R.style.SharedAppTheme)
         val navController = mock(NavController::class.java)
 
         scenario.onFragment {
@@ -31,7 +31,7 @@ class GreetingFragmentTest {
         onView(withId(R.id.navigateButton)).perform(click())
 
         verify(navController).navigate(
-            GreetingFragmentDirections.toSecondDestination("")
+            GreetingFragmentDirections.UnsupportedVersionFragment("")
         )
     }
 
