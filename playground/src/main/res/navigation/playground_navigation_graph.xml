@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/playground_navigation_graph"
-    app:startDestination="@id/greetingFragment">
+    app:startDestination="@id/unsupportedVersionFragment">
 
     <fragment
-        android:id="@+id/greetingFragment"
-        android:name="mx.yellowme.youst.playground.navigation.GreetingFragment"
+        android:id="@+id/unsupportedVersionFragment"
+        android:name="mx.yellowme.youst.playground.navigation.UnsupportedVersionFragment"
         android:label="DestinationOneFragment"
-        tools:layout="@layout/navigation_destination_one">
+        tools:layout="@layout/screen_unsupported">
 
         <action
-            android:id="@+id/toSecondDestination"
-            app:destination="@id/middleFragment"
+            android:id="@+id/toLogin"
+            app:destination="@id/loginFragment"
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_right"
@@ -22,18 +22,14 @@
     </fragment>
 
     <fragment
-        android:id="@+id/middleFragment"
-        android:name="mx.yellowme.youst.playground.navigation.MiddleFragment"
-        android:label="DestinationTwoFragment"
-        tools:layout="@layout/navigation_destination_two">
-
-        <argument
-            android:name="textArg"
-            app:argType="string" />
+        android:id="@+id/loginFragment"
+        android:name="mx.yellowme.youst.playground.navigation.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/screen_login">
 
         <action
-            android:id="@+id/toLastFragment"
-            app:destination="@id/lastFragment"
+            android:id="@+id/toUserWithoutAttributeFragment"
+            app:destination="@id/userWithoutAttributeFragment"
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_right"
@@ -42,20 +38,39 @@
     </fragment>
 
     <fragment
-        android:id="@+id/lastFragment"
-        android:name="mx.yellowme.youst.playground.navigation.LastFragment"
-        android:label="DestinationThreeFragment"
-        tools:layout="@layout/navigation_destination_three">
-
-        <argument
-            android:name="nameArg"
-            app:argType="string" />
+        android:id="@+id/userWithoutAttributeFragment"
+        android:name="mx.yellowme.youst.playground.navigation.UserWithoutAttributeFragment"
+        android:label="UserWithoutAttributeFragment"
+        tools:layout="@layout/screen_user_no_attribute">
         <action
-            android:id="@+id/backToGreeting"
-            app:destination="@id/greetingFragment"
-            app:popUpTo="@+id/greetingFragment"
-            app:popUpToInclusive="true" />
+            android:id="@+id/toPayment"
+            app:destination="@id/missingPaymentOptionFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
 
+    <fragment
+        android:id="@+id/missingPaymentOptionFragment"
+        android:name="mx.yellowme.youst.playground.navigation.MissingPaymentOptionFragment"
+        android:label="MissingPaymentOptionFragment">
+        <action
+            android:id="@+id/toMain"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="mx.yellowme.youst.playground.navigation.MainFragment"
+        android:label="MainFragment">
+        <action
+            android:id="@+id/toUnsupported"
+            app:destination="@id/unsupportedVersionFragment" />
     </fragment>
 
     <fragment

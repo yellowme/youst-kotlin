@@ -30,4 +30,6 @@
 
     <string name="component_holder_hero_message">This is a message for the user!</string>
     <string name="component_holder_hero_action_label">Action</string>
+    <string name="userName">César Gómez</string>
+    <string name="paymentData">Enso</string>
 </resources>
