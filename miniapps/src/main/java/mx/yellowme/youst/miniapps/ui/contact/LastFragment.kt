@@ -1,11 +1,10 @@
 package mx.yellowme.youst.miniapps.ui.contact
 
-import android.content.Intent
-import android.net.Uri
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import kotlinx.android.synthetic.main.screen_destination_three.*
 import mx.yellowme.youst.core.hooks.BaseFragment
+import mx.yellowme.youst.core.utils.composeEmail
 import mx.yellowme.youst.miniapps.R
 
 
@@ -24,8 +23,10 @@ class LastFragment : BaseFragment() {
         }
 
         yellowmeLink.setOnClickListener {
-            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://yellowme.mx/"))
-            startActivity(browserIntent)
+            activity?.composeEmail(
+                getString(R.string.yellowme_email_address),
+                getString(R.string.yellowme_email_subject)
+            )
         }
     }
 
