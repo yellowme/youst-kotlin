@@ -4,7 +4,6 @@
     package="mx.yellowme.youst.miniapps">
 
     <application>
-        <activity android:name=".ui.contact.ContactUsActivity"></activity>
         <activity
             android:name=".MiniAppsActivity"
             android:theme="@style/SharedAppTheme.NoActionBar">
@@ -14,6 +13,10 @@
         </activity>
         <activity
             android:name=".ui.chords.ChordsActivity"
+            android:theme="@style/SharedAppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ui.contact.ContactUsActivity"
             android:theme="@style/SharedAppTheme.NoActionBar" />
     </application>
 

@@ -75,7 +75,7 @@
 
     <fragment
         android:id="@+id/deepLinkFragment"
-        android:name="mx.yellowme.youst.playground.navigation.DeepLinkDestinationFragment"
+        android:name="mx.yellowme.youst.miniapps.ui.contact.DeepLinkDestinationFragment"
         android:label="DeepLinkDestinationFragment"
         tools:layout="@layout/navigation_deep_link_destination" />
 

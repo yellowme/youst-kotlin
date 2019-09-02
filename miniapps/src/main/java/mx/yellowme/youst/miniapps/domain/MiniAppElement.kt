@@ -13,11 +13,13 @@ class MiniAppElement(
         get() {
             return when (id) {
                 "1" -> MiniAppElementType.CHORDS
+                "2" -> MiniAppElementType.CONTACT_US
                 else -> throw RuntimeException("Unsupported challenge type for id: $id")
             }
         }
 }
 
 enum class MiniAppElementType {
-    CHORDS
+    CHORDS,
+    CONTACT_US
 }

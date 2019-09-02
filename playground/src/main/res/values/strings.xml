@@ -1,20 +1,8 @@
 <resources>
+    <string name="app_name">Playground</string>
+    <string name="playground_title">Playground Title</string>
+    <string name="playground_subtitle">Playground Subtitle</string>
     <string name="title_playground">Playground</string>
-
-    <string name="playground_title">This is our Playground! 🎡</string>
-    <string name="playground_subtitle">An outdoor area provided for all to play in. Feel free to try out any development tool you are interested in.</string>
-
-    <string name="navigation_title_emoji_1">🙈</string>
-    <string name="navigation_title_emoji_2">🙉</string>
-    <string name="navigation_title_emoji_3">🙊</string>
-    <string name="navigation_title_emoji_deeplink">🔗🤖</string>
-    <string name="navigation_title_deeplink">You\'ve arrived to a secret screen!</string>
-    <string name="navigation_title_step_1">Hello! What\'s your name?</string>
-    <string name="navigation_title_step_2">Nice to meet you, %1$s! Tell us... what are you passionate about?</string>
-    <string name="navigation_title_step_3">Thanks for reaching out, %1$s!\n\nTo know more about us, visit our website linked below! ⬇️</string>
-    <string name="yellow_web_link">yellowme.mx 💛</string>
-    <string name="action_next">Next</string>
-    <string name="deep_link_widget">Deep Link</string>
 
     <string name="screen_unsupported">Oops! Unsupported app version</string>
     <string name="screen_user_no_attribute">Oops! You must complete your personal info before continue</string>

@@ -8,4 +8,17 @@
     <string name="chords_card_holder">D</string>
     <string name="chord_guitar">Guitar chord</string>
     <string name="chord_guitalele">Guitalele chord</string>
+
+    <string name="navigation_title_emoji_1">🙈</string>
+    <string name="navigation_title_emoji_2">🙉</string>
+    <string name="navigation_title_emoji_3">🙊</string>
+    <string name="navigation_title_emoji_deeplink">🔗🤖</string>
+    <string name="navigation_title_deeplink">You\'ve arrived to a secret screen!</string>
+    <string name="navigation_title_step_1">Hello! What\'s your name?</string>
+    <string name="navigation_title_step_2">Nice to meet you, %1$s! Tell us... what are you passionate about?</string>
+    <string name="navigation_title_step_3">Thanks for reaching out, %1$s!\n\nTo know more about us, visit our website linked below! ⬇️</string>
+    <string name="yellow_web_link">yellowme.mx 💛</string>
+    <string name="action_next">Next</string>
+    <string name="deep_link_widget">Deep Link</string>
+
 </resources>
