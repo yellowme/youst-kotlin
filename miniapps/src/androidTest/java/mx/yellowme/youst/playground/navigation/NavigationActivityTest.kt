@@ -7,7 +7,8 @@ import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
-import mx.yellowme.youst.playground.R
+import mx.yellowme.youst.miniapps.R
+import mx.yellowme.youst.miniapps.ui.contact.ContactUsActivity
 import mx.yellowme.youst.playground.util.DataBindingIdlingResource
 import mx.yellowme.youst.playground.util.monitorActivity
 import org.junit.Test
@@ -21,7 +22,7 @@ class NavigationActivityTest {
 
     @Test
     fun navigateWithText() {
-        val scenario = ActivityScenario.launch(NavigationActivity::class.java)
+        val scenario = ActivityScenario.launch(ContactUsActivity::class.java)
         dataBindingIdlingResource.monitorActivity(scenario)
 
         onView(withId(R.id.nameEditText)).perform(typeText("Cesar"), closeSoftKeyboard())
