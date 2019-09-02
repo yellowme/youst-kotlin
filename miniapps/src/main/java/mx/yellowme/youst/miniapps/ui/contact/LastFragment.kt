@@ -4,7 +4,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import kotlinx.android.synthetic.main.screen_destination_three.*
 import mx.yellowme.youst.core.hooks.BaseFragment
-import mx.yellowme.youst.core.utils.composeEmail
+import mx.yellowme.youst.core.utils.launchExternalEmailChooser
 import mx.yellowme.youst.miniapps.R
 
 
@@ -23,7 +23,7 @@ class LastFragment : BaseFragment() {
         }
 
         yellowmeLink.setOnClickListener {
-            activity?.composeEmail(
+            activity?.launchExternalEmailChooser(
                 getString(R.string.yellowme_email_address),
                 getString(R.string.yellowme_email_subject)
             )

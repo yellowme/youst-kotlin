@@ -31,5 +31,14 @@
         <item name="android:fontFamily">@font/source_sans_pro_bold</item>
     </style>
 
+    <style name="MiniApps.ContactUs" parent="TextAppearance">
+        <item name="android:paddingStart">@dimen/dimen_2</item>
+        <item name="android:paddingEnd">@dimen/dimen_2</item>
+        <item name="android:textSize">@dimen/size_28</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:letterSpacing">0.025</item>
+    </style>
+
     <!--endregion-->
 </resources>

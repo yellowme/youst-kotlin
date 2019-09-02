@@ -47,7 +47,7 @@ inline fun <reified T : Any> Activity.loadJsonObject(named: String): T? {
     return readJson(named)?.asJsonObject()
 }
 
-fun Activity.composeEmail(address: String, subject: String) {
+fun Activity.launchExternalEmailChooser(address: String, subject: String) {
     val intent = Intent(Intent.ACTION_SENDTO).apply {
         data = Uri.parse("mailto:")
         val addressArray = ArrayList<String>(1)

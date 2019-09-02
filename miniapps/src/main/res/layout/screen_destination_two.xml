@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="32dp">
+    android:padding="@dimen/dimen_32">
 
     <androidx.emoji.widget.EmojiTextView
         android:id="@+id/titleEmoji"
@@ -19,7 +19,7 @@
 
     <TextView
         android:id="@+id/destinationTextView"
-        style="@style/GenericShowcase.Title"
+        style="@style/MiniApps.ContactUs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -32,7 +32,7 @@
         style="@style/GenericShowcase.Description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/dimen_20"
         android:imeOptions="actionDone"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@id/centerGuide" />
@@ -41,7 +41,7 @@
         android:id="@+id/navigateButton"
         style="@style/ButtonColored.Primary"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="@dimen/dimen_15"
         android:text="@string/action_next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
