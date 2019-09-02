@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="35dp">
+    android:padding="@dimen/dimen_35">
 
     <androidx.emoji.widget.EmojiTextView
         android:id="@+id/titleEmoji"

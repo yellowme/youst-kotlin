@@ -18,6 +18,15 @@
         <activity
             android:name=".ui.contact.ContactUsActivity"
             android:theme="@style/SharedAppTheme.NoActionBar" />
+
+        <receiver android:name=".ui.contact.DeepLinkWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/deep_link_widget_info" />
+        </receiver>
     </application>
 
     <dist:module
