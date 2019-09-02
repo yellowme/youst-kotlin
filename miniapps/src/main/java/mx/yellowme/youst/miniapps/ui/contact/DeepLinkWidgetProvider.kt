@@ -1,11 +1,11 @@
-package mx.yellowme.youst.playground.navigation
+package mx.yellowme.youst.miniapps.ui.contact
 
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
 import android.widget.RemoteViews
 import androidx.navigation.NavDeepLinkBuilder
-import mx.yellowme.youst.playground.R
+import mx.yellowme.youst.miniapps.R
 
 class DeepLinkWidgetProvider : AppWidgetProvider() {
     override fun onUpdate(
@@ -16,8 +16,8 @@ class DeepLinkWidgetProvider : AppWidgetProvider() {
         val remoteViews = RemoteViews(context.packageName, R.layout.component_deep_link)
 
         val pendingIntent = NavDeepLinkBuilder(context)
-            .setComponentName(NavigationActivity::class.java)
-            .setGraph(R.navigation.playground_navigation_graph)
+            .setComponentName(ContactUsActivity::class.java)
+            .setGraph(R.navigation.contact_us_navigation_graph)
             .setDestination(R.id.deepLinkFragment)
             .createPendingIntent()
 

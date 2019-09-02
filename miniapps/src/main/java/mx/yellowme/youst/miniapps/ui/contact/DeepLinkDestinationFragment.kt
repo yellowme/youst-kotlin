@@ -1,11 +1,11 @@
-package mx.yellowme.youst.playground.navigation
+package mx.yellowme.youst.miniapps.ui.contact
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import mx.yellowme.youst.playground.R
+import mx.yellowme.youst.miniapps.R
 
 class DeepLinkDestinationFragment : Fragment() {
     override fun onCreateView(

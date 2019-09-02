@@ -1,13 +1,10 @@
 package mx.yellowme.youst.miniapps.ui.contact
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.miniapps.R
 
-class ContactUsActivity : AppCompatActivity() {
+class ContactUsActivity : BaseActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.contact_us)
-    }
+    override val layoutId = R.layout.contact_navigation_base
+
 }

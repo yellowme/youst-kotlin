@@ -29,6 +29,9 @@ class MiniAppsActivity : GenericShowcaseActivity<MiniAppElement>() {
                 MiniAppElementType.CHORDS -> {
                     launch(intentTo(Activities.MiniApps.Chords))
                 }
+                MiniAppElementType.CONTACT_US -> {
+                    launch(intentTo(Activities.MiniApps.ContactUs))
+                }
                 else -> throw RuntimeException("Invalid identifier")
             }
         }
