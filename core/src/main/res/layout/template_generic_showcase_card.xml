@@ -3,42 +3,49 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:layout_gravity="center"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
     app:cardCornerRadius="@dimen/dimen_12"
     app:cardUseCompatPadding="true"
     tools:background="@color/black"
     tools:cardBackgroundColor="@color/black">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_height="match_parent"
+        android:layout_width="match_parent"
         android:orientation="vertical"
-        android:padding="@dimen/dimen_24">
-
-        <androidx.emoji.widget.EmojiAppCompatTextView
-            android:id="@+id/titleTextView"
-            style="@style/GenericShowcase.Option.Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:fontFamily="@font/source_sans_pro_bold"
-            android:textColor="@color/white"
-            tools:text="Title" />
+        android:padding="@dimen/dimen_18">
 
         <androidx.emoji.widget.EmojiAppCompatTextView
             android:id="@+id/contentTextView"
             style="@style/GenericShowcase.Option.Subtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/titleTextView"
-            android:layout_alignStart="@id/titleTextView"
-            android:layout_marginTop="@dimen/dimen_6"
             android:gravity="top"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_6"
+            android:layout_width="0dp"
+            android:maxLines="8"
             android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView"
             tools:text="Subtitle" />
 
-    </RelativeLayout>
+        <androidx.emoji.widget.EmojiAppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/GenericShowcase.Option.Title"
+            android:fontFamily="@font/source_sans_pro_bold"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

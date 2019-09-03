@@ -9,12 +9,15 @@
         <item name="android:paddingEnd">@dimen/dimen_2</item>
         <item name="android:textSize">@dimen/size_24</item>
         <item name="android:letterSpacing">0.025</item>
+        <item name="autoSizeMaxTextSize">@dimen/size_20</item>
+        <item name="autoSizeMinTextSize">@dimen/size_12</item>
+        <item name="autoSizeTextType">uniform</item>
     </style>
 
     <style name="Dashboard.Subtitle" parent="TextAppearance.Regular">
         <item name="android:paddingStart">@dimen/dimen_2</item>
         <item name="android:paddingEnd">@dimen/dimen_2</item>
-        <item name="android:textSize">@dimen/size_12</item>
+        <item name="android:textSize">@dimen/size_12</item>®®
     </style>
 
     <style name="Dashboard.OptionItem" parent="Dashboard" />
@@ -23,11 +26,17 @@
         <item name="android:textSize">@dimen/size_20</item>
         <item name="android:letterSpacing">0.025</item>
         <item name="android:textColor">@color/white</item>
+        <item name="autoSizeMaxTextSize">@dimen/size_16</item>
+        <item name="autoSizeMinTextSize">@dimen/size_12</item>
+        <item name="autoSizeTextType">uniform</item>
     </style>
 
     <style name="Dashboard.OptionItem.Subtitle" parent="TextAppearance.Regular">
         <item name="android:textSize">@dimen/size_12</item>
         <item name="android:textColor">@color/white</item>
+        <item name="autoSizeMaxTextSize">@dimen/size_12</item>
+        <item name="autoSizeMinTextSize">@dimen/size_10</item>
+        <item name="autoSizeTextType">uniform</item>
     </style>
 
     <!--endregion-->

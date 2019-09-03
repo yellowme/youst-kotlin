@@ -3,27 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/materialCardView"
-    android:layout_width="match_parent"
     android:layout_height="@dimen/dimen_150"
+    android:layout_width="match_parent"
     app:cardCornerRadius="@dimen/dimen_10"
     app:cardElevation="@dimen/dimen_1"
     tools:background="@color/turquoise"
     tools:cardBackgroundColor="@color/turquoise">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_width="match_parent"
         android:padding="@dimen/size_12">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/titleTextView"
             style="@style/Dashboard.OptionItem.Title"
-            android:layout_marginBottom="@dimen/size_2"
+            android:layout_marginBottom="@dimen/dimen_2"
+            android:layout_width="0dp"
+            android:maxLines="1"
             app:layout_constraintBottom_toTopOf="@id/subtitleTextView"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:text="@string/dashboard_option_item_holder_title" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/subtitleTextView"
             style="@style/Dashboard.OptionItem.Subtitle"
             app:layout_constraintBottom_toBottomOf="parent"
