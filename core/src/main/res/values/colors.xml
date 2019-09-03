@@ -61,4 +61,9 @@
 
     <color name="clear_chill">#1e90ff</color>
 
+    <color name="guitar_gold">#f7b731</color>
+    <color name="guitar_black">@color/black</color>
+    <color name="guitar_secondary_black">#1b2021</color>
+    <color name="guitar_light_black">#546165</color>
+
 </resources>

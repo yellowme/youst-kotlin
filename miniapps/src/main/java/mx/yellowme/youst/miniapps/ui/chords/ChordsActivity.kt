@@ -6,6 +6,7 @@ import kotlinx.android.synthetic.main.chords.*
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.miniapps.R
 import mx.yellowme.youst.miniapps.domain.Chord
+import java.lang.RuntimeException
 
 class ChordsActivity : BaseActivity() {
 
@@ -17,7 +18,6 @@ class ChordsActivity : BaseActivity() {
         updateSelected(Chord.all().first())
 
         chordSelector.setOnProgressChangedListener { value ->
-            println("Chord $value")
             updateSelected(Chord.all()[value - 1])
         }
     }
