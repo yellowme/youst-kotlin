@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.40" />
+        app:layout_constraintGuide_percent="0.45" />
 
     <com.sdsmdg.harjot.crollerTest.Croller
         android:id="@+id/chordSelector"
