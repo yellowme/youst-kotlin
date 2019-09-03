@@ -10,6 +10,7 @@ enum class PaletteColors {
     MINT_LEAF,
     ELECTRON_BLUE,
     EXODUS_FRUIT,
+    CHI_GONG,
 
     ICELAND_POPPY,
     WATERFALL,
@@ -20,11 +21,16 @@ enum class PaletteColors {
     UFO_GREEN,
     CLEAR_CHILL,
     SATURATED_SKY,
-
     TANGERINE,
+
     TURQUOISE,
     PETERRIVER,
-    AMETHYST;
+    AMETHYST,
+    NON_BLACK,
+    MAZARINE_BLUE,
+    MERCHANT_MARINE,
+    DOWNLOAD_PROGRESS,
+    SYNTHETIC_PUMPKIN;
 
     val hexColor: String
         get() {
@@ -33,22 +39,32 @@ enum class PaletteColors {
                 DARK_MOUNTAIN -> Palette.Canadian.darkMountainMeadow
                 JOUST_BLUE -> Palette.Canadian.joustBlue
                 NASU_PURPLE -> Palette.Canadian.nasuPurple
+
                 PINK_GLAMOUR -> Palette.American.pinkGlamour
                 MINT_LEAF -> Palette.American.mintLeaf
                 ELECTRON_BLUE -> Palette.American.electronBlue
                 EXODUS_FRUIT -> Palette.American.exodusFruit
+                CHI_GONG -> Palette.American.chiGong
+
                 ICELAND_POPPY -> Palette.French.icelandPoppy
                 WATERFALL -> Palette.French.waterfall
                 FOREST_BLUES -> Palette.French.forestBlues
                 JALAPENO_RED -> Palette.French.jalapenoRed
+
                 BRUSCHETTA_TOMATO -> Palette.Chinese.bruschettaTomato
                 UFO_GREEN -> Palette.Chinese.ufoGreen
                 CLEAR_CHILL -> Palette.Chinese.clearChill
                 SATURATED_SKY -> Palette.Chinese.saturatedSky
+
                 TANGERINE -> Palette.Main.tangerine
                 TURQUOISE -> Palette.Main.turquoise
                 PETERRIVER -> Palette.Main.peterriver
                 AMETHYST -> Palette.Main.amethyst
+                NON_BLACK -> Palette.Main.nonBlack
+                MAZARINE_BLUE -> Palette.Main.mazarineBlue
+                MERCHANT_MARINE -> Palette.Main.merchantMarineBlue
+                DOWNLOAD_PROGRESS -> Palette.Main.downloadProgress
+                SYNTHETIC_PUMPKIN -> Palette.Main.syntheticPumpkin
             }
         }
 }
@@ -62,6 +78,11 @@ object Palette {
         val turquoise = "#1abc9c"
         val peterriver = "#3498db"
         val amethyst = "#9b59b6"
+        val mazarineBlue = "#273c75"
+        val merchantMarineBlue = "#0652DD"
+        val downloadProgress = "#4cd137"
+        val syntheticPumpkin = "#ff793f"
+        val nonBlack = "#111111"
     }
 
     /**
@@ -82,6 +103,7 @@ object Palette {
         val electronBlue = "#0984e3"
         val mintLeaf = "#00b894"
         val exodusFruit = "#6c5ce7"
+        val chiGong = "#d63031"
     }
 
     /**
@@ -102,5 +124,6 @@ object Palette {
         val ufoGreen = "#2ed573"
         val clearChill = "#1e90ff"
         val saturatedSky = "#5352ed"
+        val brightGreek = "#3742fa"
     }
 }

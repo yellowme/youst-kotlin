@@ -88,4 +88,8 @@ object Activities {
             override val className = "$PACKAGE_NAME.miniapps.ui.contact.ContactUsActivity"
         }
     }
+
+    object Portfolio : AddressableActivity {
+        override val className = "$PACKAGE_NAME.portfolio.PortfolioActivity"
+    }
 }

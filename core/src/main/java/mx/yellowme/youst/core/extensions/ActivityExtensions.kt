@@ -1,11 +1,11 @@
 package mx.yellowme.youst.core.extensions
 
 import android.app.Activity
+import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import android.view.Window
-import android.view.WindowManager
 import mx.yellowme.youst.core.R
 
 //region Start Activity
@@ -105,6 +105,27 @@ fun Activity.launch(
     if (finishCaller) {
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         finish()
+    }
+}
+
+fun Activity.launchBrowser(url: String) {
+    val webPage = Uri.parse(url)
+    val intent = Intent(Intent.ACTION_VIEW, webPage)
+    if (intent.resolveActivity(packageManager) != null) {
+        startActivity(intent)
+    }
+}
+
+fun Activity.launchPlayStore(appPackageName: String) {
+    try {
+        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$appPackageName")))
+    } catch (ex: ActivityNotFoundException) {
+        startActivity(
+            Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName")
+            )
+        )
     }
 }
 

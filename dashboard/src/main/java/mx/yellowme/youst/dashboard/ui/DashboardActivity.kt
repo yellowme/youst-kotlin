@@ -54,7 +54,7 @@ class DashboardActivity : BaseActivity(), ItemListener<DashboardOption> {
                 launch(intentTo(Activities.MiniApps))
             }
             DashboardOptionId.PORTFOLIO -> {
-                toast(getString(coreR.string.work_in_progress))
+                launch(intentTo(Activities.Portfolio))
             }
         }
     }

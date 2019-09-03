@@ -43,9 +43,7 @@ android {
         targetCompatibility = 1.8
     }
 
-    dynamicFeatures = [":dashboard", ":playground", ":challenges", ":miniapps"]
-
-
+    dynamicFeatures = [":dashboard", ":playground", ":challenges", ":miniapps", ":portfolio"]
 }
 
 dependencies {

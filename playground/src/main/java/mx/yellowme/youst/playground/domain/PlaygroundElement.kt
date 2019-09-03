@@ -17,6 +17,7 @@ class PlaygroundElement(
                 else -> throw RuntimeException("Unsupported challenge type for id: $id")
             }
         }
+
 }
 
 enum class PlaygroundElementType {

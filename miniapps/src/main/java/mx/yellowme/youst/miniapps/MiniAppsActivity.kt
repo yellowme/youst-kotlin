@@ -32,7 +32,7 @@ class MiniAppsActivity : GenericShowcaseActivity<MiniAppElement>() {
                 MiniAppElementType.CONTACT_US -> {
                     launch(intentTo(Activities.MiniApps.ContactUs))
                 }
-                else -> throw RuntimeException("Invalid identifier")
+                else -> throw RuntimeException("Invalid type")
             }
         }
     }

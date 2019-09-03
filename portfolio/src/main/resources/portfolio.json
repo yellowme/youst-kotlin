@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "title": "REMAX Tanlah",
+    "subtitle": "...",
+    "paletteColor": "MERCHANT_MARINE",
+    "type": "WEB_PAGE",
+    "url": "https://remaxtanlah.com/"
+  },
+  {
+    "id": "2",
+    "title": "Grupo CMG",
+    "subtitle": "...",
+    "paletteColor": "CHI_GONG",
+    "type": "WEB_PAGE",
+    "url": "https://grupocmg.com.mx/"
+  },
+  {
+    "id": "3",
+    "title": "Sumacasa",
+    "subtitle": "...",
+    "paletteColor": "MAZARINE_BLUE",
+    "type": "WEB_PAGE",
+    "url": "http://sumacasa.com/"
+  },
+  {
+    "id": "4",
+    "title": "Enso",
+    "subtitle": "Send and receive money between cell phone contacts without any commission and in seconds.\n\nForget about having the exact cash, bank branches or asking CLABE accounts.",
+    "paletteColor": "SYNTHETIC_PUMPKIN",
+    "type": "MOBILE_APP",
+    "url": "com.enso.app"
+  },
+  {
+    "id": "5",
+    "title": "Kueski",
+    "subtitle": "Fastest online micro-loan platform in Latin America.\n\nAfter your first loan, you can receive your money 24/7!",
+    "paletteColor": "DOWNLOAD_PROGRESS",
+    "type": "MOBILE_APP",
+    "url": "com.kueski.app"
+  },
+  {
+    "id": "6",
+    "title": "Yellowme",
+    "subtitle": "Yellowme combines a development team with talent, product intelligence strategies, a set of best practices, and passion to build products and bring them to market faster.",
+    "paletteColor": "NON_BLACK",
+    "type": "WEB_PAGE",
+    "url": "https://yellowme.mx"
+  }
+]

@@ -42,7 +42,7 @@ class ChallengesActivity : GenericShowcaseActivity<Challenge>() {
                 ChallengeType.ABOUT_DETAILS -> {
                     CrazyListsChallengeActivity::class.java
                 }
-                else -> throw RuntimeException("Invalid challenge identifier")
+                else -> throw RuntimeException("Invalid type")
             }
 
             launch(nextActivity) {

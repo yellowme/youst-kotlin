@@ -34,7 +34,7 @@ class PlaygroundActivity : GenericShowcaseActivity<PlaygroundElement>() {
                 PlaygroundElementType.NEMO -> {
                     launch(intentTo(Activities.Playground.Nemo))
                 }
-                else -> throw RuntimeException("Invalid identifier")
+                else -> throw RuntimeException("Invalid type")
             }
         }
     }
