@@ -97,4 +97,4 @@ When you have finished working on an issue, and your working branch is already p
 
 Inside the Pull Request description you must specify if the reviewer needs to read any comments made on the working branch commits. 
 
-**Please use our [template](https://github.com/yellowme/youst-kotlin/blob/master/.github/PULL_REQUEST_TEMPLATE/pull_request.md)** for your pull request description
+**Please use our [template](https://github.com/yellowme/youst-kotlin/blob/master/.github/PULL_REQUEST_TEMPLATE.md)** for your pull request description
