@@ -13,6 +13,8 @@ android {
         targetSdkVersion versions.targetSdk
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField 'String', 'POKEMON_API_URL', "\"${POKEMON_API_URL}\""
     }
 
     kotlinOptions {
