@@ -8,11 +8,7 @@ import mx.yellowme.youst.playground.components.AppHeroActionListener
 
 class MissingPaymentOptionFragment : BaseFragment() {
 
-    //region Attributes
-
     override val layoutId: Int = R.layout.screen_no_payment_option
-
-    //endregion
 
     override fun onViewReady() {
         appHero.listener = object : AppHeroActionListener {

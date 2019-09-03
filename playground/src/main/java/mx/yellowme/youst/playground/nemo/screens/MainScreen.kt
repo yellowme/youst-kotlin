@@ -1,4 +1,4 @@
-package mx.yellowme.youst.playground.shared
+package mx.yellowme.youst.playground.nemo.screens
 
 import android.os.Bundle
 import kotlinx.android.synthetic.main.screen_main.*
@@ -9,11 +9,7 @@ import mx.yellowme.youst.playground.data.UserFakeRepository
 
 class MainScreen : BaseActivity() {
 
-    //region Attributes
-
     override val layoutId: Int = R.layout.screen_main
-
-    //endregion
 
     @Suppress("PARAMETER_NAME_CHANGED_ON_OVERRIDE")
     override fun onCreate(savedInstanceState: Bundle?) {

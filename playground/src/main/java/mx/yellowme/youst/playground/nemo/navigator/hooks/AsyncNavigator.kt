@@ -1,8 +1,7 @@
-package mx.yellowme.nemo.common.navigation.hooks
+package mx.yellowme.youst.playground.nemo.navigator.hooks
 
 import mx.yellowme.youst.playground.data.SimpleCallback
 import mx.yellowme.youst.playground.data.SingleItemCallback
-import mx.yellowme.youst.playground.nemo.navigator.hooks.Navigator
 
 abstract class AsyncSingleNavigator<Model>(
     private val handler: Navigator

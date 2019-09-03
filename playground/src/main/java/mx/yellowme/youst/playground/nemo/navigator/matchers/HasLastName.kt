@@ -1,6 +1,6 @@
 package mx.yellowme.youst.playground.nemo.navigator.matchers
 
-import mx.yellowme.nemo.common.navigation.hooks.AsyncSingleNavigator
+import mx.yellowme.youst.playground.nemo.navigator.hooks.AsyncSingleNavigator
 import mx.yellowme.youst.playground.nemo.navigator.BaseNavigator
 import mx.yellowme.youst.playground.data.UserFakeRepository
 import mx.yellowme.youst.playground.domain.User

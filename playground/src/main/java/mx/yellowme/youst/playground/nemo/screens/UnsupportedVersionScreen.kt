@@ -1,19 +1,19 @@
-package mx.yellowme.youst.playground.shared
+package mx.yellowme.youst.playground.nemo.screens
 
 import android.os.Bundle
-import kotlinx.android.synthetic.main.screen_login.*
+import kotlinx.android.synthetic.main.screen_unsupported.*
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.components.AppHeroActionListener
-import mx.yellowme.youst.playground.data.UserFakeRepository
-import mx.yellowme.youst.playground.domain.User
+import mx.yellowme.youst.playground.data.ConfigFakeRepository
+import mx.yellowme.youst.playground.domain.Config
 import mx.yellowme.youst.playground.nemo.navigator.CommonNavigator
 
-class LoginScreen : BaseActivity() {
+class UnsupportedVersionScreen : BaseActivity() {
 
     //region Attributes
 
-    override val layoutId: Int = R.layout.screen_login
+    override val layoutId: Int = R.layout.screen_unsupported
 
     private val navigation = CommonNavigator(this)
 
@@ -26,7 +26,8 @@ class LoginScreen : BaseActivity() {
         appHero.listener = object : AppHeroActionListener {
             override fun onClickAction() {
                 //TODO: Must delegate action to another layer component (ViewModel or Presenter)
-                UserFakeRepository.defaultConfig = User("Luis")
+                ConfigFakeRepository.defaultConfig =
+                    Config("3.3.12", 12)
                 navigation.sendToSplash()
             }
         }
@@ -34,11 +35,4 @@ class LoginScreen : BaseActivity() {
 
     //endregion
 
-    //region View
-
-    fun setProgress(isActive: Boolean) {
-        appHero.setProgress(isActive)
-    }
-
-    //endregion
 }

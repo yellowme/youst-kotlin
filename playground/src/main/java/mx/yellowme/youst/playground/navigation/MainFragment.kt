@@ -8,11 +8,7 @@ import mx.yellowme.youst.playground.components.AppHeroActionListener
 
 class MainFragment : BaseFragment() {
 
-    //region Attributes
-
     override val layoutId: Int = R.layout.screen_main
-
-    //endregion
 
     override fun onViewReady() {
         appHero.message = getString(

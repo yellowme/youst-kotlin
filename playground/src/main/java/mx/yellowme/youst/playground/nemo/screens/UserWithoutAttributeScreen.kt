@@ -1,19 +1,18 @@
-package mx.yellowme.youst.playground.shared
+package mx.yellowme.youst.playground.nemo.screens
 
 import android.os.Bundle
-import kotlinx.android.synthetic.main.screen_no_payment_option.*
+import kotlinx.android.synthetic.main.screen_user_no_attribute.*
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.components.AppHeroActionListener
-import mx.yellowme.youst.playground.data.PaymentFakeRepository
-import mx.yellowme.youst.playground.domain.Payment
+import mx.yellowme.youst.playground.data.UserFakeRepository
 import mx.yellowme.youst.playground.nemo.navigator.CommonNavigator
 
-class MissingPaymentOptionScreen : BaseActivity() {
+class UserWithoutAttributeScreen : BaseActivity() {
 
     //region Attributes
 
-    override val layoutId: Int = R.layout.screen_no_payment_option
+    override val layoutId: Int = R.layout.screen_user_no_attribute
 
     private val navigation = CommonNavigator(this)
 
@@ -26,8 +25,7 @@ class MissingPaymentOptionScreen : BaseActivity() {
         appHero.listener = object : AppHeroActionListener {
             override fun onClickAction() {
                 //TODO: Must delegate action to another layer component (ViewModel or Presenter)
-                PaymentFakeRepository.defaultConfig =
-                    Payment("Enso", "4242424242424242")
+                UserFakeRepository.defaultConfig?.lastName = "Burgos"
                 navigation.sendToSplash()
             }
         }
