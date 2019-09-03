@@ -34,7 +34,7 @@ class Chord(val name: String) {
             return when(chord.name) {
                 "A" -> Chord("Em")
                 "Am" -> Chord("E")
-                "A7" -> Chord("??")
+                "A7" -> Chord("??") //TODO: Add proper chord
                 "B" -> Chord("F#")
                 "Bm" -> Chord("F#m")
                 "B7" -> Chord("Fmaj7")
@@ -43,13 +43,13 @@ class Chord(val name: String) {
                 "C7" -> Chord("G7")
                 "D" -> Chord("A")
                 "Dm" -> Chord("Am")
-                "D7" -> Chord("??")
+                "D7" -> Chord("??") //TODO: Add proper chord
                 "E" -> Chord("B")
                 "Em" -> Chord("Bm")
                 "E7" -> Chord("B7")
-                "F" -> Chord("??")
+                "F" -> Chord("??") //TODO: Add proper chord
                 "Fm" -> Chord("A#m")
-                "F7" -> Chord("??")
+                "F7" -> Chord("??") //TODO: Add proper chord
                 "G" -> Chord("D")
                 "Gm" -> Chord("Dm")
                 "G7" -> Chord("D7")
