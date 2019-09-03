@@ -13,3 +13,7 @@ We are using Kotlin language and testing latest Android libraries. It'll be upda
 ## Getting Started
 
 Please refer to the [contributing](./CONTRIBUTING.md) file to see our contribution guidelines and also our [workflow](./WORKFLOW.md) file to see our development workflow.
+
+## Android Studio IDE setup
+
+Youst requires Android Studio version 3.5 or higher.
