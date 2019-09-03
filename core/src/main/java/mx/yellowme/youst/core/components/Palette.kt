@@ -29,7 +29,7 @@ enum class PaletteColors {
     NON_BLACK,
     MAZARINE_BLUE,
     MERCHANT_MARINE,
-    DOWNLOAD_PROGRESS,
+    SKIRRET_GREEN,
     SYNTHETIC_PUMPKIN;
 
     val hexColor: String
@@ -63,7 +63,7 @@ enum class PaletteColors {
                 NON_BLACK -> Palette.Main.nonBlack
                 MAZARINE_BLUE -> Palette.Main.mazarineBlue
                 MERCHANT_MARINE -> Palette.Main.merchantMarineBlue
-                DOWNLOAD_PROGRESS -> Palette.Main.downloadProgress
+                SKIRRET_GREEN -> Palette.Main.skirretGreen
                 SYNTHETIC_PUMPKIN -> Palette.Main.syntheticPumpkin
             }
         }
@@ -80,7 +80,7 @@ object Palette {
         val amethyst = "#9b59b6"
         val mazarineBlue = "#273c75"
         val merchantMarineBlue = "#0652DD"
-        val downloadProgress = "#4cd137"
+        val skirretGreen = "#44bd32"
         val syntheticPumpkin = "#ff793f"
         val nonBlack = "#111111"
     }
