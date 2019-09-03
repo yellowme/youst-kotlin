@@ -17,3 +17,16 @@ Please refer to the [contributing](./CONTRIBUTING.md) file to see our contributi
 ## Android Studio IDE setup
 
 Youst requires Android Studio version 3.5 or higher.
+
+### Gradle Properties
+
+**Note:** Please contact the project leader in order to get all the values for the gradle properties config constants.
+
+At your terminal, you will need to execute:
+
+```
+touch challenges/gradle.properties
+echo "POKEMON_API_URL=" >> challenges/gradle.properties
+```
+
+Now you can open the recently created `gradle.properties` file and add the values for all the keys.
