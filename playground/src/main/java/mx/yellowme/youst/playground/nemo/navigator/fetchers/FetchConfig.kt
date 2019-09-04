@@ -2,14 +2,14 @@ package mx.yellowme.youst.playground.nemo.navigator.fetchers
 
 import mx.yellowme.youst.playground.nemo.navigator.hooks.AsyncSingleNavigator
 import mx.yellowme.youst.playground.nemo.navigator.hooks.Navigator
-import mx.yellowme.youst.playground.nemo.navigator.BaseNavigator
+import mx.yellowme.youst.playground.nemo.navigator.BaseHelm
 import mx.yellowme.youst.playground.data.ConfigFakeRepository
 import mx.yellowme.youst.playground.domain.Config
 
 class FetchConfig<Navigation>(
     private val repository: ConfigFakeRepository,
     private val navigator: Navigation
-) : Navigator() where Navigation : BaseNavigator {
+) : Navigator() where Navigation : BaseHelm {
 
     override fun run() {
         repository.getData(true, object : AsyncSingleNavigator<Config>(this) {

@@ -7,7 +7,7 @@ import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.components.AppHeroActionListener
 import mx.yellowme.youst.playground.data.ConfigFakeRepository
 import mx.yellowme.youst.playground.domain.Config
-import mx.yellowme.youst.playground.nemo.navigator.CommonNavigator
+import mx.yellowme.youst.playground.nemo.navigator.CommonActivityHelm
 
 class UnsupportedVersionScreen : BaseActivity() {
 
@@ -15,7 +15,7 @@ class UnsupportedVersionScreen : BaseActivity() {
 
     override val layoutId: Int = R.layout.screen_unsupported
 
-    private val navigation = CommonNavigator(this)
+    private val navigation = CommonActivityHelm(this)
 
     //endregion
 

@@ -5,7 +5,7 @@ import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.nemo.NemoActivity
 import mx.yellowme.youst.playground.nemo.screens.*
 
-class CommonNavigator(private val activity: BaseActivity) : BaseNavigator {
+class CommonActivityHelm(private val activity: BaseActivity) : BaseHelm {
 
     override fun sendToLogin() {
         navigate {

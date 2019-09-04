@@ -6,7 +6,7 @@ import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.data.ConfigFakeRepository
 import mx.yellowme.youst.playground.data.PaymentFakeRepository
 import mx.yellowme.youst.playground.data.UserFakeRepository
-import mx.yellowme.youst.playground.nemo.navigator.CommonNavigator
+import mx.yellowme.youst.playground.nemo.navigator.CommonActivityHelm
 import mx.yellowme.youst.playground.nemo.navigator.fetchers.FetchConfig
 import mx.yellowme.youst.playground.nemo.navigator.fetchers.FetchOtherModel
 import mx.yellowme.youst.playground.nemo.navigator.fetchers.FetchUser
@@ -21,7 +21,7 @@ class NemoActivity : BaseActivity() {
 
     private lateinit var navigator: Navigator
 
-    private val navigation = CommonNavigator(this)
+    private val navigationHelm = CommonActivityHelm(this)
 
     //endregion
 
@@ -31,18 +31,18 @@ class NemoActivity : BaseActivity() {
         setProgress(true)
 
         //TODO: Must delegate action to another layer component (ViewModel or Presenter)
-        navigator = FetchConfig(ConfigFakeRepository(), navigation)
+        navigator = FetchConfig(ConfigFakeRepository(), navigationHelm)
         navigator
-            .linkWith(FetchUser(UserFakeRepository(), navigation))
-            .linkWith(HasLastName(UserFakeRepository(), navigation))
-            .linkWith(FetchOtherModel(PaymentFakeRepository(), navigation))
+            .linkWith(FetchUser(UserFakeRepository(), navigationHelm))
+            .linkWith(HasLastName(UserFakeRepository(), navigationHelm))
+            .linkWith(FetchOtherModel(PaymentFakeRepository(), navigationHelm))
             .linkWith(object : Navigator() {
                 override fun run() {
                     continueFlowIf(true)
                 }
 
                 override fun executeExit() {
-                    navigation.sendToMain()
+                    navigationHelm.sendToMain()
                 }
             })
 

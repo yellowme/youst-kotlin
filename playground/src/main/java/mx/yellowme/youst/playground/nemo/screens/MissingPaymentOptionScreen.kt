@@ -7,7 +7,7 @@ import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.components.AppHeroActionListener
 import mx.yellowme.youst.playground.data.PaymentFakeRepository
 import mx.yellowme.youst.playground.domain.Payment
-import mx.yellowme.youst.playground.nemo.navigator.CommonNavigator
+import mx.yellowme.youst.playground.nemo.navigator.CommonActivityHelm
 
 class MissingPaymentOptionScreen : BaseActivity() {
 
@@ -15,7 +15,7 @@ class MissingPaymentOptionScreen : BaseActivity() {
 
     override val layoutId: Int = R.layout.screen_no_payment_option
 
-    private val navigation = CommonNavigator(this)
+    private val navigation = CommonActivityHelm(this)
 
     //endregion
 

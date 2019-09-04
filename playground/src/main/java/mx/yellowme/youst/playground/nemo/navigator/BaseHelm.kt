@@ -1,6 +1,6 @@
 package mx.yellowme.youst.playground.nemo.navigator
 
-interface BaseNavigator {
+interface BaseHelm {
     fun sendToLogin()
 
     fun sendToSplash()

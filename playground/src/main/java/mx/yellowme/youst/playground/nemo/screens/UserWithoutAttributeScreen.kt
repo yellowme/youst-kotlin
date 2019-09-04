@@ -6,7 +6,7 @@ import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.components.AppHeroActionListener
 import mx.yellowme.youst.playground.data.UserFakeRepository
-import mx.yellowme.youst.playground.nemo.navigator.CommonNavigator
+import mx.yellowme.youst.playground.nemo.navigator.CommonActivityHelm
 
 class UserWithoutAttributeScreen : BaseActivity() {
 
@@ -14,7 +14,7 @@ class UserWithoutAttributeScreen : BaseActivity() {
 
     override val layoutId: Int = R.layout.screen_user_no_attribute
 
-    private val navigation = CommonNavigator(this)
+    private val navigation = CommonActivityHelm(this)
 
     //endregion
 

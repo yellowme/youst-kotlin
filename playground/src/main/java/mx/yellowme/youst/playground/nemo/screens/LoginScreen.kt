@@ -7,7 +7,7 @@ import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.components.AppHeroActionListener
 import mx.yellowme.youst.playground.data.UserFakeRepository
 import mx.yellowme.youst.playground.domain.User
-import mx.yellowme.youst.playground.nemo.navigator.CommonNavigator
+import mx.yellowme.youst.playground.nemo.navigator.CommonActivityHelm
 
 class LoginScreen : BaseActivity() {
 
@@ -15,7 +15,7 @@ class LoginScreen : BaseActivity() {
 
     override val layoutId: Int = R.layout.screen_login
 
-    private val navigation = CommonNavigator(this)
+    private val navigation = CommonActivityHelm(this)
 
     //endregion
 
