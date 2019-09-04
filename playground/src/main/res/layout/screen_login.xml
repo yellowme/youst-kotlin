@@ -8,7 +8,7 @@
         android:id="@+id/appHero"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:heroActionLabel="@string/action_login"
+        app:heroMainActionLabel="@string/action_login"
         app:heroBackgroundColor="@color/gray_purple"
         app:heroMessage="@string/screen_login" />
 

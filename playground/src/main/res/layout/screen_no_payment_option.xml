@@ -8,7 +8,7 @@
         android:id="@+id/appHero"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:heroActionLabel="@string/action_add_add_payment"
+        app:heroMainActionLabel="@string/action_add_add_payment"
         app:heroBackgroundColor="@color/maroon"
         app:heroMessage="@string/screen_no_payment_option" />
 
