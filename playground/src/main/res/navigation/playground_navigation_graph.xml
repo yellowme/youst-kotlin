@@ -3,48 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/playground_navigation_graph"
-    app:startDestination="@id/unsupportedVersionFragment">
+    app:startDestination="@id/screenA">
 
     <fragment
-        android:id="@+id/unsupportedVersionFragment"
-        android:name="mx.yellowme.youst.playground.navigation.UnsupportedVersionFragment"
-        android:label="DestinationOneFragment"
-        tools:layout="@layout/screen_unsupported">
-
+        android:id="@+id/screenA"
+        android:name="mx.yellowme.youst.playground.navigation.ScreenAFragment"
+        android:label="ScreenAFragment"
+        tools:layout="@layout/screen_a">
         <action
-            android:id="@+id/toLogin"
-            app:destination="@id/loginFragment"
-            app:enterAnim="@anim/slide_in_left"
-            app:exitAnim="@anim/slide_out_right"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_left" />
-
-    </fragment>
-
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="mx.yellowme.youst.playground.navigation.LoginFragment"
-        android:label="LoginFragment"
-        tools:layout="@layout/screen_login">
-
-        <action
-            android:id="@+id/toUserWithoutAttributeFragment"
-            app:destination="@id/userWithoutAttributeFragment"
-            app:enterAnim="@anim/slide_in_left"
-            app:exitAnim="@anim/slide_out_right"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_left" />
-
-    </fragment>
-
-    <fragment
-        android:id="@+id/userWithoutAttributeFragment"
-        android:name="mx.yellowme.youst.playground.navigation.UserWithoutAttributeFragment"
-        android:label="UserWithoutAttributeFragment"
-        tools:layout="@layout/screen_user_no_attribute">
-        <action
-            android:id="@+id/toPayment"
-            app:destination="@id/missingPaymentOptionFragment"
+            android:id="@+id/action_screenA_to_screenB"
+            app:destination="@id/screenB"
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_right"
@@ -52,12 +20,20 @@
     </fragment>
 
     <fragment
-        android:id="@+id/missingPaymentOptionFragment"
-        android:name="mx.yellowme.youst.playground.navigation.MissingPaymentOptionFragment"
-        android:label="MissingPaymentOptionFragment">
+        android:id="@+id/screenB"
+        android:name="mx.yellowme.youst.playground.navigation.ScreenBFragment"
+        android:label="ScreenBFragment"
+        tools:layout="@layout/screen_b">
         <action
-            android:id="@+id/toMain"
-            app:destination="@id/mainFragment"
+            android:id="@+id/action_screenB_to_screenC"
+            app:destination="@id/screenC"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_screenB_to_screenD"
+            app:destination="@id/screenD"
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_right"
@@ -65,12 +41,68 @@
     </fragment>
 
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="mx.yellowme.youst.playground.navigation.MainFragment"
-        android:label="MainFragment">
+        android:id="@+id/screenC"
+        android:name="mx.yellowme.youst.playground.navigation.ScreenCFragment"
+        android:label="ScreenCFragment"
+        tools:layout="@layout/screen_c">
         <action
-            android:id="@+id/toUnsupported"
-            app:destination="@id/unsupportedVersionFragment" />
+            android:id="@+id/action_screenC_to_screenG"
+            app:destination="@id/screenG"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_screenC_to_screenA"
+            app:destination="@id/screenA"
+            app:popUpTo="@+id/screenA"
+            app:popUpToInclusive="true" />
     </fragment>
+
+    <fragment
+        android:id="@+id/screenD"
+        android:name="mx.yellowme.youst.playground.navigation.ScreenDFragment"
+        android:label="ScreenDFragment"
+        tools:layout="@layout/screen_d">
+        <action
+            android:id="@+id/action_screenD_to_screenE"
+            app:destination="@id/screenE"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/screenE"
+        android:name="mx.yellowme.youst.playground.navigation.ScreenEFragment"
+        android:label="ScreenEFragment"
+        tools:layout="@layout/screen_e">
+        <action
+            android:id="@+id/action_screenE_to_screenF"
+            app:destination="@id/screenF"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/screenF"
+        android:name="mx.yellowme.youst.playground.navigation.ScreenFFragment"
+        android:label="ScreenFFragment"
+        tools:layout="@layout/screen_f">
+        <action
+            android:id="@+id/action_screenF_to_screenB"
+            app:destination="@id/screenB"
+            app:popUpTo="@+id/screenB"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/screenG"
+        android:name="mx.yellowme.youst.playground.navigation.ScreenGFragment"
+        android:label="ScreenGFragment"
+        tools:layout="@layout/screen_g" />
 
 </navigation>

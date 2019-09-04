@@ -6,22 +6,17 @@ import mx.yellowme.youst.core.hooks.BaseFragment
 import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.components.AppHeroActionListener
 
-class MainFragment : BaseFragment() {
+class ScreenDFragment : BaseFragment() {
 
-    override val layoutId: Int = R.layout.screen_main
+    override val layoutId: Int = R.layout.screen_d
 
     override fun onViewReady() {
-        appHero.message = getString(
-            R.string.screen_main,
-            getString(R.string.userName),
-            getString(R.string.paymentData)
-        )
-
-        appHero.listener = object : AppHeroActionListener {
+        appHero.mainActionListener = object : AppHeroActionListener {
             override fun onClickAction() {
-                val action = MainFragmentDirections.toUnsupported()
+                val action = ScreenDFragmentDirections.actionScreenDToScreenE()
                 findNavController().navigate(action)
             }
         }
     }
+
 }

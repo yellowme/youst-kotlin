@@ -22,7 +22,7 @@ class UserWithoutAttributeScreen : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        appHero.listener = object : AppHeroActionListener {
+        appHero.mainActionListener = object : AppHeroActionListener {
             override fun onClickAction() {
                 //TODO: Must delegate action to another layer component (ViewModel or Presenter)
                 UserFakeRepository.defaultConfig?.lastName = "Burgos"

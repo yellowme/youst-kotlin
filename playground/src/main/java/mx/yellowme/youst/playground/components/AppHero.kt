@@ -23,7 +23,8 @@ class AppHero @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : LinearLayout(context, attrs, defStyleAttr) {
 
-    var listener: AppHeroActionListener? = null
+    var mainActionListener: AppHeroActionListener? = null
+    var secondaryActionListener: AppHeroActionListener? = null
 
     var message: String? = null
         set(value) {
@@ -74,7 +75,11 @@ class AppHero @JvmOverloads constructor(
         }
 
         mainAction.setOnClickListener {
-            listener?.onClickAction()
+            mainActionListener?.onClickAction()
+        }
+
+        secondaryAction.setOnClickListener {
+            secondaryActionListener?.onClickAction()
         }
     }
 
