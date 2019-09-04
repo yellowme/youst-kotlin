@@ -22,7 +22,7 @@ class LastFragment : BaseFragment() {
             findNavController().navigate(action)
         }
 
-        yellowmeLink.setOnClickListener {
+        navigateButton.setOnClickListener {
             activity?.launchExternalEmailChooser(
                 getString(R.string.yellowme_email_address),
                 getString(R.string.yellowme_email_subject)

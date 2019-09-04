@@ -1,64 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:padding="@dimen/dimen_32">
-
-    <EditText
-        android:id="@+id/jobEditText"
-        style="@style/GenericShowcase.Description"
-        android:imeOptions="actionDone"
-        android:inputType="textPersonName"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_20"
-        android:layout_width="match_parent"
-        app:layout_constraintBottom_toTopOf="@id/centerGuide" />
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/navigateButton"
         style="@style/ButtonColored.Primary"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_15"
+        android:minHeight="@dimen/dimen_56"
         android:text="@string/action_next"
+        android:textAllCaps="true"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/jobEditText"
+        style="@style/GenericShowcase.Description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_32"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_marginEnd="@dimen/dimen_32"
+        android:imeOptions="actionDone"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@id/centerGuide"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/destinationTextView"
         style="@style/MiniApps.ContactUs"
-        android:layout_gravity="center"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:maxLines="3"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/dimen_32"
+        android:layout_marginEnd="@dimen/dimen_32"
+        android:minHeight="@dimen/dimen_56"
+        android:text="@string/navigation_title_step_2"
+        android:layout_marginBottom="@dimen/dimen_8"
+        app:layout_constraintBottom_toTopOf="@id/moreInfoTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/moreInfoTextView"
+        style="@style/MiniApps.ContactUs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/dimen_32"
+        android:layout_marginEnd="@dimen/dimen_32"
+        android:text="@string/navigation_title_step_2_more_info"
+        android:textSize="@dimen/size_18"
+        android:textStyle="normal"
         app:layout_constraintBottom_toTopOf="@id/jobEditText"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="@string/navigation_title_step_2" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/centerGuide"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.55" />
+        app:layout_constraintGuide_percent="0.5" />
 
-    <androidx.emoji.widget.EmojiTextView
+    <androidx.emoji.widget.EmojiAppCompatTextView
         android:id="@+id/titleEmoji"
         style="@style/GenericShowcase.Title"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_32"
         android:maxLines="1"
         android:text="@string/navigation_title_emoji_2"
-        android:textSize="@dimen/size_30"
+        android:textSize="@dimen/size_40"
         app:autoSizeMaxTextSize="@dimen/size_40"
         app:autoSizeMinTextSize="@dimen/size_20"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@id/destinationTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <mx.yellowme.youst.core.components.toolbar.MainActionToolbar
+        android:id="@+id/mainActionToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1" />
+        app:leftAction="back"
+        app:menuAction="none" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

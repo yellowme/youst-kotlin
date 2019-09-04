@@ -15,12 +15,15 @@
     <string name="navigation_title_emoji_deeplink">🔗🤖</string>
     <string name="navigation_title_deeplink">You\'ve arrived to a secret screen!</string>
     <string name="navigation_title_step_1">Hello! What\'s your name?</string>
-    <string name="navigation_title_step_2">Nice to meet you, %1$s! Tell us... what are you passionate about?</string>
-    <string name="navigation_title_step_3">Thanks for reaching out, %1$s!\n\nTo know more about us, feel free to send us an email! ⬇️</string>
-    <string name="yellow_web_link">hola@yellowme.mx 💛</string>
+    <string name="navigation_title_step_2">Nice to meet you, %1$s!</string>
+    <string name="navigation_title_step_2_more_info">Tell us something you are passionate about!</string>
+    <string name="navigation_title_step_3">Thanks for reaching out %1$s!️</string>
+    <string name="navigation_title_step_3_more_info">To know more about us, feel free to contacts us at <b>hola@yellowme.mx!️</b></string>
+    <string name="yellow_web_link">hola@yellowme.mx</string>
     <string name="action_next">Next</string>
     <string name="deep_link_widget">Deep Link</string>
     <string name="yellowme_email_address">hola@yellowme.mx</string>
     <string name="yellowme_email_subject">¡Hello!</string>
+    <string name="send_us_an_email">Send us an email!</string>
 
 </resources>
