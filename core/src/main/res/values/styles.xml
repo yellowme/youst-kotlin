@@ -79,10 +79,16 @@
         <item name="android:paddingEnd">@dimen/dimen_2</item>
         <item name="android:textSize">@dimen/size_24</item>
         <item name="android:letterSpacing">0.025</item>
+        <item name="autoSizeMaxTextSize">@dimen/size_24</item>
+        <item name="autoSizeMinTextSize">@dimen/size_16</item>
+        <item name="autoSizeTextType">uniform</item>
     </style>
 
     <style name="GenericShowcase.Description" parent="TextAppearance.Regular">
         <item name="android:textSize">@dimen/size_18</item>
+        <item name="autoSizeMaxTextSize">@dimen/size_18</item>
+        <item name="autoSizeMinTextSize">@dimen/size_12</item>
+        <item name="autoSizeTextType">uniform</item>
     </style>
 
     <style name="GenericShowcase.Option" />
@@ -90,10 +96,16 @@
     <style name="GenericShowcase.Option.Title" parent="TextAppearance.Bold">
         <item name="android:textSize">@dimen/size_22</item>
         <item name="android:letterSpacing">0.025</item>
+        <item name="autoSizeMaxTextSize">@dimen/size_22</item>
+        <item name="autoSizeMinTextSize">@dimen/size_14</item>
+        <item name="autoSizeTextType">uniform</item>
     </style>
 
     <style name="GenericShowcase.Option.Subtitle" parent="TextAppearance.Regular">
         <item name="android:textSize">@dimen/size_16</item>
+        <item name="autoSizeMaxTextSize">@dimen/size_16</item>
+        <item name="autoSizeMinTextSize">@dimen/size_8</item>
+        <item name="autoSizeTextType">uniform</item>
     </style>
 
     <!--endregion-->

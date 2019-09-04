@@ -2,18 +2,27 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     android:background="@android:color/transparent"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
     android:minHeight="@dimen/dimen_56"
     android:orientation="horizontal">
 
+    <View
+        android:id="@+id/toolbarShadowView"
+        android:background="@color/gray_brown"
+        android:layout_height="@dimen/dimen_1"
+        android:layout_width="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarAction" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarAction"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_56"
         android:background="@android:color/transparent"
         android:elevation="0dp"
+        android:layout_height="@dimen/dimen_56"
+        android:layout_width="match_parent"
         android:minHeight="@dimen/dimen_56"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,38 +34,32 @@
         app:titleTextAppearance="@style/Toolbar.ActionTitle">
 
         <LinearLayout
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_width="match_parent"
             android:orientation="horizontal">
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/toolbarTitle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="56dp"
                 android:ellipsize="end"
                 android:fontFamily="sans-serif"
                 android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="56dp"
+                android:layout_marginStart="4dp"
+                android:layout_width="match_parent"
                 android:maxLines="1"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="@dimen/size_20"
                 android:textStyle="bold"
+                app:autoSizeMaxTextSize="@dimen/size_20"
+                app:autoSizeMinTextSize="@dimen/size_12"
+                app:autoSizeTextType="uniform"
                 tools:text="@string/toolbar_title_holder" />
 
         </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
-
-    <View
-        android:id="@+id/toolbarShadowView"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_1"
-        android:background="@color/gray_brown"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbarAction" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

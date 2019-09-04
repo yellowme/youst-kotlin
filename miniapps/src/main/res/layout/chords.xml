@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@color/white"
     android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
     app:layout_constraintVertical_chainStyle="spread_inside">
-
-    <mx.yellowme.youst.core.components.toolbar.MainActionToolbar
-        android:id="@+id/mainActionToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="?attr/actionBarSize"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:leftAction="back"
-        app:menuAction="none" />
-
-    <TextView
-        android:id="@+id/guitaleleChord"
-        style="@style/MiniApps.Chords.Title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_16"
-        android:text="@string/chord_guitalele"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mainActionToolbar" />
 
     <TextView
         android:id="@+id/selectedChordTextView"
         style="@style/MiniApps.Chords.Selected"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/dimen_16"
         android:layout_marginBottom="@dimen/dimen_16"
-        android:paddingStart="@dimen/dimen_32"
+        android:layout_marginTop="@dimen/dimen_16"
         android:paddingEnd="@dimen/dimen_32"
+        android:paddingStart="@dimen/dimen_32"
         android:text="@string/chords_selected_holder"
         app:layout_constraintBottom_toTopOf="@id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guitaleleChord" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.50" />
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/chordsViewPager"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_gravity="bottom"
-        android:clipToPadding="false"
-        android:overScrollMode="never"
-        android:paddingStart="@dimen/dimen_60"
-        android:paddingLeft="@dimen/dimen_60"
-        android:paddingTop="@dimen/dimen_30"
-        android:paddingEnd="@dimen/dimen_60"
-        android:paddingRight="@dimen/dimen_60"
-        android:paddingBottom="@dimen/dimen_30"
-        app:layout_constraintBottom_toTopOf="@id/guitarChord"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline" />
-
     <TextView
         android:id="@+id/guitarChord"
         style="@style/MiniApps.Chords.Title"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_16"
         android:layout_marginBottom="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:layout_width="wrap_content"
         android:text="@string/chord_guitar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/chordsViewPager" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/guitaleleChord"
+        style="@style/MiniApps.Chords.Title"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:layout_width="wrap_content"
+        android:text="@string/chord_guitalele"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainActionToolbar" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/chordsViewPager"
+        android:clipToPadding="false"
+        android:layout_gravity="bottom"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:overScrollMode="never"
+        android:paddingBottom="@dimen/dimen_30"
+        android:paddingEnd="@dimen/dimen_60"
+        android:paddingLeft="@dimen/dimen_60"
+        android:paddingRight="@dimen/dimen_60"
+        android:paddingStart="@dimen/dimen_60"
+        android:paddingTop="@dimen/dimen_30"
+        app:layout_constraintBottom_toTopOf="@id/guitarChord"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+    <mx.yellowme.youst.core.components.toolbar.MainActionToolbar
+        android:id="@+id/mainActionToolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftAction="back"
+        app:menuAction="none" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
