@@ -4,43 +4,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical"
-    android:padding="@dimen/dimen_35">
+    android:orientation="vertical">
 
-    <androidx.emoji.widget.EmojiTextView
-        android:id="@+id/titleEmoji"
-        style="@style/GenericShowcase.Title"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/navigateButton"
+        style="@style/ButtonColored.Primary"
         android:layout_height="wrap_content"
-        android:text="@string/navigation_title_emoji_3"
-        android:textSize="@dimen/size_40"
-        app:layout_constraintBottom_toTopOf="@id/goodbyeTextView"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/goodbyeTextView"
-        style="@style/MiniApps.ContactUs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/navigation_title_step_3"
-        app:layout_constraintBottom_toTopOf="@id/centerGuide"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.emoji.widget.EmojiTextView
-        android:id="@+id/yellowmeLink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="?attr/selectableItemBackground"
-        android:clickable="true"
-        android:focusable="true"
-        android:paddingStart="@dimen/dimen_10"
-        android:paddingEnd="@dimen/dimen_10"
-        android:text="@string/yellow_web_link"
-        android:textColor="@color/yellow"
-        android:textSize="@dimen/size_28"
+        android:minHeight="@dimen/dimen_56"
+        android:text="@string/send_us_an_email"
+        android:textAllCaps="true"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/moreInfoTextView"
+        style="@style/MiniApps.ContactUs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/dimen_32"
+        android:layout_marginEnd="@dimen/dimen_32"
+        android:text="@string/navigation_title_step_3_more_info"
+        android:textSize="@dimen/size_20"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@id/centerGuide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/goodbyeTextView"
+        style="@style/MiniApps.ContactUs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/dimen_32"
+        android:layout_marginEnd="@dimen/dimen_32"
+        android:layout_marginBottom="@dimen/size_16"
+        android:text="@string/navigation_title_step_3"
+        android:textSize="@dimen/size_32"
+        app:autoSizeMaxTextSize="@dimen/size_32"
+        app:autoSizeMinTextSize="@dimen/size_12"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/moreInfoTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -50,5 +57,30 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.emoji.widget.EmojiAppCompatTextView
+        android:id="@+id/titleEmoji"
+        style="@style/GenericShowcase.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_32"
+        android:maxLines="1"
+        android:text="@string/navigation_title_emoji_3"
+        android:textSize="@dimen/size_40"
+        app:autoSizeMaxTextSize="@dimen/size_40"
+        app:autoSizeMinTextSize="@dimen/size_20"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/goodbyeTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <mx.yellowme.youst.core.components.toolbar.MainActionToolbar
+        android:id="@+id/mainActionToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftAction="back"
+        app:menuAction="none" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,26 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="@dimen/dimen_32">
+    android:orientation="vertical">
 
-    <androidx.emoji.widget.EmojiTextView
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/messageTextView"
         style="@style/Challenge.Title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/navigation_title_emoji_deeplink"
-        android:textSize="@dimen/size_40"
-        app:layout_constraintBottom_toTopOf="@id/greetingTextView"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/greetingTextView"
-        style="@style/Challenge.Title"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginStart="@dimen/dimen_32"
+        android:layout_marginEnd="@dimen/dimen_32"
         android:text="@string/navigation_title_deeplink"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@id/centerGuide"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -31,5 +25,28 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.emoji.widget.EmojiAppCompatTextView
+        style="@style/Challenge.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_32"
+        android:layout_marginEnd="@dimen/dimen_32"
+        android:layout_marginBottom="@dimen/dimen_16"
+        android:text="@string/navigation_title_emoji_deeplink"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_40"
+        app:layout_constraintBottom_toTopOf="@id/messageTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <mx.yellowme.youst.core.components.toolbar.MainActionToolbar
+        android:id="@+id/mainActionToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftAction="back"
+        app:menuAction="none" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
