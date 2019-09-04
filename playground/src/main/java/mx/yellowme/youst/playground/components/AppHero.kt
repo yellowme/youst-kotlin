@@ -31,10 +31,16 @@ class AppHero @JvmOverloads constructor(
             mainLabel.hideOrDisplay(message, false)
         }
 
-    private var actionLabel: String? = null
+    private var mainActionLabel: String? = null
         set(value) {
             field = value
-            mainAction.hideOrDisplay(actionLabel, true)
+            mainAction.hideOrDisplay(mainActionLabel, true)
+        }
+
+    private var secondaryActionLabel: String? = null
+        set(value) {
+            field = value
+            secondaryAction.hideOrDisplay(secondaryActionLabel, true)
         }
 
     private var backgroundColorRes: Int = -1
@@ -63,7 +69,8 @@ class AppHero @JvmOverloads constructor(
             backgroundColorRes = getResourceIdOrThrow(R.styleable.AppHero_heroBackgroundColor)
             message = getString(R.styleable.AppHero_heroMessage)
             messageColorRes = getResourceId(R.styleable.AppHero_heroMessageColor, coreR.color.white)
-            actionLabel = getString(R.styleable.AppHero_heroActionLabel)
+            mainActionLabel = getString(R.styleable.AppHero_heroMainActionLabel)
+            secondaryActionLabel = getString(R.styleable.AppHero_heroSecondaryActionLabel)
         }
 
         mainAction.setOnClickListener {

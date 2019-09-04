@@ -8,7 +8,7 @@
         android:id="@+id/appHero"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:heroActionLabel="@string/action_upgrade"
+        app:heroMainActionLabel="@string/action_upgrade"
         app:heroBackgroundColor="@color/olive"
         app:heroMessage="@string/screen_unsupported" />
 
