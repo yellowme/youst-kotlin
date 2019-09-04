@@ -21,4 +21,23 @@
     <string name="component_holder_hero_action_label">Action</string>
     <string name="userName">César Gómez</string>
     <string name="paymentData">Enso</string>
+
+    <string name="a_label">A</string>
+    <string name="b_label">B</string>
+    <string name="c_label">C</string>
+    <string name="d_label">D</string>
+    <string name="e_label">E</string>
+    <string name="f_label">F</string>
+    <string name="g_label">G</string>
+
+    <string name="to_a">To A</string>
+    <string name="to_b">To B</string>
+    <string name="to_c">To C</string>
+    <string name="to_d">To D</string>
+    <string name="to_e">To E</string>
+    <string name="to_f">To F</string>
+    <string name="to_g">To G</string>
+
+    <string name="hello">Hello!</string>
+
 </resources>
