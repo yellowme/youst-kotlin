@@ -21,6 +21,7 @@ class ChordsActivity : BaseActivity() {
     }
 
     private fun updateSelected(chord: Chord) {
+        selectedChordTitle.text = getString(R.string.chord_title, chord.name)
         selectedChordTextView.text = Chord.transform(chord).name
         chordSelector.label = chord.name
     }

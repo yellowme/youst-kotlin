@@ -10,28 +10,35 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/selectedChordTitle"
         style="@style/MiniApps.Chords.Title"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16"
         android:layout_marginTop="@dimen/dimen_16"
+        android:layout_marginEnd="@dimen/dimen_16"
+        android:gravity="center"
         android:text="@string/chord_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mainActionToolbar" />
+        app:layout_constraintTop_toBottomOf="@id/mainActionToolbar"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".8" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/selectedChordTextView"
         style="@style/MiniApps.Chords.Selected"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_4"
         android:layout_marginBottom="@dimen/dimen_16"
-        android:gravity="top"
-        android:paddingStart="@dimen/dimen_32"
-        android:paddingEnd="@dimen/dimen_32"
+        android:gravity="top|center_horizontal"
         android:text="@string/chords_selected_holder"
+        app:autoSizeMinTextSize="@dimen/size_10"
         app:layout_constraintBottom_toTopOf="@id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/selectedChordTitle" />
+        app:layout_constraintTop_toBottomOf="@id/selectedChordTitle"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".8" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/chordSelectorTitle"
@@ -57,8 +64,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_gravity="bottom"
-        android:layout_marginTop="@dimen/dimen_40"
         android:layout_marginStart="@dimen/dimen_40"
+        android:layout_marginTop="@dimen/dimen_40"
         android:layout_marginEnd="@dimen/dimen_40"
         android:layout_marginBottom="@dimen/dimen_16"
         android:clipToPadding="false"
@@ -68,7 +75,7 @@
         app:indicator_width="20"
         app:is_continuous="false"
         app:label_color="@color/guitar_black"
-        app:label_size="60"
+        app:label_size="40"
         app:layout_constraintBottom_toTopOf="@id/chordSelectorTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

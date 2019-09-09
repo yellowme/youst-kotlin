@@ -47,7 +47,7 @@ class Chord(val name: String) {
                 "E" -> Chord("B")
                 "Em" -> Chord("Bm")
                 "E7" -> Chord("B7")
-                "F" -> Chord("??") //TODO: Add proper chord
+                "F" -> Chord("C") //TODO: Add proper chord
                 "Fm" -> Chord("A#m")
                 "F7" -> Chord("??") //TODO: Add proper chord
                 "G" -> Chord("D")
