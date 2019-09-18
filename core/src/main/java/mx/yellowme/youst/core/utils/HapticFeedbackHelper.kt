@@ -24,6 +24,8 @@ object HapticFeedbackHelper {
             return
         }
 
+        @Suppress("DEPRECATION")
         vibrator.vibrate(DEVICES_BELOW_API_26_MILLS)
     }
+
 }
