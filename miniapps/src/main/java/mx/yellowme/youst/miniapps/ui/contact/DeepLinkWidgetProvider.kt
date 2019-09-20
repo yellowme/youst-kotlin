@@ -6,6 +6,7 @@ import android.content.Context
 import android.widget.RemoteViews
 import androidx.navigation.NavDeepLinkBuilder
 import mx.yellowme.youst.miniapps.R
+import mx.yellowme.youst.R as appR
 
 class DeepLinkWidgetProvider : AppWidgetProvider() {
     override fun onUpdate(
@@ -13,7 +14,7 @@ class DeepLinkWidgetProvider : AppWidgetProvider() {
         appWidgetManager: AppWidgetManager?,
         appWidgetIds: IntArray?
     ) {
-        val remoteViews = RemoteViews(context.packageName, R.layout.component_deep_link)
+        val remoteViews = RemoteViews(context.packageName, appR.layout.component_deep_link)
 
         val pendingIntent = NavDeepLinkBuilder(context)
             .setComponentName(ContactUsActivity::class.java)
@@ -21,7 +22,7 @@ class DeepLinkWidgetProvider : AppWidgetProvider() {
             .setDestination(R.id.deepLinkFragment)
             .createPendingIntent()
 
-        remoteViews.setOnClickPendingIntent(R.id.deep_link_button, pendingIntent)
+        remoteViews.setOnClickPendingIntent(appR.id.deep_link_button, pendingIntent)
         appWidgetManager?.updateAppWidget(appWidgetIds, remoteViews)
     }
 }
