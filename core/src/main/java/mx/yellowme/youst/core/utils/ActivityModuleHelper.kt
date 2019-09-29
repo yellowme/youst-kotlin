@@ -62,6 +62,10 @@ object Activities {
         object Nemo : AddressableActivity {
             override val className = "$PACKAGE_NAME.playground.nemo.NemoActivity"
         }
+
+        object Chart : AddressableActivity {
+            override val className = "$PACKAGE_NAME.playground.ui.chart.ChartActivity"
+        }
     }
 
     object Challenges : AddressableActivity {

@@ -8,7 +8,6 @@ import mx.yellowme.youst.core.utils.asJsonArrayOf
 import mx.yellowme.youst.core.utils.intentTo
 import mx.yellowme.youst.playground.domain.PlaygroundElement
 import mx.yellowme.youst.playground.domain.PlaygroundElementType
-import mx.yellowme.youst.core.R as coreR
 
 class PlaygroundActivity : GenericShowcaseActivity<PlaygroundElement>() {
 
@@ -33,6 +32,9 @@ class PlaygroundActivity : GenericShowcaseActivity<PlaygroundElement>() {
                 }
                 PlaygroundElementType.NEMO -> {
                     launch(intentTo(Activities.Playground.Nemo))
+                }
+                PlaygroundElementType.CHART -> {
+                    launch(intentTo(Activities.Playground.Chart))
                 }
             }
         }

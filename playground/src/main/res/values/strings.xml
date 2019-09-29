@@ -39,5 +39,8 @@
     <string name="to_g">To G</string>
 
     <string name="hello">Hello!</string>
+    <string name="yes">Yes</string>
+
+    <string name="screen_chart">Welcome, yellow knight.\nWould you want to try chart displaying?</string>
 
 </resources>
