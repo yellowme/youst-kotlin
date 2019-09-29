@@ -10,5 +10,11 @@
     "title": "Nemo Navigation",
     "subtitle": "Opinionated mobile navigation flow handler.\n\nAvoid boilerplate code when handle navigation programmatically.",
     "paletteColor": "JALAPENO_RED"
+  },
+  {
+    "id": "3",
+    "title": "Chart showcases",
+    "subtitle": "Implementation of MPAndroidChart library.\n\nHandle dynamic data and display it in several kind of charts.",
+    "paletteColor": "WATERFALL"
   }
 ]

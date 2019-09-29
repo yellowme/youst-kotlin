@@ -14,6 +14,7 @@ class PlaygroundElement(
             return when (id) {
                 "1" -> PlaygroundElementType.JETPACK_NAVIGATION
                 "2" -> PlaygroundElementType.NEMO
+                "3" -> PlaygroundElementType.CHART
                 else -> throw RuntimeException("Unsupported challenge type for id: $id")
             }
         }
@@ -21,5 +22,5 @@ class PlaygroundElement(
 }
 
 enum class PlaygroundElementType {
-    JETPACK_NAVIGATION, NEMO
+    JETPACK_NAVIGATION, NEMO, CHART
 }
