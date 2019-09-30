@@ -26,7 +26,6 @@ class ChartViewActivity : BaseChart() {
         super.onCreate(savedInstanceState)
         initializeDefaultOptions()
         radioGroup.setOnCheckedChangeListener { _, checkedId ->
-            //TODO: Change strings by enums
             when(checkedId) {
                 optionOne.id -> {
                     listener.onChangeChart(
