@@ -8,11 +8,20 @@ import mx.yellowme.youst.playground.domain.ChartType
 /**
  * Created by adrianleyvasanchez on 29,September,2019
  */
-abstract class BaseChart : BaseActivity(), OnChangeListener {
+abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
 
-    override val layoutId: Int = R.layout.screen_chart_view
+    /**
+     * The @chartContainerId Int instance represents the Layout id
+     * where the chart is going to be drawn.
+     */
+    abstract val chartContainerId: Int
 
+    /**
+     * The @settingsJson String instance represent the path where
+     * is going to be located the chart settings file.
+     */
     abstract val settingsJson: String
+
 
     abstract val listener: OnChangeListener
 
@@ -22,11 +31,11 @@ abstract class BaseChart : BaseActivity(), OnChangeListener {
     }
 
     override fun onChangeChart(type: ChartType) {
-        //TODO: Implement it
+        //TODO: To implement
     }
 
     private fun setupChart() {
-        //TODO: Implement it
+        //TODO: To implement
     }
 
 }

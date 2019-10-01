@@ -6,7 +6,6 @@ import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.components.AppHeroActionListener
-import mx.yellowme.youst.playground.ui.chart.common.BaseChart
 import mx.yellowme.youst.playground.ui.chart.screens.ChartViewActivity
 
 /**
@@ -16,8 +15,7 @@ class ChartActivity : BaseActivity() {
 
     //Region attributes
 
-    override val layoutId: Int
-        get() = R.layout.screen_chart
+    override val layoutId = R.layout.screen_chart
 
     //endregion
 
@@ -25,7 +23,7 @@ class ChartActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        appHero.apply {
+        appHero.run {
             message = getString(R.string.screen_chart)
             mainActionListener = object : AppHeroActionListener {
                 override fun onClickAction() {
