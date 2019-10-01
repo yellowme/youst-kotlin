@@ -3,16 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainContainer"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:paddingTop="@dimen/dimen_10"
-    android:paddingBottom="@dimen/dimen_10"
-    android:background="@color/light_gray">
+    android:paddingBottom="@dimen/dimen_10">
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="center">
 
         <RadioButton

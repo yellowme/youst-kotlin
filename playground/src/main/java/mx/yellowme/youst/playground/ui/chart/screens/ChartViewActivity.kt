@@ -7,8 +7,7 @@ import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.domain.ChartType
 import mx.yellowme.youst.playground.domain.getTypeByName
 import mx.yellowme.youst.playground.ui.chart.common.BaseChartActivity
-import mx.yellowme.youst.playground.ui.chart.common.OnChangeListener
-import mx.yellowme.youst.playground.ui.chart.components.ChartSelectorActionListener
+import mx.yellowme.youst.playground.components.ChartSelectorActionListener
 
 /**
  * Created by adrianleyvasanchez on 29,September,2019
@@ -23,33 +22,32 @@ class ChartViewActivity : BaseChartActivity() {
 
     override val settingsJson = "./chart_settings.json"
 
-    override val listener: OnChangeListener
-        get() = this
-
     //endregion
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        listener = this
         chartSelector.run {
             firstOptionText = ChartType.BAR.name
             secondOptionText = ChartType.LINE.name
             thirdOptionText = ChartType.BUBBLE.name
-            actionListener = object : ChartSelectorActionListener {
+            actionListener = object :
+                ChartSelectorActionListener {
                 override fun onChangeAction(checkedId: Int) {
                     when(checkedId) {
                         firstOption.id -> {
-                            listener.onChangeChart(
+                            listener?.onChangeChart(
                                 getTypeByName(firstOptionText ?: "")
                             )
                         }
                         secondOption.id -> {
-                            listener.onChangeChart(
+                            listener?.onChangeChart(
                                 getTypeByName(secondOptionText ?: "")
                             )
 
                         }
                         thirdOption.id -> {
-                            listener.onChangeChart(
+                            listener?.onChangeChart(
                                 getTypeByName(thirdOptionText ?: "")
                             )
                         }
@@ -58,4 +56,5 @@ class ChartViewActivity : BaseChartActivity() {
             }
         }
     }
+
 }
