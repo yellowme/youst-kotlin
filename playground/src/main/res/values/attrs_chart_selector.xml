@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ChartSelector">
+        <attr name="selectorBackgroundColor" format="color" />
+        <attr name="selectorOptionsTextColor" format="color" />
+    </declare-styleable>
+</resources>
