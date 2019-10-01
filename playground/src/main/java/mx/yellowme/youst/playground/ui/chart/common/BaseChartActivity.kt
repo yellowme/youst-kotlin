@@ -2,7 +2,6 @@ package mx.yellowme.youst.playground.ui.chart.common
 
 import android.os.Bundle
 import mx.yellowme.youst.core.hooks.BaseActivity
-import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.domain.ChartType
 
 /**
@@ -22,8 +21,7 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
      */
     abstract val settingsJson: String
 
-
-    abstract val listener: OnChangeListener
+    var listener: OnChangeListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

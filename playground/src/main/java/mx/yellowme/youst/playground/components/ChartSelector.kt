@@ -1,10 +1,9 @@
-package mx.yellowme.youst.playground.ui.chart.components
+package mx.yellowme.youst.playground.components
 
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
-import androidx.core.content.res.getResourceIdOrThrow
 import kotlinx.android.synthetic.main.component_chart_selector.view.*
 import mx.yellowme.youst.core.extensions.consumeTypeArray
 import mx.yellowme.youst.core.extensions.inflate
@@ -20,9 +19,8 @@ interface ChartSelectorActionListener {
 
 class ChartSelector @JvmOverloads constructor(
     context: Context,
-    attrs: AttributeSet? = null,
-    defStyleAttr: Int = 0
-) : LinearLayout(context, attrs, defStyleAttr) {
+    attrs: AttributeSet? = null
+) : LinearLayout(context, attrs) {
 
     var actionListener: ChartSelectorActionListener? = null
 
@@ -69,8 +67,8 @@ class ChartSelector @JvmOverloads constructor(
     init {
         inflate(R.layout.component_chart_selector, context)
         attrs?.consumeTypeArray(context, R.styleable.ChartSelector) {
-            backgroundColorRes = getResourceIdOrThrow(R.styleable.ChartSelector_selectorBackgroundColor)
-            optionsTextColorRes = getResourceId(R.styleable.ChartSelector_selectorOptionsTextColor, coreR.color.white)
+            backgroundColorRes = getResourceId(R.styleable.ChartSelector_selectorBackgroundColor, coreR.color.white)
+            optionsTextColorRes = getResourceId(R.styleable.ChartSelector_selectorOptionsTextColor, coreR.color.guitar_black)
         }
 
         radioGroup.setOnCheckedChangeListener { _, checkedId ->
