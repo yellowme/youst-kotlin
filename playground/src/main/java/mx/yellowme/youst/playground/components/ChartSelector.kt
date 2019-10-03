@@ -8,13 +8,14 @@ import kotlinx.android.synthetic.main.component_chart_selector.view.*
 import mx.yellowme.youst.core.extensions.consumeTypeArray
 import mx.yellowme.youst.core.extensions.inflate
 import mx.yellowme.youst.playground.R
+import mx.yellowme.youst.playground.domain.ChartType
 import mx.yellowme.youst.core.R as coreR
 
 /**
  * Created by adrianleyvasanchez on 30,September,2019
  */
 interface ChartSelectorActionListener {
-    fun onChangeAction(checkedId: Int)
+    fun onChangeAction(checkedType: ChartType)
 }
 
 class ChartSelector @JvmOverloads constructor(
@@ -56,10 +57,10 @@ class ChartSelector @JvmOverloads constructor(
         set(value) {
             field = value
             if (optionsTextColorRes != -1) {
-                ContextCompat.getColor(context, optionsTextColorRes).let {
-                    firstOption.setTextColor(it)
-                    secondOption.setTextColor(it)
-                    thirdOption.setTextColor(it)
+                ContextCompat.getColor(context, optionsTextColorRes).run {
+                    firstOption.setTextColor(this)
+                    secondOption.setTextColor(this)
+                    thirdOption.setTextColor(this)
                 }
             }
         }
@@ -72,7 +73,25 @@ class ChartSelector @JvmOverloads constructor(
         }
 
         radioGroup.setOnCheckedChangeListener { _, checkedId ->
-            actionListener?.onChangeAction(checkedId)
+            when(checkedId) {
+                firstOption.id -> {
+                    actionListener?.onChangeAction(
+                        ChartType.valueOf(firstOptionText ?: "")
+                    )
+                }
+                secondOption.id -> {
+                    actionListener?.onChangeAction(
+                        ChartType.valueOf(secondOptionText ?: "")
+                    )
+
+                }
+                thirdOption.id -> {
+                    actionListener?.onChangeAction(
+                        ChartType.valueOf(thirdOptionText ?: "")
+                    )
+                }
+            }
         }
     }
+
 }
