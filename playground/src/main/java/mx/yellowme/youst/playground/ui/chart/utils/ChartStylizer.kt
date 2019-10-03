@@ -26,10 +26,12 @@ object ChartStylizer {
                 setDrawBarShadow(it.drawBarShadowEnabled)
                 setBackgroundColor(getColorByName(it.backgroundColor, activity))
                 setDrawGridBackground(it.drawGridBackgroundEnabled)
+                setGridBackgroundColor(getColorByName(it.gridBackgroundColor, activity))
                 setBorderColor(getColorByName(it.borderColor, activity))
                 description = Description()
                     .apply {
                         text = it.description
+                        textSize = it.descriptionTextSize
                         textColor = getColorByName(it.descriptionColor, activity)
                     }
             }
@@ -49,10 +51,12 @@ object ChartStylizer {
                 isLogEnabled = it.logEnabled
                 setBackgroundColor(getColorByName(it.backgroundColor, activity))
                 setDrawGridBackground(it.drawGridBackgroundEnabled)
+                setGridBackgroundColor(getColorByName(it.gridBackgroundColor, activity))
                 setBorderColor(getColorByName(it.borderColor, activity))
                 description = Description()
                     .apply {
                         text = it.description
+                        textSize = it.descriptionTextSize
                         textColor = getColorByName(it.descriptionColor, activity)
                     }
             }
@@ -72,10 +76,12 @@ object ChartStylizer {
                 isLogEnabled = it.logEnabled
                 setBackgroundColor(getColorByName(it.backgroundColor, activity))
                 setDrawGridBackground(it.drawGridBackgroundEnabled)
+                setGridBackgroundColor(getColorByName(it.gridBackgroundColor, activity))
                 setBorderColor(getColorByName(it.borderColor, activity))
                 description = Description()
                     .apply {
                         text = it.description
+                        textSize = it.descriptionTextSize
                         textColor = getColorByName(it.descriptionColor, activity)
                     }
             }
