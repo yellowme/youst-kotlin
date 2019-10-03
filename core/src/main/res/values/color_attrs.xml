@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="themeId" format="integer" />
+    <attr name="textColor" format="reference" />
+    <attr name="typeAll" format="reference" />
+    <attr name="typeBug" format="reference" />
+    <attr name="typeDragon" format="reference" />
+    <attr name="typeElectric" format="reference" />
+    <attr name="typeFighting" format="reference" />
+    <attr name="typeFire" format="reference" />
+    <attr name="typeFlying" format="reference" />
+    <attr name="typeGhost" format="reference" />
+    <attr name="typeDark" format="reference" />
+    <attr name="typeFairy" format="reference" />
+    <attr name="typeGrass" format="reference" />
+    <attr name="typeGround" format="reference" />
+    <attr name="typeNormal" format="reference" />
+    <attr name="typeIce" format="reference" />
+    <attr name="typePoison" format="reference" />
+    <attr name="typePsychic" format="reference" />
+    <attr name="typeRock" format="reference" />
+    <attr name="typeSteel" format="reference" />
+    <attr name="typeWater" format="reference" />
+    <attr name="backgroundItem" format="reference" />
+    <attr name="activityBackground" format="reference" />
+
+    <attr name="textTitle" format="reference" />
+    <attr name="textBody" format="reference" />
+    <attr name="textCaption" format="reference" />
+    <attr name="textOverColor" format="reference" />
+
+    <attr name="coral" format="reference" />
+    <attr name="turquoise" format="reference" />
+    <attr name="malibu" format="reference" />
+    <attr name="orchid" format="reference" />
+    <attr name="cerise" format="reference" />
+    <attr name="kiwi" format="reference" />
+    <attr name="royal" format="reference" />
+    <attr name="violet" format="reference" />
+    <attr name="yellow" format="reference" />
+    <attr name="white" format="reference" />
+    <attr name="black" format="reference" />
+
+    <attr name="vectorTint" format="reference" />
+
+</resources>
+

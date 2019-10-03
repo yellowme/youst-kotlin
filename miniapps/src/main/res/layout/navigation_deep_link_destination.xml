@@ -14,7 +14,7 @@
         android:layout_marginStart="@dimen/dimen_32"
         android:layout_marginEnd="@dimen/dimen_32"
         android:text="@string/navigation_title_deeplink"
-        android:textColor="@color/black"
+        android:textColor="?attr/textTitle"
         app:layout_constraintBottom_toTopOf="@id/centerGuide"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -34,7 +34,7 @@
         android:layout_marginEnd="@dimen/dimen_32"
         android:layout_marginBottom="@dimen/dimen_16"
         android:text="@string/navigation_title_emoji_deeplink"
-        android:textColor="@color/black"
+        android:textColor="?attr/textTitle"
         android:textSize="@dimen/size_40"
         app:layout_constraintBottom_toTopOf="@id/messageTextView"
         app:layout_constraintStart_toStartOf="parent" />

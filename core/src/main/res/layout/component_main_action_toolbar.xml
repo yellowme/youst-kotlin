@@ -10,7 +10,7 @@
 
     <View
         android:id="@+id/toolbarShadowView"
-        android:background="@color/gray_brown"
+        android:background="?attr/typeGround"
         android:layout_height="@dimen/dimen_1"
         android:layout_width="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:maxLines="1"
                 android:textAllCaps="false"
-                android:textColor="@color/black"
+                android:textColor="?attr/textTitle"
                 android:textSize="@dimen/size_20"
                 android:textStyle="bold"
                 app:autoSizeMaxTextSize="@dimen/size_20"

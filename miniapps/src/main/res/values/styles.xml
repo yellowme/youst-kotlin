@@ -10,7 +10,7 @@
         <item name="android:paddingStart">@dimen/dimen_2</item>
         <item name="android:paddingEnd">@dimen/dimen_2</item>
         <item name="android:textSize">@dimen/size_16</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">?attr/textTitle</item>
         <item name="android:letterSpacing">0.025</item>
     </style>
 
@@ -18,7 +18,7 @@
         <item name="android:paddingStart">@dimen/dimen_2</item>
         <item name="android:paddingEnd">@dimen/dimen_2</item>
         <item name="android:textSize">@dimen/size_80</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">?attr/textTitle</item>
         <item name="android:letterSpacing">0.025</item>
         <item name="autoSizeMaxTextSize">@dimen/size_80</item>
         <item name="autoSizeMinTextSize">@dimen/size_40</item>
@@ -30,7 +30,7 @@
     <style name="MiniApps.Chords.OptionItem.Label" parent="TextAppearance.Bold">
         <item name="android:textSize">@dimen/size_60</item>
         <item name="android:letterSpacing">0.025</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">?attr/textTitle</item>
         <item name="android:fontFamily">@font/source_sans_pro_bold</item>
         <item name="autoSizeMaxTextSize">@dimen/size_60</item>
         <item name="autoSizeMinTextSize">@dimen/size_30</item>
@@ -42,7 +42,7 @@
         <item name="android:paddingEnd">@dimen/dimen_2</item>
         <item name="android:textSize">@dimen/size_28</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">?attr/textTitle</item>
         <item name="android:letterSpacing">0.025</item>
         <item name="autoSizeMaxTextSize">@dimen/size_22</item>
         <item name="autoSizeMinTextSize">@dimen/size_14</item>

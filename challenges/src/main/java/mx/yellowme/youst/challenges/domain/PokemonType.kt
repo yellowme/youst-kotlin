@@ -1,7 +1,7 @@
 package mx.yellowme.youst.challenges.domain
 
 import android.content.Context
-import androidx.core.content.ContextCompat
+import android.util.TypedValue
 import mx.yellowme.youst.core.R
 
 /**
@@ -22,27 +22,28 @@ enum class PokemonType {
         var colorWithId = -1
 
         when (this) {
-            ALL -> colorWithId = R.color.gray
-            BUG -> colorWithId = R.color.green_brown
-            DRAGON -> colorWithId = R.color.blue_green
-            ELECTRIC -> colorWithId = R.color.gold
-            FIGHTING -> colorWithId = R.color.orange
-            FIRE -> colorWithId = R.color.dark_red
-            FLYING -> colorWithId = R.color.blue_gray
-            GHOST -> colorWithId = R.color.gray_purple
-            DARK -> colorWithId = R.color.black
-            FAIRY -> colorWithId = R.color.dark_pink
-            GRASS -> colorWithId = R.color.light_green
-            GROUND -> colorWithId = R.color.light_brown
-            NORMAL -> colorWithId = R.color.gray_brown
-            ICE -> colorWithId = R.color.bright_blue
-            POISON -> colorWithId = R.color.purple
-            PSYCHIC -> colorWithId = R.color.hot_pink
-            ROCK -> colorWithId = R.color.dark_brown
-            STEEL -> colorWithId = R.color.gray_green
-            WATER -> colorWithId = R.color.blue
+            ALL -> colorWithId = R.attr.typeAll
+            BUG -> colorWithId = R.attr.typeBug
+            DRAGON -> colorWithId = R.attr.typeDragon
+            ELECTRIC -> colorWithId = R.attr.typeElectric
+            FIGHTING -> colorWithId = R.attr.typeFighting
+            FIRE -> colorWithId = R.attr.typeFire
+            FLYING -> colorWithId = R.attr.typeFlying
+            GHOST -> colorWithId = R.attr.typeGhost
+            DARK -> colorWithId = R.attr.typeDark
+            FAIRY -> colorWithId = R.attr.typeFairy
+            GRASS -> colorWithId = R.attr.typeGrass
+            GROUND -> colorWithId = R.attr.typeGround
+            NORMAL -> colorWithId = R.attr.typeNormal
+            ICE -> colorWithId = R.attr.typeIce
+            POISON -> colorWithId = R.attr.typePoison
+            PSYCHIC -> colorWithId = R.attr.typePsychic
+            ROCK -> colorWithId = R.attr.typeRock
+            STEEL -> colorWithId = R.attr.typeSteel
+            WATER -> colorWithId = R.attr.typeWater
         }
-
-        return ContextCompat.getColor(fromContext, colorWithId)
+        val typedValue = TypedValue()
+        fromContext.theme.resolveAttribute(colorWithId, typedValue, true)
+        return typedValue.data
     }
 }

@@ -1,13 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="SharedAppTheme.NoActionBar">
-        <item name="themeId">2</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:windowBackground">@color/white</item>
-        <item name="android:statusBarColor">@color/white</item>
-        <item name="android:windowLightStatusBar">true</item>
 
+    <!--region Base application theme. -->
+
+    <style name="LightTheme">
         <item name="typeAll">@color/black20</item>
         <item name="typeBug">@color/bug</item>
         <item name="typeDragon">@color/dragon</item>
@@ -51,11 +46,12 @@
         <item name="black">@color/black</item>
     </style>
 
-    <style name="SharedAppTheme.NoActionBar.Dark" parent="DarkTheme">
-        <item name="themeId">3</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:windowBackground">@color/white</item>
+    <style name="DarkTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
 
         <item name="typeAll">@color/dark_black20</item>
         <item name="typeBug">@color/dark_bug</item>
@@ -98,20 +94,5 @@
         <item name="yellow">@color/dark_yellow</item>
         <item name="white">@color/dark_white</item>
         <item name="black">@color/dark_black</item>
-    </style>
-
-    <style name="SharedAppTheme.NoActionBar.TransparentStatus">
-        <item name="windowActionBar">false</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-    </style>
-
-    <style name="SharedAppTheme.NoActionBar.Translucent">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:windowTranslucentStatus">true</item>
     </style>
 </resources>

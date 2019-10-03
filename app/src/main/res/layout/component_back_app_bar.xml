@@ -6,7 +6,7 @@
         android:id="@+id/mainAppBar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_100"
-        android:background="@color/white"
+        android:background="?attr/white"
         android:fitsSystemWindows="true">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -15,7 +15,7 @@
             android:layout_height="match_parent"
             android:elevation="@dimen/dimen_6"
             android:fitsSystemWindows="true"
-            app:contentScrim="@color/white"
+            app:contentScrim="?attr/white"
             app:expandedTitleMarginBottom="@dimen/dimen_16"
             app:expandedTitleMarginStart="@dimen/dimen_8"
             app:expandedTitleMarginTop="@dimen/dimen_16"

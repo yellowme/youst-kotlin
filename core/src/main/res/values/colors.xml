@@ -6,10 +6,10 @@
 
     <color name="textColor">@color/haiti</color>
 
-    <color name="white">#ffffff</color>
-    <color name="yellow">#ffdc00</color>
+    <!--    <color name="white">#ffffff</color>-->
+    <!--    <color name="yellow">#ffdc00</color>-->
     <color name="blue">#0074D9</color>
-    <color name="black">#111111</color>
+    <!--    <color name="black">#111111</color>-->
     <color name="gray">#aaaaaa</color>
     <color name="graywhite">#EEEEEE</color>
     <color name="silver">#dddddd</color>
@@ -51,7 +51,7 @@
 
     <color name="chinook">#A6E0BC</color>
     <color name="salomie">#FFE38A</color>
-    <color name="turquoise">#1abc9c</color>
+    <!--    <color name="turquoise">#1abc9c</color>-->
     <color name="peterriver">#3498db</color>
     <color name="nephritis">#27ae60</color>
     <color name="amethyst">#9b59b6</color>
@@ -61,9 +61,107 @@
 
     <color name="clear_chill">#1e90ff</color>
 
+<!--    <color name="guitar_gold">#f7b731</color>-->
+<!--    <color name="guitar_black">@color/black</color>-->
+<!--    <color name="guitar_secondary_black">#1b2021</color>-->
+<!--    <color name="guitar_light_black">#546165</color>-->
+
+
     <color name="guitar_gold">#f7b731</color>
-    <color name="guitar_black">@color/black</color>
-    <color name="guitar_secondary_black">#1b2021</color>
-    <color name="guitar_light_black">#546165</color>
+    <color name="guitar_black">#6E6D84</color>
+    <color name="guitar_secondary_black">#434255</color>
+    <color name="guitar_light_black">#D4D1E4</color>
+
+    <!--region NEW COLOR PALLET -->
+
+    <color name="coral">#F97B54</color>
+    <color name="turquoise">#18CCA8</color>
+    <color name="malibu">#24A7FF</color>
+    <color name="orchid">#EA5570</color>
+    <color name="cerise">#EA5570</color>
+    <color name="kiwi">#8ADA5B</color>
+    <color name="royal">#720DE5</color>
+    <color name="violet">#720DE5</color>
+    <color name="yellow">#FFDA49</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#0E0E1A</color>
+
+    <color name="black90">#2D2D42</color>
+    <color name="black80">#3F3F55</color>
+    <color name="black70">#57576E</color>
+    <color name="black60">#6E6E83</color>
+    <color name="black50">#B5B5C4</color>
+    <color name="black40">#B5B5C4</color>
+    <color name="black30">#B5B5C4</color>
+    <color name="black20">#D1D2DC</color>
+    <color name="black10">#E9EAF3</color>
+    <color name="black5">#F4F4F9</color>
+    <color name="black3">#F8F8FB</color>
+
+    <color name="water">#52B1F0</color>
+    <color name="dragon">#49C3B5</color>
+    <color name="poison">#9960C5</color>
+    <color name="electric">#9960C5</color>
+    <color name="fire">#EA625C</color>
+    <color name="grass">#B0E872</color>
+    <color name="bug">#51B073</color>
+    <color name="psychic">#D47ED3</color>
+    <color name="flying">#CAEAFF</color>
+    <color name="fighting">#F59154</color>
+    <color name="normal">#FCBACD</color>
+    <color name="ice">#93E2F3</color>
+    <color name="dark">#2C2C45</color>
+    <color name="fairy">#EB6495</color>
+    <color name="ground">#E3BA83</color>
+    <color name="ghost">#464689</color>
+    <color name="rock">#B65D3C</color>
+    <color name="steel">#B4E3CD</color>
+
+    <!--endregion  -->
+
+    <!--region DARK COLOR PALLET-->
+    <color name="dark_coral">#DE643F</color>
+    <color name="dark_turquoise">#04BA96</color>
+    <color name="dark_malibu">#0E9CFB</color>
+    <color name="dark_orchid">#A039CB</color>
+    <color name="dark_cerise">#CB425A</color>
+    <color name="dark_kiwi">#6CAF45</color>
+    <color name="dark_royal">#355AE1</color>
+    <color name="dark_violet">#660BCD</color>
+    <color name="dark_yellow">#E8C53D</color>
+    <color name="dark_white">#FFFFFF</color>
+    <color name="dark_black">#0E0E1A</color>
+
+    <color name="dark_black90">#E6E2F5</color>
+    <color name="dark_black80">#D4D1E4</color>
+    <color name="dark_black70">#B8B5CD</color>
+    <color name="dark_black60">#9593A9</color>
+    <color name="dark_black50">#6E6D84</color>
+    <color name="dark_black40">#565469</color>
+    <color name="dark_black30">#434255</color>
+    <color name="dark_black20">#373745</color>
+    <color name="dark_black10">#232332</color>
+    <color name="dark_black5">#171725</color>
+    <color name="dark_black3">#121120</color>
+
+    <color name="dark_water">#3B9CE0</color>
+    <color name="dark_dragon">#36B7AA</color>
+    <color name="dark_poison">#874CB6</color>
+    <color name="dark_electric">#ECCC51</color>
+    <color name="dark_fire">#D04943</color>
+    <color name="dark_grass">#96CD5B</color>
+    <color name="dark_bug">#329658</color>
+    <color name="dark_psychic">#C265C2</color>
+    <color name="dark_flying">#C5E2F7</color>
+    <color name="dark_fighting">#D6783E</color>
+    <color name="dark_normal">#F2A1BB</color>
+    <color name="dark_ice">#85DCE2</color>
+    <color name="dark_dark">#20203A</color>
+    <color name="dark_fairy">#D05080</color>
+    <color name="dark_ground">#C19963</color>
+    <color name="dark_ghost">#383870</color>
+    <color name="dark_rock">#954B31</color>
+    <color name="dark_steel">#8FBDAA</color>
+    <!--endregion-->
 
 </resources>

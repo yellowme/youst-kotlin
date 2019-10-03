@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
     package="mx.yellowme.youst.challenges">
 
     <dist:module
@@ -16,15 +17,16 @@
             android:name=".ChallengesActivity"
             android:label="@string/app_name"
             android:theme="@style/SharedAppTheme.NoActionBar">
-            <intent-filter>
+            <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="www.yellowme.mx"
-                    android:scheme="https" />
+                    android:host="marioguillermo.github.io"
+                    android:scheme="https"
+                    android:path="/hello" />
             </intent-filter>
         </activity>
         <activity
