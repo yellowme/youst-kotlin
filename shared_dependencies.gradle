@@ -23,4 +23,6 @@ dependencies {
     implementation "com.squareup.moshi:moshi:${versions.moshi}"
 
     implementation "com.airbnb.android:lottie:${versions.lottie}"
+
+    implementation "com.github.PhilJay:MPAndroidChart:${versions.mpAndroidChart}"
 }

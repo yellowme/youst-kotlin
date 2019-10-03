@@ -1,1 +1,15 @@
-{}
+{
+  "type": "LINE",
+  "description": "Chart description",
+  "descriptionTextSize": 16,
+  "descriptionColor": "black",
+  "noDataText": "There's no data",
+  "backgroundColor": "white",
+  "gridBackgroundColor": "red",
+  "borderColor": "blue",
+  "borderWidth": 5.0,
+  "maxVisibleValueCount": 100,
+  "logEnabled": false,
+  "drawGridBackgroundEnabled": true,
+  "drawBarShadowEnabled": true
+}
