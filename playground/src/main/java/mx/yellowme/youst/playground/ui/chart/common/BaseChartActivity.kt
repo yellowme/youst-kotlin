@@ -1,8 +1,11 @@
 package mx.yellowme.youst.playground.ui.chart.common
 
 import android.os.Bundle
+import android.view.View
+import android.widget.LinearLayout
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.domain.ChartType
+import mx.yellowme.youst.playground.ui.chart.utils.ChartBuilder
 
 /**
  * Created by adrianleyvasanchez on 29,September,2019
@@ -26,9 +29,14 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
 
     var listener: OnChangeListener? = null
 
+    private var chart: View? = null
+
+    private var chartContainerView: LinearLayout? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setupChart()
+        bindView()
     }
 
     override fun onChangeChart(type: ChartType) {
@@ -36,7 +44,12 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
     }
 
     private fun setupChart() {
-        //TODO: To implement
+        chart = ChartBuilder.buildChart(this)
+    }
+
+    private fun bindView() {
+        chartContainerView = findViewById(chartContainerId)
+        chartContainerView?.addView(chart)
     }
 
 }

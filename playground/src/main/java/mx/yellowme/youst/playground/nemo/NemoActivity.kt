@@ -29,7 +29,6 @@ class NemoActivity : BaseActivity() {
         super.onStart()
 
         setProgress(true)
-
         //TODO: Must delegate action to another layer component (ViewModel or Presenter)
         navigator = FetchConfig(ConfigFakeRepository(), navigationHelm)
         navigator
