@@ -1,5 +1,7 @@
 package mx.yellowme.youst.core.components
 
+import mx.yellowme.youst.core.R
+
 enum class PaletteColors {
     PASTEL_RED,
     DARK_MOUNTAIN,
@@ -32,39 +34,39 @@ enum class PaletteColors {
     SKIRRET_GREEN,
     SYNTHETIC_PUMPKIN;
 
-    val hexColor: String
+    val hexColor: Int
         get() {
-            return when(this) {
-                PASTEL_RED -> Palette.Canadian.pastelRed
-                DARK_MOUNTAIN -> Palette.Canadian.darkMountainMeadow
-                JOUST_BLUE -> Palette.Canadian.joustBlue
-                NASU_PURPLE -> Palette.Canadian.nasuPurple
+            return when (this) {
+                PASTEL_RED -> R.attr.cerise
+                DARK_MOUNTAIN -> R.attr.turquoise
+                JOUST_BLUE -> R.attr.malibu
+                NASU_PURPLE -> R.attr.violet
 
-                PINK_GLAMOUR -> Palette.American.pinkGlamour
-                MINT_LEAF -> Palette.American.mintLeaf
-                ELECTRON_BLUE -> Palette.American.electronBlue
-                EXODUS_FRUIT -> Palette.American.exodusFruit
-                CHI_GONG -> Palette.American.chiGong
+                PINK_GLAMOUR -> R.attr.coral
+                MINT_LEAF -> R.attr.turquoise
+                ELECTRON_BLUE -> R.attr.malibu
+                EXODUS_FRUIT -> R.attr.violet
+                CHI_GONG -> R.attr.cerise
 
-                ICELAND_POPPY -> Palette.French.icelandPoppy
-                WATERFALL -> Palette.French.waterfall
-                FOREST_BLUES -> Palette.French.forestBlues
-                JALAPENO_RED -> Palette.French.jalapenoRed
+                ICELAND_POPPY -> R.attr.coral
+                WATERFALL -> R.attr.turquoise
+                FOREST_BLUES -> R.attr.royal
+                JALAPENO_RED -> R.attr.cerise
 
-                BRUSCHETTA_TOMATO -> Palette.Chinese.bruschettaTomato
-                UFO_GREEN -> Palette.Chinese.ufoGreen
-                CLEAR_CHILL -> Palette.Chinese.clearChill
-                SATURATED_SKY -> Palette.Chinese.saturatedSky
+                BRUSCHETTA_TOMATO -> R.attr.coral
+                UFO_GREEN -> R.attr.kiwi
+                CLEAR_CHILL -> R.attr.malibu
+                SATURATED_SKY -> R.attr.violet
 
-                TANGERINE -> Palette.Main.tangerine
-                TURQUOISE -> Palette.Main.turquoise
-                PETERRIVER -> Palette.Main.peterriver
-                AMETHYST -> Palette.Main.amethyst
-                NON_BLACK -> Palette.Main.nonBlack
-                MAZARINE_BLUE -> Palette.Main.mazarineBlue
-                MERCHANT_MARINE -> Palette.Main.merchantMarineBlue
-                SKIRRET_GREEN -> Palette.Main.skirretGreen
-                SYNTHETIC_PUMPKIN -> Palette.Main.syntheticPumpkin
+                TANGERINE -> R.attr.coral
+                TURQUOISE -> R.attr.turquoise
+                PETERRIVER -> R.attr.malibu
+                AMETHYST -> R.attr.orchid
+                NON_BLACK -> R.attr.typeDark
+                MAZARINE_BLUE -> R.attr.royal
+                MERCHANT_MARINE -> R.attr.royal
+                SKIRRET_GREEN -> R.attr.kiwi
+                SYNTHETIC_PUMPKIN -> R.attr.coral
             }
         }
 }

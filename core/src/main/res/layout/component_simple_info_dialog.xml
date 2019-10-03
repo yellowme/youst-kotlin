@@ -9,6 +9,7 @@
     android:paddingStart="24dp"
     android:paddingTop="8dp"
     android:paddingEnd="24dp"
+    android:background="?attr/backgroundItem"
     android:paddingBottom="16dp">
 
     <TextView
@@ -34,6 +35,6 @@
         style="@style/ButtonText.Blue"
         android:layout_gravity="end"
         android:text="@string/understood"
-        app:rippleColor="@color/blue" />
+        app:rippleColor="?attr/typeWater" />
 
 </LinearLayout>

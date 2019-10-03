@@ -3,29 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/materialCardView"
-    android:layout_width="match_parent"
     android:layout_height="@dimen/dimen_70"
     android:layout_margin="@dimen/dimen_4"
-    app:cardBackgroundColor="@color/white"
+    android:layout_width="match_parent"
+    app:cardBackgroundColor="?attr/backgroundItem"
     app:cardCornerRadius="@dimen/dimen_8"
     app:cardElevation="@dimen/dimen_2">
 
     <LinearLayout
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_width="match_parent"
         android:orientation="horizontal">
 
         <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/typeCheckBox"
-            android:layout_width="0dp"
+            android:fontFamily="@font/source_sans_pro"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_16"
             android:layout_marginStart="@dimen/dimen_16"
             android:layout_marginTop="@dimen/dimen_16"
-            android:layout_marginBottom="@dimen/dimen_16"
             android:layout_weight="0.5"
-            android:fontFamily="@font/source_sans_pro"
+            android:layout_width="0dp"
             android:minHeight="@dimen/dimen_38"
             android:padding="@dimen/dimen_6"
+            android:textColor="?attr/textTitle"
             android:textSize="@dimen/size_16"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,9 +35,9 @@
 
         <mx.yellowme.youst.core.components.TriangularView
             android:id="@+id/typeDecoration"
-            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
+            android:layout_width="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/typeCheckBox"

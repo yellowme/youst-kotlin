@@ -2,10 +2,12 @@ package mx.yellowme.youst.core.extensions
 
 import android.content.Context
 import android.content.res.Resources
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import mx.yellowme.youst.core.R
 
 // dp to pixels
 val Int.dp: Int get() = (this * Resources.getSystem().displayMetrics.density + 0.5f).toInt()
@@ -76,4 +78,16 @@ val View.isVisible
  */
 fun View.invisible() {
     visibility = View.INVISIBLE
+}
+
+fun Context.getThemeName(): Int {
+    val typedValue = TypedValue()
+    theme.resolveAttribute(R.attr.themeId, typedValue, true)
+    return typedValue.data
+}
+
+fun Int.toColor(context: Context): Int {
+    val typedValue = TypedValue()
+    context.theme.resolveAttribute(this, typedValue, true)
+    return typedValue.data
 }

@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/dimen_4"
     android:minHeight="@dimen/dimen_150"
-    app:cardBackgroundColor="@color/white"
+    app:cardBackgroundColor="?attr/backgroundItem"
     app:cardCornerRadius="@dimen/dimen_8"
     app:cardElevation="@dimen/dimen_2">
 
