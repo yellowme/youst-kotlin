@@ -16,10 +16,13 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
     abstract val chartContainerId: Int
 
     /**
-     * The @settingsJson String instance represent the path where
-     * is going to be located the chart settings file.
+     * The @settingsJsonPath String instance represent the path where
+     * is going to be located the chart settings file that will allow
+     * set all chart configurations, including style, structure
+     * and constraints. It's necessary define this variable in
+     * the child class.
      */
-    abstract val settingsJson: String
+    abstract val settingsJsonPath: String
 
     var listener: OnChangeListener? = null
 

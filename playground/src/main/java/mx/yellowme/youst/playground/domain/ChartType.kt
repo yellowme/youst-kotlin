@@ -8,7 +8,3 @@ enum class ChartType(name: String) {
     LINE("Line"),
     BUBBLE( "Bubble"),
 }
-
-fun getTypeByName(name: String): ChartType {
-    return ChartType.valueOf(name)
-}
