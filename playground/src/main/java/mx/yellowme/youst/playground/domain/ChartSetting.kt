@@ -1,7 +1,8 @@
 package mx.yellowme.youst.playground.domain
 
 /**
- * Created by adrianleyvasanchez on 03,October,2019
+ * @author adrianleyvasanchez
+ * @since 03,October,2019
  */
 data class ChartSetting(
     val type: String,

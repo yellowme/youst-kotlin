@@ -12,7 +12,8 @@ import mx.yellowme.youst.playground.domain.ChartType
 import mx.yellowme.youst.core.R as coreR
 
 /**
- * Created by adrianleyvasanchez on 30,September,2019
+ * @author adrianleyvasanchez
+ * @since 30,September,2019
  */
 interface ChartSelectorActionListener {
     fun onChangeAction(checkedType: ChartType)
