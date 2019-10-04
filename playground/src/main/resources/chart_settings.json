@@ -4,7 +4,7 @@
   "descriptionTextSize": 20.0,
   "descriptionColor": "black",
   "noDataText": "There's no data",
-  "backgroundColor": "guitar_gold",
+  "backgroundColor": "black",
   "gridBackgroundColor": "yellow",
   "borderColor": "blue",
   "borderWidth": 5.0,

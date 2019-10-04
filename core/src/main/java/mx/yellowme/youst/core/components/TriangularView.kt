@@ -13,7 +13,8 @@ import mx.yellowme.youst.core.extensions.consumeTypeArray
 
 /**
  * youst-kotlin
- * Created by Mario Guillermo on 2019-07-17.
+ * @author Mario Guillermo
+ * @since 2019-07-17.
  */
 class TriangularView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0

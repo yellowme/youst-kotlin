@@ -9,7 +9,8 @@ import mx.yellowme.youst.playground.domain.ChartType
 import mx.yellowme.youst.playground.ui.chart.utils.ChartBuilder
 
 /**
- * Created by adrianleyvasanchez on 29,September,2019
+ * @author adrianleyvasanchez
+ * @since 29,September,2019
  */
 abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
 

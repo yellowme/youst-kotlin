@@ -10,7 +10,8 @@ import mx.yellowme.youst.playground.domain.ChartSetting
 import mx.yellowme.youst.playground.domain.ChartType
 
 /**
- * Created by adrianleyvasanchez on 03,October,2019
+ * @author adrianleyvasanchez
+ * @since 03,October,2019
  */
 object ChartBuilder {
 
@@ -39,15 +40,10 @@ object ChartBuilder {
     private fun setConfiguration(settings: ChartSetting?, chart: Any?, activity: AppCompatActivity): Any? {
         with(chart){
             settings?.let {
-                when (this) {
-                    is BarChart -> return ChartStylizer.applyStyle(it, this, activity)
-                    is LineChart -> return ChartStylizer.applyStyle(it, this, activity)
-                    is BubbleChart -> return ChartStylizer.applyStyle(it, this, activity)
-                    else -> { }
-                }
+                return ChartStylizer.applyStyle(it, this, activity)
             }
         }
-        return this
+        return chart
     }
 
 }

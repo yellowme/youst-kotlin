@@ -8,7 +8,8 @@ import mx.yellowme.youst.playground.ui.chart.common.BaseChartActivity
 import mx.yellowme.youst.playground.components.ChartSelectorActionListener
 
 /**
- * Created by adrianleyvasanchez on 29,September,2019
+ * @author adrianleyvasanchez
+ * @since 29,September,2019
  */
 class ChartViewActivity : BaseChartActivity() {
 

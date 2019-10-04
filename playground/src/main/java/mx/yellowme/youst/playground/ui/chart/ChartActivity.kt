@@ -9,7 +9,8 @@ import mx.yellowme.youst.playground.components.AppHeroActionListener
 import mx.yellowme.youst.playground.ui.chart.screens.ChartViewActivity
 
 /**
- * Created by adrianleyvasanchez on 27,September,2019
+ * @author adrianleyvasanchez
+ * @since 27,September,2019
  */
 class ChartActivity : BaseActivity() {
 
