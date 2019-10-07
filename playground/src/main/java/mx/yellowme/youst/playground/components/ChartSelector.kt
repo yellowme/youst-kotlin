@@ -66,12 +66,21 @@ class ChartSelector @JvmOverloads constructor(
             }
         }
 
+    fun checkPredefinedOption(id: Int) {
+        when (id) {
+            firstOption.id -> firstOption.isChecked = true
+            secondOption.id -> secondOption.isChecked = true
+            thirdOption.id -> thirdOption.isChecked = true
+        }
+    }
+
     init {
         inflate(R.layout.component_chart_selector, context)
         attrs?.consumeTypeArray(context, R.styleable.ChartSelector) {
             backgroundColorRes = getResourceId(R.styleable.ChartSelector_selectorBackgroundColor, coreR.color.white)
             optionsTextColorRes = getResourceId(R.styleable.ChartSelector_selectorOptionsTextColor, coreR.color.guitar_black)
         }
+
 
         radioGroup.setOnCheckedChangeListener { _, checkedId ->
             when(checkedId) {

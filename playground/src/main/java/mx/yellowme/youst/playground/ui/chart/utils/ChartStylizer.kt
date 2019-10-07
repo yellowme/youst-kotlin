@@ -13,9 +13,9 @@ object ChartStylizer {
 
     fun applyStyle(
         settings: ChartSetting,
-        chart: Any?,
+        chart: BarLineChartBase<*>?,
         activity: AppCompatActivity
-    ): Any {
+    ): BarLineChartBase<*>? {
         return (chart as BarLineChartBase<*>)
             .apply {
                 settings.let {

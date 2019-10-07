@@ -9,7 +9,7 @@
         android:id="@+id/appHero"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:heroBackgroundColor="@color/guitar_gold"
+        app:heroBackgroundColor="@color/red"
         app:heroMessageColor="@color/white"
         app:heroMainActionLabel="@string/yes" />
 

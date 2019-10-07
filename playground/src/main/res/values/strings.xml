@@ -42,5 +42,6 @@
     <string name="yes">Yes</string>
 
     <string name="screen_chart">Welcome, yellow knight.\nWould you want to try chart displaying?</string>
+    <string name="showcases_label">Chart showcases</string>
 
 </resources>
