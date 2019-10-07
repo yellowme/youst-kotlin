@@ -1,10 +1,16 @@
 package mx.yellowme.youst.playground.ui.chart.common
 
 import android.os.Bundle
-import android.view.View
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.widget.LinearLayout
+import com.github.mikephil.charting.charts.BarChart
+import com.github.mikephil.charting.charts.BarLineChartBase
+import com.github.mikephil.charting.charts.BubbleChart
+import com.github.mikephil.charting.charts.LineChart
+import com.github.mikephil.charting.data.*
 import mx.yellowme.youst.core.hooks.BaseActivity
+import mx.yellowme.youst.playground.R
+import mx.yellowme.youst.playground.domain.ChartEntry
 import mx.yellowme.youst.playground.domain.ChartType
 import mx.yellowme.youst.playground.ui.chart.utils.ChartBuilder
 
@@ -31,9 +37,16 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
 
     var listener: OnChangeListener? = null
 
-    private var chart: View? = null
-
     private var chartContainerView: LinearLayout? = null
+
+    private var listOfEntries: ArrayList<ChartEntry>? = ArrayList()
+
+    private var chart: BarLineChartBase<*>? = null
+
+    private var chartData: BarLineScatterCandleBubbleData<*>? = null
+
+    private var chartDataSet: Any? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,43 +56,48 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
 
     override fun onChangeChart(type: ChartType) {
         //TODO: To implement
-        /*
-        when (type) {
-            ChartType.BAR -> {
-                val entries = ArrayList<BarEntry>()
-                entries.add(BarEntry(5f, 10f))
-                entries.add(BarEntry(10f, 20f))
-                entries.add(BarEntry(15f, 30f))
-                entries.add(BarEntry(20f, 40f))
-                val dataSet = BarDataSet(entries, "Label")
-                val barData = BarData(dataSet)
-                (chart as BarChart).data = barData
-                chart?.invalidate()
-            }
-            ChartType.LINE -> {
-                val entries = ArrayList<Entry>()
-                entries.add(Entry(5f, 10f))
-                entries.add(Entry(10f, 20f))
-                entries.add(Entry(15f, 30f))
-                entries.add(Entry(20f, 40f))
-                val dataSet = LineDataSet(entries, "Label")
-                val lineData = LineData(dataSet)
-                (chart as LineChart).data = lineData
-                chart?.invalidate()
-            }
-            ChartType.BUBBLE -> {
-                val entries = ArrayList<BubbleEntry>()
-                entries.add(BubbleEntry(5f, 10f, 5f))
-                entries.add(BubbleEntry(10f, 20f, 5f))
-                entries.add(BubbleEntry(15f, 30f, 5f))
-                entries.add(BubbleEntry(20f, 40f, 5f))
-                val dataSet = BubbleDataSet(entries, "Label")
-                val bubbleData = BubbleData(dataSet)
-                (chart as BubbleChart).data = bubbleData
-                chart?.invalidate()
+    }
+
+    override fun onChangeDataSet(entry: ChartEntry) {
+        val chartEntries = ArrayList<Entry>()
+        val label = getString(R.string.showcases_label)
+
+        listOfEntries?.let {
+            it.add(entry)
+            for (item in it) {
+                when (chart) {
+                    is BarChart -> {
+                        chartEntries.add(BarEntry(item.x, item.y))
+                        BarDataSet(chartEntries.toList() as List<BarEntry>, label).run {
+                            chartDataSet = this
+                            chartData = BarData(this)
+                        }
+                    }
+                    is LineChart -> {
+                        chartEntries.add(Entry(item.x, item.y))
+                        LineDataSet(chartEntries.toList(), label).run {
+                            chartDataSet = this
+                            chartData = LineData(this)
+                        }
+                    }
+                    is BubbleChart -> {
+                        chartEntries.add(BubbleEntry(item.x, item.y, item.z ?: 0f))
+                        BubbleDataSet(chartEntries.toList() as List<BubbleEntry>, label).run {
+                            chartDataSet = this
+                            chartData = BubbleData(this)
+                        }
+                    }
+                }
+                chart?.run {
+                    data = chartData
+                    invalidate()
+                }
             }
         }
-        */
+    }
+
+    private fun bindView() {
+        chartContainerView = findViewById(chartContainerId)
     }
 
     private fun setupChart() {
@@ -90,10 +108,6 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
             it.layoutParams.height = MATCH_PARENT
             it.invalidate()
         }
-    }
-
-    private fun bindView() {
-        chartContainerView = findViewById(chartContainerId)
     }
 
 }
