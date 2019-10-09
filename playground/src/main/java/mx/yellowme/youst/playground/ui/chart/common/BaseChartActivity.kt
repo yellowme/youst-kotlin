@@ -13,6 +13,7 @@ import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.domain.ChartEntry
 import mx.yellowme.youst.playground.domain.ChartType
 import mx.yellowme.youst.playground.ui.chart.utils.ChartBuilder
+import mx.yellowme.youst.playground.ui.chart.utils.DataSetConverter.convertDataSetList
 
 /**
  * @author adrianleyvasanchez
@@ -41,12 +42,9 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
 
     private var listOfEntries: ArrayList<ChartEntry>? = ArrayList()
 
-    private var chart: BarLineChartBase<*>? = null
+    protected var chart: BarLineChartBase<*>? = null
 
-    private var chartData: BarLineScatterCandleBubbleData<*>? = null
-
-    private var chartDataSet: Any? = null
-
+    protected val chartLabel: Int = R.string.showcases_label
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,45 +53,18 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
     }
 
     override fun onChangeChart(type: ChartType) {
-        //TODO: To implement
+        chart = ChartBuilder.buildChartByType(this, type)
+        chartContainerView?.run {
+            removeAllViews()
+            addView(chart)
+        }
+        adjustChartSize()
+        updateDataSet()
     }
 
     override fun onChangeDataSet(entry: ChartEntry) {
-        val chartEntries = ArrayList<Entry>()
-        val label = getString(R.string.showcases_label)
-
-        listOfEntries?.let {
-            it.add(entry)
-            for (item in it) {
-                when (chart) {
-                    is BarChart -> {
-                        chartEntries.add(BarEntry(item.x, item.y))
-                        BarDataSet(chartEntries.toList() as List<BarEntry>, label).run {
-                            chartDataSet = this
-                            chartData = BarData(this)
-                        }
-                    }
-                    is LineChart -> {
-                        chartEntries.add(Entry(item.x, item.y))
-                        LineDataSet(chartEntries.toList(), label).run {
-                            chartDataSet = this
-                            chartData = LineData(this)
-                        }
-                    }
-                    is BubbleChart -> {
-                        chartEntries.add(BubbleEntry(item.x, item.y, item.z ?: 0f))
-                        BubbleDataSet(chartEntries.toList() as List<BubbleEntry>, label).run {
-                            chartDataSet = this
-                            chartData = BubbleData(this)
-                        }
-                    }
-                }
-                chart?.run {
-                    data = chartData
-                    invalidate()
-                }
-            }
-        }
+        listOfEntries?.add(entry)
+        updateDataSet()
     }
 
     private fun bindView() {
@@ -103,10 +74,49 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
     private fun setupChart() {
         chart = ChartBuilder.buildChart(this)
         chartContainerView?.addView(chart)
+        adjustChartSize()
+    }
+
+    private fun adjustChartSize() {
         chart?.let {
             it.layoutParams.width = MATCH_PARENT
             it.layoutParams.height = MATCH_PARENT
             it.invalidate()
+        }
+    }
+
+    private fun updateDataSet() {
+        when (chart) {
+            is BarChart -> {
+                convertDataSetList<BarDataSet>(listOfEntries ?: ArrayList(), ChartType.BAR)
+                    .let {
+                        it.label = getString(chartLabel)
+                        (chart as BarChart).run {
+                            data = BarData(it)
+                            invalidate()
+                        }
+                    }
+            }
+            is LineChart -> {
+                convertDataSetList<LineDataSet>(listOfEntries ?: ArrayList(), ChartType.LINE)
+                    .let {
+                        it.label = getString(chartLabel)
+                        (chart as LineChart).run {
+                            data = LineData(it)
+                            invalidate()
+                        }
+                    }
+            }
+            is BubbleChart -> {
+                convertDataSetList<BubbleDataSet>(listOfEntries ?: ArrayList(), ChartType.BUBBLE)
+                    .let {
+                        it.label = getString(chartLabel)
+                        (chart as BubbleChart).run {
+                            data = BubbleData(it)
+                            invalidate()
+                        }
+                    }
+            }
         }
     }
 

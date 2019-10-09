@@ -5,7 +5,7 @@ package mx.yellowme.youst.playground.domain
  * @since 03,October,2019
  */
 data class ChartSetting(
-    val type: String,
+    var type: String,
     val description: String,
     val descriptionTextSize: Float,
     val descriptionColor: String,

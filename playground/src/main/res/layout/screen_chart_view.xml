@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight=".1"
-        app:selectorBackgroundColor="@color/red"
+        app:selectorBackgroundColor="@color/guitar_gold"
         app:selectorOptionsTextColor="@color/white" />
 
 </LinearLayout>

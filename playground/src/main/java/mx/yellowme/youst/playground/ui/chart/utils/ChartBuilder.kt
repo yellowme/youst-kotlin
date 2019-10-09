@@ -1,6 +1,5 @@
 package mx.yellowme.youst.playground.ui.chart.utils
 
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.charts.BarLineChartBase
@@ -19,6 +18,17 @@ object ChartBuilder {
     fun buildChart(activity: AppCompatActivity): BarLineChartBase<*>? {
         with(activity) {
             parseSettingsJson(this).run {
+                instanceTypeChart(this, activity).also {
+                    return setConfiguration(this, it, activity)
+                }
+            }
+        }
+    }
+
+    fun buildChartByType(activity: AppCompatActivity, type: ChartType): BarLineChartBase<*>? {
+        with(activity) {
+            parseSettingsJson(this).run {
+                this?.type = type.toString()
                 instanceTypeChart(this, activity).also {
                     return setConfiguration(this, it, activity)
                 }

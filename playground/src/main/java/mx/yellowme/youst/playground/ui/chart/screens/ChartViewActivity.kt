@@ -49,20 +49,18 @@ class ChartViewActivity : BaseChartActivity() {
         }
     }
 
-    private fun getPredefinedTypeChartId(): Int {
+    private fun getPredefinedTypeChartId(): Int =
         loadJsonObject<ChartSetting>("chart_settings.json")?.let {
-            return when(ChartType.valueOf(it.type)) {
+            when(ChartType.valueOf(it.type)) {
                 ChartType.BAR -> firstOption.id
                 ChartType.LINE -> secondOption.id
                 ChartType.BUBBLE -> thirdOption.id
             }
-        }
-        return 0
-    }
+        } ?: 0
 
     //TODO: Must delegate action to another layer component (ViewModel or Presenter)
     private fun getData() {
-        ChartFakeRepository().getData(true ,
+        ChartFakeRepository().getData(true,
             object : SingleItemCallback<ChartEntry> {
                 override fun onServerError(message: String) {
                     Log.d("tag", message)
