@@ -1,5 +1,5 @@
 {
-  "type": "BAR",
+  "type": "LINE",
   "description": "Chart description",
   "descriptionTextSize": 16.0,
   "descriptionColor": "black",
