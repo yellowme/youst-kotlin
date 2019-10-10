@@ -83,7 +83,7 @@ fun View.invisible() {
 fun Context.getThemeName(): Int {
     val typedValue = TypedValue()
     theme.resolveAttribute(R.attr.themeId, typedValue, true)
-    return typedValue.data
+    return typedValue.resourceId
 }
 
 fun Int.toColor(context: Context): Int {

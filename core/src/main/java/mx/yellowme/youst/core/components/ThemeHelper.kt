@@ -11,7 +11,7 @@ object SharedApp {
 }
 
 object ThemeConstants {
-    const val STORAGE_NAME = "THEME_PREFERENCES"
+    const val THEME_PREFERENCES = "THEME_PREFERENCES"
     const val IS_DARK = "IS_DARK"
     const val LIGHT = "light"
     const val DARK = "dark"

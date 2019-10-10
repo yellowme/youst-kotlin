@@ -3,7 +3,7 @@
     <!--region Base application theme. -->
 
     <style name="SharedAppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <item name="themeId">0</item>
+        <item name="themeId">@id/theme</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -52,7 +52,6 @@
     </style>
 
     <style name="SharedAppTheme.Dark" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <item name="themeId">1</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/white</item>
@@ -103,7 +102,7 @@
     </style>
 
     <style name="SharedAppTheme.NoActionBar" parent="LightTheme">
-        <item name="themeId">2</item>
+        <item name="themeId">@id/theme_no_action_bar</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowBackground">@color/white</item>
@@ -111,7 +110,6 @@
     </style>
 
     <style name="SharedAppTheme.NoActionBar.Dark" parent="DarkTheme">
-        <item name="themeId">3</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowBackground">@color/dark_white</item>
@@ -119,15 +117,16 @@
     </style>
 
     <style name="SharedAppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="themeId">4</item>
+        <item name="themeId">@id/theme_app_overlay</item>
     </style>
 
     <style name="SharedAppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
-        <item name="themeId">5</item>
+        <item name="themeId">@id/theme_pop_up_overlay</item>
     </style>
 
     <style name="SharedAppTheme.Translucent">
-        <item name="themeId">6</item>
+        <item name="themeId">@id/theme_translucent</item>
+
         <!-- using a semi-transparent window background for the drag-back gesture -->
         <item name="android:windowBackground">@color/scrim</item>
         <item name="android:colorBackgroundCacheHint">@null</item>

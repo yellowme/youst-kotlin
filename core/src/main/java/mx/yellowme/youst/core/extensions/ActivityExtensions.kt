@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import mx.yellowme.youst.core.R
 
 //region Start Activity
@@ -160,5 +161,17 @@ inline fun <reified T : Any> Activity.launch(
 fun <T : Any> newIntent(context: Context, toClass: Class<T>): Intent = Intent(context, toClass)
 
 inline fun <reified T : Any> newIntent(context: Context): Intent = newIntent(context, T::class.java)
+
+//endregion
+
+//region Preferences
+
+fun Activity.getBooleanFrom(
+    preferenceName: String,
+    key: String,
+    default: Boolean = false
+): Boolean {
+    return getSharedPreferences(preferenceName, 0).getBoolean(key, default)
+}
 
 //endregion

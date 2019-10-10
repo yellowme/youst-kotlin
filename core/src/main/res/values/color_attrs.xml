@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <attr name="themeId" format="integer" />
+    <attr name="themeId" format="reference" />
     <attr name="textColor" format="reference" />
     <attr name="typeAll" format="reference" />
     <attr name="typeBug" format="reference" />
