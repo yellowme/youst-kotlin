@@ -7,8 +7,9 @@ import mx.yellowme.youst.R
 import mx.yellowme.youst.core.components.ThemeConstants.DARK
 import mx.yellowme.youst.core.components.ThemeConstants.IS_DARK
 import mx.yellowme.youst.core.components.ThemeConstants.LIGHT
-import mx.yellowme.youst.core.components.ThemeConstants.STORAGE_NAME
+import mx.yellowme.youst.core.components.ThemeConstants.THEME_PREFERENCES
 import mx.yellowme.youst.core.components.ThemeConstants.THEME_QUERY
+import mx.yellowme.youst.core.extensions.getBooleanFrom
 import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.core.hooks.animations.setListener
@@ -23,14 +24,11 @@ class SplashActivity : BaseActivity() {
         handleUri()
         super.onCreate(savedInstanceState)
         splashAnimationView?.apply {
-            val rawRes =
-                if (getSharedPreferences(STORAGE_NAME, 0)
-                        .getBoolean(IS_DARK, false)
-                ) {
-                    R.raw.logo_reveal_dark
-                } else {
-                    R.raw.logo_reveal
-                }
+            val rawRes = if (getBooleanFrom(THEME_PREFERENCES, IS_DARK)) {
+                R.raw.logo_reveal_dark
+            } else {
+                R.raw.logo_reveal
+            }
             setAnimation(rawRes)
             useHardwareAcceleration()
             setListener {
@@ -41,14 +39,18 @@ class SplashActivity : BaseActivity() {
         }
     }
 
-    private fun handleUri(){
+    private fun handleUri() {
         val data: Uri? = intent?.data
-        if (data?.getQueryParameter(THEME_QUERY) == DARK) {
-            getSharedPreferences(STORAGE_NAME, 0).edit()
-                .putBoolean(IS_DARK, true).apply()
-        } else if (data?.getQueryParameter(THEME_QUERY) == LIGHT) {
-            getSharedPreferences(STORAGE_NAME, 0).edit()
-                .putBoolean(IS_DARK, false).apply()
+        val isDark = when (data?.getQueryParameter(THEME_QUERY)) {
+            DARK -> true
+            LIGHT -> false
+            else -> null
+        }
+        isDark?.let {
+            getSharedPreferences(THEME_PREFERENCES, 0)
+                .edit()
+                .putBoolean(IS_DARK, it)
+                .apply()
         }
     }
 }

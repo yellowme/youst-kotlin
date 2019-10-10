@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="theme" type="id" />
+    <item name="theme_no_action_bar" type="id" />
+    <item name="theme_app_overlay" type="id" />
+    <item name="theme_pop_up_overlay" type="id" />
+    <item name="theme_translucent" type="id" />
+</resources>
