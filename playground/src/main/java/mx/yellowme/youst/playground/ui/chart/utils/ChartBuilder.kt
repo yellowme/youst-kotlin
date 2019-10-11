@@ -1,6 +1,6 @@
 package mx.yellowme.youst.playground.ui.chart.utils
 
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentActivity
 import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.charts.BarLineChartBase
 import com.github.mikephil.charting.charts.BubbleChart
@@ -15,7 +15,7 @@ import mx.yellowme.youst.playground.domain.ChartType
  */
 object ChartBuilder {
 
-    fun buildChart(activity: AppCompatActivity): BarLineChartBase<*>? {
+    fun buildChart(activity: FragmentActivity): BarLineChartBase<*>? {
         with(activity) {
             parseSettingsJson(this).run {
                 instanceTypeChart(this, activity).also {
@@ -25,7 +25,7 @@ object ChartBuilder {
         }
     }
 
-    fun buildChartByType(activity: AppCompatActivity, type: ChartType): BarLineChartBase<*>? {
+    fun buildChartByType(activity: FragmentActivity, type: ChartType): BarLineChartBase<*>? {
         with(activity) {
             parseSettingsJson(this).run {
                 this?.type = type.toString()
@@ -36,11 +36,11 @@ object ChartBuilder {
         }
     }
 
-    private fun parseSettingsJson(activity: AppCompatActivity): ChartSetting? {
+    private fun parseSettingsJson(activity: FragmentActivity): ChartSetting? {
         return activity.loadJsonObject("chart_settings.json")
     }
 
-    private fun instanceTypeChart(settings: ChartSetting?, activity: AppCompatActivity): BarLineChartBase<*>?  {
+    private fun instanceTypeChart(settings: ChartSetting?, activity: FragmentActivity): BarLineChartBase<*>?  {
         return when (ChartType.valueOf(settings?.type ?: "")) {
             ChartType.BAR -> BarChart(activity)
             ChartType.LINE -> LineChart(activity)
@@ -48,7 +48,7 @@ object ChartBuilder {
         }
     }
 
-    private fun setConfiguration(settings: ChartSetting?, chart: BarLineChartBase<*>?, activity: AppCompatActivity): BarLineChartBase<*>? {
+    private fun setConfiguration(settings: ChartSetting?, chart: BarLineChartBase<*>?, activity: FragmentActivity): BarLineChartBase<*>? {
         with(chart){
             settings?.let {
                 return ChartStylizer.applyStyle(it, this, activity)

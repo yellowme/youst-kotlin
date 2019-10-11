@@ -70,16 +70,6 @@
                 android:value=".PlaygroundActivity" />
         </activity>
 
-        <activity
-            android:name=".ui.chart.screens.ChartViewActivity"
-            android:parentActivityName=".PlaygroundActivity"
-            android:theme="@style/SharedAppTheme.NoActionBar.Translucent">
-
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".PlaygroundActivity" />
-        </activity>
-
         <!--endregion-->
 
     </application>
