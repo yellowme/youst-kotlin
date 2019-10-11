@@ -1,19 +1,18 @@
 package mx.yellowme.youst.playground.ui.chart.screens
 
-import android.os.Bundle
 import android.util.Log
 import kotlinx.android.synthetic.main.screen_chart_view.*
 import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.data.ChartFakeRepository
 import mx.yellowme.youst.playground.data.SingleItemCallback
 import mx.yellowme.youst.playground.domain.ChartEntry
-import mx.yellowme.youst.playground.ui.chart.common.BaseChartActivity
+import mx.yellowme.youst.playground.ui.chart.common.BaseChartFragment
 
 /**
  * @author adrianleyvasanchez
  * @since 29,September,2019
  */
-class ChartViewActivity : BaseChartActivity() {
+class ChartViewFragment : BaseChartFragment() {
 
     //Region attributes
 
@@ -25,10 +24,10 @@ class ChartViewActivity : BaseChartActivity() {
 
     //endregion
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onViewReady() {
+        super.onViewReady()
         listener = this
-        chartSelector?.setup(this, listener!!)
+        chartSelector?.setup(activity!!, listener!!)
         repeat(20) {
             getData()
         }
@@ -36,7 +35,7 @@ class ChartViewActivity : BaseChartActivity() {
 
     //TODO: Must delegate action to another layer component (ViewModel or Presenter)
     private fun getData() {
-        ChartFakeRepository().getData(true,
+        ChartFakeRepository().getData(false,
             object : SingleItemCallback<ChartEntry> {
                 override fun onServerError(message: String) {
                     Log.d("tag", message)

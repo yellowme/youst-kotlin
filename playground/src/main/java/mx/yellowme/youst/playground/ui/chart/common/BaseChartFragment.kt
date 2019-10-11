@@ -1,27 +1,25 @@
 package mx.yellowme.youst.playground.ui.chart.common
 
-import android.os.Bundle
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.charts.BarLineChartBase
 import com.github.mikephil.charting.charts.BubbleChart
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.data.*
-import mx.yellowme.youst.core.hooks.BaseActivity
+import mx.yellowme.youst.core.hooks.BaseFragment
 import mx.yellowme.youst.playground.R
-import mx.yellowme.youst.core.R as coreR
 import mx.yellowme.youst.playground.domain.ChartEntry
 import mx.yellowme.youst.playground.domain.ChartType
 import mx.yellowme.youst.playground.ui.chart.utils.ChartBuilder
 import mx.yellowme.youst.playground.ui.chart.utils.DataSetConverter.convertDataSetList
+import mx.yellowme.youst.core.R as coreR
 
 /**
  * @author adrianleyvasanchez
  * @since 29,September,2019
  */
-abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
+abstract class BaseChartFragment : BaseFragment(), OnChangeListener {
 
     /**
      * The @chartContainerId Int instance represents the Layout id
@@ -40,7 +38,7 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
 
     var listener: OnChangeListener? = null
 
-    private var chartContainerView: LinearLayout? = null
+    private var chartContainerView: ViewGroup? = null
 
     private var listOfEntries: ArrayList<ChartEntry>? = ArrayList()
 
@@ -48,14 +46,13 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
 
     protected val chartLabel: Int = R.string.showcases_label
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onViewReady() {
         bindView()
         setupChart()
     }
 
     override fun onChangeChart(type: ChartType) {
-        chart = ChartBuilder.buildChartByType(this, type)
+        chart = ChartBuilder.buildChartByType(activity!!, type)
         chart?.let {
             chartContainerView?.run {
                 removeAllViews()
@@ -72,11 +69,11 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
     }
 
     private fun bindView() {
-        chartContainerView = findViewById(chartContainerId)
+        chartContainerView = activity?.findViewById<ViewGroup>(chartContainerId)
     }
 
     private fun setupChart() {
-        chart = ChartBuilder.buildChart(this)
+        chart = ChartBuilder.buildChart(activity!!)
         chart?.let {
             chartContainerView?.addView(it)
             it.adjustChartSize()
@@ -89,7 +86,7 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
                 convertDataSetList<BarDataSet>(listOfEntries ?: ArrayList(), ChartType.BAR)
                     .let {
                         it.label = getString(chartLabel)
-                        it.color = ContextCompat.getColor(this, coreR.color.yellow)
+                        it.color = ContextCompat.getColor(context!!, coreR.color.yellow)
                         (chart as BarChart).run {
                             data = BarData(it)
                             invalidate()
@@ -100,7 +97,7 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
                 convertDataSetList<LineDataSet>(listOfEntries ?: ArrayList(), ChartType.LINE)
                     .let {
                         it.label = getString(chartLabel)
-                        it.color = ContextCompat.getColor(this, coreR.color.yellow)
+                        it.color = ContextCompat.getColor(context!!, coreR.color.yellow)
                         (chart as LineChart).run {
                             data = LineData(it)
                             invalidate()
@@ -111,7 +108,7 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
                 convertDataSetList<BubbleDataSet>(listOfEntries ?: ArrayList(), ChartType.BUBBLE)
                     .let {
                         it.label = getString(chartLabel)
-                        it.color = ContextCompat.getColor(this, coreR.color.yellow)
+                        it.color = ContextCompat.getColor(context!!, coreR.color.yellow)
                         (chart as BubbleChart).run {
                             data = BubbleData(it)
                             invalidate()

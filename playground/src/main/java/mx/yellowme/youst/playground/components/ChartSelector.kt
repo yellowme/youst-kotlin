@@ -3,8 +3,8 @@ package mx.yellowme.youst.playground.components
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.LinearLayout
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentActivity
 import kotlinx.android.synthetic.main.component_chart_selector.view.*
 import mx.yellowme.youst.core.extensions.consumeTypeArray
 import mx.yellowme.youst.core.extensions.inflate
@@ -48,7 +48,7 @@ class ChartSelector @JvmOverloads constructor(
             }
         }
 
-    fun setup(activity: AppCompatActivity, listener: OnChangeListener) {
+    fun setup(activity: FragmentActivity, listener: OnChangeListener) {
         this.listener = listener
         activity.loadJsonObject<ChartSetting>("chart_settings.json")?.let {
             when(ChartType.valueOf(it.type)) {

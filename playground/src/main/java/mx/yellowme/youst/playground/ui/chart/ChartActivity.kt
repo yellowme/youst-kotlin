@@ -2,11 +2,10 @@ package mx.yellowme.youst.playground.ui.chart
 
 import android.os.Bundle
 import kotlinx.android.synthetic.main.screen_chart.*
-import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.components.AppHeroActionListener
-import mx.yellowme.youst.playground.ui.chart.screens.ChartViewActivity
+import mx.yellowme.youst.playground.ui.chart.screens.ChartViewFragment
 
 /**
  * @author adrianleyvasanchez
@@ -28,7 +27,10 @@ class ChartActivity : BaseActivity() {
             message = getString(R.string.screen_chart)
             mainActionListener = object : AppHeroActionListener {
                 override fun onClickAction() {
-                    launch<ChartViewActivity>(finishCaller = true)
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(android.R.id.content, ChartViewFragment())
+                        .commit()
                 }
             }
         }

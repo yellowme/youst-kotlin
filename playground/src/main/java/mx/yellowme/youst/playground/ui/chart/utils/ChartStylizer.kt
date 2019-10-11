@@ -1,7 +1,7 @@
 package mx.yellowme.youst.playground.ui.chart.utils
 
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentActivity
 import com.github.mikephil.charting.charts.BarLineChartBase
 import com.github.mikephil.charting.components.Description
 import mx.yellowme.youst.playground.domain.ChartSetting
@@ -16,7 +16,7 @@ object ChartStylizer {
     fun applyStyle(
         settings: ChartSetting,
         chart: BarLineChartBase<*>?,
-        activity: AppCompatActivity
+        activity: FragmentActivity
     ): BarLineChartBase<*>? {
         return (chart as BarLineChartBase<*>)
             .apply {
@@ -41,7 +41,7 @@ object ChartStylizer {
             }
     }
 
-    private fun getColorByName(name: String, activity: AppCompatActivity): Int {
+    private fun getColorByName(name: String, activity: FragmentActivity): Int {
         activity.run {
             resources.let {
                 val colorId = it.getIdentifier(name, "color", packageName)
