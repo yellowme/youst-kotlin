@@ -1,6 +1,7 @@
 package mx.yellowme.youst.playground.ui.chart.common
 
 import android.os.Bundle
+import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import com.github.mikephil.charting.charts.BarChart
@@ -8,7 +9,6 @@ import com.github.mikephil.charting.charts.BarLineChartBase
 import com.github.mikephil.charting.charts.BubbleChart
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.data.*
-import mx.yellowme.youst.core.extensions.adjustChartSize
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.core.R as coreR
@@ -121,4 +121,16 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
         }
     }
 
+}
+
+/**
+ * The chart size doesn't adjust to parent size automatically, so
+ * this method has to be used to match the chart size with the parent size
+ * when it's added into the parent view.
+ * @return Unit
+ */
+fun BarLineChartBase<*>.adjustChartSize() {
+    layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT
+    layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT
+    invalidate()
 }
