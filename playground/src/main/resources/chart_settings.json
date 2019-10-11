@@ -1,15 +1,15 @@
 {
   "type": "LINE",
-  "description": "Chart description",
+  "description": "Dynamic chart builder",
   "descriptionTextSize": 16.0,
   "descriptionColor": "black",
-  "noDataText": "There's no data",
+  "noDataText": "No data to display",
   "backgroundColor": "white",
   "gridBackgroundColor": "white",
-  "borderColor": "blue",
-  "borderWidth": 5.0,
+  "borderColor": "red",
+  "borderWidth": 10.0,
   "maxVisibleValueCount": 100,
   "logEnabled": false,
-  "drawGridBackgroundEnabled": true,
+  "drawGridBackgroundEnabled": false,
   "drawBarShadowEnabled": true
 }
