@@ -1,15 +1,17 @@
 package mx.yellowme.youst.playground.ui.chart.common
 
 import android.os.Bundle
-import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.widget.LinearLayout
+import androidx.core.content.ContextCompat
 import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.charts.BarLineChartBase
 import com.github.mikephil.charting.charts.BubbleChart
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.data.*
+import mx.yellowme.youst.core.extensions.adjustChartSize
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.R
+import mx.yellowme.youst.core.R as coreR
 import mx.yellowme.youst.playground.domain.ChartEntry
 import mx.yellowme.youst.playground.domain.ChartType
 import mx.yellowme.youst.playground.ui.chart.utils.ChartBuilder
@@ -54,12 +56,14 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
 
     override fun onChangeChart(type: ChartType) {
         chart = ChartBuilder.buildChartByType(this, type)
-        chartContainerView?.run {
-            removeAllViews()
-            addView(chart)
+        chart?.let {
+            chartContainerView?.run {
+                removeAllViews()
+                addView(it)
+            }
+            it.adjustChartSize()
+            updateDataSet()
         }
-        adjustChartSize()
-        updateDataSet()
     }
 
     override fun onChangeDataSet(entry: ChartEntry) {
@@ -73,15 +77,9 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
 
     private fun setupChart() {
         chart = ChartBuilder.buildChart(this)
-        chartContainerView?.addView(chart)
-        adjustChartSize()
-    }
-
-    private fun adjustChartSize() {
         chart?.let {
-            it.layoutParams.width = MATCH_PARENT
-            it.layoutParams.height = MATCH_PARENT
-            it.invalidate()
+            chartContainerView?.addView(it)
+            it.adjustChartSize()
         }
     }
 
@@ -91,6 +89,7 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
                 convertDataSetList<BarDataSet>(listOfEntries ?: ArrayList(), ChartType.BAR)
                     .let {
                         it.label = getString(chartLabel)
+                        it.color = ContextCompat.getColor(this, coreR.color.yellow)
                         (chart as BarChart).run {
                             data = BarData(it)
                             invalidate()
@@ -101,6 +100,7 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
                 convertDataSetList<LineDataSet>(listOfEntries ?: ArrayList(), ChartType.LINE)
                     .let {
                         it.label = getString(chartLabel)
+                        it.color = ContextCompat.getColor(this, coreR.color.yellow)
                         (chart as LineChart).run {
                             data = LineData(it)
                             invalidate()
@@ -111,6 +111,7 @@ abstract class BaseChartActivity : BaseActivity(), OnChangeListener {
                 convertDataSetList<BubbleDataSet>(listOfEntries ?: ArrayList(), ChartType.BUBBLE)
                     .let {
                         it.label = getString(chartLabel)
+                        it.color = ContextCompat.getColor(this, coreR.color.yellow)
                         (chart as BubbleChart).run {
                             data = BubbleData(it)
                             invalidate()
