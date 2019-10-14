@@ -18,36 +18,30 @@ object ChartStylizer {
         chart: BarLineChartBase<*>?,
         activity: FragmentActivity
     ): BarLineChartBase<*>? {
-        return (chart as BarLineChartBase<*>)
-            .apply {
-                settings.let {
-                    setNoDataText(it.noDataText)
-                    setBorderWidth(it.borderWidth)
-                    setMaxVisibleValueCount(it.maxVisibleValueCount)
-                    isLogEnabled = it.logEnabled
-                    setBackgroundColor(getColorByName(it.backgroundColor, activity))
-                    setDrawGridBackground(it.drawGridBackgroundEnabled)
-                    setGridBackgroundColor(getColorByName(it.gridBackgroundColor, activity))
-                    setBorderColor(getColorByName(it.borderColor, activity))
-                    setDescription(
-                        Description()
-                            .apply {
-                                text = it.description
-                                textSize = it.descriptionTextSize
-                                textColor = getColorByName(it.descriptionColor, activity)
-                            }
-                    )
-                }
-            }
-    }
-
-    private fun getColorByName(name: String, activity: FragmentActivity): Int {
-        activity.run {
-            resources.let {
-                val colorId = it.getIdentifier(name, "color", packageName)
-                return ContextCompat.getColor(this, colorId)
+        return (chart as BarLineChartBase<*>).apply {
+            with(settings) {
+                setNoDataText(noDataText)
+                setBorderWidth(borderWidth)
+                setMaxVisibleValueCount(maxVisibleValueCount)
+                isLogEnabled = logEnabled
+                setBackgroundColor(getColorByName(backgroundColor, activity))
+                setDrawGridBackground(drawGridBackgroundEnabled)
+                setGridBackgroundColor(getColorByName(gridBackgroundColor, activity))
+                setBorderColor(getColorByName(borderColor, activity))
+                setDescription(
+                    Description().apply {
+                        text = description
+                        textSize = descriptionTextSize
+                        textColor = getColorByName(descriptionColor, activity)
+                    }
+                )
             }
         }
+    }
+
+    private fun getColorByName(name: String, activity: FragmentActivity): Int = activity.run {
+        val colorId = resources.getIdentifier(name, "color", packageName)
+        ContextCompat.getColor(this, colorId)
     }
 
 }

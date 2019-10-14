@@ -5,7 +5,8 @@ import mx.yellowme.youst.playground.domain.ChartEntry
 import mx.yellowme.youst.playground.domain.ChartType
 
 /**
- * Created by adrianleyvasanchez on 08,October,2019
+ * @author adrianleyvasanchez
+ * @since 08,October,2019
  */
 object DataSetConverter {
 

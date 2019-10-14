@@ -9,32 +9,32 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/firstOption"
+            style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/TextAppearance.AppCompat.Title"
             tools:text="Bar" />
 
         <RadioButton
             android:id="@+id/secondOption"
+            style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_30"
-            style="@style/TextAppearance.AppCompat.Title"
             tools:text="Line" />
 
         <RadioButton
             android:id="@+id/thirdOption"
+            style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_30"
-            style="@style/TextAppearance.AppCompat.Title"
             tools:text="Bubble" />
 
     </RadioGroup>
