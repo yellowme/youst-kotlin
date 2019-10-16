@@ -15,21 +15,21 @@ import mx.yellowme.youst.playground.domain.ChartType
  */
 object ChartBuilder {
 
-    fun buildChart(activity: FragmentActivity): BarLineChartBase<*>? {
-        return parseSettingsJson(activity).run {
+    fun buildChart(activity: FragmentActivity, settingsJsonPath: String): BarLineChartBase<*>? {
+        return parseSettingsJson(activity, settingsJsonPath).run {
             setConfiguration(this, instanceTypeChart(this, activity), activity)
         }
     }
 
-    fun buildChartByType(activity: FragmentActivity, type: ChartType): BarLineChartBase<*>? {
-        return parseSettingsJson(activity).run {
+    fun buildChartByType(activity: FragmentActivity, settingsJsonPath: String, type: ChartType): BarLineChartBase<*>? {
+        return parseSettingsJson(activity, settingsJsonPath).run {
             this?.type = type.toString()
             setConfiguration(this, instanceTypeChart(this, activity), activity)
         }
     }
 
-    private fun parseSettingsJson(activity: FragmentActivity): ChartSetting? =
-        activity.loadJsonObject("chart_settings.json")
+    private fun parseSettingsJson(activity: FragmentActivity, settingsJsonPath: String): ChartSetting? =
+        activity.loadJsonObject(settingsJsonPath)
 
 
     private fun instanceTypeChart(settings: ChartSetting?, activity: FragmentActivity): BarLineChartBase<*>?  {

@@ -52,7 +52,7 @@ abstract class BaseChartFragment : BaseFragment(), OnChangeListener {
     }
 
     override fun onChangeChart(type: ChartType) {
-        chart = ChartBuilder.buildChartByType(activity!!, type)
+        chart = ChartBuilder.buildChartByType(activity!!, settingsJsonPath, type)
         chart?.let {
             chartContainerView?.run {
                 removeAllViews()
@@ -73,7 +73,7 @@ abstract class BaseChartFragment : BaseFragment(), OnChangeListener {
     }
 
     private fun setupChart() {
-        chart = ChartBuilder.buildChart(activity!!)
+        chart = ChartBuilder.buildChart(activity!!, settingsJsonPath)
         chart?.let {
             chartContainerView?.addView(it)
             it.adjustChartSize()

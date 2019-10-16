@@ -20,7 +20,7 @@ class ChartViewFragment : BaseChartFragment() {
 
     override val chartContainerId = R.id.chartContainer
 
-    override val settingsJsonPath = "./chart_settings.json"
+    override val settingsJsonPath = "chart_settings.json"
 
     //endregion
 
