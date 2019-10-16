@@ -13,26 +13,46 @@ import mx.yellowme.youst.playground.domain.ChartType
  * @author adrianleyvasanchez
  * @since 03,October,2019
  */
-object ChartBuilder {
+class ChartBuilder private constructor(
+    private val activity: FragmentActivity?,
+    private val settingsJsonPath: String?,
+    private val type: ChartType? = null) {
 
-    fun buildChart(activity: FragmentActivity, settingsJsonPath: String): BarLineChartBase<*>? {
-        return parseSettingsJson(activity, settingsJsonPath).run {
-            setConfiguration(this, instanceTypeChart(this, activity), activity)
+    data class Builder(
+        private var activity: FragmentActivity? = null,
+        private var settingsJsonPath: String? = null,
+        private var type: ChartType? = null) {
+
+        fun setActivity(activity: FragmentActivity) = apply { this.activity = activity }
+
+        fun setSettingsJsonPath(settingsJsonPath: String) = apply { this.settingsJsonPath = settingsJsonPath }
+
+        fun setType(type: ChartType?) = apply { this.type = type }
+
+        fun build(): BarLineChartBase<*>? = ChartBuilder(activity, settingsJsonPath, type).run {
+                type?.let {
+                    buildChartByType()
+                } ?: buildChart()
+        }
+
+    }
+
+    private fun buildChart(): BarLineChartBase<*>? {
+        return parseSettingsJson().run {
+            setConfiguration(this, instanceTypeChart(this))
         }
     }
 
-    fun buildChartByType(activity: FragmentActivity, settingsJsonPath: String, type: ChartType): BarLineChartBase<*>? {
-        return parseSettingsJson(activity, settingsJsonPath).run {
+    private fun buildChartByType(): BarLineChartBase<*>? {
+        return parseSettingsJson().run {
             this?.type = type.toString()
-            setConfiguration(this, instanceTypeChart(this, activity), activity)
+            setConfiguration(this, instanceTypeChart(this))
         }
     }
 
-    private fun parseSettingsJson(activity: FragmentActivity, settingsJsonPath: String): ChartSetting? =
-        activity.loadJsonObject(settingsJsonPath)
+    private fun parseSettingsJson(): ChartSetting? = activity?.loadJsonObject(settingsJsonPath!!)
 
-
-    private fun instanceTypeChart(settings: ChartSetting?, activity: FragmentActivity): BarLineChartBase<*>?  {
+    private fun instanceTypeChart(settings: ChartSetting?): BarLineChartBase<*>?  {
         return when (ChartType.valueOf(settings?.type ?: "")) {
             ChartType.BAR -> BarChart(activity)
             ChartType.LINE -> LineChart(activity)
@@ -40,9 +60,9 @@ object ChartBuilder {
         }
     }
 
-    private fun setConfiguration(settings: ChartSetting?, chart: BarLineChartBase<*>?, activity: FragmentActivity): BarLineChartBase<*>? =
+    private fun setConfiguration(settings: ChartSetting?, chart: BarLineChartBase<*>?): BarLineChartBase<*>? =
         settings?.let {
-            return ChartStylizer.applyStyle(it, chart, activity)
+            ChartStylizer.applyStyle(it, chart, activity!!)
         } ?: chart
 
 }
