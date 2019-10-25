@@ -80,7 +80,7 @@ fun View.invisible() {
     visibility = View.INVISIBLE
 }
 
-fun Context.getThemeName(): Int {
+fun Context.themeId(): Int {
     val typedValue = TypedValue()
     theme.resolveAttribute(R.attr.themeId, typedValue, true)
     return typedValue.resourceId

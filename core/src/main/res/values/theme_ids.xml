@@ -5,4 +5,5 @@
     <item name="theme_app_overlay" type="id" />
     <item name="theme_pop_up_overlay" type="id" />
     <item name="theme_translucent" type="id" />
+    <item name="dark_theme" type="id" />
 </resources>

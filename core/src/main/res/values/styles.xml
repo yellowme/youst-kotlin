@@ -2,106 +2,11 @@
 
     <!--region Base application theme. -->
 
-    <style name="SharedAppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="SharedAppTheme" parent="LightTheme">
         <item name="themeId">@id/theme</item>
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-
-        <item name="typeAll">@color/black20</item>
-        <item name="typeBug">@color/bug</item>
-        <item name="typeDragon">@color/dragon</item>
-        <item name="typeElectric">@color/electric</item>
-        <item name="typeFighting">@color/fighting</item>
-        <item name="typeFire">@color/fire</item>
-        <item name="typeFlying">@color/flying</item>
-        <item name="typeGhost">@color/ghost</item>
-        <item name="typeDark">@color/dark</item>
-        <item name="typeFairy">@color/fairy</item>
-        <item name="typeGrass">@color/grass</item>
-        <item name="typeGround">@color/ground</item>
-        <item name="typeNormal">@color/normal</item>
-        <item name="typeIce">@color/ice</item>
-        <item name="typePoison">@color/poison</item>
-        <item name="typePsychic">@color/psychic</item>
-        <item name="typeRock">@color/rock</item>
-        <item name="typeSteel">@color/steel</item>
-        <item name="typeWater">@color/water</item>
-
-        <item name="backgroundItem">@color/white</item>
-        <item name="activityBackground">@color/white</item>
-
-        <item name="textTitle">@color/black</item>
-        <item name="textBody">@color/black70</item>
-        <item name="textCaption">@color/black40</item>
-        <item name="textOverColor">@color/white</item>
-
-        <item name="vectorTint">@color/black60</item>
-
-        <item name="coral">@color/coral</item>
-        <item name="turquoise">@color/turquoise</item>
-        <item name="malibu">@color/malibu</item>
-        <item name="orchid">@color/orchid</item>
-        <item name="cerise">@color/cerise</item>
-        <item name="kiwi">@color/kiwi</item>
-        <item name="royal">@color/royal</item>
-        <item name="violet">@color/violet</item>
-        <item name="yellow">@color/yellow</item>
-        <item name="white">@color/white</item>
-        <item name="black">@color/black</item>
     </style>
 
-    <style name="SharedAppTheme.Dark" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/white</item>
-        <item name="android:statusBarColor">@color/black</item>
-        <item name="android:windowLightStatusBar">false</item>
-
-        <item name="typeAll">@color/dark_black20</item>
-        <item name="typeBug">@color/dark_bug</item>
-        <item name="typeDragon">@color/dark_dragon</item>
-        <item name="typeElectric">@color/dark_electric</item>
-        <item name="typeFighting">@color/dark_fighting</item>
-        <item name="typeFire">@color/dark_fire</item>
-        <item name="typeFlying">@color/dark_flying</item>
-        <item name="typeGhost">@color/dark_ghost</item>
-        <item name="typeDark">@color/dark_dark</item>
-        <item name="typeFairy">@color/dark_fairy</item>
-        <item name="typeGrass">@color/dark_grass</item>
-        <item name="typeGround">@color/dark_ground</item>
-        <item name="typeNormal">@color/dark_normal</item>
-        <item name="typeIce">@color/dark_ice</item>
-        <item name="typePoison">@color/dark_poison</item>
-        <item name="typePsychic">@color/dark_psychic</item>
-        <item name="typeRock">@color/dark_rock</item>
-        <item name="typeSteel">@color/dark_steel</item>
-        <item name="typeWater">@color/dark_water</item>
-
-        <item name="backgroundItem">@color/dark_black5</item>
-        <item name="activityBackground">@color/black</item>
-
-        <item name="textTitle">@color/white</item>
-        <item name="textBody">@color/dark_black70</item>
-        <item name="textCaption">@color/dark_black40</item>
-        <item name="textOverColor">@color/black</item>
-
-        <item name="vectorTint">@color/dark_black60</item>
-
-        <item name="coral">@color/dark_coral</item>
-        <item name="turquoise">@color/dark_turquoise</item>
-        <item name="malibu">@color/dark_malibu</item>
-        <item name="orchid">@color/dark_orchid</item>
-        <item name="cerise">@color/dark_cerise</item>
-        <item name="kiwi">@color/dark_kiwi</item>
-        <item name="royal">@color/dark_royal</item>
-        <item name="violet">@color/dark_violet</item>
-        <item name="yellow">@color/dark_yellow</item>
-        <item name="white">@color/dark_white</item>
-        <item name="black">@color/dark_black</item>
-    </style>
-
-    <style name="SharedAppTheme.NoActionBar" parent="LightTheme">
+    <style name="SharedAppTheme.NoActionBar">
         <item name="themeId">@id/theme_no_action_bar</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -109,7 +14,7 @@
         <item name="android:statusBarColor">@color/black</item>
     </style>
 
-    <style name="SharedAppTheme.NoActionBar.Dark" parent="DarkTheme">
+    <style name="SharedAppThemeDark.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowBackground">@color/dark_white</item>

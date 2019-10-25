@@ -2,7 +2,11 @@
 
     <!--region Base application theme. -->
 
-    <style name="LightTheme">
+    <style name="LightTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
         <item name="typeAll">@color/black20</item>
         <item name="typeBug">@color/bug</item>
         <item name="typeDragon">@color/dragon</item>
@@ -46,7 +50,8 @@
         <item name="black">@color/black</item>
     </style>
 
-    <style name="DarkTheme">
+    <style name="SharedAppThemeDark" parent="LightTheme">
+        <item name="themeId">@id/dark_theme</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/white</item>
@@ -58,7 +63,6 @@
         <item name="typeDragon">@color/dark_dragon</item>
         <item name="typeElectric">@color/dark_electric</item>
         <item name="typeFighting">@color/dark_fighting</item>
-        <item name="typeFire">@color/dark_fire</item>
         <item name="typeFlying">@color/dark_flying</item>
         <item name="typeGhost">@color/dark_ghost</item>
         <item name="typeDark">@color/dark_dark</item>
