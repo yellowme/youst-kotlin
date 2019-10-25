@@ -10,7 +10,7 @@
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
-    <style name="SharedAppTheme.NoActionBar.Dark" parent="DarkTheme">
+    <style name="SharedAppThemeDark.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowBackground">@color/white</item>

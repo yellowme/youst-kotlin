@@ -20,16 +20,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <intent-filter android:autoVerify="true">
+            <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:scheme="https"
-                    android:host="marioguillermo.github.io"
-                    android:pathPattern="/theme" />
+                    android:host="yellowme.github.io"
+                    android:pathPattern="/theme"
+                    android:scheme="https" />
             </intent-filter>
         </activity>
 

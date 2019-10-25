@@ -9,8 +9,8 @@ import mx.yellowme.youst.core.components.ThemeConstants.IS_DARK
 import mx.yellowme.youst.core.components.ThemeConstants.LIGHT
 import mx.yellowme.youst.core.components.ThemeConstants.THEME_PREFERENCES
 import mx.yellowme.youst.core.components.ThemeConstants.THEME_QUERY
-import mx.yellowme.youst.core.extensions.getBooleanFrom
 import mx.yellowme.youst.core.extensions.launch
+import mx.yellowme.youst.core.extensions.themeId
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.core.hooks.animations.setListener
 import mx.yellowme.youst.core.utils.Activities
@@ -24,7 +24,7 @@ class SplashActivity : BaseActivity() {
         handleUri()
         super.onCreate(savedInstanceState)
         splashAnimationView?.apply {
-            val rawRes = if (getBooleanFrom(THEME_PREFERENCES, IS_DARK)) {
+            val rawRes = if (themeId() == R.id.dark_theme) {
                 R.raw.logo_reveal_dark
             } else {
                 R.raw.logo_reveal
@@ -50,7 +50,7 @@ class SplashActivity : BaseActivity() {
             getSharedPreferences(THEME_PREFERENCES, 0)
                 .edit()
                 .putBoolean(IS_DARK, it)
-                .apply()
+                .commit()
         }
     }
 }
