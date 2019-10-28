@@ -1,9 +1,11 @@
 package mx.yellowme.youst.playground.ui.chart.utils
 
+import android.graphics.Typeface
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
 import com.github.mikephil.charting.charts.BarLineChartBase
 import com.github.mikephil.charting.components.Description
+import com.github.mikephil.charting.data.BarLineScatterCandleBubbleDataSet
 import mx.yellowme.youst.playground.domain.ChartSetting
 
 /**
@@ -37,6 +39,17 @@ object ChartStylizer {
                 )
             }
         }
+    }
+
+    fun<T : BarLineScatterCandleBubbleDataSet<*>> applyStyleToDataSet(
+        dataSet: T,
+        label: Int,
+        activity: FragmentActivity
+    ) = dataSet.run {
+        setLabel(activity.getString(label))
+        valueTextColor = getColorByName("blue", activity)
+        valueTypeface = Typeface.DEFAULT_BOLD
+        color= getColorByName("guitar_gold", activity)
     }
 
     private fun getColorByName(name: String, activity: FragmentActivity): Int = activity.run {

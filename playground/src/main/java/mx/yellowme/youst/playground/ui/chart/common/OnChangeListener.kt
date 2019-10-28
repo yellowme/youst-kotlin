@@ -9,7 +9,7 @@ import mx.yellowme.youst.playground.domain.ChartType
  */
 interface OnChangeListener {
 
-    fun onChangeChart(type: ChartType)
+    fun onChangeTypeChart(type: ChartType)
 
     fun onChangeDataSet(entry: ChartEntry)
 

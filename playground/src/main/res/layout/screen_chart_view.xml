@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".2"
+        android:gravity="center"
+        android:paddingTop="@dimen/dimen_15"
+        tools:text="Random data incoming..." />
 
     <LinearLayout
         android:id="@+id/chartContainer"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:paddingTop="@dimen/dimen_30"
-        android:paddingStart="@dimen/dimen_5"
-        android:paddingEnd="@dimen/dimen_5"
+        android:background="@color/white"
         android:gravity="center"
-        android:background="@color/white" />
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dimen_5"
+        android:paddingTop="@dimen/dimen_30"
+        android:paddingEnd="@dimen/dimen_5" />
 
     <mx.yellowme.youst.playground.components.ChartSelector
         android:id="@+id/chartSelector"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight=".1"
-        app:selectorBackgroundColor="@color/red"
+        app:selectorBackgroundColor="@color/blue"
         app:selectorOptionsTextColor="@color/white" />
 
 </LinearLayout>
