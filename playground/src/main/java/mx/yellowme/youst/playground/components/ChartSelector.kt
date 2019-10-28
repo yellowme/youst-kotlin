@@ -72,13 +72,13 @@ class ChartSelector @JvmOverloads constructor(
         radioGroup.setOnCheckedChangeListener { _, checkedId ->
             when(checkedId) {
                 firstOption.id -> {
-                    listener?.onChangeChart(ChartType.valueOf(firstOption.text.toString()))
+                    listener?.onChangeTypeChart(ChartType.valueOf(firstOption.text.toString()))
                 }
                 secondOption.id -> {
-                    listener?.onChangeChart(ChartType.valueOf(secondOption.text.toString()))
+                    listener?.onChangeTypeChart(ChartType.valueOf(secondOption.text.toString()))
                 }
                 thirdOption.id -> {
-                    listener?.onChangeChart(ChartType.valueOf(thirdOption.text.toString()))
+                    listener?.onChangeTypeChart(ChartType.valueOf(thirdOption.text.toString()))
                 }
             }
         }

@@ -1,7 +1,6 @@
 package mx.yellowme.youst.playground.ui.chart.common
 
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.charts.BarLineChartBase
 import com.github.mikephil.charting.charts.BubbleChart
@@ -12,8 +11,9 @@ import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.domain.ChartEntry
 import mx.yellowme.youst.playground.domain.ChartType
 import mx.yellowme.youst.playground.ui.chart.utils.ChartBuilder
+import mx.yellowme.youst.playground.ui.chart.utils.ChartDataInjector.injectData
+import mx.yellowme.youst.playground.ui.chart.utils.ChartStylizer.applyStyleToDataSet
 import mx.yellowme.youst.playground.ui.chart.utils.DataSetConverter.convertDataSetList
-import mx.yellowme.youst.core.R as coreR
 
 /**
  * @author adrianleyvasanchez
@@ -51,20 +51,14 @@ abstract class BaseChartFragment : BaseFragment(), OnChangeListener {
         setupChart()
     }
 
-    override fun onChangeChart(type: ChartType) {
+    override fun onChangeTypeChart(type: ChartType) {
         chart = ChartBuilder.Builder()
             .setActivity(activity!!)
             .setSettingsJsonPath(settingsJsonPath)
             .setType(type)
             .build()
-        chart?.let {
-            chartContainerView?.run {
-                removeAllViews()
-                addView(it)
-            }
-            it.adjustChartSize()
-            updateDataSet()
-        }
+        updateChartContainerView()
+        updateDataSet()
     }
 
     override fun onChangeDataSet(entry: ChartEntry) {
@@ -81,10 +75,15 @@ abstract class BaseChartFragment : BaseFragment(), OnChangeListener {
             .setActivity(activity!!)
             .setSettingsJsonPath(settingsJsonPath)
             .build()
-        chart?.let {
-            chartContainerView?.addView(it)
-            it.adjustChartSize()
+        updateChartContainerView()
+    }
+
+    private fun updateChartContainerView() {
+        chartContainerView?.run {
+            removeAllViews()
+            addView(chart)
         }
+        chart?.adjustChartSize()
     }
 
     private fun updateDataSet() {
@@ -92,34 +91,22 @@ abstract class BaseChartFragment : BaseFragment(), OnChangeListener {
             is BarChart -> {
                 convertDataSetList<BarDataSet>(listOfEntries ?: ArrayList(), ChartType.BAR)
                     .let {
-                        it.label = getString(chartLabel)
-                        it.color = ContextCompat.getColor(context!!, coreR.color.yellow)
-                        (chart as BarChart).run {
-                            data = BarData(it)
-                            invalidate()
-                        }
+                        applyStyleToDataSet(it, chartLabel, activity!!)
+                        injectData(chart!!, it)
                     }
             }
             is LineChart -> {
                 convertDataSetList<LineDataSet>(listOfEntries ?: ArrayList(), ChartType.LINE)
                     .let {
-                        it.label = getString(chartLabel)
-                        it.color = ContextCompat.getColor(context!!, coreR.color.yellow)
-                        (chart as LineChart).run {
-                            data = LineData(it)
-                            invalidate()
-                        }
+                        applyStyleToDataSet(it, chartLabel, activity!!)
+                        injectData(chart!!, it)
                     }
             }
             is BubbleChart -> {
                 convertDataSetList<BubbleDataSet>(listOfEntries ?: ArrayList(), ChartType.BUBBLE)
                     .let {
-                        it.label = getString(chartLabel)
-                        it.color = ContextCompat.getColor(context!!, coreR.color.yellow)
-                        (chart as BubbleChart).run {
-                            data = BubbleData(it)
-                            invalidate()
-                        }
+                        applyStyleToDataSet(it, chartLabel, activity!!)
+                        injectData(chart!!, it)
                     }
             }
         }

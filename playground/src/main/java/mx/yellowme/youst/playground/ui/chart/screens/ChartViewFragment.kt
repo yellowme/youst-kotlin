@@ -27,6 +27,7 @@ class ChartViewFragment : BaseChartFragment() {
     override fun onViewReady() {
         super.onViewReady()
         listener = this
+        title.text = getString(R.string.title_chart_view_label)
         chartSelector?.setup(activity!!, listener!!)
         repeat(20) {
             getData()

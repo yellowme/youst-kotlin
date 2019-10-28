@@ -26,7 +26,7 @@ class ChartFakeRepository {
     }
 
     private fun handleResponse(callback: SingleItemCallback<ChartEntry>) {
-        x = (x + 1)
+        x += 1
         val y = Random.nextInt(0, 100).toFloat()
         val z = Random.nextInt(0, 100).toFloat()
         ChartEntry(x, y, z).apply {
