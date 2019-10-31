@@ -2,10 +2,14 @@ package mx.yellowme.youst.playground.ui.chart.screens
 
 import android.util.Log
 import kotlinx.android.synthetic.main.screen_chart_view.*
+import mx.yellowme.youst.core.utils.loadJsonObject
 import mx.yellowme.youst.playground.R
+import mx.yellowme.youst.playground.components.OnChangeListener
 import mx.yellowme.youst.playground.data.ChartFakeRepository
 import mx.yellowme.youst.playground.data.SingleItemCallback
 import mx.yellowme.youst.playground.domain.ChartEntry
+import mx.yellowme.youst.playground.domain.ChartSetting
+import mx.yellowme.youst.playground.domain.ChartType
 import mx.yellowme.youst.playground.ui.chart.common.BaseChartFragment
 
 /**
@@ -14,7 +18,7 @@ import mx.yellowme.youst.playground.ui.chart.common.BaseChartFragment
  */
 class ChartViewFragment : BaseChartFragment() {
 
-    //Region attributes
+    //region attributes
 
     override val layoutId = R.layout.screen_chart_view
 
@@ -24,15 +28,32 @@ class ChartViewFragment : BaseChartFragment() {
 
     //endregion
 
+    //region Lifecycle
+
     override fun onViewReady() {
         super.onViewReady()
-        listener = this
+
         title.text = getString(R.string.title_chart_view_label)
-        chartSelector?.setup(activity!!, listener!!)
+
+        chartSelector?.delegate = object: OnChangeListener {
+            override fun didChangeChartType(type: ChartType) {
+                //myOwnChart.currentType = type
+                updateChartType(type)
+            }
+        }
+
+        activity!!.loadJsonObject<ChartSetting>(settingsJsonPath)?.let {
+            chartSelector.currentTypeSelected = ChartType.valueOf(it.type)
+        }
+
         repeat(20) {
             getData()
         }
     }
+
+    //endregion
+
+    //region Helpers
 
     //TODO: Must delegate action to another layer component (ViewModel or Presenter)
     private fun getData() {
@@ -44,10 +65,13 @@ class ChartViewFragment : BaseChartFragment() {
 
                 override fun onLoad(item: ChartEntry?) {
                     item?.let {
-                        listener?.onChangeDataSet(item)
+                        //myOwnChart.entries = item
+                        updateDataSet(item)
                     }
                 }
         })
     }
+
+    //endregion
 
 }

@@ -19,7 +19,7 @@ import mx.yellowme.youst.playground.ui.chart.utils.DataSetConverter.convertDataS
  * @author adrianleyvasanchez
  * @since 29,September,2019
  */
-abstract class BaseChartFragment : BaseFragment(), OnChangeListener {
+abstract class BaseChartFragment : BaseFragment() {
 
     /**
      * The @chartContainerId Int instance represents the Layout id
@@ -36,22 +36,20 @@ abstract class BaseChartFragment : BaseFragment(), OnChangeListener {
      */
     abstract val settingsJsonPath: String
 
-    var listener: OnChangeListener? = null
+    protected var chart: BarLineChartBase<*>? = null
+
+    protected val chartLabel: Int = R.string.showcases_label
 
     private var chartContainerView: ViewGroup? = null
 
     private var listOfEntries: ArrayList<ChartEntry>? = ArrayList()
-
-    protected var chart: BarLineChartBase<*>? = null
-
-    protected val chartLabel: Int = R.string.showcases_label
 
     override fun onViewReady() {
         bindView()
         setupChart()
     }
 
-    override fun onChangeTypeChart(type: ChartType) {
+    fun updateChartType(type: ChartType) {
         chart = ChartBuilder.Builder()
             .setActivity(activity!!)
             .setSettingsJsonPath(settingsJsonPath)
@@ -61,13 +59,13 @@ abstract class BaseChartFragment : BaseFragment(), OnChangeListener {
         updateDataSet()
     }
 
-    override fun onChangeDataSet(entry: ChartEntry) {
+    fun updateDataSet(entry: ChartEntry) {
         listOfEntries?.add(entry)
         updateDataSet()
     }
 
     private fun bindView() {
-        chartContainerView = activity?.findViewById<ViewGroup>(chartContainerId)
+        chartContainerView = activity?.findViewById(chartContainerId)
     }
 
     private fun setupChart() {
