@@ -1,42 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RadioGroup
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mainContainer"
+    android:id="@+id/radioGroup"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:paddingTop="@dimen/dimen_10"
-    android:paddingBottom="@dimen/dimen_10">
+    android:paddingBottom="@dimen/dimen_10"
+    android:gravity="center"
+    android:orientation="horizontal">
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="horizontal">
+    <RadioButton
+        android:id="@+id/firstOption"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Bar" />
 
-        <RadioButton
-            android:id="@+id/firstOption"
-            style="@style/TextAppearance.AppCompat.Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="Bar" />
+    <RadioButton
+        android:id="@+id/secondOption"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_30"
+        tools:text="Line" />
 
-        <RadioButton
-            android:id="@+id/secondOption"
-            style="@style/TextAppearance.AppCompat.Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_30"
-            tools:text="Line" />
+    <RadioButton
+        android:id="@+id/thirdOption"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_30"
+        tools:text="Bubble" />
 
-        <RadioButton
-            android:id="@+id/thirdOption"
-            style="@style/TextAppearance.AppCompat.Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_30"
-            tools:text="Bubble" />
-
-    </RadioGroup>
-
-</LinearLayout>
+</RadioGroup>

@@ -31,6 +31,7 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".PlaygroundActivity" />
+
         </activity>
 
         <!--endregion-->
@@ -68,6 +69,7 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".PlaygroundActivity" />
+
         </activity>
 
         <!--endregion-->
