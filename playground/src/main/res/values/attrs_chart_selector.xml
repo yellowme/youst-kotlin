@@ -3,5 +3,6 @@
     <declare-styleable name="ChartSelector">
         <attr name="selectorBackgroundColor" format="color" />
         <attr name="selectorOptionsTextColor" format="color" />
+        <attr name="selectorOptionsHighlightColor" format="color" />
     </declare-styleable>
 </resources>

@@ -17,15 +17,13 @@ import mx.yellowme.youst.core.R as coreR
  */
 interface OnChangeListener {
     /**
-     * TODO: Add docs
-     */
+    * The @didChangeChartType function is a callback to be triggered
+     * when the current type of chart has changed, this callback is
+     * going to change the chart data structure.
+    */
     fun didChangeChartType(type: ChartType)
 }
 
-/**
- * @author adrianleyvasanchez
- * @since 30,September,2019
- */
 class ChartSelector @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null
@@ -61,6 +59,12 @@ class ChartSelector @JvmOverloads constructor(
             updateOptionsTextColor()
         }
 
+    private var optionsHighlightColor: Int = -1
+        set(value) {
+            field = value
+            updateOptionsHighlightColor()
+        }
+
     //endregion
 
     //region Setup
@@ -78,6 +82,9 @@ class ChartSelector @JvmOverloads constructor(
             )
             optionsTextColorRes = getResourceId(
                 R.styleable.ChartSelector_selectorOptionsTextColor, coreR.color.guitar_black
+            )
+            optionsHighlightColor = getResourceId(
+                R.styleable.ChartSelector_selectorOptionsHighlightColor, coreR.color.white
             )
         }
 
@@ -100,6 +107,16 @@ class ChartSelector @JvmOverloads constructor(
                 firstOption.setTextColor(this)
                 secondOption.setTextColor(this)
                 thirdOption.setTextColor(this)
+            }
+        }
+    }
+
+    private fun updateOptionsHighlightColor() {
+        if (optionsHighlightColor != -1) {
+            ContextCompat.getColor(context, optionsHighlightColor).run {
+                firstOption.highlightColor = this
+                secondOption.highlightColor = this
+                thirdOption.highlightColor = this
             }
         }
     }
