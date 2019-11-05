@@ -13,9 +13,12 @@ data class ChartSetting(
     val backgroundColor: String,
     val gridBackgroundColor: String,
     val borderColor: String,
+    val axisColor: String,
+    val legendColor: String,
     val borderWidth: Float,
     val maxVisibleValueCount: Int,
     val logEnabled: Boolean,
     val drawGridBackgroundEnabled: Boolean,
-    val drawBarShadowEnabled: Boolean
+    val drawBarShadowEnabled: Boolean,
+    val axisLabelsEnabled: Boolean
 )
