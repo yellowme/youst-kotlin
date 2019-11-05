@@ -6,7 +6,6 @@ import mx.yellowme.youst.core.hooks.BaseFragment
 import mx.yellowme.youst.core.utils.loadJsonObject
 import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.components.OnChangeListener
-import mx.yellowme.youst.playground.components.YellowChart
 import mx.yellowme.youst.playground.data.ChartFakeRepository
 import mx.yellowme.youst.playground.data.SingleItemCallback
 import mx.yellowme.youst.playground.domain.ChartEntry
@@ -23,8 +22,6 @@ class ChartViewFragment : BaseFragment() {
 
     override val layoutId = R.layout.screen_chart_view
 
-    private var playgroundChart: YellowChart? = null
-
     private val settingsJsonPath = "chart_settings.json"
 
     //endregion
@@ -32,11 +29,15 @@ class ChartViewFragment : BaseFragment() {
     //region Lifecycle
 
     override fun onViewReady() {
-        initializeChart()
+        yellowChart?.run {
+            label = getString(R.string.showcases_label)
+            chartSettings = activity?.loadJsonObject(settingsJsonPath)
+            setup()
+        }
 
         chartSelector?.delegate = object: OnChangeListener {
             override fun didChangeChartType(type: ChartType) {
-                playgroundChart?.updateType(type.toString())
+                yellowChart?.updateType(type.toString())
             }
         }
 
@@ -53,16 +54,6 @@ class ChartViewFragment : BaseFragment() {
 
     //region Helpers
 
-    private fun initializeChart() {
-        playgroundChart = YellowChart(activity!!)
-        playgroundChart?.run {
-            chartContainerId = R.id.chartContainer
-            label = R.string.showcases_label
-            chartSettings = activity?.loadJsonObject(settingsJsonPath)
-            setupChart()
-        }
-    }
-
     //TODO: Must delegate action to another layer component (ViewModel or Presenter)
     private fun getData() {
         ChartFakeRepository().getData(false,
@@ -73,7 +64,7 @@ class ChartViewFragment : BaseFragment() {
 
                 override fun onLoad(item: ChartEntry?) {
                     item?.let {
-                        playgroundChart?.addData(item)
+                        yellowChart?.addData(item)
                     }
                 }
         })

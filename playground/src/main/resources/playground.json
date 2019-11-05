@@ -14,7 +14,7 @@
   {
     "id": "3",
     "title": "Chart showcases",
-    "subtitle": "Implementation of MPAndroidChart library.\n\nHandle dynamic data and display it in several kinds of chart.",
+    "subtitle": "Implementation of MPAndroidChart library.\n\nHandle dynamic data and display it in several types of chart.",
     "paletteColor": "NASU_PURPLE"
   }
 ]

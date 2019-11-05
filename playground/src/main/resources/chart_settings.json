@@ -1,15 +1,18 @@
 {
   "type": "LINE",
-  "description": "Dynamic chart builder",
-  "descriptionTextSize": 16.0,
-  "descriptionColor": "black",
+  "description": "YellowChart",
+  "descriptionTextSize": 14.0,
+  "descriptionColor": "guitar_light_black",
   "noDataText": "No data to display",
   "backgroundColor": "white",
-  "gridBackgroundColor": "white",
+  "gridBackgroundColor": "blue",
   "borderColor": "red",
+  "axisColor": "blue",
+  "legendColor": "guitar_light_black",
   "borderWidth": 10.0,
   "maxVisibleValueCount": 100,
   "logEnabled": false,
   "drawGridBackgroundEnabled": false,
-  "drawBarShadowEnabled": true
+  "drawBarShadowEnabled": true,
+  "axisLabelsEnabled": false
 }

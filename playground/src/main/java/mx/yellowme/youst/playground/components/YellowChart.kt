@@ -1,7 +1,9 @@
 package mx.yellowme.youst.playground.components
 
+import android.content.Context
+import android.util.AttributeSet
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentActivity
+import android.widget.LinearLayout
 import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.charts.BarLineChartBase
 import com.github.mikephil.charting.charts.BubbleChart
@@ -9,6 +11,8 @@ import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BubbleDataSet
 import com.github.mikephil.charting.data.LineDataSet
+import mx.yellowme.youst.core.extensions.consumeTypeArray
+import mx.yellowme.youst.core.extensions.inflate
 import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.domain.ChartEntry
 import mx.yellowme.youst.playground.domain.ChartSetting
@@ -23,16 +27,15 @@ import mx.yellowme.youst.playground.ui.chart.utils.DataSetConverter
  * @since 04,November,2019
  */
 
-class YellowChart(private val activity: FragmentActivity) {
-    /**
-     * The @chartContainerId Int instance represents the Layout id
-     * where the chart is going to be drawn.
-     */
-    var chartContainerId: Int? = 0
-    
-    var chart: BarLineChartBase<*>? = null
+class YellowChart @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0
+) : LinearLayout(context, attrs, defStyleAttr) {
 
-    var label: Int = R.string.showcases_label
+    var label  = context.getString(R.string.showcases_label)
+
+    var chart: BarLineChartBase<*>? = null
 
     var chartSettings: ChartSetting? = null
         set(value) {
@@ -40,11 +43,11 @@ class YellowChart(private val activity: FragmentActivity) {
             updateChartView()
         }
 
-    private var listOfEntries: ArrayList<ChartEntry> = ArrayList()
+    private var listOfEntries = ArrayList<ChartEntry>()
 
-    fun setupChart() {
+    fun setup() {
         chart = ChartBuilder.Builder()
-            .setActivity(activity)
+            .setActivity(context)
             .setSetting(chartSettings)
             .build()
         updateChartContainerView()
@@ -62,7 +65,7 @@ class YellowChart(private val activity: FragmentActivity) {
 
     private fun updateChartView() {
         chart = ChartBuilder.Builder()
-            .setActivity(activity)
+            .setActivity(context)
             .setSetting(chartSettings)
             .build()
         updateChartContainerView()
@@ -70,10 +73,8 @@ class YellowChart(private val activity: FragmentActivity) {
     }
 
     private fun updateChartContainerView() {
-        activity.findViewById<ViewGroup>(chartContainerId!!).run {
-            removeAllViews()
-            addView(chart)
-        }
+        removeAllViews()
+        addView(chart)
         chart?.adjustChartSize()
     }
 
@@ -85,7 +86,7 @@ class YellowChart(private val activity: FragmentActivity) {
                     ChartType.BAR
                 )
                     .let {
-                        ChartStylizer.applyStyleToDataSet(it, label, activity)
+                        ChartStylizer.applyStyleToDataSet(it, label, context)
                         ChartDataInjector.injectData(chart!!, it)
                     }
             }
@@ -95,7 +96,7 @@ class YellowChart(private val activity: FragmentActivity) {
                     ChartType.LINE
                 )
                     .let {
-                        ChartStylizer.applyStyleToDataSet(it, label, activity)
+                        ChartStylizer.applyStyleToDataSet(it, label, context)
                         ChartDataInjector.injectData(chart!!, it)
                     }
             }
@@ -105,10 +106,18 @@ class YellowChart(private val activity: FragmentActivity) {
                     ChartType.BUBBLE
                 )
                     .let {
-                        ChartStylizer.applyStyleToDataSet(it, label, activity)
+                        ChartStylizer.applyStyleToDataSet(it, label, context)
                         ChartDataInjector.injectData(chart!!, it)
                     }
             }
+        }
+    }
+
+    init {
+        inflate(R.layout.component_yellowchart, context)
+        attrs?.consumeTypeArray(context, R.styleable.AppHero) {
+            label = getString(R.styleable.YellowChart_yellowChartLabel)
+                ?: context.getString(R.string.showcases_label)
         }
     }
 
