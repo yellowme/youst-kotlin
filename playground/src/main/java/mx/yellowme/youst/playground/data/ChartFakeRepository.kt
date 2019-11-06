@@ -29,12 +29,11 @@ class ChartFakeRepository {
         x += 1
         val y = Random.nextInt(0, 100).toFloat()
         val z = Random.nextInt(0, 100).toFloat()
-        ChartEntry(x, y, z).apply {
-            if (shouldFail) {
-                callback.onServerError("Ups! Should fail.")
-            } else {
-                callback.onLoad(this)
-            }
+
+        if (shouldFail) {
+            callback.onServerError("Ups! Should fail.")
+        } else {
+            callback.onLoad(ChartEntry(x,y, z))
         }
     }
 

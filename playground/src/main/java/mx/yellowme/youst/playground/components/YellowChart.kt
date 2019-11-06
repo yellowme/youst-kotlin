@@ -26,14 +26,13 @@ import mx.yellowme.youst.playground.ui.chart.utils.DataSetConverter
  * @author adrianleyvasanchez
  * @since 04,November,2019
  */
-
 class YellowChart @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : LinearLayout(context, attrs, defStyleAttr) {
 
-    var label  = context.getString(R.string.showcases_label)
+    var label: String? = ""
 
     var chart: BarLineChartBase<*>? = null
 
@@ -45,12 +44,13 @@ class YellowChart @JvmOverloads constructor(
 
     private var listOfEntries = ArrayList<ChartEntry>()
 
-    fun setup() {
-        chart = ChartBuilder.Builder()
-            .setActivity(context)
-            .setSetting(chartSettings)
-            .build()
-        updateChartContainerView()
+    init {
+        inflate(R.layout.component_yellowchart, context)
+        attrs?.consumeTypeArray(context, R.styleable.AppHero) {
+            label = getString(R.styleable.YellowChart_yellowChartLabel)
+                ?: context.getString(R.string.showcases_label)
+        }
+        chartSettings?.let { setup() }
     }
 
     fun addData(entry: ChartEntry) {
@@ -63,12 +63,16 @@ class YellowChart @JvmOverloads constructor(
         updateChartView()
     }
 
-    private fun updateChartView() {
+    private fun setup() {
         chart = ChartBuilder.Builder()
             .setActivity(context)
             .setSetting(chartSettings)
             .build()
         updateChartContainerView()
+    }
+
+    private fun updateChartView() {
+        setup()
         refreshDataSet()
     }
 
@@ -86,7 +90,7 @@ class YellowChart @JvmOverloads constructor(
                     ChartType.BAR
                 )
                     .let {
-                        ChartStylizer.applyStyleToDataSet(it, label, context)
+                        ChartStylizer.applyStyleToDataSet(it, chartSettings!!, context)
                         ChartDataInjector.injectData(chart!!, it)
                     }
             }
@@ -96,7 +100,7 @@ class YellowChart @JvmOverloads constructor(
                     ChartType.LINE
                 )
                     .let {
-                        ChartStylizer.applyStyleToDataSet(it, label, context)
+                        ChartStylizer.applyStyleToDataSet(it, chartSettings!!, context)
                         ChartDataInjector.injectData(chart!!, it)
                     }
             }
@@ -106,18 +110,10 @@ class YellowChart @JvmOverloads constructor(
                     ChartType.BUBBLE
                 )
                     .let {
-                        ChartStylizer.applyStyleToDataSet(it, label, context)
+                        ChartStylizer.applyStyleToDataSet(it, chartSettings!!, context)
                         ChartDataInjector.injectData(chart!!, it)
                     }
             }
-        }
-    }
-
-    init {
-        inflate(R.layout.component_yellowchart, context)
-        attrs?.consumeTypeArray(context, R.styleable.AppHero) {
-            label = getString(R.styleable.YellowChart_yellowChartLabel)
-                ?: context.getString(R.string.showcases_label)
         }
     }
 
@@ -129,7 +125,7 @@ class YellowChart @JvmOverloads constructor(
  * when it's added into the parent view.
  * @return Unit
  */
-fun BarLineChartBase<*>.adjustChartSize() {
+private fun BarLineChartBase<*>.adjustChartSize() {
     layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT
     layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT
     invalidate()

@@ -18,8 +18,7 @@ import mx.yellowme.youst.core.R as coreR
 interface OnChangeListener {
     /**
     * The @didChangeChartType function is a callback to be triggered
-     * when the current type of chart has changed, this callback is
-     * going to change the chart data structure.
+     * when the current type of chart has changed.
     */
     fun didChangeChartType(type: ChartType)
 }
