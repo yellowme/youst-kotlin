@@ -19,7 +19,7 @@ class ChartActivity : BaseActivity() {
 
     //endregion
 
-    //region lifecycle
+    //region Lifecycle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

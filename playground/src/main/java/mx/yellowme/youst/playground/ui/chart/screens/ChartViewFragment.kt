@@ -29,20 +29,20 @@ class ChartViewFragment : BaseFragment() {
     //region Lifecycle
 
     override fun onViewReady() {
-        yellowChart?.run {
-            label = getString(R.string.showcases_label)
-            chartSettings = activity?.loadJsonObject(settingsJsonPath)
-            setup()
-        }
-
-        chartSelector?.delegate = object: OnChangeListener {
-            override fun didChangeChartType(type: ChartType) {
-                yellowChart?.updateType(type.toString())
+        activity?.loadJsonObject<ChartSetting>(settingsJsonPath)?.let {
+            yellowChart?.run {
+                label = getString(R.string.showcases_label)
+                chartSettings = it
             }
-        }
 
-        activity!!.loadJsonObject<ChartSetting>(settingsJsonPath)?.let {
-            chartSelector.currentTypeSelected = ChartType.valueOf(it.type)
+            chartSelector?.run {
+                currentTypeSelected = ChartType.valueOf(it.type)
+                delegate = object : OnChangeListener {
+                    override fun didChangeChartType(type: ChartType) {
+                        yellowChart?.updateType(type.toString())
+                    }
+                }
+            }
         }
 
         repeat(20) {

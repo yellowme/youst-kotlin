@@ -53,13 +53,15 @@ object ChartStylizer {
 
     fun<T : BarLineScatterCandleBubbleDataSet<*>> applyStyleToDataSet(
         dataSet: T,
-        label: String,
+        settings: ChartSetting,
         context: Context
     ) = dataSet.run {
-        setLabel(label)
-        valueTextColor = getColorByName("blue", context)
-        valueTypeface = Typeface.DEFAULT_BOLD
-        color= getColorByName("yellow", context)
+        settings.let {
+            label = it.labelText
+            valueTextColor = getColorByName(it.dataSetTextColor, context)
+            valueTypeface = Typeface.DEFAULT_BOLD
+            color= getColorByName(it.dataSetColor, context)
+        }
     }
 
     private fun getColorByName(name: String, context: Context): Int = context.run {
