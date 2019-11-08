@@ -32,6 +32,8 @@ class YellowChart @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : LinearLayout(context, attrs, defStyleAttr) {
 
+    //region Attributes
+
     var label: String? = ""
 
     var chart: BarLineChartBase<*>? = null
@@ -43,6 +45,10 @@ class YellowChart @JvmOverloads constructor(
         }
 
     private var listOfEntries = ArrayList<ChartEntry>()
+
+    //end region
+
+    //region Helpers
 
     init {
         inflate(R.layout.component_yellowchart, context)
@@ -116,6 +122,8 @@ class YellowChart @JvmOverloads constructor(
             }
         }
     }
+
+    //end region
 
 }
 
