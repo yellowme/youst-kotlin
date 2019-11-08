@@ -41,8 +41,5 @@
     <string name="hello">Hello!</string>
     <string name="yes">Yes</string>
 
-    <string name="screen_chart">Welcome, yellow knight.\nDo you want to continue?</string>
     <string name="showcases_label">Chart showcases</string>
-    <string name="title_chart_view_label">Random data incoming...</string>
-
 </resources>

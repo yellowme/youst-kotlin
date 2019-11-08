@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/chartActivity"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
 
-    <mx.yellowme.youst.playground.components.AppHero
-        android:id="@+id/appHero"
+    <mx.yellowme.youst.playground.components.YellowChart
+        android:id="@+id/yellowChart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:heroBackgroundColor="@color/gold"
-        app:heroMessageColor="@color/white"
-        app:heroMainActionLabel="@string/yes" />
+        android:layout_height="0dp"
+        android:layout_weight=".85"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dimen_5"
+        android:paddingTop="@dimen/dimen_40"
+        android:paddingEnd="@dimen/dimen_5"
+        android:paddingBottom="@dimen/dimen_20" />
+
+    <mx.yellowme.youst.playground.components.ChartSelector
+        android:id="@+id/chartSelector"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".15"
+        app:selectorBackgroundColor="@color/design_default_color_primary"
+        app:selectorOptionsTextColor="@color/white"
+        app:selectorOptionsHighlightColor="@color/white" />
 
 </LinearLayout>
