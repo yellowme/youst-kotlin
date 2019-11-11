@@ -6,10 +6,7 @@
 
     <color name="textColor">@color/haiti</color>
 
-    <!--    <color name="white">#ffffff</color>-->
-    <!--    <color name="yellow">#ffdc00</color>-->
     <color name="blue">#0074D9</color>
-    <!--    <color name="black">#111111</color>-->
     <color name="gray">#aaaaaa</color>
     <color name="graywhite">#EEEEEE</color>
     <color name="silver">#dddddd</color>
@@ -23,35 +20,10 @@
 
     <color name="shade">#697385</color>
 
-    <!-- Colors for type -->
-
-    <color name="vermillion">#db2811</color>
-    <color name="frenchBlue">#3b5ba7</color>
-    <color name="orange">#FF6600</color>
-    <color name="gray_purple">#666699</color>
-    <color name="dark_pink">#990066</color>
-    <color name="light_green">#00CC00</color>
-    <color name="green_brown">#404F24</color>
-    <color name="light_brown">#996633</color>
-    <color name="blue_green">#01796f</color>
-    <color name="bright_blue">#00E0E0</color>
-    <color name="blue_gray">#AEC6CF</color>
-    <color name="gray_brown">#816E5C</color>
-    <color name="dark_brown">#593C1F</color>
-    <color name="purple">#663399</color>
-    <color name="hot_pink">#FF0099</color>
-    <color name="gray_green">#336666</color>
-    <color name="gold">#FFCC00</color>
-    <color name="dark_red">#AA0114</color>
-    <color name="clear_gray">#e0e0e0</color>
-    <color name="light_gray">#f2f2f2</color>
-    <color name="dark_gray">#56575a</color>
-
     <!-- Colors for screen backgrounds -->
 
     <color name="chinook">#A6E0BC</color>
     <color name="salomie">#FFE38A</color>
-    <!--    <color name="turquoise">#1abc9c</color>-->
     <color name="peterriver">#3498db</color>
     <color name="nephritis">#27ae60</color>
     <color name="amethyst">#9b59b6</color>
@@ -60,12 +32,6 @@
     <color name="scrim">#99323232</color>
 
     <color name="clear_chill">#1e90ff</color>
-
-<!--    <color name="guitar_gold">#f7b731</color>-->
-<!--    <color name="guitar_black">@color/black</color>-->
-<!--    <color name="guitar_secondary_black">#1b2021</color>-->
-<!--    <color name="guitar_light_black">#546165</color>-->
-
 
     <color name="guitar_gold">#f7b731</color>
     <color name="guitar_black">#6E6D84</color>
@@ -120,6 +86,7 @@
     <!--endregion  -->
 
     <!--region DARK COLOR PALLET-->
+
     <color name="dark_coral">#DE643F</color>
     <color name="dark_turquoise">#04BA96</color>
     <color name="dark_malibu">#0E9CFB</color>
@@ -162,6 +129,7 @@
     <color name="dark_ghost">#383870</color>
     <color name="dark_rock">#954B31</color>
     <color name="dark_steel">#8FBDAA</color>
+
     <!--endregion-->
 
 </resources>

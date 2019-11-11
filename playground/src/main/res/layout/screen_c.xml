@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:background="@color/dark_red">
+    tools:background="@color/orchid">
 
     <mx.yellowme.youst.playground.components.AppHero
         android:id="@+id/appHero"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:heroBackgroundColor="@color/dark_red"
+        app:heroBackgroundColor="@color/orchid"
         app:heroMainActionLabel="@string/to_g"
         app:heroMessage="@string/c_label"
         app:heroSecondaryActionLabel="@string/to_a" />

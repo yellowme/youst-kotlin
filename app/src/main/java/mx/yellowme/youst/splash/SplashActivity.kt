@@ -5,12 +5,11 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.splash.*
 import mx.yellowme.youst.R
 import mx.yellowme.youst.core.components.ThemeConstants.DARK
-import mx.yellowme.youst.core.components.ThemeConstants.IS_DARK
 import mx.yellowme.youst.core.components.ThemeConstants.LIGHT
-import mx.yellowme.youst.core.components.ThemeConstants.THEME_PREFERENCES
 import mx.yellowme.youst.core.components.ThemeConstants.THEME_QUERY
+import mx.yellowme.youst.core.components.isDarkThemeEnabled
+import mx.yellowme.youst.core.components.setDarkThemeEnabled
 import mx.yellowme.youst.core.extensions.launch
-import mx.yellowme.youst.core.extensions.themeId
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.core.hooks.animations.setListener
 import mx.yellowme.youst.core.utils.Activities
@@ -24,12 +23,7 @@ class SplashActivity : BaseActivity() {
         handleUri()
         super.onCreate(savedInstanceState)
         splashAnimationView?.apply {
-            val rawRes = if (themeId() == R.id.dark_theme) {
-                R.raw.logo_reveal_dark
-            } else {
-                R.raw.logo_reveal
-            }
-            setAnimation(rawRes)
+            setAnimation(if (isDarkThemeEnabled()) R.raw.logo_reveal_dark else R.raw.logo_reveal)
             useHardwareAcceleration()
             setListener {
                 onAnimationEnd {
@@ -45,12 +39,7 @@ class SplashActivity : BaseActivity() {
             DARK -> true
             LIGHT -> false
             else -> null
-        }
-        isDark?.let {
-            getSharedPreferences(THEME_PREFERENCES, 0)
-                .edit()
-                .putBoolean(IS_DARK, it)
-                .commit()
-        }
+        } ?: return
+        setDarkThemeEnabled(isDark)
     }
 }

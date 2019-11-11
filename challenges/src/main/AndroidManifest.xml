@@ -24,7 +24,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="marioguillermo.github.io"
+                    android:host="yellowme.github.io"
                     android:scheme="https"
                     android:path="/hello" />
             </intent-filter>

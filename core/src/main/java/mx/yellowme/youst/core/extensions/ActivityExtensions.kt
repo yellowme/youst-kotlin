@@ -6,7 +6,6 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import mx.yellowme.youst.core.R
 
 //region Start Activity
@@ -172,6 +171,17 @@ fun Activity.getBooleanFrom(
     default: Boolean = false
 ): Boolean {
     return getSharedPreferences(preferenceName, 0).getBoolean(key, default)
+}
+
+fun Activity.saveBooleanTo(
+    preferenceName: String,
+    key: String,
+    value: Boolean
+) {
+    getSharedPreferences(preferenceName, 0)
+        .edit()
+        .putBoolean(key, value)
+        .apply()
 }
 
 //endregion
