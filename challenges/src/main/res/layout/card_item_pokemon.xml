@@ -31,7 +31,7 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/dimen_8"
             android:layout_marginTop="@dimen/dimen_8"
-            android:background="@color/green_brown"
+            android:background="@color/ground"
             android:gravity="center"
             app:layout_constraintEnd_toStartOf="@+id/secondTypeView"
             app:layout_constraintStart_toStartOf="@id/imageView"

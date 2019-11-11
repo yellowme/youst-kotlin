@@ -3,8 +3,7 @@ package mx.yellowme.youst.core.hooks
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import mx.yellowme.youst.core.R
-import mx.yellowme.youst.core.components.ThemeConstants
-import mx.yellowme.youst.core.extensions.getBooleanFrom
+import mx.yellowme.youst.core.components.isDarkThemeEnabled
 import mx.yellowme.youst.core.extensions.themeId
 
 abstract class BaseActivity : AppCompatActivity() {
@@ -15,13 +14,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (getBooleanFrom(
-                ThemeConstants.THEME_PREFERENCES,
-                ThemeConstants.IS_DARK
-            )
-        ) {
-            replaceTheme(themeId())
-        }
+        if (isDarkThemeEnabled()) replaceTheme(themeId())
         setContentView(layoutId)
     }
 

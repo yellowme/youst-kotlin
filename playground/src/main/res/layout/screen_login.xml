@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:heroMainActionLabel="@string/action_login"
-        app:heroBackgroundColor="@color/gray_purple"
+        app:heroBackgroundColor="@color/coral"
         app:heroMessage="@string/screen_login" />
 
 </RelativeLayout>
