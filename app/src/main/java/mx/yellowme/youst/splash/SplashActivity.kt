@@ -6,7 +6,7 @@ import kotlinx.android.synthetic.main.splash.*
 import mx.yellowme.youst.R
 import mx.yellowme.youst.core.components.ThemeConstants.DARK
 import mx.yellowme.youst.core.components.ThemeConstants.LIGHT
-import mx.yellowme.youst.core.components.ThemeConstants.THEME_QUERY
+import mx.yellowme.youst.core.components.ThemeConstants.QUERY_PARAM_STYLE
 import mx.yellowme.youst.core.components.isDarkThemeEnabled
 import mx.yellowme.youst.core.components.setDarkThemeEnabled
 import mx.yellowme.youst.core.extensions.launch
@@ -35,7 +35,7 @@ class SplashActivity : BaseActivity() {
 
     private fun handleUri() {
         val data: Uri? = intent?.data
-        val isDark = when (data?.getQueryParameter(THEME_QUERY)) {
+        val isDark = when (data?.getQueryParameter(QUERY_PARAM_STYLE)) {
             DARK -> true
             LIGHT -> false
             else -> null
