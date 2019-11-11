@@ -11,7 +11,7 @@ object ThemeConstants {
     const val IS_DARK = "IS_DARK"
     const val LIGHT = "light"
     const val DARK = "dark"
-    const val THEME_QUERY = "wanted"
+    const val QUERY_PARAM_STYLE = "style"
 }
 
 fun AppCompatActivity.isDarkThemeEnabled(): Boolean {

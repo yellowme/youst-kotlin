@@ -125,31 +125,21 @@
     <!--region Placeholders. Implementations in feature modules. -->
 
     <style name="Dashboard" />
-
     <style name="Dashboard.OptionItem" parent="Dashboard" />
-
     <style name="Dashboard.OptionItem.Title" />
-
     <style name="Dashboard.OptionItem.Subtitle" />
 
     <style name="Challenge" />
-
     <style name="Challenge.Title" />
-
     <style name="Challenge.Subtitle" />
-
     <style name="Challenge.Option" parent="Challenge" />
-
     <style name="Challenge.Option.Title" />
-
     <style name="Challenge.Option.Subtitle" />
 
     <style name="Playground" />
 
     <style name="MiniApps" />
-
     <style name="MiniApps.Chords" />
-
     <style name="MiniApps.Chords.OptionItem" parent="MiniApps.Chords" />
 
     <!--endregion-->
