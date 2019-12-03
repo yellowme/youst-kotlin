@@ -5,6 +5,7 @@ import mx.yellowme.youst.challenges.crazylists.CrazyListsChallengeActivity
 import mx.yellowme.youst.challenges.domain.Challenge
 import mx.yellowme.youst.challenges.domain.ChallengeType
 import mx.yellowme.youst.challenges.listentome.ListenToMeChallengeActivity
+import mx.yellowme.youst.challenges.ui.archie.ArchieChallengeActivity
 import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.core.templates.showcase.GenericShowcaseActivity
@@ -29,12 +30,10 @@ class ChallengesActivity : GenericShowcaseActivity<Challenge>() {
     //TODO: Improve item handle
     override fun onItemClick(item: Challenge?) {
         item?.type?.let {
-            if (it == ChallengeType.ARCHIE) {
-                toast(getString(coreR.string.work_in_progress))
-                return
-            }
-
             val nextActivity: Class<*> = when (it) {
+                ChallengeType.ARCHIE -> {
+                    ArchieChallengeActivity::class.java
+                }
                 ChallengeType.LISTEN_TO_ME -> {
                     ListenToMeChallengeActivity::class.java
                 }

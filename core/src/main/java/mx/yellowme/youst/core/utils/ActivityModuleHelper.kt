@@ -66,7 +66,7 @@ object Activities {
         object Chart : AddressableActivity {
             override val className = "$PACKAGE_NAME.playground.ui.chart.ChartActivity"
         }
-    }
+     }
 
     object Challenges : AddressableActivity {
 
