@@ -38,6 +38,9 @@
         <activity
             android:name=".listentome.ListenToMeChallengeActivity"
             android:theme="@style/SharedAppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.archie.ArchieChallengeActivity"
+            android:theme="@style/SharedAppTheme.NoActionBar" />
     </application>
 
 </manifest>
