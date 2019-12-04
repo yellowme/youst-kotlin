@@ -9,7 +9,7 @@
     <string name="action_go_back">Go back</string>
     <string name="instructions">Instructions</string>
     <string name="empty_list_holder">Empty List</string>
-    <string name="error_list_message">There was an error trying to load the data</string>
+    <string name="error_list_message">There was an error loading data</string>
     <string name="help">Help</string>
 
     <string name="challenge_title_archie">Archie</string>

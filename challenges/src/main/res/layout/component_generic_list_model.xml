@@ -23,6 +23,7 @@
         style="@style/Challenge.Subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_32"
         android:text="@string/error_list_message"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
