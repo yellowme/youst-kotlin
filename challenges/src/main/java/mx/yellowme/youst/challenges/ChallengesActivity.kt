@@ -1,17 +1,15 @@
 package mx.yellowme.youst.challenges
 
 import mx.yellowme.youst.challenges.common.BaseChallengeActivity.Companion.TOOLBAR_TITLE
-import mx.yellowme.youst.challenges.crazylists.CrazyListsChallengeActivity
+import mx.yellowme.youst.challenges.ui.crazylists.CrazyListsChallengeActivity
 import mx.yellowme.youst.challenges.domain.Challenge
 import mx.yellowme.youst.challenges.domain.ChallengeType
-import mx.yellowme.youst.challenges.listentome.ListenToMeChallengeActivity
+import mx.yellowme.youst.challenges.ui.listentome.ListenToMeChallengeActivity
 import mx.yellowme.youst.challenges.ui.archie.ArchieChallengeActivity
 import mx.yellowme.youst.core.extensions.launch
-import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.core.templates.showcase.GenericShowcaseActivity
 import mx.yellowme.youst.core.templates.showcase.ModelTransformer
 import mx.yellowme.youst.core.utils.asJsonArrayOf
-import mx.yellowme.youst.core.R as coreR
 
 class ChallengesActivity : GenericShowcaseActivity<Challenge>() {
 
@@ -31,9 +29,6 @@ class ChallengesActivity : GenericShowcaseActivity<Challenge>() {
     override fun onItemClick(item: Challenge?) {
         item?.type?.let {
             val nextActivity: Class<*> = when (it) {
-                ChallengeType.ARCHIE -> {
-                    ArchieChallengeActivity::class.java
-                }
                 ChallengeType.LISTEN_TO_ME -> {
                     ListenToMeChallengeActivity::class.java
                 }
@@ -41,7 +36,10 @@ class ChallengesActivity : GenericShowcaseActivity<Challenge>() {
                 ChallengeType.ABOUT_DETAILS -> {
                     CrazyListsChallengeActivity::class.java
                 }
-                else -> throw RuntimeException("Invalid type")
+                ChallengeType.ARCHIE -> {
+                    ArchieChallengeActivity::class.java
+                }
+                else -> throw RuntimeException("Invalid type: $it")
             }
 
             launch(nextActivity) {
