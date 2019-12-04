@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/activityBackground">
+    android:background="?attr/activityBackground"
+    android:orientation="vertical">
 
     <mx.yellowme.youst.core.components.toolbar.MainActionToolbar
         android:id="@+id/mainActionToolbar"
@@ -16,19 +16,10 @@
         app:leftAction="back"
         app:menuAction="@string/help" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="@dimen/dimen_12"
-        android:layout_marginEnd="@dimen/dimen_12"
-        android:paddingTop="@dimen/dimen_6"
-        app:layout_constrainedHeight="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mainActionToolbar"
-        tools:listitem="@layout/card_item_pokemon_type" />
+    <mx.yellowme.youst.challenges.components.PokeTypeListModel
+        android:id="@+id/pokeTypeListModel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
 

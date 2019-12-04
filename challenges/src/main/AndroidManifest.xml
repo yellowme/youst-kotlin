@@ -33,10 +33,10 @@
             android:name=".pokemon.show.PokemonDetailActivity"
             android:theme="@style/SharedAppTheme.NoActionBar" />
         <activity
-            android:name=".crazylists.CrazyListsChallengeActivity"
+            android:name=".ui.crazylists.CrazyListsChallengeActivity"
             android:theme="@style/SharedAppTheme.NoActionBar" />
         <activity
-            android:name=".listentome.ListenToMeChallengeActivity"
+            android:name=".ui.listentome.ListenToMeChallengeActivity"
             android:theme="@style/SharedAppTheme.NoActionBar" />
         <activity
             android:name=".ui.archie.ArchieChallengeActivity"

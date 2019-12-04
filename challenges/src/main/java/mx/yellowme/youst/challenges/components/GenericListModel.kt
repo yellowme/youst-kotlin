@@ -8,12 +8,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.component_generic_list_model.view.*
 import mx.yellowme.youst.challenges.R
+import mx.yellowme.youst.core.extensions.gone
 import mx.yellowme.youst.core.extensions.inflate
+import mx.yellowme.youst.core.extensions.visible
 import mx.yellowme.youst.core.hooks.recycler.RecyclerViewHolderDecorator
 import mx.yellowme.youst.core.hooks.recycler.SimpleRecyclerAdapter
 
 enum class GenericListState {
-    LOADING, EMPTY, LOADED
+    LOADING, EMPTY, LOADED, ERROR
 }
 
 /**
@@ -49,19 +51,32 @@ abstract class GenericListModel<Model, ViewHolder : RecyclerViewHolderDecorator<
     fun setState(state: GenericListState) {
         when (state) {
             GenericListState.LOADING -> {
-                loadingProgressBar.visibility = View.VISIBLE
-                emptyMessageTextView.visibility = View.GONE
-                recyclerView.visibility = View.GONE
+                loadingProgressBar.visible()
+
+                emptyMessageTextView.gone()
+                errorMessageTextView.gone()
+                recyclerView.gone()
             }
             GenericListState.EMPTY -> {
-                loadingProgressBar.visibility = View.VISIBLE
-                emptyMessageTextView.visibility = View.GONE
-                recyclerView.visibility = View.GONE
+                emptyMessageTextView.visible()
+
+                loadingProgressBar.gone()
+                errorMessageTextView.gone()
+                recyclerView.gone()
             }
             GenericListState.LOADED -> {
-                loadingProgressBar.visibility = View.GONE
-                emptyMessageTextView.visibility = View.GONE
-                recyclerView.visibility = View.VISIBLE
+                recyclerView.visible()
+
+                loadingProgressBar.gone()
+                emptyMessageTextView.gone()
+                errorMessageTextView.gone()
+            }
+            GenericListState.ERROR -> {
+                errorMessageTextView.visible()
+
+                loadingProgressBar.gone()
+                emptyMessageTextView.gone()
+                recyclerView.gone()
             }
         }
     }

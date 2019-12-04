@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?attr/activityBackground"
+    android:orientation="vertical">
 
     <mx.yellowme.youst.core.components.toolbar.MainActionToolbar
         android:id="@+id/mainActionToolbar"
@@ -15,7 +16,7 @@
         app:leftAction="back"
         app:menuAction="@string/help" />
 
-    <mx.yellowme.youst.challenges.ui.archie.PokeListModel
+    <mx.yellowme.youst.challenges.components.PokeListModel
         android:id="@+id/pokeListModel"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

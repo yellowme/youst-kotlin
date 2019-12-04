@@ -1,21 +1,24 @@
-package mx.yellowme.youst.challenges.listentome
+package mx.yellowme.youst.challenges.components
 
-import mx.yellowme.youst.challenges.R
-import mx.yellowme.youst.challenges.common.BaseChallengeActivity
-import mx.yellowme.youst.challenges.common.ChallengeWithListActivity
-import mx.yellowme.youst.challenges.domain.ChallengeType
+import android.content.Context
+import android.util.AttributeSet
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import mx.yellowme.youst.challenges.domain.PokemonType
 import mx.yellowme.youst.challenges.domain.PokemonTypeSelection
 import mx.yellowme.youst.challenges.pokemon.types.PokemonTypeAdapter
 import mx.yellowme.youst.challenges.pokemon.types.PokemonTypeListViewHolder
 import mx.yellowme.youst.core.hooks.recycler.SimpleRecyclerAdapter
-import java.util.*
 
-class ListenToMeChallengeActivity : ChallengeWithListActivity<PokemonTypeSelection, PokemonTypeListViewHolder>() {
-
-    override val layoutId = R.layout.challenge_listen_to_me
-
-    override val currentType = ChallengeType.LISTEN_TO_ME
+class PokeTypeListModel @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0
+) : GenericListModel<PokemonTypeSelection, PokemonTypeListViewHolder>(
+    context,
+    attrs,
+    defStyleAttr
+) {
 
     override fun initAdapter(): SimpleRecyclerAdapter<PokemonTypeSelection, PokemonTypeListViewHolder>? {
         val types = PokemonType.values()
