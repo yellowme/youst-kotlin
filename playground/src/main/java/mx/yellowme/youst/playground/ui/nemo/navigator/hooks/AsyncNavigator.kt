@@ -1,4 +1,4 @@
-package mx.yellowme.youst.playground.nemo.navigator.hooks
+package mx.yellowme.youst.playground.ui.nemo.navigator.hooks
 
 import mx.yellowme.youst.playground.data.SimpleCallback
 import mx.yellowme.youst.playground.data.SingleItemCallback

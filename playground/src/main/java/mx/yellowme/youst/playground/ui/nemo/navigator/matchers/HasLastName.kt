@@ -1,10 +1,10 @@
-package mx.yellowme.youst.playground.nemo.navigator.matchers
+package mx.yellowme.youst.playground.ui.nemo.navigator.matchers
 
-import mx.yellowme.youst.playground.nemo.navigator.hooks.AsyncSingleNavigator
-import mx.yellowme.youst.playground.nemo.navigator.BaseHelm
+import mx.yellowme.youst.playground.ui.nemo.navigator.hooks.AsyncSingleNavigator
+import mx.yellowme.youst.playground.ui.nemo.navigator.BaseHelm
 import mx.yellowme.youst.playground.data.UserFakeRepository
 import mx.yellowme.youst.playground.domain.User
-import mx.yellowme.youst.playground.nemo.navigator.hooks.Navigator
+import mx.yellowme.youst.playground.ui.nemo.navigator.hooks.Navigator
 
 class HasLastName<Navigation>(
     private val repository: UserFakeRepository,

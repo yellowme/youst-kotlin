@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/screenA"
-        android:name="mx.yellowme.youst.playground.navigation.ScreenAFragment"
+        android:name="mx.yellowme.youst.playground.ui.navigation.ScreenAFragment"
         android:label="ScreenAFragment"
         tools:layout="@layout/screen_a">
         <action
@@ -21,7 +21,7 @@
 
     <fragment
         android:id="@+id/screenB"
-        android:name="mx.yellowme.youst.playground.navigation.ScreenBFragment"
+        android:name="mx.yellowme.youst.playground.ui.navigation.ScreenBFragment"
         android:label="ScreenBFragment"
         tools:layout="@layout/screen_b">
         <action
@@ -42,7 +42,7 @@
 
     <fragment
         android:id="@+id/screenC"
-        android:name="mx.yellowme.youst.playground.navigation.ScreenCFragment"
+        android:name="mx.yellowme.youst.playground.ui.navigation.ScreenCFragment"
         android:label="ScreenCFragment"
         tools:layout="@layout/screen_c">
         <action
@@ -61,7 +61,7 @@
 
     <fragment
         android:id="@+id/screenD"
-        android:name="mx.yellowme.youst.playground.navigation.ScreenDFragment"
+        android:name="mx.yellowme.youst.playground.ui.navigation.ScreenDFragment"
         android:label="ScreenDFragment"
         tools:layout="@layout/screen_d">
         <action
@@ -75,7 +75,7 @@
 
     <fragment
         android:id="@+id/screenE"
-        android:name="mx.yellowme.youst.playground.navigation.ScreenEFragment"
+        android:name="mx.yellowme.youst.playground.ui.navigation.ScreenEFragment"
         android:label="ScreenEFragment"
         tools:layout="@layout/screen_e">
         <action
@@ -89,7 +89,7 @@
 
     <fragment
         android:id="@+id/screenF"
-        android:name="mx.yellowme.youst.playground.navigation.ScreenFFragment"
+        android:name="mx.yellowme.youst.playground.ui.navigation.ScreenFFragment"
         android:label="ScreenFFragment"
         tools:layout="@layout/screen_f">
         <action
@@ -101,7 +101,7 @@
 
     <fragment
         android:id="@+id/screenG"
-        android:name="mx.yellowme.youst.playground.navigation.ScreenGFragment"
+        android:name="mx.yellowme.youst.playground.ui.navigation.ScreenGFragment"
         android:label="ScreenGFragment"
         tools:layout="@layout/screen_g" />
 

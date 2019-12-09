@@ -1,8 +1,8 @@
-package mx.yellowme.youst.playground.nemo.navigator.fetchers
+package mx.yellowme.youst.playground.ui.nemo.navigator.fetchers
 
-import mx.yellowme.youst.playground.nemo.navigator.hooks.AsyncSingleNavigator
-import mx.yellowme.youst.playground.nemo.navigator.hooks.Navigator
-import mx.yellowme.youst.playground.nemo.navigator.BaseHelm
+import mx.yellowme.youst.playground.ui.nemo.navigator.hooks.AsyncSingleNavigator
+import mx.yellowme.youst.playground.ui.nemo.navigator.hooks.Navigator
+import mx.yellowme.youst.playground.ui.nemo.navigator.BaseHelm
 import mx.yellowme.youst.playground.data.UserFakeRepository
 import mx.yellowme.youst.playground.domain.User
 
