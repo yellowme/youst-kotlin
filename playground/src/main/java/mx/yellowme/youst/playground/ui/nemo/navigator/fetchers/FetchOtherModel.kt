@@ -1,9 +1,9 @@
-package mx.yellowme.youst.playground.nemo.navigator.fetchers
+package mx.yellowme.youst.playground.ui.nemo.navigator.fetchers
 
-import mx.yellowme.youst.playground.nemo.navigator.hooks.AsyncSimpleNavigator
-import mx.yellowme.youst.playground.nemo.navigator.hooks.Navigator
+import mx.yellowme.youst.playground.ui.nemo.navigator.hooks.AsyncSimpleNavigator
+import mx.yellowme.youst.playground.ui.nemo.navigator.hooks.Navigator
 import mx.yellowme.youst.playground.data.PaymentFakeRepository
-import mx.yellowme.youst.playground.nemo.navigator.BaseHelm
+import mx.yellowme.youst.playground.ui.nemo.navigator.BaseHelm
 
 class FetchOtherModel<Navigation>(
     private val repository: PaymentFakeRepository,

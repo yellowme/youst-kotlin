@@ -1,4 +1,4 @@
-package mx.yellowme.youst.playground.nemo.screens
+package mx.yellowme.youst.playground.ui.nemo.screens
 
 import android.os.Bundle
 import kotlinx.android.synthetic.main.screen_main.*

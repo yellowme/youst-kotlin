@@ -1,19 +1,19 @@
-package mx.yellowme.youst.playground.nemo.screens
+package mx.yellowme.youst.playground.ui.nemo.screens
 
 import android.os.Bundle
-import kotlinx.android.synthetic.main.screen_unsupported.*
+import kotlinx.android.synthetic.main.screen_no_payment_option.*
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.components.AppHeroActionListener
-import mx.yellowme.youst.playground.data.ConfigFakeRepository
-import mx.yellowme.youst.playground.domain.Config
-import mx.yellowme.youst.playground.nemo.navigator.CommonActivityHelm
+import mx.yellowme.youst.playground.data.PaymentFakeRepository
+import mx.yellowme.youst.playground.domain.Payment
+import mx.yellowme.youst.playground.ui.nemo.navigator.CommonActivityHelm
 
-class UnsupportedVersionScreen : BaseActivity() {
+class MissingPaymentOptionScreen : BaseActivity() {
 
     //region Attributes
 
-    override val layoutId: Int = R.layout.screen_unsupported
+    override val layoutId: Int = R.layout.screen_no_payment_option
 
     private val navigation = CommonActivityHelm(this)
 
@@ -26,8 +26,8 @@ class UnsupportedVersionScreen : BaseActivity() {
         appHero.mainActionListener = object : AppHeroActionListener {
             override fun onClickAction() {
                 //TODO: Must delegate action to another layer component (ViewModel or Presenter)
-                ConfigFakeRepository.defaultConfig =
-                    Config("3.3.12", 12)
+                PaymentFakeRepository.defaultConfig =
+                    Payment("Enso", "4242424242424242")
                 navigation.sendToSplash()
             }
         }

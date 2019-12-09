@@ -1,4 +1,4 @@
-package mx.yellowme.youst.playground.navigation
+package mx.yellowme.youst.playground.ui.navigation
 
 import mx.yellowme.youst.core.hooks.BaseFragment
 import mx.yellowme.youst.playground.R

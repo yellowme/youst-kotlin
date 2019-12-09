@@ -23,7 +23,7 @@
         <!--region Navigation-->
 
         <activity
-            android:name=".navigation.NavigationActivity"
+            android:name=".ui.navigation.NavigationActivity"
             android:label="Jetpack Navigation"
             android:parentActivityName=".PlaygroundActivity"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent">
@@ -39,22 +39,22 @@
         <!--region Nemo-->
 
         <activity
-            android:name=".nemo.NemoActivity"
+            android:name=".ui.nemo.NemoActivity"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
         <activity
-            android:name="mx.yellowme.youst.playground.nemo.screens.LoginScreen"
+            android:name="mx.yellowme.youst.playground.ui.nemo.screens.LoginScreen"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
         <activity
-            android:name="mx.yellowme.youst.playground.nemo.screens.UnsupportedVersionScreen"
+            android:name="mx.yellowme.youst.playground.ui.nemo.screens.UnsupportedVersionScreen"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
         <activity
-            android:name="mx.yellowme.youst.playground.nemo.screens.UserWithoutAttributeScreen"
+            android:name="mx.yellowme.youst.playground.ui.nemo.screens.UserWithoutAttributeScreen"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
         <activity
-            android:name="mx.yellowme.youst.playground.nemo.screens.MissingPaymentOptionScreen"
+            android:name="mx.yellowme.youst.playground.ui.nemo.screens.MissingPaymentOptionScreen"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
         <activity
-            android:name="mx.yellowme.youst.playground.nemo.screens.MainScreen"
+            android:name="mx.yellowme.youst.playground.ui.nemo.screens.MainScreen"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
 
         <!--endregion-->

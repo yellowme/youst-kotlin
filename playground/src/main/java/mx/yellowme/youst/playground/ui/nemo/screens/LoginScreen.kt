@@ -1,4 +1,4 @@
-package mx.yellowme.youst.playground.nemo.screens
+package mx.yellowme.youst.playground.ui.nemo.screens
 
 import android.os.Bundle
 import kotlinx.android.synthetic.main.screen_login.*
@@ -7,7 +7,7 @@ import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.components.AppHeroActionListener
 import mx.yellowme.youst.playground.data.UserFakeRepository
 import mx.yellowme.youst.playground.domain.User
-import mx.yellowme.youst.playground.nemo.navigator.CommonActivityHelm
+import mx.yellowme.youst.playground.ui.nemo.navigator.CommonActivityHelm
 
 class LoginScreen : BaseActivity() {
 

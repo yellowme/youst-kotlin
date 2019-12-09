@@ -1,18 +1,19 @@
-package mx.yellowme.youst.playground.nemo.screens
+package mx.yellowme.youst.playground.ui.nemo.screens
 
 import android.os.Bundle
-import kotlinx.android.synthetic.main.screen_user_no_attribute.*
+import kotlinx.android.synthetic.main.screen_unsupported.*
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.components.AppHeroActionListener
-import mx.yellowme.youst.playground.data.UserFakeRepository
-import mx.yellowme.youst.playground.nemo.navigator.CommonActivityHelm
+import mx.yellowme.youst.playground.data.ConfigFakeRepository
+import mx.yellowme.youst.playground.domain.Config
+import mx.yellowme.youst.playground.ui.nemo.navigator.CommonActivityHelm
 
-class UserWithoutAttributeScreen : BaseActivity() {
+class UnsupportedVersionScreen : BaseActivity() {
 
     //region Attributes
 
-    override val layoutId: Int = R.layout.screen_user_no_attribute
+    override val layoutId: Int = R.layout.screen_unsupported
 
     private val navigation = CommonActivityHelm(this)
 
@@ -25,7 +26,8 @@ class UserWithoutAttributeScreen : BaseActivity() {
         appHero.mainActionListener = object : AppHeroActionListener {
             override fun onClickAction() {
                 //TODO: Must delegate action to another layer component (ViewModel or Presenter)
-                UserFakeRepository.defaultConfig?.lastName = "Burgos"
+                ConfigFakeRepository.defaultConfig =
+                    Config("3.3.12", 12)
                 navigation.sendToSplash()
             }
         }
