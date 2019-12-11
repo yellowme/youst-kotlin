@@ -66,6 +66,10 @@ object Activities {
         object Chart : AddressableActivity {
             override val className = "$PACKAGE_NAME.playground.ui.chart.ChartActivity"
         }
+
+        object CameraX : AddressableActivity {
+            override val className = "$PACKAGE_NAME.playground.ui.camerax.CameraXActivity"
+        }
      }
 
     object Challenges : AddressableActivity {

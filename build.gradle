@@ -23,6 +23,7 @@ buildscript {
             coreKtx             : '1.0.2',
             cardview            : '1.0.0',
             coroutines          : '1.2.1',
+            camerax             : '1.0.0-alpha06',
 
             // App dependencies
             picasso             : '2.71828',

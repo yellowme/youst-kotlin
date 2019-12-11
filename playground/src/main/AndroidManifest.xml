@@ -74,6 +74,15 @@
 
         <!--endregion-->
 
+        <!--region CameraX-->
+
+        <activity
+            android:name=".ui.camerax.CameraXActivity"
+            android:parentActivityName=".PlaygroundActivity"
+            android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
+
+        <!--endregion-->
+
     </application>
 
 </manifest>
