@@ -16,5 +16,11 @@
     "title": "Chart showcases",
     "subtitle": "Implementation of MPAndroidChart library.\n\nHandle dynamic data and display it in several types of chart.",
     "paletteColor": "NASU_PURPLE"
+  },
+  {
+    "id": "4",
+    "title": "CameraX component",
+    "subtitle": "Implementation of CameraX library.\n\nHandles camera features using this component.",
+    "paletteColor": "PINK_GLAMOUR"
   }
 ]

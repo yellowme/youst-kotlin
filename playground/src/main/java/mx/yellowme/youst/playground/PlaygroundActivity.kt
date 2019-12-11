@@ -36,6 +36,9 @@ class PlaygroundActivity : GenericShowcaseActivity<PlaygroundElement>() {
                 PlaygroundElementType.CHART -> {
                     launch(intentTo(Activities.Playground.Chart))
                 }
+                PlaygroundElementType.CAMERAX -> {
+                    launch(intentTo(Activities.Playground.CameraX))
+                }
             }
         }
     }
