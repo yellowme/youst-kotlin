@@ -58,26 +58,6 @@ class CameraXY @JvmOverloads constructor(
         }
     }
 
-    fun startCamera() {
-        viewFinder.post {
-            preview = CameraFactory.createPreviewWithConfig()
-            imageCapture = CameraFactory.createImageCaptureWithConfig()
-            imageAnalysis = CameraFactory.createImageAnalysisWithConfig(executor)
-
-            preview?.setOnPreviewOutputUpdateListener {
-                val parent = viewFinder.parent as ViewGroup
-                parent.removeView(viewFinder)
-                parent.addView(viewFinder, 0)
-                viewFinder.run {
-                    surfaceTexture = it.surfaceTexture
-                    updateTransform()
-                }
-            }
-
-            CameraX.bindToLifecycle(lifecycleOwner, preview, imageCapture, imageAnalysis)
-        }
-    }
-
     fun captureImage() {
         viewFinder.post {
             val file = File(context.externalMediaDirs.first(),
@@ -100,6 +80,26 @@ class CameraXY @JvmOverloads constructor(
                         }
                     }
                 })
+        }
+    }
+
+    private fun startCamera() {
+        viewFinder.post {
+            preview = CameraFactory.createPreviewWithConfig()
+            imageCapture = CameraFactory.createImageCaptureWithConfig()
+            imageAnalysis = CameraFactory.createImageAnalysisWithConfig(executor)
+
+            preview?.setOnPreviewOutputUpdateListener {
+                val parent = viewFinder.parent as ViewGroup
+                parent.removeView(viewFinder)
+                parent.addView(viewFinder, 0)
+                viewFinder.run {
+                    surfaceTexture = it.surfaceTexture
+                    updateTransform()
+                }
+            }
+
+            CameraX.bindToLifecycle(lifecycleOwner, preview, imageCapture, imageAnalysis)
         }
     }
 
