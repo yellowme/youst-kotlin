@@ -33,6 +33,9 @@ class CameraXActivity : BaseActivity(), LifecycleOwner {
         super.onCreate(savedInstanceState)
         if (allPermissionsGranted()) {
             initializeCamera()
+            captureButton.setOnClickListener {
+                cameraxy.captureImage()
+            }
         } else {
             ActivityCompat.requestPermissions(
                 this, requiredPermissions, requestCodePermission)
@@ -46,7 +49,6 @@ class CameraXActivity : BaseActivity(), LifecycleOwner {
     private fun initializeCamera() {
         cameraxy.run {
             lifecycleOwner = this@CameraXActivity
-            startCamera()
         }
     }
 
