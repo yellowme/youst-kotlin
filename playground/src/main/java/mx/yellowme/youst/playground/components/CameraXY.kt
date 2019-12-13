@@ -3,18 +3,23 @@ package mx.yellowme.youst.playground.components
 import android.content.Context
 import android.graphics.Matrix
 import android.util.AttributeSet
-import android.util.Size
 import android.view.Surface
+import android.view.TextureView
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.camera.core.CameraX
+import androidx.camera.core.ImageAnalysis
+import androidx.camera.core.ImageCapture
 import androidx.camera.core.Preview
-import androidx.camera.core.PreviewConfig
 import androidx.lifecycle.LifecycleOwner
 import kotlinx.android.synthetic.main.component_cameraxy.view.*
 import mx.yellowme.youst.core.extensions.inflate
 import mx.yellowme.youst.playground.R
+import mx.yellowme.youst.playground.ui.camerax.utils.CameraFactory
+import java.io.File
 import java.util.concurrent.Executors
+
 
 /**
  * @author adrianleyvasanchez
@@ -29,8 +34,18 @@ class CameraXY @JvmOverloads constructor(
     //region Attributes
 
     var lifecycleOwner: LifecycleOwner? = null
+        set(value) {
+            field = value
+            startCamera()
+        }
 
     private val executor = Executors.newSingleThreadExecutor()
+
+    private var preview: Preview? = null
+
+    private var imageCapture: ImageCapture? = null
+
+    private var imageAnalysis: ImageAnalysis? = null
 
     //endregion
 
@@ -39,47 +54,71 @@ class CameraXY @JvmOverloads constructor(
     init {
         inflate(R.layout.component_cameraxy, context)
         viewFinder.addOnLayoutChangeListener { _, _, _, _, _, _, _, _, _ ->
-            updateTransform()
+            viewFinder.updateTransform()
         }
     }
 
     fun startCamera() {
         viewFinder.post {
-            val previewConfig = PreviewConfig.Builder().apply {
-                setTargetResolution(Size(640, 480))
-            }.build()
+            preview = CameraFactory.createPreviewWithConfig()
+            imageCapture = CameraFactory.createImageCaptureWithConfig()
+            imageAnalysis = CameraFactory.createImageAnalysisWithConfig(executor)
 
-            val preview = Preview(previewConfig)
-            preview.setOnPreviewOutputUpdateListener {
+            preview?.setOnPreviewOutputUpdateListener {
                 val parent = viewFinder.parent as ViewGroup
                 parent.removeView(viewFinder)
                 parent.addView(viewFinder, 0)
-                viewFinder.surfaceTexture = it.surfaceTexture
-                updateTransform()
+                viewFinder.run {
+                    surfaceTexture = it.surfaceTexture
+                    updateTransform()
+                }
             }
 
-            CameraX.bindToLifecycle(lifecycleOwner, preview)
+            CameraX.bindToLifecycle(lifecycleOwner, preview, imageCapture, imageAnalysis)
         }
     }
 
-    private fun updateTransform() {
-        val matrix = Matrix()
+    fun captureImage() {
+        viewFinder.post {
+            val file = File(context.externalMediaDirs.first(),
+                "${System.currentTimeMillis()}.jpg")
+            imageCapture?.takePicture(file, executor,
+                object : ImageCapture.OnImageSavedListener {
+                    override fun onError(
+                        imageCaptureError: ImageCapture.ImageCaptureError,
+                        message: String,
+                        exc: Throwable?
+                    ) {
+                        viewFinder.post {
+                            Toast.makeText(context, "Photo capture failed: $message", Toast.LENGTH_SHORT).show()
+                        }
+                    }
 
-        val centerX = viewFinder.width / 2f
-        val centerY = viewFinder.height / 2f
-
-        val rotationDegrees = when(viewFinder.display.rotation) {
-            Surface.ROTATION_0 -> 0
-            Surface.ROTATION_90 -> 90
-            Surface.ROTATION_180 -> 180
-            Surface.ROTATION_270 -> 270
-            else -> return
+                    override fun onImageSaved(file: File) {
+                        viewFinder.post {
+                            Toast.makeText(context, "Photo capture succeeded: ${file.absolutePath}", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                })
         }
-        matrix.postRotate(-rotationDegrees.toFloat(), centerX, centerY)
-
-        viewFinder.setTransform(matrix)
     }
 
     //endregion
+}
 
+fun TextureView.updateTransform() {
+    val matrix = Matrix()
+    val centerX = width / 2f
+    val centerY = height / 2f
+
+    val rotationDegrees = when(display.rotation) {
+        Surface.ROTATION_0 -> 0
+        Surface.ROTATION_90 -> 90
+        Surface.ROTATION_180 -> 180
+        Surface.ROTATION_270 -> 270
+        else -> return
+    }
+    matrix.postRotate(-rotationDegrees.toFloat(), centerX, centerY)
+
+    setTransform(matrix)
 }
