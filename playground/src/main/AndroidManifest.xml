@@ -74,10 +74,15 @@
 
         <!--endregion-->
 
-        <!--region CameraX-->
+        <!--region QRCode-->
 
         <activity
             android:name=".ui.qrcode.QRCodeActivity"
+            android:parentActivityName=".PlaygroundActivity"
+            android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
+
+        <activity
+            android:name=".ui.qrcode.screens.MainActivity"
             android:parentActivityName=".PlaygroundActivity"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
 

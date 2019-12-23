@@ -8,9 +8,6 @@ import com.google.android.gms.vision.Frame
 import com.google.android.gms.vision.barcode.Barcode
 import com.google.android.gms.vision.barcode.BarcodeDetector
 import io.fotoapparat.Fotoapparat
-import io.fotoapparat.log.fileLogger
-import io.fotoapparat.log.logcat
-import io.fotoapparat.log.loggers
 import io.fotoapparat.parameter.ScaleType
 import io.fotoapparat.selector.back
 import kotlinx.android.synthetic.main.component_qrcode_detector.view.*
@@ -41,7 +38,9 @@ class BarcodeDetector @JvmOverloads constructor(
 
     private var camera: Fotoapparat? = null
 
-    var delegate : BarcodeDelegate? = null
+    var delegate: BarcodeDelegate? = null
+
+    var barcodeFormat: Int = Barcode.QR_CODE
 
     //endregion
 
@@ -54,7 +53,7 @@ class BarcodeDetector @JvmOverloads constructor(
 
     private fun setup() {
         detector = BarcodeDetector.Builder(context)
-            .setBarcodeFormats(Barcode.QR_CODE)
+            .setBarcodeFormats(barcodeFormat)
             .build()
 
         if (!detector!!.isOperational) {
@@ -70,10 +69,6 @@ class BarcodeDetector @JvmOverloads constructor(
             view = cameraView,
             scaleType = ScaleType.CenterCrop,
             lensPosition = back(),
-            logger = loggers(
-                logcat(),
-                fileLogger(context)
-            ),
             cameraErrorCallback = { error ->
                 delegate?.onError(error.localizedMessage!!)
             }
