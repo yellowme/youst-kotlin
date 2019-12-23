@@ -67,8 +67,8 @@ object Activities {
             override val className = "$PACKAGE_NAME.playground.ui.chart.ChartActivity"
         }
 
-        object CameraX : AddressableActivity {
-            override val className = "$PACKAGE_NAME.playground.ui.camerax.CameraXActivity"
+        object QRCode : AddressableActivity {
+            override val className = "$PACKAGE_NAME.playground.ui.qrcode.QRCodeActivity"
         }
      }
 
