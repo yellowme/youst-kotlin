@@ -2,6 +2,7 @@
           package="mx.yellowme.youst.core">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+
     <uses-permission android:name="android.permission.CAMERA" />
 
 </manifest>
