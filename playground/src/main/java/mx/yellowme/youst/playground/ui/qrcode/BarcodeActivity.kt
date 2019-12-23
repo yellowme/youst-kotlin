@@ -15,7 +15,7 @@ import mx.yellowme.youst.playground.ui.qrcode.screens.MainActivity
  * @author adrianleyvasanchez
  * @since 10,December,2019
  */
-class QRCodeActivity : BaseActivity() {
+class BarcodeActivity : BaseActivity() {
 
     //region Attributes
 

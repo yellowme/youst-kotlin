@@ -15,7 +15,7 @@ class PlaygroundElement(
                 "1" -> PlaygroundElementType.JETPACK_NAVIGATION
                 "2" -> PlaygroundElementType.NEMO
                 "3" -> PlaygroundElementType.CHART
-                "4" -> PlaygroundElementType.QRCODE
+                "4" -> PlaygroundElementType.BARCODE
                 else -> throw RuntimeException("Unsupported challenge type for id: $id")
             }
         }
@@ -23,5 +23,5 @@ class PlaygroundElement(
 }
 
 enum class PlaygroundElementType {
-    JETPACK_NAVIGATION, NEMO, CHART, QRCODE
+    JETPACK_NAVIGATION, NEMO, CHART, BARCODE
 }

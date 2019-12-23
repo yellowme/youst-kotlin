@@ -36,8 +36,8 @@ class PlaygroundActivity : GenericShowcaseActivity<PlaygroundElement>() {
                 PlaygroundElementType.CHART -> {
                     launch(intentTo(Activities.Playground.Chart))
                 }
-                PlaygroundElementType.QRCODE -> {
-                    launch(intentTo(Activities.Playground.QRCode))
+                PlaygroundElementType.BARCODE -> {
+                    launch(intentTo(Activities.Playground.BARCODE))
                 }
             }
         }
