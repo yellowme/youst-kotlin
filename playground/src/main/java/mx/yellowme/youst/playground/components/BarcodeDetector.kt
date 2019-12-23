@@ -10,7 +10,7 @@ import com.google.android.gms.vision.barcode.BarcodeDetector
 import io.fotoapparat.Fotoapparat
 import io.fotoapparat.parameter.ScaleType
 import io.fotoapparat.selector.back
-import kotlinx.android.synthetic.main.component_qrcode_detector.view.*
+import kotlinx.android.synthetic.main.component_barcode_detector.view.*
 import mx.yellowme.youst.core.extensions.inflate
 import mx.yellowme.youst.playground.R
 
@@ -47,7 +47,7 @@ class BarcodeDetector @JvmOverloads constructor(
     //region Helpers
 
     init {
-        inflate(R.layout.component_qrcode_detector, context)
+        inflate(R.layout.component_barcode_detector, context)
         setup()
     }
 

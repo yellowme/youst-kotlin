@@ -77,7 +77,7 @@
         <!--region QRCode-->
 
         <activity
-            android:name=".ui.qrcode.QRCodeActivity"
+            android:name=".ui.qrcode.BarcodeActivity"
             android:parentActivityName=".PlaygroundActivity"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
 
