@@ -43,5 +43,5 @@
 
     <string name="showcases_label">Chart showcases</string>
 
-    <string name="take_photo_label">Take it!</string>
+    <string name="scan_photo_label">Scan</string>
 </resources>

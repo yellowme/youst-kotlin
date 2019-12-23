@@ -77,7 +77,7 @@
         <!--region CameraX-->
 
         <activity
-            android:name=".ui.camerax.CameraXActivity"
+            android:name=".ui.qrcode.QRCodeActivity"
             android:parentActivityName=".PlaygroundActivity"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
 
