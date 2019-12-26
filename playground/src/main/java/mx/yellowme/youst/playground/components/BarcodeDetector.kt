@@ -34,29 +34,43 @@ class BarcodeDetector @JvmOverloads constructor(
 
     //region Attributes
 
-    private var detector: BarcodeDetector? = null
-
-    private var camera: Fotoapparat? = null
-
     var delegate: BarcodeDelegate? = null
 
     var barcodeFormat: Int = Barcode.QR_CODE
 
+    private lateinit var detector: BarcodeDetector
+
+    private var camera: Fotoapparat? = null
+
     //endregion
 
-    //region Helpers
+    //region Public methods
 
     init {
         inflate(R.layout.component_barcode_detector, context)
         setup()
     }
 
+    fun start() = camera?.start()
+
+    fun stop() = camera?.stop()
+
+    fun scanPicture() = camera?.run {
+        takePicture().toBitmap().whenAvailable {
+            scan(it?.bitmap)
+        }
+    }
+
+    //endregion
+
+    //region Private methods
+
     private fun setup() {
         detector = BarcodeDetector.Builder(context)
             .setBarcodeFormats(barcodeFormat)
             .build()
 
-        if (!detector!!.isOperational) {
+        if (detector.isOperational.not()) {
             delegate?.onError("Couldn't setup the detector")
         }
 
@@ -77,25 +91,15 @@ class BarcodeDetector @JvmOverloads constructor(
 
     private fun scan(bitmap: Bitmap?) {
         val frame = Frame.Builder().setBitmap(bitmap).build()
-        detector?.detect(frame)?.let {
+        detector.detect(frame)?.let {
             if (it.size() > 0) {
                 val firstResult = 0
                 val value = it.valueAt(firstResult).rawValue
                 delegate?.onPictureScanned(value)
             } else {
-                delegate?.onError("QR code doesn't detected")
+                delegate?.onError("QR code not detected")
             }
         } ?: delegate?.onError("There's a problem detecting QR codes")
-    }
-
-    fun start() = camera?.start()
-
-    fun stop() = camera?.stop()
-
-    fun scanPicture() = camera?.run {
-        takePicture().toBitmap().whenAvailable {
-            scan(it?.bitmap)
-        }
     }
 
     //endregion
