@@ -9,7 +9,7 @@ import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.R
-import mx.yellowme.youst.playground.ui.qrcode.screens.MainActivity
+import mx.yellowme.youst.playground.ui.qrcode.screens.QRCodeActivity
 
 /**
  * @author adrianleyvasanchez
@@ -79,7 +79,7 @@ class BarcodeActivity : BaseActivity() {
     }
 
     private fun launchActivity() {
-        launch<MainActivity>(false)
+        launch<QRCodeActivity>(false)
         finish()
     }
 

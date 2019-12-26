@@ -82,7 +82,7 @@
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
 
         <activity
-            android:name=".ui.qrcode.screens.MainActivity"
+            android:name=".ui.qrcode.screens.QRCodeActivity"
             android:parentActivityName=".PlaygroundActivity"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
 

@@ -12,7 +12,7 @@ import mx.yellowme.youst.playground.components.BarcodeDelegate
  * @author adrianleyvasanchez
  * @since 23,December,2019
  */
-class MainActivity : BaseActivity() {
+class QRCodeActivity : BaseActivity() {
 
     override val layoutId = R.layout.screen_barcode
 
