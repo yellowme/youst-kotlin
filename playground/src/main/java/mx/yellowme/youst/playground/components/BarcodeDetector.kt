@@ -44,7 +44,7 @@ class BarcodeDetector @JvmOverloads constructor(
 
     //endregion
 
-    //region Public methods
+    //region API
 
     init {
         inflate(R.layout.component_barcode_detector, context)
@@ -63,7 +63,7 @@ class BarcodeDetector @JvmOverloads constructor(
 
     //endregion
 
-    //region Private methods
+    //region Helpers
 
     private fun setup() {
         detector = BarcodeDetector.Builder(context)
