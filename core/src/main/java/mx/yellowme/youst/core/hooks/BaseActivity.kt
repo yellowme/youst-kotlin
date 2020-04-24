@@ -21,13 +21,13 @@ abstract class BaseActivity : AppCompatActivity() {
     //endregion
 
     private fun replaceTheme(themeName: Int) {
-        when (themeName) {
+        /*when (themeName) {
             R.id.theme -> {
                 setTheme(R.style.SharedAppThemeDark)
             }
             R.id.theme_no_action_bar -> {
                 setTheme(R.style.SharedAppThemeDark_NoActionBar)
             }
-        }
+        }*/
     }
 }

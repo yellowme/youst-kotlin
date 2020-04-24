@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">@color/yellow</color>
+    <color name="colorPrimaryDark">@color/yellow</color>
+    <color name="colorAccent">@color/haiti</color>
+
+    <color name="textColor">@color/haiti</color>
+
+    <!--region DARK COLOR PALLET-->
+
+    <color name="coral">#DE643F</color>
+    <color name="turquoise">#04BA96</color>
+    <color name="malibu">#0E9CFB</color>
+    <color name="orchid">#A039CB</color>
+    <color name="cerise">#CB425A</color>
+    <color name="kiwi">#6CAF45</color>
+    <color name="royal">#355AE1</color>
+    <color name="violet">#660BCD</color>
+    <color name="yellow">#E8C53D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#0E0E1A</color>
+
+    <color name="black90">#E6E2F5</color>
+    <color name="black80">#D4D1E4</color>
+    <color name="black70">#B8B5CD</color>
+    <color name="black60">#9593A9</color>
+    <color name="black50">#6E6D84</color>
+    <color name="black40">#565469</color>
+    <color name="black30">#434255</color>
+    <color name="black20">#373745</color>
+    <color name="black10">#232332</color>
+    <color name="black5">#171725</color>
+    <color name="black3">#121120</color>
+
+    <color name="water">#3B9CE0</color>
+    <color name="dragon">#36B7AA</color>
+    <color name="poison">#874CB6</color>
+    <color name="electric">#ECCC51</color>
+    <color name="fire">#D04943</color>
+    <color name="grass">#96CD5B</color>
+    <color name="bug">#329658</color>
+    <color name="psychic">#C265C2</color>
+    <color name="flying">#C5E2F7</color>
+    <color name="fighting">#D6783E</color>
+    <color name="normal">#F2A1BB</color>
+    <color name="ice">#85DCE2</color>
+    <color name="dark">#20203A</color>
+    <color name="fairy">#D05080</color>
+    <color name="ground">#C19963</color>
+    <color name="ghost">#383870</color>
+    <color name="rock">#954B31</color>
+    <color name="steel">#8FBDAA</color>
+
+    <!--endregion-->
+
+</resources>
