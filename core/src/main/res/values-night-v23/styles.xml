@@ -5,9 +5,9 @@
         <item name="themeId">@id/theme_no_action_bar</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:windowBackground">@color/white</item>
-        <item name="android:statusBarColor">@color/white</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
     </style>
 
     <style name="SharedAppTheme.NoActionBar.TransparentStatus">

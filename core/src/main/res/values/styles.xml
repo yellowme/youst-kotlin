@@ -2,7 +2,7 @@
 
     <!--region Base application theme. -->
 
-    <style name="SharedAppTheme" parent="LightTheme">
+    <style name="SharedAppTheme" parent="BaseTheme">
         <item name="themeId">@id/theme</item>
     </style>
 
@@ -10,15 +10,6 @@
         <item name="themeId">@id/theme_no_action_bar</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:windowBackground">@color/white</item>
-        <item name="android:statusBarColor">@color/black</item>
-    </style>
-
-    <style name="SharedAppThemeDark.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:windowBackground">@color/dark_white</item>
-        <item name="android:statusBarColor">@color/dark_black</item>
     </style>
 
     <style name="SharedAppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
