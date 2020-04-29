@@ -4,7 +4,10 @@ import android.app.Activity
 
 /**
  * TODO: Add docs
+ *
+ * @deprecated Use [DialogBuilder] instead.
  */
+@Deprecated("")
 class SimpleInfoDialogBuilder {
 
     private var dialogTitle: String? = null

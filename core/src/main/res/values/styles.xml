@@ -53,10 +53,14 @@
 
     <style name="Dialog.Title" parent="TextAppearance.Bold">
         <item name="android:textSize">@dimen/size_22</item>
+        <item name="android:paddingTop">@dimen/dimen_12</item>
+        <item name="android:paddingBottom">@dimen/dimen_8</item>
     </style>
 
     <style name="Dialog.Subtitle" parent="TextAppearance.Regular">
         <item name="android:textSize">@dimen/size_16</item>
+        <item name="android:paddingTop">@dimen/dimen_16</item>
+        <item name="android:paddingBottom">@dimen/dimen_16</item>
     </style>
 
     <!--endregion-->
@@ -135,4 +139,15 @@
 
     <!--endregion-->
 
+
+    <!--region Dialogs-->
+
+    <style name="DialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="android:backgroundTint">@color/black5</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/Dialog.Title</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/Dialog.Subtitle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/ButtonText.Blue</item>
+    </style>
+
+    <!--endregion-->
 </resources>
