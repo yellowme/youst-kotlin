@@ -2,8 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="?attr/activityBackground"
     android:padding="@dimen/dimen_32">
 
@@ -19,8 +19,8 @@
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.35" />
 
@@ -36,20 +36,34 @@
 
     <mx.yellowme.youst.core.components.YellowCircle
         android:id="@+id/yellowCircle"
+        android:layout_width="@dimen/dimen_40"
         android:layout_height="@dimen/dimen_40"
         android:layout_marginBottom="@dimen/dimen_16"
-        android:layout_width="@dimen/dimen_40"
         app:layout_constraintBottom_toTopOf="@id/titleTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias=".65"
         app:layout_constraintVertical_chainStyle="packed" />
 
+    <!--TODO: Move this button to a Settings Section-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/themeModeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_theme"
+        app:icon="@drawable/ic_theme"
+        app:iconGravity="start"
+        app:layout_constraintBottom_toTopOf="@+id/titleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92"
+        app:layout_constraintVertical_chainStyle="packed" />
+
     <mx.yellowme.youst.core.hooks.recycler.AutoSizeGridRecyclerView
         android:id="@+id/dashboardOptions"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/dimen_10"
-        android:layout_width="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

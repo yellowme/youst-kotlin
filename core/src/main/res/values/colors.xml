@@ -5,6 +5,7 @@
     <color name="colorAccent">@color/haiti</color>
 
     <color name="textColor">@color/haiti</color>
+    <color name="iconColor">@color/black</color>
 
     <color name="blue">#0074D9</color>
     <color name="gray">#aaaaaa</color>
