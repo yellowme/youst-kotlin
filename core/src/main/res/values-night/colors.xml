@@ -8,11 +8,14 @@
     <color name="textColor">@color/haiti</color>
     <color name="iconColor">@color/white</color>
 
+    <color name="blue">#015075</color>
+    <color name="maroon">#390920</color>
+
     <color name="coral">#DE643F</color>
     <color name="turquoise">#04BA96</color>
     <color name="malibu">#0E9CFB</color>
     <color name="orchid">#A039CB</color>
-    <color name="cerise">#CB425A</color>
+    <color name="cerise">#8C3947</color>
     <color name="kiwi">#6CAF45</color>
     <color name="royal">#355AE1</color>
     <color name="violet">#660BCD</color>
@@ -50,5 +53,7 @@
     <color name="ghost">#383870</color>
     <color name="rock">#954B31</color>
     <color name="steel">#8FBDAA</color>
+
+    <color name="onahau">#374050</color>
 
 </resources>

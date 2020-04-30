@@ -1,61 +1,50 @@
-@file:Suppress("unused")
-
 package mx.yellowme.youst.core.hooks.animations
 
-import android.animation.Animator
-import com.airbnb.lottie.LottieAnimationView
+import android.view.animation.Animation
 
-fun LottieAnimationView.setListener(init: AnimationListenerHelper.() -> Unit) {
+private typealias AnimationListener = (Animation) -> Unit
+
+fun Animation.setListener(init: AnimationListenerHelper.() -> Unit) {
     val listener = AnimationListenerHelper()
     listener.init()
-    addAnimatorListener(listener)
+    setAnimationListener(listener)
 }
 
-private typealias AnimListener = (Animator) -> Unit
-
-class AnimationListenerHelper : Animator.AnimatorListener {
-    private var animationStart: AnimListener? = null
-    private var animationEnd: AnimListener? = null
-    private var animationRepeat: AnimListener? = null
-    private var animationCancel: AnimListener? = null
+class AnimationListenerHelper : Animation.AnimationListener {
+    private var animationStart: AnimationListener? = null
+    private var animationEnd: AnimationListener? = null
+    private var animationRepeat: AnimationListener? = null
 
     //region Builder
 
-    fun onAnimationStart(onAnimationCancel: AnimListener) {
-        animationEnd = onAnimationCancel
+    fun onAnimationStart(onAnimationStart: AnimationListener) {
+        animationStart = onAnimationStart
     }
 
-    fun onAnimationEnd(onAnimationEnd: AnimListener) {
+    fun onAnimationEnd(onAnimationEnd: AnimationListener) {
         animationEnd = onAnimationEnd
     }
 
-    fun onAnimationRepeat(onAnimationRepeat: AnimListener) {
-        animationEnd = onAnimationRepeat
-    }
-
-    fun onAnimationCancel(onAnimationCancel: AnimListener) {
-        animationEnd = onAnimationCancel
+    fun onAnimationRepeat(onAnimationRepeat: AnimationListener) {
+        animationRepeat = onAnimationRepeat
     }
 
     //endregion
 
-    //region AnimatorListener
+    //region AnimationListener
 
-    override fun onAnimationStart(animation: Animator) {
+    override fun onAnimationStart(animation: Animation) {
         animationStart?.invoke(animation)
     }
 
-    override fun onAnimationEnd(animation: Animator) {
+    override fun onAnimationEnd(animation: Animation) {
         animationEnd?.invoke(animation)
     }
 
-    override fun onAnimationRepeat(animation: Animator) {
+    override fun onAnimationRepeat(animation: Animation) {
         animationRepeat?.invoke(animation)
     }
 
-    override fun onAnimationCancel(animation: Animator) {
-        animationCancel?.invoke(animation)
-    }
-
     //endregion
+
 }

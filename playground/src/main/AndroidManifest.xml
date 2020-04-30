@@ -88,6 +88,15 @@
 
         <!--endregion-->
 
+        <!--region Interpolator-->
+
+        <activity
+            android:name=".ui.interpolator.InterpolatorActivity"
+            android:parentActivityName=".PlaygroundActivity"
+            android:theme="@style/SharedAppTheme.NoActionBar.TransparentStatus" />
+
+        <!--endregion-->
+
     </application>
 
 </manifest>

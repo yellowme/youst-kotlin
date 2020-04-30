@@ -39,6 +39,9 @@ class PlaygroundActivity : GenericShowcaseActivity<PlaygroundElement>() {
                 PlaygroundElementType.BARCODE -> {
                     launch(intentTo(Activities.Playground.BARCODE))
                 }
+                PlaygroundElementType.INTERPOLATOR -> {
+                    launch(intentTo(Activities.Playground.Interpolator))
+                }
             }
         }
     }
