@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ResizableCardView">
+        <attr name="resizableCardInterpolator" format="enum">
+            <enum name="linear" value="0" />
+            <enum name="ease" value="1" />
+        </attr>
+        <attr name="expandDuration" format="integer" />
+        <attr name="resizableCardBackground" format="reference|color" />
+        <attr name="resizableCardTitle" format="string" />
+        <attr name="resizableCardDescription" format="string" />
+    </declare-styleable>
+</resources>

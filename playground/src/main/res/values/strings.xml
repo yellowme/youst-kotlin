@@ -44,4 +44,9 @@
     <string name="showcases_label">Chart showcases</string>
 
     <string name="scan_photo_label">Scan</string>
+
+    <string name="linear_interpolator_title">Linear Interpolator</string>
+    <string name="linear_interpolator_description">This is a CardView controlled by a LinearInterpolator. Click on it and see how it changes size with a constant speed.</string>
+    <string name="ease_interpolator_title">Ease Interpolator</string>
+    <string name="ease_interpolator_description">This is a CardView controlled by a PathInterpolator configured to provide an easing motion. Click on it and see how it changes size with an easing motion.</string>
 </resources>

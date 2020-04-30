@@ -22,5 +22,11 @@
     "title": "QR scanner",
     "subtitle": "Implementation of FotoApparat library and Barcode API.\n\nScan QR codes using this component.",
     "paletteColor": "PINK_GLAMOUR"
+  },
+  {
+    "id": "5",
+    "title": "Interpolator",
+    "subtitle": "Showcase of different types of interpolators.",
+    "paletteColor": "SKIRRET_GREEN"
   }
 ]

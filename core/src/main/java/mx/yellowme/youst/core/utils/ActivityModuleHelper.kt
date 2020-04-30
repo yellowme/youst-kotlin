@@ -70,6 +70,10 @@ object Activities {
         object BARCODE : AddressableActivity {
             override val className = "$PACKAGE_NAME.playground.ui.qrcode.BarcodeActivity"
         }
+
+        object Interpolator: AddressableActivity {
+            override val className = "$PACKAGE_NAME.playground.ui.interpolator.InterpolatorActivity"
+        }
      }
 
     object Challenges : AddressableActivity {

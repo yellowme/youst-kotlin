@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/card_showcase_background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <mx.yellowme.youst.playground.ui.widgets.ResizableCardView
+        android:id="@+id/linearCardView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_60"
+        app:cardBackground="@drawable/blue_gradient"
+        app:cardCornerRadius="@dimen/dimen_12"
+        app:cardDescription="@string/linear_interpolator_description"
+        app:cardTitle="@string/linear_interpolator_title"
+        app:layout_constraintBottom_toTopOf="@id/middleGuide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <mx.yellowme.youst.playground.ui.widgets.ResizableCardView
+        android:id="@+id/easeCardView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_60"
+        app:cardBackground="@drawable/red_gradient"
+        app:cardCornerRadius="@dimen/dimen_12"
+        app:cardDescription="@string/ease_interpolator_description"
+        app:cardTitle="@string/ease_interpolator_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/middleGuide">
+
+    </mx.yellowme.youst.playground.ui.widgets.ResizableCardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middleGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
