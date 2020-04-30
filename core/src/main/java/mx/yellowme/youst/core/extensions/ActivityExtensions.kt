@@ -186,4 +186,23 @@ fun Activity.saveBooleanTo(
         .apply()
 }
 
+fun Activity.getStringFrom(
+    preferenceName: String,
+    key: String,
+    default: String
+): String {
+    return getSharedPreferences(preferenceName, 0).getString(key, default) ?: default
+}
+
+fun Activity.saveStringTo(
+    preferenceName: String,
+    key: String,
+    value: String
+) {
+    getSharedPreferences(preferenceName, 0)
+        .edit()
+        .putString(key, value)
+        .apply()
+}
+
 //endregion

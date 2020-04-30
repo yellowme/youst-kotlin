@@ -6,8 +6,7 @@
     <color name="colorAccent">@color/haiti</color>
 
     <color name="textColor">@color/haiti</color>
-
-    <!--region DARK COLOR PALLET-->
+    <color name="iconColor">@color/white</color>
 
     <color name="coral">#DE643F</color>
     <color name="turquoise">#04BA96</color>
@@ -51,7 +50,5 @@
     <color name="ghost">#383870</color>
     <color name="rock">#954B31</color>
     <color name="steel">#8FBDAA</color>
-
-    <!--endregion-->
 
 </resources>

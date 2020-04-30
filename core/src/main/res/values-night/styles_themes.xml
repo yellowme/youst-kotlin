@@ -15,6 +15,7 @@
         <item name="typeDragon">@color/dragon</item>
         <item name="typeElectric">@color/electric</item>
         <item name="typeFighting">@color/fighting</item>
+        <item name="typeFire">@color/fire</item>
         <item name="typeFlying">@color/flying</item>
         <item name="typeGhost">@color/ghost</item>
         <item name="typeDark">@color/dark</item>
