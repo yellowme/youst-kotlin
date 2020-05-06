@@ -1,6 +1,7 @@
 package mx.yellowme.youst.playground.ui.widgets
 
 import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.content.Context
 import android.util.AttributeSet
@@ -22,7 +23,7 @@ import mx.yellowme.youst.core.hooks.animations.setListener
 import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.ui.widgets.ResizableCardView.Interpolator.EASE
 import mx.yellowme.youst.playground.ui.widgets.ResizableCardView.Interpolator.LINEAR
-import mx.yellowme.youst.playground.ui.widgets.ResizableCardView.Interpolator.valueOf
+import mx.yellowme.youst.playground.ui.widgets.ResizableCardView.Interpolator.values
 
 /**
  * Custom implementation of a [MaterialCardView] that expands and contracts with a click event.
@@ -60,11 +61,10 @@ class ResizableCardView @JvmOverloads constructor(
         attrs?.consumeTypeArray(context, R.styleable.ResizableCardView) {
             title = getString(R.styleable.ResizableCardView_resizableCardTitle) ?: ""
             description = getString(R.styleable.ResizableCardView_resizableCardDescription) ?: ""
-            interpolator =
-                valueOf(
-                    getString(R.styleable.ResizableCardView_resizableCardInterpolator)
-                        ?: LINEAR.name
-                )
+            interpolator = values()[getInt(
+                R.styleable.ResizableCardView_resizableCardInterpolator,
+                LINEAR.ordinal
+            )]
             duration =
                 getInt(R.styleable.ResizableCardView_expandDuration, DEFAULT_DURATION).toLong()
             cardBackground =
@@ -82,9 +82,7 @@ class ResizableCardView @JvmOverloads constructor(
                 ValueAnimator.ofInt(cardWidth, cardWidth + if (isExpanded) (-80).dp else 80.dp)
                     .apply {
                         addUpdateListener { animator ->
-                            val value = animator.animatedValue as Int
-                            layoutParams.width = value
-                            requestLayout()
+                            layoutParams.width = animator.animatedValue as Int
                         }
                     }
 
@@ -92,24 +90,17 @@ class ResizableCardView @JvmOverloads constructor(
                 ValueAnimator.ofInt(cardHeight, cardHeight + if (isExpanded) (-80).dp else 80.dp)
                     .apply {
                         addUpdateListener { animator ->
-                            val value = animator.animatedValue as Int
-                            layoutParams.height = value
+                            layoutParams.height = animator.animatedValue as Int
                             requestLayout()
                         }
                     }
 
-            val cornerAnimator =
-                ValueAnimator.ofFloat(
-                    cornerRadius,
-                    cornerRadius + if (isExpanded) 6.dp.toFloat() else (-6).dp.toFloat()
-                )
-                    .apply {
-                        addUpdateListener { animator ->
-                            val value = animator.animatedValue as Float
-                            radius = value
-                            requestLayout()
-                        }
-                    }
+            val cornerAnimator = ObjectAnimator.ofFloat(
+                this,
+                "radius",
+                cornerRadius,
+                cornerRadius + if (isExpanded) 6.dp.toFloat() else (-6).dp.toFloat()
+            )
 
             AnimatorSet().apply {
                 if (isAnimationFinished) {
