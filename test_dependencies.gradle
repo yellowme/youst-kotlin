@@ -1,6 +1,7 @@
 dependencies {
     androidTestImplementation "androidx.test:core:${versions.androidXTest}"
     androidTestImplementation "androidx.test.espresso:espresso-idling-resource:${versions.espressoCore}"
+    androidTestImplementation "androidx.fragment:fragment-testing:${versions.fragmentVersion}"
 
     androidTestImplementation "junit:junit:${versions.junit}"
     androidTestImplementation "org.mockito:mockito-core:${versions.mockitoVersion}"

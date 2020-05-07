@@ -8,7 +8,6 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
     implementation "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
 
-    implementation "androidx.fragment:fragment-testing:${versions.fragmentVersion}"
     implementation "androidx.fragment:fragment:${versions.fragmentVersion}"
 
     implementation "androidx.emoji:emoji-appcompat:${versions.emoji}"
