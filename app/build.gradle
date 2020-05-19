@@ -6,6 +6,7 @@ apply plugin: "androidx.navigation.safeargs.kotlin"
 
 apply from: '../shared_dependencies.gradle'
 apply from: '../test_dependencies.gradle'
+apply from: '../ktlint.gradle'
 
 android {
     compileSdkVersion versions.compileSdk
@@ -45,6 +46,8 @@ android {
 
     dynamicFeatures = [":dashboard", ":playground", ":challenges", ":miniapps", ":portfolio"]
 }
+
+check.dependsOn ktlint
 
 dependencies {
     api 'androidx.appcompat:appcompat:1.0.2'
