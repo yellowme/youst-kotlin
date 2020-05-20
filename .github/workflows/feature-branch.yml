@@ -1,0 +1,48 @@
+name: Android Feature Branch CI
+
+on:
+  push:
+    branches-ignore:
+      - master
+
+jobs:
+  tests:
+    name: Run Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Create gradle.properties
+        uses: finnp/create-file-action@master
+        env:
+          FILE_NAME: challenges/gradle.properties
+          FILE_DATA: POKEMON_API_URL=${{ secrets.POKEMON_API_URL }}
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Unit tests
+        run: bash ./gradlew test --stacktrace
+
+  bundle:
+    name: Generate Debug Bundle
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Create gradle.properties
+        uses: finnp/create-file-action@master
+        env:
+          FILE_NAME: challenges/gradle.properties
+          FILE_DATA: POKEMON_API_URL=${{ secrets.POKEMON_API_URL }}
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Build debug Bundle
+        run: bash ./gradlew bundleDebug --stacktrace
+      - name: Upload Bundle
+        uses: actions/upload-artifact@v2
+        with:
+          name: app
+          path: app/build/outputs/bundle/debug/app-debug.aab

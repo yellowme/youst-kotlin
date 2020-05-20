@@ -14,7 +14,7 @@ buildscript {
             minSdk              : 23,
             targetSdk           : 29,
             compileSdk          : 29,
-            buildTools          : '29.0.1',
+            buildTools          : '29.0.3',
             appcompat           : '1.1.0-rc01',
             constraintLayout    : '2.0.0-beta4',
             material            : '1.1.0-alpha09',
