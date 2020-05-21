@@ -5,4 +5,13 @@
     <string name="toolbar_title">Toolbar Title</string>
     <string name="deep_link_widget">Deep Link</string>
     <string name="title_portfolio">portfolio</string>
+
+    <!--region Shortcuts-->
+    <string name="challenges">Challenges</string>
+    <string name="playground">Playground</string>
+    <string name="mini_apps">Mini Apps</string>
+    <string name="portfolio">Portfolio</string>
+
+    <string name="not_available">Not available</string>
+    <!--endregion-->
 </resources>
