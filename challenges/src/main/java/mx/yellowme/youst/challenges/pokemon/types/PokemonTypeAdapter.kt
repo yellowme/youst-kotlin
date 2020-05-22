@@ -17,7 +17,6 @@ class PokemonTypeAdapter(
     pokemonTypes,
     itemListener
 ) {
-
     /**
      * TODO: Add docs for helper method
      */
@@ -47,7 +46,7 @@ class PokemonTypeAdapter(
                 if (isChecked && !isWithinLimits) {
                     item.isChecked = false
                     this.isChecked = false
-                    //TODO: Display message to the user.
+                    // TODO: Display message to the user.
                 } else {
                     item.isChecked = isChecked
                     this.isChecked = isChecked
@@ -59,5 +58,4 @@ class PokemonTypeAdapter(
     companion object {
         private const val MAX_SELECTION = 5
     }
-
 }

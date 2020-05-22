@@ -9,7 +9,6 @@ class DashboardRecyclerView<ActivityItemListener>(
     private val recyclerView: RecyclerView,
     private val activityListener: ActivityItemListener
 ) where ActivityItemListener : Activity, ActivityItemListener : ItemListener<DashboardOption> {
-
     private var optionsAdapter: DashboardOptionAdapter
 
     init {
@@ -42,5 +41,4 @@ class DashboardRecyclerView<ActivityItemListener>(
             } ?: throw RuntimeException("RecyclerView reference must not be null")
         }
     }
-
 }

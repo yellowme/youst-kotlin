@@ -10,7 +10,6 @@ import mx.yellowme.youst.playground.domain.User
 import mx.yellowme.youst.playground.ui.nemo.navigator.CommonActivityHelm
 
 class LoginScreen : BaseActivity() {
-
     //region Attributes
 
     override val layoutId: Int = R.layout.screen_login
@@ -25,7 +24,7 @@ class LoginScreen : BaseActivity() {
         super.onCreate(savedInstanceState)
         appHero.mainActionListener = object : AppHeroActionListener {
             override fun onClickAction() {
-                //TODO: Must delegate action to another layer component (ViewModel or Presenter)
+                // TODO: Must delegate action to another layer component (ViewModel or Presenter)
                 UserFakeRepository.defaultConfig = User("Luis")
                 navigation.sendToSplash()
             }
@@ -33,5 +32,4 @@ class LoginScreen : BaseActivity() {
     }
 
     //endregion
-
 }

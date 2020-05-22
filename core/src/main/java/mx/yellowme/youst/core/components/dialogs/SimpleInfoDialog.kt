@@ -3,7 +3,9 @@ package mx.yellowme.youst.core.components.dialogs
 import android.app.Activity
 import android.view.View
 import android.view.View.GONE
-import kotlinx.android.synthetic.main.component_simple_info_dialog.*
+import kotlinx.android.synthetic.main.component_simple_info_dialog.dialogDoneButton
+import kotlinx.android.synthetic.main.component_simple_info_dialog.dialogMessage
+import kotlinx.android.synthetic.main.component_simple_info_dialog.dialogTitle
 import mx.yellowme.youst.core.R
 
 /**
@@ -12,7 +14,6 @@ import mx.yellowme.youst.core.R
  */
 abstract class SimpleInfoDialog internal constructor(source: Activity) : CommonDialog(source),
     View.OnClickListener {
-
     //region Decoration Attributes
 
     protected abstract val title: String?
@@ -54,5 +55,4 @@ abstract class SimpleInfoDialog internal constructor(source: Activity) : CommonD
             }
         }
     }
-
 }

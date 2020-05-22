@@ -3,11 +3,14 @@ package mx.yellowme.youst.playground.ui.nemo.navigator
 import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.playground.ui.nemo.NemoActivity
-import mx.yellowme.youst.playground.ui.nemo.screens.*
+import mx.yellowme.youst.playground.ui.nemo.screens.LoginScreen
+import mx.yellowme.youst.playground.ui.nemo.screens.MainScreen
+import mx.yellowme.youst.playground.ui.nemo.screens.MissingPaymentOptionScreen
+import mx.yellowme.youst.playground.ui.nemo.screens.UnsupportedVersionScreen
+import mx.yellowme.youst.playground.ui.nemo.screens.UserWithoutAttributeScreen
 
 class CommonActivityHelm(private val activity: BaseActivity) :
     BaseHelm {
-
     override fun sendToLogin() {
         navigate {
             activity.launch<LoginScreen>(finishCaller = true)
@@ -45,7 +48,7 @@ class CommonActivityHelm(private val activity: BaseActivity) :
     }
 
     private fun navigate(completion: () -> Unit) {
-        //TODO: Add animations
+        // TODO: Add animations
         completion.invoke()
     }
 }

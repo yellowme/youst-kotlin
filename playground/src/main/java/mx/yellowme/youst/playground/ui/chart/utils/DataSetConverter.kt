@@ -1,6 +1,10 @@
 package mx.yellowme.youst.playground.ui.chart.utils
 
-import com.github.mikephil.charting.data.*
+import com.github.mikephil.charting.data.BarDataSet
+import com.github.mikephil.charting.data.BarEntry
+import com.github.mikephil.charting.data.BubbleDataSet
+import com.github.mikephil.charting.data.BubbleEntry
+import com.github.mikephil.charting.data.LineDataSet
 import mx.yellowme.youst.playground.domain.ChartEntry
 import mx.yellowme.youst.playground.domain.ChartType
 
@@ -9,8 +13,7 @@ import mx.yellowme.youst.playground.domain.ChartType
  * @since 08,October,2019
  */
 object DataSetConverter {
-
-    fun<BarLineScatterCandleBubbleDataSet> convertDataSetList(
+    fun <BarLineScatterCandleBubbleDataSet> convertDataSetList(
         listOfEntries: ArrayList<ChartEntry>,
         type: ChartType
     ): BarLineScatterCandleBubbleDataSet {
@@ -34,5 +37,4 @@ object DataSetConverter {
             }
         }
     }
-
 }

@@ -4,7 +4,6 @@ import android.os.Handler
 import mx.yellowme.youst.playground.domain.Payment
 
 class PaymentFakeRepository {
-
     companion object {
         var shouldFail: Boolean = false
         var defaultConfig: Payment? = null
@@ -42,5 +41,4 @@ class PaymentFakeRepository {
             }
         } ?: callback.onServerError("Ups! No payment method saved.")
     }
-
 }

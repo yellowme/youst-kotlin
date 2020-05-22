@@ -1,7 +1,6 @@
 package mx.yellowme.youst.core.hooks
 
 abstract class Navigator {
-
     var next: Navigator? = null
 
     private val tagName: String
@@ -32,5 +31,4 @@ abstract class Navigator {
             }
         } ?: executeExit()
     }
-
 }

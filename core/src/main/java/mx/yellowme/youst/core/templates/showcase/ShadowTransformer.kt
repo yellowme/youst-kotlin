@@ -94,5 +94,4 @@ class ShadowTransformer(
     override fun onPageSelected(position: Int) {}
 
     override fun onPageScrollStateChanged(state: Int) {}
-
 }

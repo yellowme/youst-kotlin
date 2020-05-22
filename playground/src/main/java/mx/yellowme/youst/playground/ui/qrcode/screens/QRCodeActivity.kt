@@ -1,7 +1,8 @@
 package mx.yellowme.youst.playground.ui.qrcode.screens
 
 import android.os.Bundle
-import kotlinx.android.synthetic.main.screen_barcode.*
+import kotlinx.android.synthetic.main.screen_barcode.barcodeDetector
+import kotlinx.android.synthetic.main.screen_barcode.scanButton
 import mx.yellowme.youst.core.extensions.launchBrowser
 import mx.yellowme.youst.core.extensions.toast
 import mx.yellowme.youst.core.hooks.BaseActivity
@@ -13,7 +14,6 @@ import mx.yellowme.youst.playground.components.BarcodeDelegate
  * @since 23,December,2019
  */
 class QRCodeActivity : BaseActivity() {
-
     override val layoutId = R.layout.screen_barcode
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,5 +38,4 @@ class QRCodeActivity : BaseActivity() {
         super.onStop()
         barcodeDetector?.stop()
     }
-
 }

@@ -13,7 +13,6 @@ abstract class SimpleRecyclerAdapter<Item, CustomViewHolder : RecyclerViewHolder
     itemList: MutableList<Item>,
     val itemListener: ItemListener<Item>?
 ) : RecyclerView.Adapter<CustomViewHolder>() {
-
     protected lateinit var mItemList: MutableList<Item>
 
     init {
@@ -45,7 +44,6 @@ abstract class SimpleRecyclerAdapter<Item, CustomViewHolder : RecyclerViewHolder
         addToList(items)
         notifyDataSetChanged()
     }
-
 
     override fun getItemCount(): Int {
         return mItemList.size

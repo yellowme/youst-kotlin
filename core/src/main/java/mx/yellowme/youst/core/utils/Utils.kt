@@ -11,8 +11,7 @@ import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types.newParameterizedType
 import mx.yellowme.youst.core.extensions.launch
 import java.io.IOException
-import java.util.*
-import kotlin.collections.ArrayList
+import java.util.Scanner
 
 //region AppCompatActivity
 

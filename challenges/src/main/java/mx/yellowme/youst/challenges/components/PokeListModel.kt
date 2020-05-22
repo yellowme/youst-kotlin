@@ -15,11 +15,10 @@ class PokeListModel @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : GenericListModel<Pokemon, PokemonListViewHolder>(context, attrs, defStyleAttr) {
-
     override fun initAdapter(): SimpleRecyclerAdapter<Pokemon, PokemonListViewHolder>? {
         return PokemonListAdapter(ArrayList(), object : ItemListener<Pokemon> {
             override fun onItemClick(item: Pokemon?) {
-                //TODO: Implement it
+                // TODO: Implement it
             }
         })
     }
@@ -27,5 +26,4 @@ class PokeListModel @JvmOverloads constructor(
     override fun initLayoutManager(): RecyclerView.LayoutManager {
         return GridLayoutManager(context, 3)
     }
-
 }

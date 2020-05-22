@@ -16,7 +16,6 @@ import mx.yellowme.youst.playground.ui.qrcode.screens.QRCodeActivity
  * @since 10,December,2019
  */
 class BarcodeActivity : BaseActivity() {
-
     //region Attributes
 
     override val layoutId = R.layout.screen_main
@@ -44,7 +43,8 @@ class BarcodeActivity : BaseActivity() {
         when (requestCode) {
             myPermissionsCamera -> {
                 if ((grantResults.isNotEmpty() &&
-                            grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                            grantResults[0] == PackageManager.PERMISSION_GRANTED)
+                ) {
                     launchActivity()
                 }
                 return
@@ -84,5 +84,4 @@ class BarcodeActivity : BaseActivity() {
     }
 
     //endregion
-
 }

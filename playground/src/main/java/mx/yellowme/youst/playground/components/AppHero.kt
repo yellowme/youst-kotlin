@@ -8,8 +8,15 @@ import android.view.animation.Animation
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.getResourceIdOrThrow
-import kotlinx.android.synthetic.main.component_app_hero.view.*
-import mx.yellowme.youst.core.extensions.*
+import kotlinx.android.synthetic.main.component_app_hero.view.mainAction
+import kotlinx.android.synthetic.main.component_app_hero.view.mainContainer
+import kotlinx.android.synthetic.main.component_app_hero.view.mainLabel
+import kotlinx.android.synthetic.main.component_app_hero.view.secondaryAction
+import mx.yellowme.youst.core.extensions.consumeTypeArray
+import mx.yellowme.youst.core.extensions.gone
+import mx.yellowme.youst.core.extensions.hideOrDisplay
+import mx.yellowme.youst.core.extensions.inflate
+import mx.yellowme.youst.core.extensions.visible
 import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.core.R as coreR
 
@@ -83,7 +90,7 @@ class AppHero @JvmOverloads constructor(
         }
     }
 
-    //TODO: Extract interface and use states
+    // TODO: Extract interface and use states
     fun setProgress(isLoading: Boolean) {
         if (isLoading) {
             mainLabel.blink()
@@ -93,7 +100,6 @@ class AppHero @JvmOverloads constructor(
             mainLabel.clearAnimation()
         }
     }
-
 }
 
 fun View.blink(

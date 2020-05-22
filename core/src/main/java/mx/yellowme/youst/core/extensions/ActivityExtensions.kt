@@ -165,7 +165,7 @@ inline fun <reified T : Any> newIntent(context: Context): Intent = newIntent(con
 
 //region Preferences
 
-//TODO: Define a way to handle shared Preferences
+// TODO: Define a way to handle shared Preferences
 
 fun Activity.getBooleanFrom(
     preferenceName: String,

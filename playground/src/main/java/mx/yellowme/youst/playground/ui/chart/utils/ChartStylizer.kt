@@ -14,7 +14,6 @@ import mx.yellowme.youst.playground.domain.ChartSetting
  */
 @Suppress("SpellCheckingInspection")
 object ChartStylizer {
-
     fun applyStyle(
         settings: ChartSetting,
         chart: BarLineChartBase<*>?,
@@ -51,7 +50,7 @@ object ChartStylizer {
         }
     }
 
-    fun<T : BarLineScatterCandleBubbleDataSet<*>> applyStyleToDataSet(
+    fun <T : BarLineScatterCandleBubbleDataSet<*>> applyStyleToDataSet(
         dataSet: T,
         settings: ChartSetting,
         context: Context
@@ -60,7 +59,7 @@ object ChartStylizer {
             label = it.labelText
             valueTextColor = getColorByName(it.dataSetTextColor, context)
             valueTypeface = Typeface.DEFAULT_BOLD
-            color= getColorByName(it.dataSetColor, context)
+            color = getColorByName(it.dataSetColor, context)
         }
     }
 
@@ -68,5 +67,4 @@ object ChartStylizer {
         val colorId = resources.getIdentifier(name, "color", packageName)
         ContextCompat.getColor(this, colorId)
     }
-
 }

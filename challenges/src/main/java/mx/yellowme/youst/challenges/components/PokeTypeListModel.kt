@@ -2,8 +2,6 @@ package mx.yellowme.youst.challenges.components
 
 import android.content.Context
 import android.util.AttributeSet
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import mx.yellowme.youst.challenges.domain.PokemonType
 import mx.yellowme.youst.challenges.domain.PokemonTypeSelection
 import mx.yellowme.youst.challenges.pokemon.types.PokemonTypeAdapter
@@ -19,7 +17,6 @@ class PokeTypeListModel @JvmOverloads constructor(
     attrs,
     defStyleAttr
 ) {
-
     override fun initAdapter(): SimpleRecyclerAdapter<PokemonTypeSelection, PokemonTypeListViewHolder>? {
         val types = PokemonType.values()
         val selectionTypes = ArrayList<PokemonTypeSelection>()
@@ -34,5 +31,4 @@ class PokeTypeListModel @JvmOverloads constructor(
 
         return PokemonTypeAdapter(selectionTypes, null)
     }
-
 }

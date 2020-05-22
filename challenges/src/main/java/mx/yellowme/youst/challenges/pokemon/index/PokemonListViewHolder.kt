@@ -18,7 +18,6 @@ class PokemonListViewHolder internal constructor(
     itemView: View,
     private val listener: ItemListener<Pokemon>?
 ) : RecyclerViewHolderDecorator<Pokemon>(itemView) {
-
     private val imageView: ImageView = itemView.findViewById(R.id.imageView)
     private val nameTextView: TextView = itemView.findViewById(R.id.nameTextView)
     private val firstTypeView: View = itemView.findViewById(R.id.firstTypeView)
@@ -59,5 +58,4 @@ class PokemonListViewHolder internal constructor(
             }
         }
     }
-
 }

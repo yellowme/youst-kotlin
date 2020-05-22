@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import mx.yellowme.youst.core.components.useSelectedTheme
 
 abstract class BaseActivity : AppCompatActivity() {
-
     abstract val layoutId: Int
 
     //region Lifecycle
@@ -17,5 +16,4 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     //endregion
-
 }

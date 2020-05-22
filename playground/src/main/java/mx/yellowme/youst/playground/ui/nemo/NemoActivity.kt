@@ -14,7 +14,6 @@ import mx.yellowme.youst.playground.ui.nemo.navigator.hooks.Navigator
 import mx.yellowme.youst.playground.ui.nemo.navigator.matchers.HasLastName
 
 class NemoActivity : BaseActivity() {
-
     //region Attributes
 
     override val layoutId: Int = R.layout.screen_splash
@@ -30,7 +29,7 @@ class NemoActivity : BaseActivity() {
         super.onStart()
 
         setProgress(true)
-        //TODO: Must delegate action to another layer component (ViewModel or Presenter)
+        // TODO: Must delegate action to another layer component (ViewModel or Presenter)
         navigator = FetchConfig(
             ConfigFakeRepository(),
             navigationHelm

@@ -4,7 +4,6 @@ import android.os.Handler
 import mx.yellowme.youst.playground.domain.User
 
 class UserFakeRepository {
-
     companion object {
         var shouldFail: Boolean = false
         var defaultConfig: User? = null
@@ -29,5 +28,4 @@ class UserFakeRepository {
             }
         } ?: callback.onServerError("Ups! No user session saved locally.")
     }
-
 }

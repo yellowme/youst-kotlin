@@ -9,7 +9,6 @@ import mx.yellowme.youst.portfolio.domain.PortfolioElement
 import mx.yellowme.youst.portfolio.domain.PortfolioElementType
 
 class PortfolioActivity : GenericShowcaseActivity<PortfolioElement>() {
-
     override val titleResId: Int = R.string.portfolio_title
 
     override val subtitleResId: Int = R.string.portfolio_subtitle
@@ -22,7 +21,7 @@ class PortfolioActivity : GenericShowcaseActivity<PortfolioElement>() {
         }
     }
 
-    //TODO: Improve item handle
+    // TODO: Improve item handle
     override fun onItemClick(item: PortfolioElement?) {
         item?.let {
             when (it.type) {
@@ -36,5 +35,4 @@ class PortfolioActivity : GenericShowcaseActivity<PortfolioElement>() {
             }
         } ?: throw RuntimeException("Invalid item clicked")
     }
-
 }

@@ -1,18 +1,17 @@
 package mx.yellowme.youst.challenges
 
 import mx.yellowme.youst.challenges.common.BaseChallengeActivity.Companion.TOOLBAR_TITLE
-import mx.yellowme.youst.challenges.ui.crazylists.CrazyListsChallengeActivity
 import mx.yellowme.youst.challenges.domain.Challenge
 import mx.yellowme.youst.challenges.domain.ChallengeType
-import mx.yellowme.youst.challenges.ui.listentome.ListenToMeChallengeActivity
 import mx.yellowme.youst.challenges.ui.archie.ArchieChallengeActivity
+import mx.yellowme.youst.challenges.ui.crazylists.CrazyListsChallengeActivity
+import mx.yellowme.youst.challenges.ui.listentome.ListenToMeChallengeActivity
 import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.templates.showcase.GenericShowcaseActivity
 import mx.yellowme.youst.core.templates.showcase.ModelTransformer
 import mx.yellowme.youst.core.utils.asJsonArrayOf
 
 class ChallengesActivity : GenericShowcaseActivity<Challenge>() {
-
     override val titleResId: Int = R.string.challenges_title
 
     override val subtitleResId: Int = R.string.challenges_subtitle
@@ -25,7 +24,7 @@ class ChallengesActivity : GenericShowcaseActivity<Challenge>() {
         }
     }
 
-    //TODO: Improve item handle
+    // TODO: Improve item handle
     override fun onItemClick(item: Challenge?) {
         item?.type?.let {
             val nextActivity: Class<*> = when (it) {
@@ -47,5 +46,4 @@ class ChallengesActivity : GenericShowcaseActivity<Challenge>() {
             }
         }
     }
-
 }

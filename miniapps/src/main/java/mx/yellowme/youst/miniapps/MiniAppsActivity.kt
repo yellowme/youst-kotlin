@@ -10,7 +10,6 @@ import mx.yellowme.youst.miniapps.domain.MiniAppElement
 import mx.yellowme.youst.miniapps.domain.MiniAppElementType
 
 class MiniAppsActivity : GenericShowcaseActivity<MiniAppElement>() {
-
     override val titleResId = R.string.mini_apps_title
 
     override val subtitleResId = R.string.mini_apps_subtitle
@@ -36,5 +35,4 @@ class MiniAppsActivity : GenericShowcaseActivity<MiniAppElement>() {
             }
         }
     }
-
 }

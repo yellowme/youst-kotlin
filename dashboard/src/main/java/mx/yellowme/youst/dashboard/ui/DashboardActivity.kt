@@ -1,7 +1,10 @@
 package mx.yellowme.youst.dashboard.ui
 
 import android.os.Bundle
-import kotlinx.android.synthetic.main.dashboard.*
+import kotlinx.android.synthetic.main.dashboard.dashboardOptions
+import kotlinx.android.synthetic.main.dashboard.subtitleTextView
+import kotlinx.android.synthetic.main.dashboard.themeModeButton
+import kotlinx.android.synthetic.main.dashboard.titleTextView
 import mx.yellowme.youst.core.components.showThemeChooser
 import mx.yellowme.youst.core.extensions.launch
 import mx.yellowme.youst.core.hooks.BaseActivity
@@ -30,7 +33,6 @@ class DashboardActivity : BaseActivity(), ItemListener<DashboardOption> {
             .with(dashboardOptions)
             .into(this)
 
-
         DashboardLoader.loadData(this) {
             titleTextView.text = it.title
             subtitleTextView.text = it.subtitle
@@ -38,7 +40,7 @@ class DashboardActivity : BaseActivity(), ItemListener<DashboardOption> {
             recyclerView.setData(it.options)
         }
 
-        //TODO: Move this button to a Settings Section
+        // TODO: Move this button to a Settings Section
         themeModeButton.setOnClickListener() {
             showThemeChooser()
         }

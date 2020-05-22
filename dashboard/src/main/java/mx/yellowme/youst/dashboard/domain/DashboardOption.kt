@@ -1,6 +1,6 @@
 package mx.yellowme.youst.dashboard.domain
 
-import java.util.*
+import java.util.Locale
 
 data class DashboardOption(
     val id: String,

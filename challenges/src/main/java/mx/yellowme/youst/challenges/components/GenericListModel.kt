@@ -2,11 +2,13 @@ package mx.yellowme.youst.challenges.components
 
 import android.content.Context
 import android.util.AttributeSet
-import android.view.View
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.component_generic_list_model.view.*
+import kotlinx.android.synthetic.main.component_generic_list_model.view.emptyMessageTextView
+import kotlinx.android.synthetic.main.component_generic_list_model.view.errorMessageTextView
+import kotlinx.android.synthetic.main.component_generic_list_model.view.loadingProgressBar
+import kotlinx.android.synthetic.main.component_generic_list_model.view.recyclerView
 import mx.yellowme.youst.challenges.R
 import mx.yellowme.youst.core.extensions.gone
 import mx.yellowme.youst.core.extensions.inflate

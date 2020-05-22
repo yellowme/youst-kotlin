@@ -14,7 +14,6 @@ class PokemonListAdapter(
     items: MutableList<Pokemon>,
     itemListener: ItemListener<Pokemon>
 ) : SimpleRecyclerAdapter<Pokemon, PokemonListViewHolder>(items, itemListener) {
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonListViewHolder {
         val view = LayoutInflater
             .from(parent.context)
@@ -22,5 +21,4 @@ class PokemonListAdapter(
 
         return PokemonListViewHolder(view, itemListener)
     }
-
 }

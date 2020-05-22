@@ -2,7 +2,8 @@ package mx.yellowme.youst.playground.ui.chart
 
 import android.os.Bundle
 import android.util.Log
-import kotlinx.android.synthetic.main.screen_chart.*
+import kotlinx.android.synthetic.main.screen_chart.chartSelector
+import kotlinx.android.synthetic.main.screen_chart.yellowChart
 import mx.yellowme.youst.core.hooks.BaseActivity
 import mx.yellowme.youst.core.utils.loadJsonObject
 import mx.yellowme.youst.playground.R
@@ -18,8 +19,7 @@ import mx.yellowme.youst.playground.domain.ChartType
  * @since 27,September,2019
  */
 class ChartActivity : BaseActivity() {
-
-    //Region Attributes
+    //region Attributes
 
     override val layoutId = R.layout.screen_chart
 
@@ -56,7 +56,7 @@ class ChartActivity : BaseActivity() {
 
     //region Helpers
 
-    //TODO: Must delegate action to another layer component (ViewModel or Presenter)
+    // TODO: Must delegate action to another layer component (ViewModel or Presenter)
     private fun getData() {
         ChartFakeRepository().getData(false,
             object : SingleItemCallback<ChartEntry> {
@@ -73,5 +73,4 @@ class ChartActivity : BaseActivity() {
     }
 
     //endregion
-
 }
