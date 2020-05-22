@@ -7,5 +7,5 @@ package mx.yellowme.youst.playground.domain
 enum class ChartType(name: String) {
     BAR("Bar"),
     LINE("Line"),
-    BUBBLE( "Bubble"),
+    BUBBLE("Bubble"),
 }

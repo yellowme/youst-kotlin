@@ -11,7 +11,6 @@ class AutoSizeGridRecyclerView @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : RecyclerView(context, attrs, defStyleAttr) {
-
     private val spanCount = 2
 
     init {
@@ -39,5 +38,4 @@ class AutoSizeGridRecyclerView @JvmOverloads constructor(
                 }
             })
     }
-
 }

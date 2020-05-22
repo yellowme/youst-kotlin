@@ -4,7 +4,10 @@ import android.content.Context
 import android.util.AttributeSet
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
-import kotlinx.android.synthetic.main.component_chart_selector.view.*
+import kotlinx.android.synthetic.main.component_chart_selector.view.firstOption
+import kotlinx.android.synthetic.main.component_chart_selector.view.radioGroup
+import kotlinx.android.synthetic.main.component_chart_selector.view.secondOption
+import kotlinx.android.synthetic.main.component_chart_selector.view.thirdOption
 import mx.yellowme.youst.core.extensions.consumeTypeArray
 import mx.yellowme.youst.core.extensions.inflate
 import mx.yellowme.youst.playground.R
@@ -17,9 +20,9 @@ import mx.yellowme.youst.core.R as coreR
  */
 interface OnChangeListener {
     /**
-    * The @didChangeChartType function is a callback to be triggered
+     * The @didChangeChartType function is a callback to be triggered
      * when the current type of chart has changed.
-    */
+     */
     fun didChangeChartType(type: ChartType)
 }
 
@@ -27,7 +30,6 @@ class ChartSelector @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null
 ) : LinearLayout(context, attrs) {
-
     //region Attributes
 
     var delegate: OnChangeListener? = null
@@ -35,7 +37,7 @@ class ChartSelector @JvmOverloads constructor(
     var currentTypeSelected: ChartType = ChartType.LINE
         set(value) {
             field = value
-            when(currentTypeSelected) {
+            when (currentTypeSelected) {
                 ChartType.BAR -> firstOption.isChecked = true
                 ChartType.LINE -> secondOption.isChecked = true
                 ChartType.BUBBLE -> thirdOption.isChecked = true
@@ -121,5 +123,4 @@ class ChartSelector @JvmOverloads constructor(
     }
 
     //endregion
-
 }

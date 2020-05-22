@@ -38,5 +38,3 @@ fun <T> Activity.extraSerializableOrThrow(forKey: String): T {
         getSerializable(forKey) as T
     }
 }
-
-

@@ -9,7 +9,6 @@ import kotlin.random.Random
  * @since 07,October,2019
  */
 class ChartFakeRepository {
-
     companion object {
         var shouldFail: Boolean = false
         private var x = 0f
@@ -33,8 +32,7 @@ class ChartFakeRepository {
         if (shouldFail) {
             callback.onServerError("Ups! Should fail.")
         } else {
-            callback.onLoad(ChartEntry(x,y, z))
+            callback.onLoad(ChartEntry(x, y, z))
         }
     }
-
 }

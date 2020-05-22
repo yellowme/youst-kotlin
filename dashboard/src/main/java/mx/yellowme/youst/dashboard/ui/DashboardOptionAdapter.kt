@@ -11,7 +11,6 @@ class DashboardOptionAdapter(
     items: MutableList<DashboardOption>,
     itemListener: ItemListener<DashboardOption>
 ) : SimpleRecyclerAdapter<DashboardOption, DashboardOptionViewHolder>(items, itemListener) {
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DashboardOptionViewHolder {
         val view = LayoutInflater
             .from(parent.context)
@@ -19,5 +18,4 @@ class DashboardOptionAdapter(
 
         return DashboardOptionViewHolder(view, itemListener)
     }
-
 }

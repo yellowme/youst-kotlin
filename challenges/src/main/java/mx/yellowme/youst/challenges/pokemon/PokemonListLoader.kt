@@ -21,7 +21,8 @@ object PokemonListLoader {
         view.setState(GenericListState.LOADING)
         call.enqueue(object : Callback<MutableList<Pokemon>> {
             override fun onResponse(
-                call: Call<MutableList<Pokemon>>, response: Response<MutableList<Pokemon>>
+                call: Call<MutableList<Pokemon>>,
+                response: Response<MutableList<Pokemon>>
             ) {
                 view.setState(GenericListState.LOADED)
                 if (response.isSuccessful) {

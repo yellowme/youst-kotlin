@@ -4,7 +4,6 @@ import android.os.Handler
 import mx.yellowme.youst.playground.domain.Config
 
 class ConfigFakeRepository {
-
     companion object {
         var shouldFail: Boolean = false
         var defaultConfig = Config("3.3.0", 10)
@@ -27,5 +26,4 @@ class ConfigFakeRepository {
             callback.onLoad(defaultConfig)
         }
     }
-
 }

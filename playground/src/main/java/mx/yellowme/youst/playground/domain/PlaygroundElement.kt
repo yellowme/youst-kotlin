@@ -8,7 +8,6 @@ class PlaygroundElement(
     override val subtitle: String,
     override val paletteColor: String
 ) : GenericShowcasedOption {
-
     val type: PlaygroundElementType
         get() {
             return when (id) {
@@ -20,7 +19,6 @@ class PlaygroundElement(
                 else -> throw RuntimeException("Unsupported challenge type for id: $id")
             }
         }
-
 }
 
 enum class PlaygroundElementType {

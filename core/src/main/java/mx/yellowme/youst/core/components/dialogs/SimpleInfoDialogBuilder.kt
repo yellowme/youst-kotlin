@@ -9,7 +9,6 @@ import android.app.Activity
  */
 @Deprecated("")
 class SimpleInfoDialogBuilder {
-
     private var dialogTitle: String? = null
     private var message: String? = null
     private var actionTitle: String? = null
@@ -41,5 +40,4 @@ class SimpleInfoDialogBuilder {
                 get() = actionTitle
         }
     }
-
 }

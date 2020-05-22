@@ -7,13 +7,11 @@ import mx.yellowme.youst.playground.R
 import mx.yellowme.youst.playground.components.AppHeroActionListener
 
 class ScreenCFragment : BaseFragment() {
-
     override val layoutId: Int = R.layout.screen_c
 
     override fun onViewReady() {
 
         with(appHero) {
-
             mainActionListener = object : AppHeroActionListener {
                 override fun onClickAction() {
                     val action =
@@ -29,9 +27,6 @@ class ScreenCFragment : BaseFragment() {
                     findNavController().navigate(action)
                 }
             }
-
         }
-
     }
-
 }

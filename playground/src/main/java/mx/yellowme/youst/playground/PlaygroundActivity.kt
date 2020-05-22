@@ -10,7 +10,6 @@ import mx.yellowme.youst.playground.domain.PlaygroundElement
 import mx.yellowme.youst.playground.domain.PlaygroundElementType
 
 class PlaygroundActivity : GenericShowcaseActivity<PlaygroundElement>() {
-
     override val titleResId: Int = R.string.playground_title
 
     override val subtitleResId: Int = R.string.playground_subtitle
@@ -23,7 +22,7 @@ class PlaygroundActivity : GenericShowcaseActivity<PlaygroundElement>() {
         }
     }
 
-    //TODO: Improve item handle
+    // TODO: Improve item handle
     override fun onItemClick(item: PlaygroundElement?) {
         item?.type?.let {
             when (it) {
@@ -45,5 +44,4 @@ class PlaygroundActivity : GenericShowcaseActivity<PlaygroundElement>() {
             }
         }
     }
-
 }

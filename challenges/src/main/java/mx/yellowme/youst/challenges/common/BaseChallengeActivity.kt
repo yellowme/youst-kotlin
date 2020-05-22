@@ -1,7 +1,7 @@
 package mx.yellowme.youst.challenges.common
 
 import android.os.Bundle
-import kotlinx.android.synthetic.main.challenge_crazy_lists.*
+import kotlinx.android.synthetic.main.challenge_crazy_lists.mainActionToolbar
 import mx.yellowme.youst.challenges.R
 import mx.yellowme.youst.challenges.data.ChallengeDataHelper
 import mx.yellowme.youst.challenges.domain.ChallengeType
@@ -16,7 +16,6 @@ import mx.yellowme.youst.core.R as coreR
  * TODO: Add KDoc
  */
 abstract class BaseChallengeActivity : BaseActivity(), HelpAwareListener {
-
     abstract val currentType: ChallengeType
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,5 +38,4 @@ abstract class BaseChallengeActivity : BaseActivity(), HelpAwareListener {
     companion object {
         const val TOOLBAR_TITLE = "TOOLBAR_TITLE"
     }
-
 }

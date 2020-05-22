@@ -10,7 +10,6 @@ import java.util.concurrent.TimeUnit
  * the user auth token if is needed.
  */
 open class BaseAPIServiceGenerator(baseURL: String) {
-
     private var httpClient: OkHttpClient.Builder? = null
 
     private val builder = Retrofit.Builder().baseUrl(baseURL)
@@ -38,5 +37,4 @@ open class BaseAPIServiceGenerator(baseURL: String) {
 
         return retrofit.create(serviceClass)
     }
-
 }

@@ -4,10 +4,11 @@ import android.content.DialogInterface
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import mx.yellowme.youst.core.components.ThemeConstants.THEME_PREFERENCES
 import mx.yellowme.youst.core.components.ThemeConstants.SELECTED_THEME
+import mx.yellowme.youst.core.components.ThemeConstants.THEME_PREFERENCES
 import mx.yellowme.youst.core.components.dialogs.DialogBuilder
-import mx.yellowme.youst.core.extensions.*
+import mx.yellowme.youst.core.extensions.getStringFrom
+import mx.yellowme.youst.core.extensions.saveStringTo
 
 object ThemeConstants {
     const val THEME_PREFERENCES = "THEME_PREFERENCES"

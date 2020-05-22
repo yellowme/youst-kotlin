@@ -17,9 +17,10 @@ import mx.yellowme.youst.core.extensions.consumeTypeArray
  * @since 2019-07-17.
  */
 class TriangularView @JvmOverloads constructor(
-    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
-
     //region Attributes
 
     private var arcPaint: Paint
@@ -74,5 +75,4 @@ class TriangularView @JvmOverloads constructor(
     }
 
     //endregion
-
 }

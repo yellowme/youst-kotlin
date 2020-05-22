@@ -11,7 +11,6 @@ import mx.yellowme.youst.challenges.pokemon.PokemonListLoader
  * @since 03,December,2019
  */
 class ArchieChallengeActivity : BaseChallengeActivity() {
-
     //region Attributes
 
     override val layoutId = R.layout.challenge_archie
@@ -28,5 +27,4 @@ class ArchieChallengeActivity : BaseChallengeActivity() {
     }
 
     //endregion
-
 }

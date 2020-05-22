@@ -46,5 +46,4 @@ class AnimationListenerHelper : Animation.AnimationListener {
     }
 
     //endregion
-
 }

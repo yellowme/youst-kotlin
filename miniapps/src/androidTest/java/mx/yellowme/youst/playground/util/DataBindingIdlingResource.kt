@@ -18,7 +18,6 @@ import java.util.UUID
  * children instead of the whole view tree.
  */
 class DataBindingIdlingResource : IdlingResource {
-
     // List of registered callbacks
     private val idlingCallbacks = mutableListOf<IdlingResource.ResourceCallback>()
 

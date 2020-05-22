@@ -12,8 +12,8 @@ import android.view.View
  * closure to be called after the user clicks the view.
  */
 class SingleOnClickListener(
-        private var defaultInterval: Int = 1000,
-        private val onSafeCLick: (View) -> Unit
+    private var defaultInterval: Int = 1000,
+    private val onSafeCLick: (View) -> Unit
 ) : View.OnClickListener {
     private var lastTimeClicked: Long = 0L
 

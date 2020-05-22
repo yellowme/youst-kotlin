@@ -4,8 +4,8 @@ import android.content.Context
 import android.view.View
 import android.widget.CheckBox
 import mx.yellowme.youst.challenges.R
-import mx.yellowme.youst.core.components.TriangularView
 import mx.yellowme.youst.challenges.domain.PokemonTypeSelection
+import mx.yellowme.youst.core.components.TriangularView
 import mx.yellowme.youst.core.hooks.recycler.RecyclerViewHolderDecorator
 
 /**
@@ -14,7 +14,6 @@ import mx.yellowme.youst.core.hooks.recycler.RecyclerViewHolderDecorator
 class PokemonTypeListViewHolder internal constructor(
     itemView: View
 ) : RecyclerViewHolderDecorator<PokemonTypeSelection>(itemView) {
-
     private val context: Context = itemView.context
     private val typeDecoration: TriangularView = itemView.findViewById(R.id.typeDecoration)
     internal val typeCheckBox: CheckBox = itemView.findViewById(R.id.typeCheckBox)
@@ -27,5 +26,4 @@ class PokemonTypeListViewHolder internal constructor(
             }
         }
     }
-
 }

@@ -2,14 +2,14 @@ package mx.yellowme.youst.miniapps.ui.contact
 
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import kotlinx.android.synthetic.main.screen_destination_three.*
+import kotlinx.android.synthetic.main.screen_destination_three.goodbyeTextView
+import kotlinx.android.synthetic.main.screen_destination_three.navigateButton
+import kotlinx.android.synthetic.main.screen_destination_three.titleEmoji
 import mx.yellowme.youst.core.hooks.BaseFragment
 import mx.yellowme.youst.core.utils.launchExternalEmailChooser
 import mx.yellowme.youst.miniapps.R
 
-
 class LastFragment : BaseFragment() {
-
     private val args: LastFragmentArgs by navArgs()
 
     override val layoutId = R.layout.screen_destination_three
@@ -29,6 +29,4 @@ class LastFragment : BaseFragment() {
             )
         }
     }
-
-
 }

@@ -3,7 +3,6 @@ package mx.yellowme.youst.playground.ui.nemo.navigator.hooks
 import mx.yellowme.youst.playground.BuildConfig
 
 abstract class Navigator {
-
     var next: Navigator? = null
 
     private val tagName: String
@@ -36,5 +35,4 @@ abstract class Navigator {
             }
         } ?: executeExit()
     }
-
 }

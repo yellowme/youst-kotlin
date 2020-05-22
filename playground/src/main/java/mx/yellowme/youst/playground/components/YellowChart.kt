@@ -31,7 +31,6 @@ class YellowChart @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : LinearLayout(context, attrs, defStyleAttr) {
-
     //region Attributes
 
     var label: String? = ""
@@ -46,7 +45,7 @@ class YellowChart @JvmOverloads constructor(
 
     private var listOfEntries = ArrayList<ChartEntry>()
 
-    //end region
+    //endregion
 
     //region Helpers
 
@@ -123,8 +122,7 @@ class YellowChart @JvmOverloads constructor(
         }
     }
 
-    //end region
-
+    //endregion
 }
 
 /**

@@ -10,16 +10,14 @@ import com.google.android.gms.vision.barcode.BarcodeDetector
 import io.fotoapparat.Fotoapparat
 import io.fotoapparat.parameter.ScaleType
 import io.fotoapparat.selector.back
-import kotlinx.android.synthetic.main.component_barcode_detector.view.*
+import kotlinx.android.synthetic.main.component_barcode_detector.view.cameraView
 import mx.yellowme.youst.core.extensions.inflate
 import mx.yellowme.youst.playground.R
 
 interface BarcodeDelegate {
-
     fun onPictureScanned(url: String)
 
     fun onError(message: String)
-
 }
 
 /**
@@ -31,7 +29,6 @@ class BarcodeDetector @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : LinearLayout(context, attrs, defStyleAttr) {
-
     //region Attributes
 
     var delegate: BarcodeDelegate? = null
@@ -103,5 +100,4 @@ class BarcodeDetector @JvmOverloads constructor(
     }
 
     //endregion
-
 }

@@ -1,7 +1,9 @@
 package mx.yellowme.youst.core.templates.showcase
 
 import android.os.Bundle
-import kotlinx.android.synthetic.main.template_generic_showcase.*
+import kotlinx.android.synthetic.main.template_generic_showcase.showcaseItemsViewPager
+import kotlinx.android.synthetic.main.template_generic_showcase.subtitleTextView
+import kotlinx.android.synthetic.main.template_generic_showcase.titleTextView
 import mx.yellowme.youst.core.R
 import mx.yellowme.youst.core.domain.GenericShowcasedOption
 import mx.yellowme.youst.core.hooks.BaseActivity
@@ -17,7 +19,6 @@ interface ModelTransformer<Model> {
 
 abstract class GenericShowcaseActivity<Model : GenericShowcasedOption> : BaseActivity(),
     ItemListener<Model> {
-
     override val layoutId = R.layout.template_generic_showcase
 
     abstract val titleResId: Int
@@ -62,5 +63,4 @@ abstract class GenericShowcaseActivity<Model : GenericShowcasedOption> : BaseAct
             showcaseItemsViewPager?.offscreenPageLimit = 3
         }
     }
-
 }

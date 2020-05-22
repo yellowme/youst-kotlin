@@ -50,7 +50,6 @@ sealed class ToolbarAction {
             else -> throw RuntimeException("The id: $forResId provided is not valid")
         }
     }
-
 }
 
 enum class ExecutableToolbarAction {

@@ -23,7 +23,6 @@ abstract class CommonDialog private constructor(
     context: Context,
     private val mResizePercentage: Double
 ) : Dialog(context), View.OnClickListener {
-
     //region Attributes
 
     protected abstract val layoutId: Int
@@ -80,5 +79,4 @@ abstract class CommonDialog private constructor(
     }
 
     //endregion
-
 }

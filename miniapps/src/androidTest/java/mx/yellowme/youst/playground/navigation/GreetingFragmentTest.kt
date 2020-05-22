@@ -20,7 +20,6 @@ import org.mockito.Mockito.verify
 @MediumTest
 @RunWith(AndroidJUnit4::class)
 class GreetingFragmentTest {
-
     @Test
     fun clickNavigateButton_navigateToSecondDestinationFragment() {
         val scenario = launchFragmentInContainer<GreetingFragment>(Bundle(), R.style.SharedAppTheme)
@@ -36,5 +35,4 @@ class GreetingFragmentTest {
             GreetingFragmentDirections.toSecondDestination("")
         )
     }
-
 }

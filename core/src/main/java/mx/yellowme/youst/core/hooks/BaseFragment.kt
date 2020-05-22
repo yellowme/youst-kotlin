@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
 abstract class BaseFragment : Fragment() {
-
     //region Attributes
 
     abstract val layoutId: Int
@@ -32,5 +31,4 @@ abstract class BaseFragment : Fragment() {
     //endregion
 
     abstract fun onViewReady()
-
 }

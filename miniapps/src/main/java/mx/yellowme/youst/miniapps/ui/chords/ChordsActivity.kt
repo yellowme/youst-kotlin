@@ -1,14 +1,15 @@
 package mx.yellowme.youst.miniapps.ui.chords
 
 import android.os.Bundle
-import kotlinx.android.synthetic.main.chords.*
+import kotlinx.android.synthetic.main.chords.chordSelector
+import kotlinx.android.synthetic.main.chords.selectedChordTextView
+import kotlinx.android.synthetic.main.chords.selectedChordTitle
 import mx.yellowme.youst.core.hooks.BaseActivity
+import mx.yellowme.youst.core.utils.HapticFeedbackHelper
 import mx.yellowme.youst.miniapps.R
 import mx.yellowme.youst.miniapps.domain.Chord
-import mx.yellowme.youst.core.utils.HapticFeedbackHelper
 
 class ChordsActivity : BaseActivity() {
-
     override val layoutId = R.layout.chords
 
     private var currentChordPosition = 0
@@ -36,5 +37,4 @@ class ChordsActivity : BaseActivity() {
 
         HapticFeedbackHelper.generateTouchFeedbackOn(this)
     }
-
 }

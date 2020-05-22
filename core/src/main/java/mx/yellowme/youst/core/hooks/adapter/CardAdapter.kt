@@ -11,7 +11,6 @@ import mx.yellowme.youst.core.hooks.adapter.CardAdapter.Companion.MAX_ELEVATION_
 import mx.yellowme.youst.core.hooks.recycler.ItemListener
 
 interface CardAdapter {
-
     val baseElevation: Float
 
     fun getCardViewAt(position: Int): CardView?
@@ -21,11 +20,10 @@ interface CardAdapter {
     }
 
     fun getCount(): Int
-
 }
 
 @Suppress("SpellCheckingInspection")
-abstract class Decorator<Model>{
+abstract class Decorator<Model> {
     var listener: ItemListener<Model>? = null
 
     abstract fun decorate(model: Model?, onView: View)
@@ -102,5 +100,4 @@ open class CardPagerAdapter<Model>(
     private fun bind(item: Model?, view: View) {
         decorator.decorate(item, view)
     }
-
 }

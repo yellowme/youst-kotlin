@@ -4,9 +4,15 @@ import android.app.Activity
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.LinearLayout
-import kotlinx.android.synthetic.main.component_main_action_toolbar.view.*
+import kotlinx.android.synthetic.main.component_main_action_toolbar.view.toolbarAction
+import kotlinx.android.synthetic.main.component_main_action_toolbar.view.toolbarShadowView
+import kotlinx.android.synthetic.main.component_main_action_toolbar.view.toolbarTitle
 import mx.yellowme.youst.core.R
-import mx.yellowme.youst.core.extensions.*
+import mx.yellowme.youst.core.extensions.asTypeArray
+import mx.yellowme.youst.core.extensions.gone
+import mx.yellowme.youst.core.extensions.hideOrDisplay
+import mx.yellowme.youst.core.extensions.inflate
+import mx.yellowme.youst.core.extensions.visible
 
 /**
  * TODO: Document
@@ -16,7 +22,6 @@ class MainActionToolbar @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : LinearLayout(context, attrs, defStyleAttr) {
-
     var title: String? = null
         set(value) {
             field = value
@@ -91,6 +96,4 @@ class MainActionToolbar @JvmOverloads constructor(
             delegate = DefaultActivityToolbarDelegate(it)
         }
     }
-
 }
-

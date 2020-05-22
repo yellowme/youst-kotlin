@@ -2,7 +2,6 @@ package mx.yellowme.youst.core.components.dialogs
 
 import android.content.Context
 import android.content.DialogInterface
-import androidx.appcompat.app.AlertDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import mx.yellowme.youst.core.R.style.DialogTheme
 
