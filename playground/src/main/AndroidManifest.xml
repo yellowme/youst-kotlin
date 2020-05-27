@@ -42,19 +42,19 @@
             android:name=".ui.nemo.NemoActivity"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
         <activity
-            android:name="ui.nemo.screens.LoginScreen"
+            android:name=".ui.nemo.screens.LoginScreen"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
         <activity
-            android:name="ui.nemo.screens.UnsupportedVersionScreen"
+            android:name=".ui.nemo.screens.UnsupportedVersionScreen"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
         <activity
-            android:name="ui.nemo.screens.UserWithoutAttributeScreen"
+            android:name=".ui.nemo.screens.UserWithoutAttributeScreen"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
         <activity
-            android:name="ui.nemo.screens.MissingPaymentOptionScreen"
+            android:name=".ui.nemo.screens.MissingPaymentOptionScreen"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
         <activity
-            android:name="ui.nemo.screens.MainScreen"
+            android:name=".ui.nemo.screens.MainScreen"
             android:theme="@style/SharedAppTheme.NoActionBar.Translucent" />
 
         <!--endregion-->
